@@ -34,3 +34,7 @@ Route::middleware('auth')->name('admin.')->namespace('Admin')->prefix('admin')->
 
   
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

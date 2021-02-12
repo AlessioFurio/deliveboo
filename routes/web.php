@@ -32,5 +32,5 @@ Route::middleware('auth')->name('admin.')->namespace('Admin')->prefix('admin')->
   Route::resource('/dishes', 'DishesController');
 
 
-  //commento
+  
 });

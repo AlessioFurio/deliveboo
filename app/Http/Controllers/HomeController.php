@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+<<<<<<< Updated upstream
+=======
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+>>>>>>> Stashed changes
 
 
     /**

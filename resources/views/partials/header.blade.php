@@ -13,6 +13,8 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/') }}">Home</a>
+                        <a href="{{route('admin.home')}}">Dashboard</a>
+
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

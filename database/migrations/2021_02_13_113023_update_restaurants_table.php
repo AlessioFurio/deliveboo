@@ -14,7 +14,7 @@ class UpdateRestaurantsTable extends Migration
     public function up()
     {
         Schema::table('Restaurants', function (Blueprint $table) {
-            $table->dropColumn('slug');
+            $table->string('slug')->unique();
         });
     }
 
@@ -26,7 +26,7 @@ class UpdateRestaurantsTable extends Migration
     public function down()
     {
         Schema::table('Restaurants', function (Blueprint $table) {
-            $table->string('slug')->unique();
+            $table->dropColumn('slug');
         });
     }
 }

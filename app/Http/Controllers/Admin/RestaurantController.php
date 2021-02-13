@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Restaurant;
 
 class RestaurantController extends Controller
 {
@@ -14,7 +16,12 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        //
+        $user_id = Auth::user()->id;
+        $data = [
+            'restaurants' => Restaurant::where('user_id' , $user_id )->get()
+        ];
+        return view('admin.restaurants.index' , $data);
+
     }
 
     /**
@@ -44,9 +51,15 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Restaurant $restaurant)
     {
-        //
+        if ($restaurant) {
+            $data = [
+                'restaurant' => $restaurant
+            ];
+            return view('admin.restaurants.show', $data);
+        }
+        abort(404);
     }
 
     /**

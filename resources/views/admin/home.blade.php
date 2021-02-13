@@ -16,6 +16,7 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+                <a href="{{route('admin.restaurants.index')}}">I tuoi ristoranti</a>
             </div>
         </div>
     </div>

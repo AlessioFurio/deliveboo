@@ -17,8 +17,6 @@ class CreateDishesTable extends Migration
           $table->id();
           $table->unsignedBigInteger('user_id');
           $table->foreign('user_id')->references('id')->on('users');
-          $table->unsignedBigInteger('course_id')->after('user_id');
-          $table->foreign('course_id')->references('id')->on('courses');
           $table->string('name');
           $table->text('ingredients');
           $table->double('price', 4, 2);

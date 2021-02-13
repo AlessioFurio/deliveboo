@@ -30,7 +30,6 @@ Route::middleware('auth')->name('admin.')->namespace('Admin')->prefix('admin')->
   Route::resource('/categories', 'CategoryController');
   Route::resource('/restaurants', 'RestaurantController');
   Route::resource('/dishes', 'DishesController');
-
-
-
 });
+
+//sto facendo branch + push

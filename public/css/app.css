@@ -16,25 +16,21 @@ header .header-top {
   align-items: center;
   padding: 0 20px 0;
 }
-
 header .header-top .logo {
   width: 120px;
   height: 120px;
 }
-
 header .header-top .logo img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 header .header-top .nav-menu-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 header .header-top .nav-menu-top .links > a {
   color: #636b6f;
   padding: 0 25px;
@@ -44,30 +40,24 @@ header .header-top .nav-menu-top .links > a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 header .header-top .nav-menu-top .cart i {
   font-size: 30px;
 }
-
 header .header-bottom {
   border: 1px solid black;
 }
-
 header .header-bottom .nav-menu-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 header .header-bottom .nav-menu-bottom ul {
   list-style-type: none;
   display: flex;
 }
-
 header .header-bottom .nav-menu-bottom ul li {
   margin: 10px;
 }
-
 header .header-bottom .nav-menu-bottom ul li a {
   display: inline-block;
   padding: 20px;
@@ -84,17 +74,14 @@ header .header-bottom .nav-menu-bottom ul li a {
   background-color: #040909;
   border: 1px solid red;
 }
-
 .card-category .container {
   margin: auto;
 }
-
 .card-category .container .cards {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
 .card-category .container .cards .card {
   background: url("/images/card.jpg");
   background-position: center center;
@@ -122,12 +109,10 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .container-list .list {
   font-weight: 700;
   font-size: 16px;
 }
-
 .container-list .list ul li {
   list-style-type: none;
   padding-bottom: 10px;
@@ -140,7 +125,6 @@ footer {
   justify-content: center;
   align-items: flex-start;
 }
-
 .container-social-online .social-online {
   font-weight: 700;
   display: flex;
@@ -148,7 +132,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .container-social-online .social-online h3 {
   font-size: 20px;
   color: #cc9933;
@@ -157,14 +140,12 @@ footer {
   text-transform: uppercase;
   margin-bottom: 40px;
 }
-
 .container-social-online .social-online span {
   color: #4c4d4e;
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-
 .container-social-online .social-online i {
   padding: 0 20px;
   font-size: 16px;
@@ -177,31 +158,25 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .container-contact .contact {
   font-weight: 700;
   font-size: 16px;
 }
-
 .container-contact .contact a {
   text-decoration: none;
   font-size: 15px;
   color: #cc9933;
 }
-
 .container-contact .contact h5 {
   color: white;
   font-size: 15px;
   margin: 10px 0 20px 0;
 }
-
 .container-contact .contact ul {
   font-size: 12px;
 }
-
 .container-contact .contact ul li {
   list-style-type: none;
   padding-bottom: 10px;
   color: #4c4d4e;
 }
-

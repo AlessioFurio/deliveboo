@@ -9,18 +9,41 @@
   margin: auto;
 }
 
+header {
+  height: 100vh;
+  background: url("/images/jumbo4.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+header .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 header .header-top {
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px 0;
+  padding: 0 30px 0;
 }
 header .header-top .logo {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
 }
-header .header-top .logo img {
+header .header-top .logo a {
+  display: inline-block;
+  padding: 20px 10px;
+}
+header .header-top .logo a img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -32,9 +55,9 @@ header .header-top .nav-menu-top {
   align-items: center;
 }
 header .header-top .nav-menu-top .links > a {
-  color: #636b6f;
-  padding: 0 25px;
-  font-size: 13px;
+  color: #fff;
+  padding: 0 20px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.1rem;
   text-decoration: none;
@@ -42,37 +65,32 @@ header .header-top .nav-menu-top .links > a {
 }
 header .header-top .nav-menu-top .cart i {
   font-size: 30px;
+  color: white;
 }
 header .header-bottom {
-  border: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
 }
 header .header-bottom .nav-menu-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 50%;
+  text-align: right;
+  padding-right: 80px;
 }
-header .header-bottom .nav-menu-bottom ul {
-  list-style-type: none;
-  display: flex;
-}
-header .header-bottom .nav-menu-bottom ul li {
-  margin: 10px;
-}
-header .header-bottom .nav-menu-bottom ul li a {
-  display: inline-block;
-  padding: 20px;
+header .header-bottom .nav-menu-bottom .category-select {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .jumbo {
-  background: url("/images/jumbo.jpg");
-  background-position: center center;
+  background: url("/images/jumbo2.jpg");
+  background-position: center 20%;
   background-size: cover;
   height: calc(100vh - 202px);
 }
 
 .card-category {
   background-color: #040909;
-  border: 1px solid red;
 }
 .card-category .container {
   margin: auto;
@@ -88,7 +106,6 @@ header .header-bottom .nav-menu-bottom ul li a {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 50px;
-  border: 1px solid red;
   width: 400px;
   height: 250px;
 }

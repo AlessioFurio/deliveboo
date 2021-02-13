@@ -8,8 +8,8 @@ header{
         padding: 0 20px 0;
 
         .logo{
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
 
             img {
                 width: 100%;
@@ -54,6 +54,7 @@ header{
                 display: flex;
 
                 li {
+                    margin: 10px;
                     a{
                         display: inline-block;
                         padding: 20px;

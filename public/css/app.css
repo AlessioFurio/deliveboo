@@ -17,8 +17,8 @@ header .header-top {
 }
 
 header .header-top .logo {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 header .header-top .logo img {
@@ -63,9 +63,20 @@ header .header-bottom .nav-menu-bottom ul {
   display: flex;
 }
 
+header .header-bottom .nav-menu-bottom ul li {
+  margin: 10px;
+}
+
 header .header-bottom .nav-menu-bottom ul li a {
   display: inline-block;
   padding: 20px;
+}
+
+.jumbo {
+  background: url("/images/jumbo.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 202px);
 }
 
 footer {

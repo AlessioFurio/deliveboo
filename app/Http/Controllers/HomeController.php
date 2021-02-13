@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
     /**
      * Create a new controller instance.
@@ -21,6 +22,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+=======
+>>>>>>> Stashed changes
     public function index()
     {
         return view('welcome');

@@ -5,6 +5,8 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 
+@import "partials/generic.scss";
+@import "partials/header.scss";
 @import "partials/footer.scss";

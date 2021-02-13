@@ -71,6 +71,9 @@
         @include('partials.header')
 
         @include('partials.jumbo')
+
+        @include('partials.section-card-category')
+
         @include('partials.footer')
     </body>
 </html>

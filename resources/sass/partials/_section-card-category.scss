@@ -1,0 +1,25 @@
+.card-category {
+    background-color: rgb(4, 9, 9);
+    border: 1px solid red;
+
+    .container {
+        margin: auto;
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .card {
+                background: url('/images/card.jpg');
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 50px;
+                border: 1px solid red;
+                width: 400px;
+                height: 250px;
+            }
+        }
+    }
+}

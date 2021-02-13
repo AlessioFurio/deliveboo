@@ -79,6 +79,32 @@ header .header-bottom .nav-menu-bottom ul li a {
   height: calc(100vh - 202px);
 }
 
+.card-category {
+  background-color: #040909;
+  border: 1px solid red;
+}
+
+.card-category .container {
+  margin: auto;
+}
+
+.card-category .container .cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-category .container .cards .card {
+  background: url("/images/card.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 50px;
+  border: 1px solid red;
+  width: 400px;
+  height: 250px;
+}
+
 footer {
   background-color: #0b0d0f;
 }

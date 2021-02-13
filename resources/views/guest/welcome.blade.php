@@ -70,7 +70,7 @@
 
         @include('partials.header')
 
-        @include('partials.jumbo')
+        
 
         @include('partials.section-card-category')
 

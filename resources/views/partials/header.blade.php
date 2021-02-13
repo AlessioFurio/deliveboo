@@ -1,10 +1,14 @@
 <header>
+    <div class="filter"></div>
     <div class="header-top">
         <div class="logo">
-            <img src="{{ asset('images/logo.png') }}" alt="deliveboo-logo">
+            <a href="#">
+                <img src="{{ asset('images/logo.png') }}" alt="deliveboo-logo">
+            </a>
         </div>
 
         <div class="nav-menu-top">
+
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -28,13 +32,14 @@
 
     <div class="header-bottom">
         <div class="nav-menu-bottom">
-            <ul>
-                <li><a href="">Categoria</a></li>
-                <li><a href="">Categoria</a></li>
-                <li><a href="">Categoria</a></li>
-                <li><a href="">Categoria</a></li>
-                <li><a href="">Categoria</a></li>
-            </ul>
+
+                <select class="category-select" name="">
+                    <option value="">Seleziona categoria</option>
+                    <option value="">Categoria</option>
+                    <option value="">Categoria</option>
+                    <option value="">Categoria</option>
+                </select>
+            </div>
         </div>
     </div>
 </header>

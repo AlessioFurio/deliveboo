@@ -2,6 +2,12 @@ footer {
     background-color: #0b0d0f;
 }
 
+.container-totale {
+    display: flex;
+    padding: 100px 0;
+    justify-content: center;
+}
+
 
 .container-list {
     width: 30%;
@@ -10,6 +16,8 @@ footer {
     align-items: center;
 
     .list {
+        font-weight: 700;
+        font-size: 16px;
         ul {
 
             li {
@@ -27,19 +35,37 @@ footer {
     width: 30%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
 
     .social-online {
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         h3 {
-            font-size: 15px;
-            color: yellow;
-            border: 1px solid yellow;
+            font-size: 20px;
+            color: #cc9933;
+            border: 1px solid #cc9933;
+            padding: 20px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
         }
 
         span {
-            color: grey;
-            font-size: 10px;
+            color: #4c4d4e;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+        }
+
+        i {
+            padding: 0 20px;
+            font-size: 16px;
+            color: #4c4d4e;
         }
     }
 
@@ -53,23 +79,29 @@ footer {
 
 
     .contact {
+        font-weight: 700;
+        font-size: 16px;
+
         a {
+            text-decoration: none;
             font-size: 15px;
-            color: yellow;
+            color: #cc9933;
 
         }
 
         h5 {
-            color: grey;
-            font-size: 10px;
+            color: white;
+            font-size: 15px;
+            margin: 10px 0 20px 0;
         }
 
         ul {
+            font-size: 12px;
 
             li {
                 list-style-type: none;
                 padding-bottom: 10px;
-                color: white;
+                color: #4c4d4e;
 
             }
         }

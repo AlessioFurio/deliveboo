@@ -19,6 +19,26 @@
             z-index: -1;
         }
 
+        .header-log-in {
+            .top-right {
+                text-align: right;
+                padding-right: 30px;
+            }
+
+            .links > a {
+                display: inline-block;
+                color: #fff;
+                padding: 20px;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+
+
+
         .header-top{
             display: flex;
             justify-content: space-between;
@@ -50,19 +70,6 @@
                 justify-content: space-between;
                 align-items: center;
 
-                .top-right {
-                    display: block;
-                }
-
-                .links > a {
-                    color: #fff;
-                    padding: 0 20px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    letter-spacing: .1rem;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                }
 
                 .cart {
                     i {
@@ -132,6 +139,7 @@
             .nav-menu-bottom{
                 width: 100%;
                 text-align: center;
+                padding-right: 30px;
 
 
                 .category-select {

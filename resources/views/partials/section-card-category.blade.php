@@ -6,7 +6,7 @@
                 <div class="card">
                     <img src="/images/card.jpg" alt="">
                     <div class="title">
-                        <h1>{{ $category->name }}</h1>
+                        <h1>Categoria: {{ $category->name }}</h1>
                     </div>
                 </div>
             @endforeach

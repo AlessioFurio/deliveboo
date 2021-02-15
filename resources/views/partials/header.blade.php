@@ -1,5 +1,6 @@
 <header>
     <div class="filter"></div>
+
     <div class="header-top">
         <div class="logo">
             <a href="#">
@@ -28,20 +29,43 @@
             <div class="cart">
                 <i class="fas fa-shopping-cart"></i>
             </div>
+
+            <div class="toggle-menu"  @click="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
 
+    </div>
+
+    <div class="menu-mobile" :class="isActive ? 'active' : ''">
+        <div class="nav-menu-mobile">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Ristoranti</a></li>
+                <li><a href="">Categorie</a></li>
+                <li><a href="">Piatti</a></li>
+                <li><a href="">Contatti</a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="header-bottom">
+
+
         <div class="nav-menu-bottom">
+            <span class="ricerca-avanzata">Ricerca Avanzata</span>
+
 
                 <select class="category-select" name="">
-                    <option value="">Seleziona categoria</option>
-                    <option value="">Categoria</option>
-                    <option value="">Categoria</option>
-                    <option value="">Categoria</option>
+                    <option value="">Filtra ristorante per categoria</option>
+                    @foreach ($categories as $category)
+
+                      <option value="">{{$category->name}}</option>
+
+                    @endforeach
                 </select>
-            </div>
         </div>
     </div>
+
+
 </header>

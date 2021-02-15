@@ -37335,6 +37335,24 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var app = new Vue({
+  el: '#root',
+  data: {
+    isActive: false
+  },
+  methods: {
+    toggleMenu: function toggleMenu() {
+      // x menu mobile
+      if (this.isActive == false) {
+        this.isActive = true;
+      } else {
+        this.isActive = false;
+      }
+    }
+  } // fine methods
+
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

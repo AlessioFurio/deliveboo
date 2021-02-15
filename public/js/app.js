@@ -37338,7 +37338,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var app = new Vue({
   el: '#root',
   data: {
-    isActive: false
+    isActive: false,
+    restaurants: []
   },
   methods: {
     toggleMenu: function toggleMenu() {
@@ -37348,9 +37349,19 @@ var app = new Vue({
       } else {
         this.isActive = false;
       }
-    }
-  } // fine methods
+    },
+    searchFilm: function searchFilm() {
+      var _this = this;
 
+      // funzione cerca film
+      axios.get('http://localhost:8000/api/restaurants').then(function (risposta) {
+        _this.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+
+        console.log(_this.restaurants);
+      }); // fine then
+    } // fine searcFilm
+
+  }
 });
 
 /***/ }),
@@ -37418,8 +37429,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -30,6 +30,6 @@ class CategoriesTableSeeder extends Seeder
             }
             $new_category->slug = $slug;
             $new_category->save();
-    }
+        }
     }
 }

@@ -16,9 +16,9 @@
                         <th>ID</th>
                         <th>Name</th>
                         <th>Ingredients</th>
-                        <th class="">Price</th>
                         <th class="">Portata</th>
                         <th class="">Visibility</th>
+                        <th class="">Prezzo</th>
                         <th class="text-center">Azioni</th>
                     </tr>
                 </thead>
@@ -28,9 +28,11 @@
                             <td>{{ $dish->id }}</td>
                             <td>{{ $dish->name }}</td>
                             <td>{{ $dish->ingredients }}</td>
-                            <td>{{ $dish->Visibility }}</td>
-                            <td>{{ $dish->slug }}</td>
-                            <td><a class="btn btn-info" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">Visualizza</a></td>
+                            <td>{{ $dish->course->name }}</td>
+                            <td>{{ $dish->visibility }}</td>
+                            <td>{{ $dish->price }}</td>
+                            <td><a class="btn btn-info" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">Visualizza piatto</a></td>
+                            <td><a class="btn btn-info" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica piatto</a></td>
                         </tr>
                     @endforeach
                 </tbody>

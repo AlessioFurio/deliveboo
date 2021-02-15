@@ -35,21 +35,20 @@
                     <input type="text" name="price" class="form-control" placeholder="Prezzo" value="{{ old('price') }}" required>
                 </div>
                 <div class="form-group">
-                    <label for="course_id">Scegli la portata</label>
-
-                    <select name="course_id">
-                        <option value="1">Antipasto</option>
-                        <option value="2">Primo</option>
-                        <option value="3">Secondo</option>
-                        <option value="4">Contorno</option>
-                        <option value="5">Dolce</option>
+                    <label>Portate</label>
+                    <select class="form-control" name="course_id">
+                        <option value="">seleziona portata</option>
+                        @foreach ($courses as $course)
+                            <option value="{{ $course->id }}" {{ old('course_id') == $course->id ? "selected=selected" : '' }}>
+                                {{ $course->name }}
+                            </option>
+                        @endforeach
                     </select>
-                </div>
                 <div class="form-group">
                     <input type="radio" name="visibility" value="1">
-                    <label for="male">Imposta a visibile</label>
+                    <label for="visible">Imposta a visibile</label>
                     <input type="radio" name="visibility" value="0">
-                    <label for="female">Imposta a non visibile</label>
+                    <label for="no-visible">Imposta a non visibile</label>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">

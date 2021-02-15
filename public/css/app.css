@@ -58,7 +58,7 @@
     align-items: center;
   }
   header .header-top .nav-menu-top .top-right {
-    display: none;
+    display: block;
   }
   header .header-top .nav-menu-top .links > a {
     color: #fff;

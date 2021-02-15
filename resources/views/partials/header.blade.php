@@ -30,16 +30,22 @@
                 <i class="fas fa-shopping-cart"></i>
             </div>
 
-            <div class="toggle-menu">
+            <div class="toggle-menu"  @click="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
 
     </div>
 
-    <div class="menu-mobile">
+    <div class="menu-mobile" :class="isActive ? 'active' : ''">
         <div class="nav-menu-mobile">
-
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Ristoranti</a></li>
+                <li><a href="">Categorie</a></li>
+                <li><a href="">Piatti</a></li>
+                <li><a href="">Contatti</a></li>
+            </ul>
         </div>
     </div>
 

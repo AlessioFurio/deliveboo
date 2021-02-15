@@ -12,6 +12,8 @@
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
         <!-- Styles -->
         {{-- <style>
             html, body {
@@ -68,12 +70,19 @@
     </head>
     <body>
 
-        @include('partials.header')
+        <div id="root">
+            @include('partials.header')
+        </div>
+
+
+
 
 
 
         {{-- @include('partials.section-card-category') --}}
 
         {{-- @include('partials.footer') --}}
+
+        <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
     </body>
 </html>

@@ -1,0 +1,60 @@
+#app {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.navbar {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+
+}
+
+.container-general {
+    height: 100%;
+    display: flex;
+
+}
+
+.container-brand {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+
+        .navbar-brand {
+            text-decoration: none;
+            color: #00ccbc;
+            font-size: 50px;
+        }
+
+}
+
+.container-login-register {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+        .container-navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .navbar-nav {
+
+
+                .nav-item a {
+                    text-decoration: none;
+                    list-style-type: none;
+                    color: white;
+                    font-size: 20px;
+                    margin-right: 50px;
+
+                }
+            }
+        }
+}

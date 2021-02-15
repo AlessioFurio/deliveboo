@@ -93,7 +93,8 @@ class DishController extends Controller
             abort(404);
         }
         $data = [
-            'dish' => $dish
+            'dish' => $dish,
+            'courses' => Course::all()
         ];
         return view('admin.dishes.edit', $data);
     }
@@ -105,9 +106,19 @@ class DishController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Dish $dish)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'ingredients' => 'required',
+            'price' => 'required',
+            'visibility' => 'required',
+            'course_id' => 'required'
+        ]);
+        $form_data = $request->all();
+        $dish->update($form_data);
+
+        return redirect()->route('admin.dishes.index');
     }
 
     /**

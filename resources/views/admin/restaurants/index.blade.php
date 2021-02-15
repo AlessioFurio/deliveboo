@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="">
-        <a href="{{route('admin.restaurants.create')}}">Aggiungi ristorante</a>
+
+<div class="container">
+    <div class="row">
+        <h1>I tuoi Ristoranti:</h1>
+        {{-- fghfghfggh --}}
     </div>
 <ul>
 

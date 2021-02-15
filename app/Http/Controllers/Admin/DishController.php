@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Dish;
 
 class DishController extends Controller
 {
@@ -14,7 +16,11 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        $restaurant_id = Auth::user()->id;
+        $data = [
+            'dishes' => Dish::where('restaurant_id' , $restaurant_id )->get()
+        ];
+      return view('admin.dishes.index', $data);
     }
 
     /**
@@ -24,7 +30,10 @@ class DishController extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'categories' => Dish::all(),
+        ];
+        return view('admin.dishes.create', $data);
     }
 
     /**
@@ -35,7 +44,21 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'ingredients' => 'required',
+            'price' => 'required',
+            'visibility' => 'required',
+            'course_id' => 'required'
+        ]);
+
+        $form_data = $request->all();
+        $new_dish = new Dish();
+        $new_dish->fill($form_data);
+        $new_dish->restaurant_id = Auth::user()->id;
+        $new_dish->save();
+
+        return redirect()->route('admin.dishes.index');
     }
 
     /**
@@ -44,9 +67,14 @@ class DishController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Dish $dish)
     {
-        //
+        
+        if(!$dish) {
+            abort(404);
+        }
+        $data = ['dish' => $dish];
+        return view('admin.dishes.show', $data);
     }
 
     /**

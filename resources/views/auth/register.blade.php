@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+<div class="container-general-register">
+    <div class="container-form-register">
+        <div class="container-card">
+            <div class="card-register">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                        <div class="form-group">
+                            <label for="name" class="label-name">{{ __('Name') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="container-input-name">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
@@ -25,10 +25,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                        <div class="form-group">
+                            <label for="email" class="label-email-address">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="container-input-email-address">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
@@ -39,10 +39,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <div class="form-group">
+                            <label for="password" class="label-password">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="container-input-password">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
@@ -53,18 +53,18 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                        <div class="form-group">
+                            <label for="password-confirm" class="label-confirm-password">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="container-input-confirm-password">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
+                        <div class="form-group">
+                            <label for="address" class="label-address">{{ __('Address') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="container-input-address">
                                 <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
 
                                 @error('address')
@@ -75,10 +75,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="VAT_number" class="col-md-4 col-form-label text-md-right">{{ __('VAT_number') }}</label>
+                        <div class="form-group">
+                            <label for="VAT_number" class="label-vat-number">{{ __('VAT_number') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="container-input-vat-number">
                                 <input id="VAT_number" type="text" class="form-control @error('VAT_number') is-invalid @enderror" name="VAT_number" value="{{ old('VAT_number') }}" required autocomplete="VAT_number" autofocus>
 
                                 @error('VAT_number')
@@ -89,9 +89,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="form-group">
+                            <div class="container-button-register">
+                                <button type="submit" class="button-register">
                                     {{ __('Register') }}
                                 </button>
                             </div>

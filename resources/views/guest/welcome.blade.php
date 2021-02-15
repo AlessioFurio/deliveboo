@@ -75,11 +75,7 @@
         </div>
 
 
-
-
-
-
-        {{-- @include('partials.section-card-category') --}}
+        @include('partials.section-card-category')
 
         {{-- @include('partials.footer') --}}
 

@@ -50,16 +50,18 @@
     </div>
 
     <div class="header-bottom">
-        {{-- <div class="nav-menu-bottom">
 
-                <select class="category-select" name="">
-                    <option value="">Seleziona categoria</option>
-                    <option value="">Categoria</option>
-                    <option value="">Categoria</option>
-                    <option value="">Categoria</option>
-                </select>
-            </div>
-        </div> --}}
+
+        <div class="nav-menu-bottom">
+            <span class="ricerca-avanzata">Ricerca Avanzata</span>
+
+            <select class="category-select" name="">
+                <option value="">Filtra ristorante per categoria</option>
+                <option value="">Categoria</option>
+                <option value="">Categoria</option>
+                <option value="">Categoria</option>
+            </select>
+        </div>
     </div>
 
 

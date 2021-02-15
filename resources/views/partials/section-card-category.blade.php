@@ -1,5 +1,5 @@
 <section class="card-category">
-    <div class="container">
+    <div class="container-card">
         <div class="cards">
 
             <div class="card">

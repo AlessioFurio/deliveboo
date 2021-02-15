@@ -55,12 +55,25 @@
         <div class="nav-menu-bottom">
             <span class="ricerca-avanzata">Ricerca Avanzata</span>
 
+<<<<<<< Updated upstream
             <select class="category-select" name="">
                 <option value="">Filtra ristorante per categoria</option>
                 <option value="">Categoria</option>
                 <option value="">Categoria</option>
                 <option value="">Categoria</option>
             </select>
+=======
+
+                <select class="category-select" name="">
+                    <option value="">Seleziona categoria</option>
+                    @foreach ($categories as $category)
+
+                      <option value="">{{$category->name}}</option>
+
+                    @endforeach
+                </select>
+            </div>
+>>>>>>> Stashed changes
         </div>
     </div>
 

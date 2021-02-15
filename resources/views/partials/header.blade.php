@@ -61,11 +61,11 @@
             <span class="ricerca-avanzata">Ricerca Avanzata</span>
 
 
-                <select class="category-select" name="">
+                <select class="category-select" name="" v-model="selectedCategory">
                     <option value="">Filtra ristorante per categoria</option>
                     @foreach ($categories as $category)
 
-                      <option value="">{{$category->name}}</option>
+                      <option :value="{{$category->id}}">{{$category->name}}</option>
 
                     @endforeach
                 </select>

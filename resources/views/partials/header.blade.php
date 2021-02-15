@@ -55,15 +55,15 @@
         <div class="nav-menu-bottom">
             <span class="ricerca-avanzata">Ricerca Avanzata</span>
 
-            <select class="category-select" name="">
-                <option value="">Filtra ristorante per categoria</option>
+
+                <select class="category-select" name="">
+                    <option value="">Filtra ristorante per categoria</option>
                     @foreach ($categories as $category)
 
                       <option value="">{{$category->name}}</option>
 
                     @endforeach
                 </select>
-            </div>
         </div>
     </div>
 

@@ -70,10 +70,10 @@
 
         @include('partials.header')
 
-        
 
-        @include('partials.section-card-category')
 
-        @include('partials.footer')
+        {{-- @include('partials.section-card-category') --}}
+
+        {{-- @include('partials.footer') --}}
     </body>
 </html>

@@ -1,5 +1,6 @@
 <header>
     <div class="filter"></div>
+
     <div class="header-top">
         <div class="logo">
             <a href="#">
@@ -28,12 +29,22 @@
             <div class="cart">
                 <i class="fas fa-shopping-cart"></i>
             </div>
+
+            <div class="toggle-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
 
     </div>
 
+    <div class="menu-mobile">
+        <div class="nav-menu-mobile">
+
+        </div>
+    </div>
+
     <div class="header-bottom">
-        <div class="nav-menu-bottom">
+        {{-- <div class="nav-menu-bottom">
 
                 <select class="category-select" name="">
                     <option value="">Seleziona categoria</option>
@@ -42,6 +53,8 @@
                     <option value="">Categoria</option>
                 </select>
             </div>
-        </div>
+        </div> --}}
     </div>
+
+
 </header>

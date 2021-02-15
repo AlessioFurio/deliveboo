@@ -17,6 +17,24 @@
                 margin: 50px;
                 width: 400px;
                 height: 250px;
+
+                h1 {
+                    display: none;
+                }
+            }
+
+            .card:hover {
+                opacity: 0.5;
+            }
+
+
+
+            .card:hover h1 {
+                color: #fff;
+                display: none;
+                font-size: 50px;
+                position: absolute;
+                display: block;
             }
         }
     }

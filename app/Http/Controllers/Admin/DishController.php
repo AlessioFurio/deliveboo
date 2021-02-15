@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Dish;
+use App\Course;
 
 class DishController extends Controller
 {
@@ -31,7 +32,8 @@ class DishController extends Controller
     public function create()
     {
         $data = [
-            'categories' => Dish::all(),
+            'dishes' => Dish::all(),
+            'courses' => Course::all(),
         ];
         return view('admin.dishes.create', $data);
     }
@@ -69,11 +71,13 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
-        
+
         if(!$dish) {
             abort(404);
         }
-        $data = ['dish' => $dish];
+        $data = [
+            'dish' => $dish
+        ];
         return view('admin.dishes.show', $data);
     }
 
@@ -83,9 +87,15 @@ class DishController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Dish $dish)
     {
-        //
+        if(!$dish) {
+            abort(404);
+        }
+        $data = [
+            'dish' => $dish
+        ];
+        return view('admin.dishes.edit', $data);
     }
 
     /**

@@ -159,26 +159,20 @@
   flex-wrap: wrap;
 }
 .card-category .container-card .cards .card {
-  background: url("/images/card.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: 50px;
   width: 400px;
   height: 250px;
+  position: relative;
 }
-.card-category .container-card .cards .card h1 {
-  display: none;
+.card-category .container-card .cards .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
 }
-.card-category .container-card .cards .card:hover {
-  opacity: 0.5;
-}
-.card-category .container-card .cards .card:hover h1 {
+.card-category .container-card .cards .card .title {
   color: #fff;
-  display: none;
-  font-size: 50px;
-  position: absolute;
-  display: block;
 }
 
 footer {

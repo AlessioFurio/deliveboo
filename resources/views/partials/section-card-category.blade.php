@@ -2,27 +2,15 @@
     <div class="container-card">
         <div class="cards">
 
-            <div class="card">
-                <h1>Categoria</h1>
-            </div>
-            <div class="card">
+            @foreach ($categories as $category)
+                <div class="card">
+                    <img src="/images/card.jpg" alt="">
+                    <div class="title">
+                        <h1>{{ $category->name }}</h1>
+                    </div>
+                </div>
+            @endforeach
 
-            </div>
-            <div class="card">
-
-            </div>
-
-            <div class="card">
-
-            </div>
-
-            <div class="card">
-
-            </div>
-
-            <div class="card">
-
-            </div>
         </div>
     </div>
 </section>

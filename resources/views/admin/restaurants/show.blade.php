@@ -20,7 +20,7 @@
     @foreach ($restaurant->dishes as $dish)
     <ul>
         <li>
-            Nome piatto: {{$dish->name}}
+                Nome piatto: {{$dish->name}}
         </li>
         <li>
             Ingredienti: {{$dish->ingredients}}

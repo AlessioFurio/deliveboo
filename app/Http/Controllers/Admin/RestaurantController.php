@@ -3,9 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Restaurant;
+use App\Category;
+use App\Dish;
+use Illuminate\Support\Str;
+
 
 class RestaurantController extends Controller
 {
@@ -31,7 +36,10 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'categories' => Category::all(),
+        ];
+        return view('admin.restaurants.create', $data);
     }
 
     /**
@@ -42,7 +50,43 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'address' => 'required | max:255',
+            // 'categories' => 'exists:categories,id',
+            'phone' => 'required|max:255'
+        ]);
+        $input_data = $request->all();
+        $add_restaurant = new Restaurant();
+        // if (array_key_exists('cover' , $input_data )) {
+        //     $image_path = Storage::put('cover_image' , $input_data['cover']);
+        //     $input_data['cover'] = $image_path;
+        // }
+        $add_restaurant->fill($input_data);
+        $slug = Str::slug($add_restaurant->name);
+        $slug_base = $slug;
+
+        $restaurant_if_exist = Restaurant::where('slug' , $slug)->first();
+        $j = 1;
+        while ($restaurant_if_exist) {
+            $slug = $slug_base .'-'.$j;
+            $j++;
+            $restaurant_if_exist = Restaurant::where('slug' , $slug)->first();
+
+        }
+        $add_restaurant->slug = $slug;
+        $add_restaurant->user_id = Auth::user()->id;
+
+
+
+        $add_restaurant->save();
+
+        // if(array_key_exists('tags', $input_data)) {
+        //     $add_restaurant->tags()->sync($input_data['tags']);
+        // }
+
+
+        return redirect()->route('admin.restaurants.index');
     }
 
     /**
@@ -68,9 +112,17 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Restaurant $restaurant)
     {
-        //
+        if ($restaurant) {
+            $data = [
+                'restaurant' => $restaurant
+                // 'categories' => Categories::all()
+            ];
+            return view('admin.restaurants.edit', $data);
+        }
+        abort(404);
+
     }
 
     /**
@@ -80,9 +132,42 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Restaurant $restaurant)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'address' => 'required | max:255',
+            // 'categories' => 'exists:categories,id',
+            'phone' => 'required|max:255'
+        ]);
+
+        $form_data = $request->all();
+        if ($form_data['name'] != $restaurant->name) {
+            $slug = Str::slug($form_data['name']);
+            $slug_base = $slug;
+
+            $restaurant_if_exist = Restaurant::where('slug' , $slug)->first();
+            $j = 1;
+            while ($restaurant_if_exist) {
+                $slug = $slug_base .'-'.$j;
+                $j++;
+                $restaurant_if_exist = Restaurant::where('slug' , $slug)->first();
+
+            }
+            $form_data['slug'] = $slug;
+        }
+
+        // if (array_key_exists('cover' , $form_data)) {
+        //     $image_path = Storage::put('cover_image' , $form_data['cover']);
+        //     $form_data['cover'] = $image_path;
+        // }
+
+        $restaurant->update($form_data);
+        // if(array_key_exists('tags', $form_data)) {
+        //     $restaurant->tags()->sync($form_data['tags']);
+        // }
+        return redirect()->route('admin.restaurants.index');
+
     }
 
     /**
@@ -91,8 +176,12 @@ class RestaurantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Restaurant $restaurant)
     {
-        //
+        $restaurant->categories()->sync([]);
+
+        $restaurant->delete();
+        return redirect()->route('admin.restaurants.index');
+
     }
 }

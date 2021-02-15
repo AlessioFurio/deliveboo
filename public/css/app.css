@@ -164,6 +164,19 @@
   width: 400px;
   height: 250px;
 }
+.card-category .container-card .cards .card h1 {
+  display: none;
+}
+.card-category .container-card .cards .card:hover {
+  opacity: 0.5;
+}
+.card-category .container-card .cards .card:hover h1 {
+  color: #fff;
+  display: none;
+  font-size: 50px;
+  position: absolute;
+  display: block;
+}
 
 footer {
   background-color: #0b0d0f;

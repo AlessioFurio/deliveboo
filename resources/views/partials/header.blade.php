@@ -57,10 +57,13 @@
 
             <select class="category-select" name="">
                 <option value="">Filtra ristorante per categoria</option>
-                <option value="">Categoria</option>
-                <option value="">Categoria</option>
-                <option value="">Categoria</option>
-            </select>
+                    @foreach ($categories as $category)
+
+                      <option value="">{{$category->name}}</option>
+
+                    @endforeach
+                </select>
+            </div>
         </div>
     </div>
 

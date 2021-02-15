@@ -26,9 +26,24 @@
                 <div>{{ $message }}</div>
                 @enderror
             </div>
+            <div class="form-group col-12">
+                @foreach ($categories as $category)
+                <div class="form-check">
+                    <input name="categories[]" class="form-check-input" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
+                    <label class="form-check-label">
+                        {{ $category->name }}
+                    </label>
+                </div>
+                @endforeach
+                @error('categories')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+            </div>
+
         </div>
         <button type="submit">Aggiungi</button>
     </form>
+
 
 
 @endsection

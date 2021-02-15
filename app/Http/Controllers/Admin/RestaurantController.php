@@ -23,6 +23,7 @@ class RestaurantController extends Controller
     {
         $user_id = Auth::user()->id;
         $data = [
+            'category' => Category::all(),
             'restaurants' => Restaurant::where('user_id' , $user_id )->get()
         ];
         return view('admin.restaurants.index' , $data);
@@ -53,7 +54,7 @@ class RestaurantController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'address' => 'required | max:255',
-            // 'categories' => 'exists:categories,id',
+            'categories' => 'exists:categories,id',
             'phone' => 'required|max:255'
         ]);
         $input_data = $request->all();
@@ -81,9 +82,9 @@ class RestaurantController extends Controller
 
         $add_restaurant->save();
 
-        // if(array_key_exists('tags', $input_data)) {
-        //     $add_restaurant->tags()->sync($input_data['tags']);
-        // }
+        if(array_key_exists('categories', $input_data)) {
+            $add_restaurant->categories()->sync($input_data['categories']);
+        }
 
 
         return redirect()->route('admin.restaurants.index');

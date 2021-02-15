@@ -1,0 +1,9 @@
+@extends('layouts.app')
+@section('content')
+    <h1>
+      {{$restaurant->name}}
+    </h1>
+    <h3>
+      {{$restaurant->address}}
+    </h3>
+@endsection

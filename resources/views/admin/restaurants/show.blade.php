@@ -25,8 +25,11 @@
             </a>
             <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica
             </a>
-            <a href="{{ route('admin.dishes.destroy', ['dish' => $dish->id]) }}">Cancella
-            </a>
+            <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
+                <button type="submit" name="button" class="btn btn-danger">Elimina piatto</button>
+                @csrf
+                @method('DELETE')
+            </form>
         </li>
         <li>
             Ingredienti: {{$dish->ingredients}}

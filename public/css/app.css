@@ -366,12 +366,12 @@ footer {
   border-radius: 10px;
   background-color: lightgrey;
 }
-.card .card-header {
+.card .card-header-login {
   font-size: 40px;
   margin: 20px 0 20px 0;
   text-align: center;
 }
-.card .card-body {
+.card .card-body-login {
   padding: 0 30px;
 }
 
@@ -440,12 +440,12 @@ footer {
   border-radius: 10px;
   background-color: lightgrey;
 }
-.card-register .card-header {
+.card-register .card-header-register {
   font-size: 40px;
   margin: 20px 0 20px 0;
   text-align: center;
 }
-.card-register .card-body {
+.card-register .card-body-register {
   padding: 0 30px;
 }
 

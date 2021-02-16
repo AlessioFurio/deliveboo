@@ -56,9 +56,9 @@
 
                 <div class="body-restaurant-card">
                     <div class="details-restaurant-card">
-                        <h3>ID:</h3>
-                        <h3>Indirizzo:</h3>
-                        <h3>Telefono:</h3>
+                        <p>ID: <strong>{{ $restaurant->id }}</strong></p>
+                        <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>
+                        <p>Telefono:</p> <strong>{{ $restaurant->phone }}</strong></p>
                     </div>
                     <div class="action-restaurant-card">
                         <div class="container-btn-action">

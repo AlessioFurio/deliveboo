@@ -29,9 +29,17 @@
             }
 
             .restaurants {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 50px;
+
                 .restaurant-card {
-                    max-width: 100%;
-                    padding: 50px;
+                    max-width: 80%;
+                    background-color: #B0C4DE;
+                    margin: 50px;
+                    padding: 30px;
+                    border-radius: 10px;
 
                     .title-restaurant-card{
                         text-align: center;
@@ -45,6 +53,8 @@
                         .action-restaurant-card {
 
                             .container-btn-action{
+
+                                padding-left: 10px;
 
                                 .btn-dettagli {
                                     background-color: #4169E1;
@@ -92,4 +102,7 @@
 
 @media screen and (min-width: 500px){
 
+    .container-restaurant .row-table .restaurants .restaurant-card {
+        max-width: 80%;
+    }
 }

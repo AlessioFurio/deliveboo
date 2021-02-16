@@ -3,13 +3,13 @@
 @section('content')
 
 
-<div class="container">
-    <div class="row">
+<div class="container container-restaurant">
+    <div class="row row-title">
         <h1>I tuoi Ristoranti:</h1>
     </div>
-    <div class="row">
-        <div class="text-center">
-            <a href="{{route('admin.restaurants.create')}}" class="btn btn-primary">Aggiungi Ristorante</a>
+    <div class="row row-table">
+        <div class="btn-add-restaurant">
+            <a href="{{route('admin.restaurants.create')}}" class="btn btn-primary add-restaurant">Aggiungi Ristorante</a>
         </div>
 
         <table class="table">

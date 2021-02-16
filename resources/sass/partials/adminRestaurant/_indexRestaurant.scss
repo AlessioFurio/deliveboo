@@ -1,0 +1,51 @@
+@media screen and (min-width: 200px){
+
+    .container-restaurant {
+
+        .row-title {
+            text-align: center;
+        }
+
+        .row-table {
+            
+
+            .btn-add-restaurant {
+                padding: 20px 0;
+
+                .add-restaurant {
+                    display: inline-block;
+                    background-color: #4169E1;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 10px;
+                    border-radius: 5px;
+                    color: #fff;
+                }
+            }
+
+
+        }
+
+        .row-table {
+
+            .table {
+
+
+                thead {
+
+                }
+                tr {
+                    font-size: 13px;
+                    th {
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 500px){
+
+}

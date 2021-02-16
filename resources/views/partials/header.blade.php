@@ -55,21 +55,6 @@
 
     <div class="header-bottom">
 
-
-        <div class="nav-menu-bottom">
-            <button @click="searchRestaurants()" type="button" name="button">Cerca</button>
-            <span class="ricerca-avanzata">Ricerca Avanzata</span>
-
-
-                <select class="category-select" name="" v-model="selectedCategory">
-                    <option value="">Filtra ristorante per categoria</option>
-                    @foreach ($categories as $category)
-
-                      <option :value="{{$category->id}}">{{$category->name}}</option>
-
-                    @endforeach
-                </select>
-        </div>
     </div>
 
 

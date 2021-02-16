@@ -5,22 +5,22 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Restaurant;
-use App\Category;
+use Illuminate\Database\Eloquent\Builder;
 
 class RestaurantController extends Controller
 {
     public function index () {
-        $restaurants = Restaurant::all(); // prendo tutti i post
-        return response()->json([ // restituisce un json con i vari post
-            'success' => true,
-            'results' => $restaurants
-        ]);
-    }
+      $category_id = $_GET['query']; //recupero il parametro query (id di category)
 
-    public function searchCategory ($category) {
-        // dd($_GET);
-        $category = Category::find(1);
+      if($category_id) { //se la categoria e' selezionata
+        $restaurants = Restaurant::whereHas('categories', function (Builder $query) use ($category_id)  {
+          $query->where('id', '=', $category_id);
+        })->get(); //cerco quei ristoranti che hanno una categoria con id specifica
+      } else {
+        $restaurants = Restaurant::all();
+      }
 
+         // prendo tutti i post
         return response()->json([ // restituisce un json con i vari post
             'success' => true,
             'results' => $restaurants

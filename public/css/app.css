@@ -524,3 +524,48 @@ footer {
     background-color: #FFA500;
   }
 }
+.container-general-dashboard {
+  height: 100vh;
+  background-color: grey;
+}
+
+.container-card {
+  padding-top: 100px;
+}
+
+.card-dashboard {
+  width: 80%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: lightgrey;
+}
+.card-dashboard .card-header-dashboard {
+  font-size: 40px;
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+.card-body-dashboard {
+  padding: 0 30px;
+  color: red;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container-button {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.container-button button {
+  padding: 10px;
+  background-color: yellow;
+  margin: 10px 30px;
+}
+.container-button button a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}

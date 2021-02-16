@@ -1,24 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<div class="container-general-dashboard">
+    <div class="container-dashboard">
+        <div class="container-card">
+            <div class="card-dashboard">
+                <div class="card-header-dashboard">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
+                <div class="card-body-dashboard">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="session-status" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
                     {{ __('You are logged in!') }}
                 </div>
-                <a href="{{route('admin.restaurants.index')}}">I tuoi ristoranti</a>
-                <a href="{{route('admin.orders.index')}}">Riepilogo Ordini</a>
-                <a href="{{route('admin.dishes.index')}}">I tuoi piatti</a>
+                <div class="container-button">
+                    <button class="ristoranti" type="button" name="button">
+                        <a href="{{route('admin.restaurants.index')}}">I tuoi ristoranti</a>
+                    </button>
+                    <button class="ordini" type="button" name="button">
+                        <a href="{{route('admin.orders.index')}}">Riepilogo Ordini</a>
+                    </button>
+                    <button class="piatti" type="button" name="button">
+                        <a href="{{route('admin.dishes.index')}}">I tuoi piatti</a>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

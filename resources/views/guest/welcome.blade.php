@@ -73,7 +73,7 @@
         <div id="root">
             @include('partials.header')
             @include('partials.section-card-category')
-            @include('partials.footer')
+            {{-- @include('partials.footer') --}}
         </div>
 
         {{--sfkasdopfkjdsapofdsf--}}

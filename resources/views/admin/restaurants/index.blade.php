@@ -38,14 +38,14 @@
                                 @method('DELETE')
                             </form>
                         </td> --}}
-                    </tr>
+                     </tr>
                 @endforeach
             </tbody>
         </table>
 
 
-<<<<<<< HEAD
-                <div class="body-restaurant-card">
+
+                {{-- <div class="body-restaurant-card">
                     <div class="details-restaurant-card">
                         <p>ID: <strong>{{ $restaurant->id }}</strong></p>
                         <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>
@@ -57,10 +57,7 @@
                             <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-warning btn-modifica">Modifica</a>
                         </div>
                     </div>
-                </div>
-=======
->>>>>>> main
-
+                </div> --}}
     </div>
 </div>
 

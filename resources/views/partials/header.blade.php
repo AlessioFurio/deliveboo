@@ -57,7 +57,7 @@
 
 
         <div class="nav-menu-bottom">
-            <button @click="searchFilm()" type="button" name="button">Cerca</button>
+            <button @click="searchRestaurants()" type="button" name="button">Cerca</button>
             <span class="ricerca-avanzata">Ricerca Avanzata</span>
 
 

@@ -18,16 +18,7 @@ var app = new Vue({
 			}
 		},
 
-		searchFilm(){ // funzione cerca film
-			// axios
-			// .get('http://localhost:8000/api/restaurants')
-			// .then((risposta) =>{
-			//
-			// 	this.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
-			//
-			//
-			// }); // fine then
-
+		searchRestaurants(){ // funzione cerca restaurants
 			axios
 			.get('http://localhost:8000/api/restaurants', {
 				params:{
@@ -40,7 +31,7 @@ var app = new Vue({
 
 
 			}); // fine then
-		}, // fine searcFilm
+		}, // fine searchRestaurants
 	},
 
 });

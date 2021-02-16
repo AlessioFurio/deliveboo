@@ -147,16 +147,8 @@
     padding-right: 50px;
   }
 }
-.card-category {
-  background-color: #040909;
-}
 .card-category .container-card {
   margin: auto;
-}
-.card-category .container-card .cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 .card-category .container-card .cards .card {
   margin: 50px;

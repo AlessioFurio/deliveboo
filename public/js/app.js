@@ -37351,18 +37351,10 @@ var app = new Vue({
         this.isActive = false;
       }
     },
-    searchFilm: function searchFilm() {
+    searchRestaurants: function searchRestaurants() {
       var _this = this;
 
-      // funzione cerca film
-      // axios
-      // .get('http://localhost:8000/api/restaurants')
-      // .then((risposta) =>{
-      //
-      // 	this.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
-      //
-      //
-      // }); // fine then
+      // funzione cerca restaurants
       axios.get('http://localhost:8000/api/restaurants', {
         params: {
           query: this.selectedCategory
@@ -37370,7 +37362,7 @@ var app = new Vue({
       }).then(function (risposta) {
         _this.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
       }); // fine then
-    } // fine searcFilm
+    } // fine searchRestaurants
 
   }
 });
@@ -37440,8 +37432,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -2,50 +2,107 @@
 
     .container-restaurant {
 
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
         .row-title {
             text-align: center;
         }
 
         .row-table {
-            
+
 
             .btn-add-restaurant {
                 padding: 20px 0;
 
                 .add-restaurant {
-                    display: inline-block;
+
                     background-color: #4169E1;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    padding: 10px;
-                    border-radius: 5px;
-                    color: #fff;
+
                 }
             }
 
+            .restaurants {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 50px;
 
-        }
+                .restaurant-card {
+                    max-width: 80%;
+                    background-color: #B0C4DE;
+                    margin: 50px;
+                    padding: 30px;
+                    border-radius: 10px;
 
-        .row-table {
+                    .title-restaurant-card{
+                        text-align: center;
+                    }
 
-            .table {
+                    .body-restaurant-card{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
 
+                        .action-restaurant-card {
 
-                thead {
+                            .container-btn-action{
 
-                }
-                tr {
-                    font-size: 13px;
-                    th {
+                                padding-left: 10px;
 
+                                .btn-dettagli {
+                                    background-color: #4169E1;
+                                }
+
+                                .btn-modifica {
+                                    background-color: #FFA500;
+                                }
+                            }
+                        }
                     }
                 }
             }
+
+
+            // .table {
+            //     width: 100%;
+            //     tbody{
+            //         tr{
+            //             .btn {
+            //                 display: inline-block;
+            //                 padding: 8px;
+            //                 border: 1px solid #000;
+            //                 border-radius: 5px;
+            //                 text-decoration: none;
+            //                 color: #fff;
+            //                 text-transform: uppercase;
+            //             }
+            //
+            //             .btn-dettagli {
+            //                 background-color: #4169E1;
+            //             }
+            //
+            //             .btn-modifica {
+            //                 background-color: #FFA500;
+            //             }
+            //         }
+            //     }
+            // }
         }
+
     }
 
 }
 
 @media screen and (min-width: 500px){
 
+    .container-restaurant .row-table .restaurants .restaurant-card {
+        max-width: 80%;
+    }
 }

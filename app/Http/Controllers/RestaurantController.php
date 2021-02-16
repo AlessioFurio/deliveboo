@@ -15,11 +15,10 @@ class RestaurantController extends Controller
         abort(404);
     }
 
-
     $courses_id = [];
 
     foreach ($restaurant->dishes as $dish) {
-      if (!in_array($dish->course_id, $courses_id)) {
+      if (!in_array($dish->course_id)) {
         $courses_id[] = $dish->course_id;
       }
     }

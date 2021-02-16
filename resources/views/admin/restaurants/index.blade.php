@@ -3,13 +3,13 @@
 @section('content')
 
 
-<div class="container container-restaurant">
-    <div class="row row-title">
+<div class="container">
+    <div class="row">
         <h1>I tuoi Ristoranti:</h1>
     </div>
-    <div class="row row-table">
-        <div class="btn-add-restaurant">
-            <a href="{{route('admin.restaurants.create')}}" class="btn btn-primary add-restaurant">Aggiungi Ristorante</a>
+    <div class="row">
+        <div class="text-center">
+            <a href="{{route('admin.restaurants.create')}}" class="btn btn-primary">Aggiungi Ristorante</a>
         </div>
 
         <table class="table">
@@ -44,6 +44,22 @@
         </table>
 
 
+<<<<<<< HEAD
+                <div class="body-restaurant-card">
+                    <div class="details-restaurant-card">
+                        <p>ID: <strong>{{ $restaurant->id }}</strong></p>
+                        <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>
+                        <p>Telefono:</p> <strong>{{ $restaurant->phone }}</strong></p>
+                    </div>
+                    <div class="action-restaurant-card">
+                        <div class="container-btn-action">
+                            <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class=" btn btn-dettagli">Dettagli</a>
+                            <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-warning btn-modifica">Modifica</a>
+                        </div>
+                    </div>
+                </div>
+=======
+>>>>>>> main
 
     </div>
 </div>

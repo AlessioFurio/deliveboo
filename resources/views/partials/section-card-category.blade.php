@@ -23,6 +23,12 @@
                 <div class="card" v-for="restaurant in restaurants">
                     <img src="/images/card.jpg" alt="">
                     <p>@{{ restaurant.name }}</p>
+
+                    {{-- <div class="command-cart">
+                        <button type="button" name="button">-</button>
+                        <span>0</span>
+                        <button type="button" name="button">+</button>
+                    </div> --}}
                 </div>
             </div>
 

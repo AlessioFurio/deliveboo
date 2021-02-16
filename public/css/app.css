@@ -487,3 +487,23 @@ footer {
     padding: 0 60px;
   }
 }
+@media screen and (min-width: 200px) {
+  .container-restaurant .row-title {
+    text-align: center;
+  }
+  .container-restaurant .row-table .btn-add-restaurant {
+    padding: 20px 0;
+  }
+  .container-restaurant .row-table .btn-add-restaurant .add-restaurant {
+    display: inline-block;
+    background-color: #4169E1;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .container-restaurant .row-table .table tr {
+    font-size: 13px;
+  }
+}

@@ -22,7 +22,7 @@ class DishController extends Controller
         $restaurants = Restaurant::where('user_id' , $user_id )->get();
         // dd($restaurants);
         $data = [
-            'restaurants' => $restaurants 
+            'restaurants' => $restaurants
         ];
       return view('admin.dishes.index', $data);
     }
@@ -74,8 +74,9 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
+        $user_id = Auth::user()->id;
 
-        if(!$dish) {
+        if(!$dish || $dish->restaurant->user_id != $user_id ) {
             abort(404);
         }
         $data = [
@@ -92,7 +93,9 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
-        if(!$dish) {
+
+        $user_id = Auth::user()->id;
+        if(!$dish || $dish->restaurant->user_id != $user_id) {
             abort(404);
         }
         $data = [
@@ -132,6 +135,12 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
+        $user_id = Auth::user()->id;
+        if(!$dish || $dish->restaurant->user_id != $user_id) {
+            abort(404);
+        }
+
+
         $dish->delete();
 
         return redirect()->route('admin.dishes.index');

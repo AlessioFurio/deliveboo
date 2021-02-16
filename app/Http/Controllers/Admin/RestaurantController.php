@@ -98,7 +98,8 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        if ($restaurant) {
+        $user_id = Auth::user()->id;
+        if ($restaurant && $restaurant->user_id == $user_id) {
             $data = [
                 'restaurant' => $restaurant
             ];
@@ -115,7 +116,9 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
-        if ($restaurant) {
+        $user_id = Auth::user()->id;
+
+        if ($restaurant && $restaurant->user_id == $user_id) {
             $data = [
                 'restaurant' => $restaurant
                 // 'categories' => Categories::all()
@@ -179,10 +182,17 @@ class RestaurantController extends Controller
      */
     public function destroy(Restaurant $restaurant)
     {
+        $user_id = Auth::user()->id;
+
+        if ($restaurant && $restaurant->user_id == $user_id) {
+
+
         $restaurant->categories()->sync([]);
 
         $restaurant->delete();
         return redirect()->route('admin.restaurants.index');
+        }
+        abort(404);
 
     }
 }

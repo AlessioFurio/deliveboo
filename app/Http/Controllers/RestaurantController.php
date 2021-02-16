@@ -15,16 +15,7 @@ class RestaurantController extends Controller
         abort(404);
     }
 
-
-    $courses_id = [];
-
-    foreach ($restaurant->dishes as $dish) {
-      if (!in_array($dish->course_id, $courses_id)) {
-        $courses_id[] = $dish->course_id;
-      }
-    }
-
-    $courses = Course::whereIn('id', $courses_id)->get();
+    $courses = Course::all();
 
     $data = [
       'restaurant' => $restaurant,

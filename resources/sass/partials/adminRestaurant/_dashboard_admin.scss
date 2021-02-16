@@ -1,0 +1,46 @@
+.container-general-dashboard {
+    height: 100vh;
+    background-color: grey;
+}
+
+.container-card {
+    padding-top: 100px;
+}
+
+.card-dashboard {
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: lightgrey;
+
+        .card-header-dashboard {
+            font-size: 40px;
+            margin: 20px 0 20px 0;
+            text-align: center;
+        }
+}
+
+.card-body-dashboard {
+    padding: 0 30px;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+
+        button {
+            padding: 20px;
+            background-color: yellow;
+
+                a {
+                    text-decoration: none;
+                    font-size: 20px;
+                }
+        }
+}

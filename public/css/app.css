@@ -147,6 +147,25 @@
     padding-right: 50px;
   }
 }
+.card-category {
+  background-color: #FAF0E6;
+}
+.card-category .container-card-category {
+  padding: 50px 0;
+  display: flex;
+}
+.card-category .menu-filter {
+  background-color: #c1c1c1;
+  min-width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-category .menu-filter .category-select {
+  max-width: 80%;
+}
 .card-category .container-card {
   margin: auto;
 }
@@ -156,7 +175,7 @@
   flex-wrap: wrap;
 }
 .card-category .container-card .cards .card {
-  margin: 50px;
+  margin: 0 50px 50px 50px;
   width: 400px;
   height: 250px;
   position: relative;

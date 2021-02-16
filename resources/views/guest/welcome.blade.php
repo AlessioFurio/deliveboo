@@ -73,13 +73,14 @@
         <div id="root">
             @include('partials.header')
             @include('partials.section-card-category')
+            @include('partials.footer')
         </div>
 
         {{--sfkasdopfkjdsapofdsf--}}
 
 
 
-        {{-- @include('partials.footer') --}}
+
 
         <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
     </body>

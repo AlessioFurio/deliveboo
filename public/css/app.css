@@ -506,7 +506,8 @@ footer {
     background-color: #4169E1;
   }
   .container-restaurant .row-table .restaurants .restaurant-card {
-    border: 1px solid red;
+    max-width: 100%;
+    padding: 50px;
   }
   .container-restaurant .row-table .restaurants .restaurant-card .title-restaurant-card {
     text-align: center;

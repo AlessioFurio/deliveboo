@@ -8,6 +8,8 @@ use App\Restaurant;
 use Illuminate\Database\Eloquent\Builder;
 
 class RestaurantController extends Controller
+
+//filtro per selezione categoria
 {
     public function index () {
       $category_id = $_GET['query']; //recupero il parametro query (id di category)

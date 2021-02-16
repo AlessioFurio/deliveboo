@@ -417,10 +417,10 @@ footer {
   .card {
     width: 50%;
   }
-  .card .card-header {
+  .card .card-header-login {
     font-size: 50px;
   }
-  .card .card-body {
+  .card .card-body-login {
     padding: 0 60px;
   }
 }
@@ -480,10 +480,10 @@ footer {
   .card-register {
     width: 50%;
   }
-  .card-register .card-header {
+  .card-register .card-header-register {
     font-size: 50px;
   }
-  .card-register .card-body {
+  .card-register .card-body-register {
     padding: 0 60px;
   }
 }

@@ -5,9 +5,9 @@
     <div class="container-form-login">
         <div class="container-card">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header-login">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body-login">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

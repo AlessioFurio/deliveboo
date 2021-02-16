@@ -3,23 +3,23 @@
 @section('content')
 
 
-<div class="container container-restaurant">
-    <div class="row row-title">
+<div class="container">
+    <div class="row">
         <h1>I tuoi Ristoranti:</h1>
     </div>
-
-    <div class="row row-table">
-        <div class="btn-add-restaurant">
-            <a href="{{route('admin.restaurants.create')}}" class="btn add-restaurant">Aggiungi Ristorante</a>
+    <div class="row">
+        <div class="text-center">
+            <a href="{{route('admin.restaurants.create')}}" class="btn btn-primary">Aggiungi Ristorante</a>
         </div>
 
-        {{-- <table class="table">
+        <table class="table">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Indirizzo</th>
                     <th>Telefono</th>
+                    <th>azioni</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,36 +29,27 @@
                         <td> <a href="{{route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}">{{$restaurant->name}}</a></td>
                         <td>{{$restaurant->address}}</td>
                         <td>{{$restaurant->phone}}</td>
-
+                        <td><a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-primary">Dettagli</a></td>
+                        <td><a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-warning">Modifica</a></td>
                         {{-- <td>
                             <form action="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" method="post">
                                 <button type="submit" name="button" class="btn btn-danger">Elimina</button>
                                 @csrf
                                 @method('DELETE')
                             </form>
-                        </td> --}} {{--
-                    </tr>
-                    <tr>
-                        <td><a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class=" btn btn-dettagli">Dettagli</a></td>
-                        <td><a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-warning btn-modifica">Modifica</a></td>
+                        </td> --}}
                     </tr>
                 @endforeach
             </tbody>
-        </table> --}}
+        </table>
 
-        <div class="restaurants">
-            @foreach ($restaurants as $restaurant)
-            <div class="restaurant-card">
 
-                <div class="title-restaurant-card">
-                    <p>Nome Ristorante: <strong>{{  $restaurant->name }}</strong></p>
-                </div>
-
+<<<<<<< HEAD
                 <div class="body-restaurant-card">
                     <div class="details-restaurant-card">
-                        <h3>ID:</h3>
-                        <h3>Indirizzo:</h3>
-                        <h3>Telefono:</h3>
+                        <p>ID: <strong>{{ $restaurant->id }}</strong></p>
+                        <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>
+                        <p>Telefono:</p> <strong>{{ $restaurant->phone }}</strong></p>
                     </div>
                     <div class="action-restaurant-card">
                         <div class="container-btn-action">
@@ -67,10 +58,9 @@
                         </div>
                     </div>
                 </div>
+=======
+>>>>>>> main
 
-            </div>
-            @endforeach
-        </div>
     </div>
 </div>
 

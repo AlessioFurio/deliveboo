@@ -1,9 +1,11 @@
 #app {
+    width: 100%;
     height: 100px;
     background-color: black;
 }
 
 .navbar {
+    width: 1200px;
     height: 100%;
     margin: auto;
 
@@ -25,8 +27,7 @@
         .navbar-brand {
             text-decoration: none;
             color: #00ccbc;
-            font-size: 30px;
-            padding-left: 20px;
+            font-size: 50px;
         }
 
 }
@@ -34,86 +35,31 @@
 .container-login-register {
     width: 50%;
     display: flex;
-    justify-content: center;
-
+    justify-content: flex-end;
+    align-items: center;
 
 
         .container-navbar {
             display: flex;
+            justify-content: flex-end;
             align-items: center;
 
             .navbar-nav {
 
-                .nav-item {
-                    display: block;
-                    padding-bottom: 5px;
 
-                    a {
-                        text-decoration: none;
-                        list-style-type: none;
-                        color: white;
-                        font-size: 20px;
-                    }
+                .nav-item a {
+                    text-decoration: none;
+                    list-style-type: none;
+                    color: white;
+                    font-size: 20px;
+                    margin-right: 50px;
+
                 }
             }
         }
 }
 
-
-
-@media screen and (min-width: 768px){
-
-    .container-brand {
-        .navbar-brand {
-            font-size: 50px;
-
-        }
-    }
-
-    .container-login-register {
-        justify-content: flex-end;
-        .container-navbar {
-            .navbar-nav {
-                .nav-item {
-                    display: inline-block;
-                        a {
-                            margin-right: 30px;
-                        }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1024px){
-
-    .navbar {
-        width: 100%;
-    }
-
-    .container-brand {
-
-        .navbar-brand {
-            padding-left: 50px;
-        }
-
-    }
-
-    .container-login-register {
-
-        .container-navbar {
-
-            .navbar-nav {
-
-                .nav-item {
-
-                        a {
-                            margin-right: 50px;
-                        }
-                }
-            }
-        }
-    }
+@media screen and (min-width:480px){
 
 
 }

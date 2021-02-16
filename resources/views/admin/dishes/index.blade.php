@@ -23,24 +23,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($dishes as $dish)
-                        <tr>
-                            <td>{{ $dish->id }}</td>
-                            <td>{{ $dish->name }}</td>
-                            <td>{{ $dish->ingredients }}</td>
-                            <td>{{ $dish->course->name }}</td>
-                            <td>{{ $dish->visibility }}</td>
-                            <td>{{ $dish->price }}</td>
-                            <td><a class="btn btn-info" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">Visualizza piatto</a></td>
-                            <td><a class="btn btn-info" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica piatto</a></td>
-                            <td>
-                                <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                    <button type="submit" name="button" class="btn btn-danger">Elimina piatto</button>
-                                    @csrf
-                                    @method('DELETE')
-                                </form>
-                            </td>
-                        </tr>
+                    @foreach ($restaurants as $restaurant)
+                            @foreach ($restaurant->dishes as $dish)
+                                <tr>
+
+                                <td>{{ $dish->id }}</td>
+                                <td>{{ $dish->name }}</td>
+                                <td>{{ $dish->ingredients }}</td>
+                                <td>{{ $dish->course->name }}</td>
+                                <td>{{ $dish->visibility }}</td>
+                                <td>{{ $dish->price }}</td>
+                                <td><a class="btn btn-info" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">Visualizza piatto</a></td>
+                                <td><a class="btn btn-info" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica piatto</a></td>
+                                <td>
+                                    <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
+                                        <button type="submit" name="button" class="btn btn-danger">Elimina piatto</button>
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
+                                </td>
+                            </tr>
+                            @endforeach
                     @endforeach
                 </tbody>
             </table>

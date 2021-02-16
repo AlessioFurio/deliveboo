@@ -1,5 +1,23 @@
 .card-category {
-    // background-color: #040909;
+    background-color: #FAF0E6;
+    .container-card-category {
+        padding: 50px 0;
+        display: flex;
+    }
+
+    .menu-filter {
+        background-color: #c1c1c1;
+        min-width: 200px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .category-select {
+            max-width: 80%;
+        }
+    }
 
     .container-card {
         margin: auto;
@@ -10,7 +28,7 @@
             flex-wrap: wrap;
 
             .card {
-                margin: 50px;
+                margin: 0 50px 50px 50px;
                 width: 400px;
                 height: 250px;
                 position: relative;

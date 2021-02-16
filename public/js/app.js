@@ -37364,7 +37364,20 @@ var app = new Vue({
       }); // fine then
     } // fine searchRestaurants
 
-  }
+  },
+  // fine methods
+  mounted: function mounted() {
+    var _this2 = this;
+
+    axios.get('http://localhost:8000/api/restaurants', {
+      params: {
+        query: this.selectedCategory
+      }
+    }).then(function (risposta) {
+      _this2.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+    }); // fine then
+  } // fine mounted
+
 });
 
 /***/ }),

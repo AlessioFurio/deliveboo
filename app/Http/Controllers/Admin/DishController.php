@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Dish;
 use App\Course;
+use App\Restaurant;
 
 class DishController extends Controller
 {
@@ -17,9 +18,11 @@ class DishController extends Controller
      */
     public function index()
     {
-        $restaurant_id = Auth::user()->id;
+        $user_id = Auth::user()->id;
+        $restaurants = Restaurant::where('user_id' , $user_id )->get();
+        // dd($restaurants);
         $data = [
-            'dishes' => Dish::where('restaurant_id' , $restaurant_id )->get()
+            'restaurants' => $restaurants 
         ];
       return view('admin.dishes.index', $data);
     }

@@ -12,7 +12,8 @@ class RestaurantController extends Controller
 //filtro per selezione categoria
 {
     public function index () {
-      $category_id = $_GET['query']; //recupero il parametro query (id di category)
+        
+        $category_id = $_GET['query']; //recupero il parametro query (id di category)
 
       if($category_id) { //se la categoria e' selezionata
         $restaurants = Restaurant::whereHas('categories', function (Builder $query) use ($category_id)  {

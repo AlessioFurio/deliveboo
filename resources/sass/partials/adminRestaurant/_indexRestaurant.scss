@@ -2,46 +2,89 @@
 
     .container-restaurant {
 
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
         .row-title {
             text-align: center;
         }
 
         .row-table {
-            
+
 
             .btn-add-restaurant {
                 padding: 20px 0;
 
                 .add-restaurant {
-                    display: inline-block;
+
                     background-color: #4169E1;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    padding: 10px;
-                    border-radius: 5px;
-                    color: #fff;
+
                 }
             }
 
+            .restaurants {
+                .restaurant-card {
+                    border: 1px solid red;
 
-        }
+                    .title-restaurant-card{
+                        text-align: center;
+                    }
 
-        .row-table {
+                    .body-restaurant-card{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
 
-            .table {
+                        .action-restaurant-card {
 
+                            .container-btn-action{
 
-                thead {
+                                .btn-dettagli {
+                                    background-color: #4169E1;
+                                }
 
-                }
-                tr {
-                    font-size: 13px;
-                    th {
-
+                                .btn-modifica {
+                                    background-color: #FFA500;
+                                }
+                            }
+                        }
                     }
                 }
             }
+
+
+            // .table {
+            //     width: 100%;
+            //     tbody{
+            //         tr{
+            //             .btn {
+            //                 display: inline-block;
+            //                 padding: 8px;
+            //                 border: 1px solid #000;
+            //                 border-radius: 5px;
+            //                 text-decoration: none;
+            //                 color: #fff;
+            //                 text-transform: uppercase;
+            //             }
+            //
+            //             .btn-dettagli {
+            //                 background-color: #4169E1;
+            //             }
+            //
+            //             .btn-modifica {
+            //                 background-color: #FFA500;
+            //             }
+            //         }
+            //     }
+            // }
         }
+
     }
 
 }

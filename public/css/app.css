@@ -488,6 +488,14 @@ footer {
   }
 }
 @media screen and (min-width: 200px) {
+  .container-restaurant .btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
   .container-restaurant .row-title {
     text-align: center;
   }
@@ -495,15 +503,23 @@ footer {
     padding: 20px 0;
   }
   .container-restaurant .row-table .btn-add-restaurant .add-restaurant {
-    display: inline-block;
     background-color: #4169E1;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
   }
-  .container-restaurant .row-table .table tr {
-    font-size: 13px;
+  .container-restaurant .row-table .restaurants .restaurant-card {
+    border: 1px solid red;
+  }
+  .container-restaurant .row-table .restaurants .restaurant-card .title-restaurant-card {
+    text-align: center;
+  }
+  .container-restaurant .row-table .restaurants .restaurant-card .body-restaurant-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container-restaurant .row-table .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-dettagli {
+    background-color: #4169E1;
+  }
+  .container-restaurant .row-table .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
+    background-color: #FFA500;
   }
 }

@@ -22,7 +22,6 @@
 
 .card-register {
     width: 80%;
-    height: 650px;
     margin: auto;
     border: 1px solid black;
     border-radius: 10px;
@@ -32,7 +31,7 @@
 
 .card-header {
     font-size: 50px;
-    margin: 10px 0 20px 0;
+    margin: 20px 0 20px 0;
     text-align: center;
 }
 
@@ -64,7 +63,7 @@
 
                 display: flex;
                 justify-content: center;
-                margin-top: 50px;
+                margin: 50px 0;
 
 
                     .button-register {

@@ -330,7 +330,6 @@ footer {
 
 .card {
   width: 70%;
-  height: 400px;
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
@@ -339,7 +338,7 @@ footer {
 
 .card-header {
   font-size: 50px;
-  margin: 10px 0 20px 0;
+  margin: 20px 0 20px 0;
   text-align: center;
 }
 
@@ -377,7 +376,12 @@ footer {
 }
 .form-group .forgot-password {
   text-align: center;
-  padding-top: 25px;
+  padding: 25px 0 5px 0;
+}
+.form-group .forgot-password a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
 }
 
 .container-general-register {
@@ -402,7 +406,6 @@ footer {
 
 .card-register {
   width: 80%;
-  height: 650px;
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
@@ -411,7 +414,7 @@ footer {
 
 .card-header {
   font-size: 50px;
-  margin: 10px 0 20px 0;
+  margin: 20px 0 20px 0;
   text-align: center;
 }
 
@@ -435,7 +438,7 @@ footer {
 .form-group .container-button-register {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 .form-group .container-button-register .button-register {
   font-size: 30px;

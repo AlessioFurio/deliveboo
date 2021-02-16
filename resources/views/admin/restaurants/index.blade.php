@@ -54,13 +54,13 @@
                         <td>{{$restaurant->phone}}</td>
                         <td><a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-primary">Dettagli</a></td>
                         <td><a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-warning">Modifica</a></td>
-                        <td>
+                        {{-- <td>
                             <form action="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" method="post">
                                 <button type="submit" name="button" class="btn btn-danger">Elimina</button>
                                 @csrf
                                 @method('DELETE')
                             </form>
-                        </td>
+                        </td> --}}
                     </tr>
                 @endforeach
             </tbody>

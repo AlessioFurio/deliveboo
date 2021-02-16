@@ -33,8 +33,8 @@
                                 <td>{{ $dish->course->name }}</td>
                                 <td>{{ $dish->visibility }}</td>
                                 <td>{{ $dish->price }}</td>
-                                <td><a class="btn btn-info" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">Visualizza piatto</a></td>
-                                <td><a class="btn btn-info" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica piatto</a></td>
+                                <td><a class="btn btn-info mr-2" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">Visualizza piatto</a></td>
+                                <td><a class="btn btn-info mr-2" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica piatto</a></td>
                                 <td>
                                     <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
                                         <button type="submit" name="button" class="btn btn-danger">Elimina piatto</button>

@@ -275,7 +275,6 @@ footer {
 }
 
 #app {
-  width: 100%;
   height: 100px;
   background-color: black;
 }
@@ -299,64 +298,81 @@ footer {
 .container-brand .navbar-brand {
   text-decoration: none;
   color: #00ccbc;
-  font-size: 50px;
+  font-size: 30px;
+  padding-left: 20px;
 }
 
 .container-login-register {
   width: 50%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
 }
 .container-login-register .container-navbar {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+}
+.container-login-register .container-navbar .navbar-nav .nav-item {
+  display: block;
+  padding-bottom: 5px;
 }
 .container-login-register .container-navbar .navbar-nav .nav-item a {
   text-decoration: none;
   list-style-type: none;
   color: white;
   font-size: 20px;
-  margin-right: 50px;
 }
 
+@media screen and (min-width: 768px) {
+  .container-brand .navbar-brand {
+    font-size: 50px;
+  }
+
+  .container-login-register {
+    justify-content: flex-end;
+  }
+  .container-login-register .container-navbar .navbar-nav .nav-item {
+    display: inline-block;
+  }
+  .container-login-register .container-navbar .navbar-nav .nav-item a {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .container-brand .navbar-brand {
+    padding-left: 50px;
+  }
+
+  .container-login-register .container-navbar .navbar-nav .nav-item a {
+    margin-right: 50px;
+  }
+}
 .container-general-login {
-  width: 100%;
   height: 100vh;
   background-color: grey;
 }
 
 .container-form-login {
-  width: 1200px;
-  margin: auto;
   padding-top: 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: grey;
-}
-
-.container-card {
-  width: 100%;
 }
 
 .card {
-  width: 70%;
+  width: 80%;
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
   background-color: lightgrey;
 }
-
-.card-header {
-  font-size: 50px;
+.card .card-header {
+  font-size: 40px;
   margin: 20px 0 20px 0;
   text-align: center;
 }
-
-.card-body {
-  padding: 0 100px;
+.card .card-body {
+  padding: 0 30px;
 }
 
 .form-group {
@@ -397,24 +413,24 @@ footer {
   color: black;
 }
 
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 50%;
+  }
+  .card .card-header {
+    font-size: 50px;
+  }
+  .card .card-body {
+    padding: 0 60px;
+  }
+}
 .container-general-register {
-  width: 100%;
   height: 100vh;
   background-color: grey;
 }
 
 .container-form-register {
-  width: 1200px;
-  margin: auto;
   padding-top: 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: grey;
-}
-
-.container-card {
-  width: 100%;
 }
 
 .card-register {
@@ -424,15 +440,13 @@ footer {
   border-radius: 10px;
   background-color: lightgrey;
 }
-
-.card-header {
-  font-size: 50px;
+.card-register .card-header {
+  font-size: 40px;
   margin: 20px 0 20px 0;
   text-align: center;
 }
-
-.card-body {
-  padding: 0 100px;
+.card-register .card-body {
+  padding: 0 30px;
 }
 
 .form-group {
@@ -462,6 +476,17 @@ footer {
   border-radius: 5px;
 }
 
+@media screen and (min-width: 1024px) {
+  .card-register {
+    width: 50%;
+  }
+  .card-register .card-header {
+    font-size: 50px;
+  }
+  .card-register .card-body {
+    padding: 0 60px;
+  }
+}
 @media screen and (min-width: 200px) {
   .container-restaurant .btn {
     display: inline-block;

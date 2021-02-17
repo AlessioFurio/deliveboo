@@ -23,8 +23,8 @@
                 @csrf
                 @method('POST')
                 <div class="form-group">
-                    @if (isset($_GET['rest']))
-                    <input type="text" name="restaurant_id" value="{{$restaurants}}" hidden>
+                    @if (isset($_GET['rest']) && in_array($_GET['rest'], $own_id))
+                    <input type="hidden" name="restaurant_id" value="{{$restaurants}}" >
                     @else
                     <label>Scegli il ristorante</label>
                     <select class="" name="restaurant_id">

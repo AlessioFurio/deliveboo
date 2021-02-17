@@ -34,17 +34,25 @@ class DishController extends Controller
      */
     public function create()
     {
+        $own_id = [];
         $user_id = Auth::user()->id;
-        if (isset($_GET['rest'])) {
+        $collect = Restaurant::where('user_id' , $user_id )->get();
+        foreach ($collect as $collection) {
+            if (!in_array($collection->id, $own_id )) {
+                $own_id[] = $collection->id;
+            }
+        }
+        if (isset($_GET['rest']) && in_array($_GET['rest'], $own_id )) {
             $restaurants = $_GET['rest'];
         }else {
-            $restaurants = Restaurant::where('user_id' , $user_id )->get();
+            $restaurants = $collect;
         }
 
         $data = [
             'restaurants' => $restaurants,
             'dishes' => Dish::all(),
             'courses' => Course::all(),
+            'own_id' => $own_id
         ];
         return view('admin.dishes.create', $data);
     }

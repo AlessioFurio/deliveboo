@@ -35,9 +35,14 @@ class DishController extends Controller
     public function create()
     {
         $user_id = Auth::user()->id;
+        if (isset($_GET['rest'])) {
+            $restaurants = $_GET['rest'];
+        }else {
+            $restaurants = Restaurant::where('user_id' , $user_id )->get();
+        }
 
         $data = [
-            'restaurants' => Restaurant::where('user_id' , $user_id )->get(),
+            'restaurants' => $restaurants,
             'dishes' => Dish::all(),
             'courses' => Course::all(),
         ];

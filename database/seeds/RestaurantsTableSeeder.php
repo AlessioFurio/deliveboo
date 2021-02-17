@@ -20,8 +20,8 @@ class RestaurantsTableSeeder extends Seeder
             $new_restaurant->name = $faker->sentence($nbWords = 3, $variableNbWords = true);
             $new_restaurant->address = $faker->address();
             $new_restaurant->phone = $faker->phoneNumber();
-            $new_restaurant->user_id = 1;
-            
+            $new_restaurant->user_id = $faker->numberBetween($min = 71, $max = 90);
+
             $slug = Str::slug($new_restaurant->name);
             $current_restaurant = Restaurant::where('slug', $slug)->first();
             $slug_base = $slug;

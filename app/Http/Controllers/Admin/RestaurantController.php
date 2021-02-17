@@ -25,7 +25,7 @@ class RestaurantController extends Controller
         $user_id = Auth::user()->id;
         $data = [
             'category' => Category::all(),
-            'restaurants' => Restaurant::where('user_id' , $user_id )->get()
+            'restaurants' => Restaurant::where('user_id' , $user_id )->orderBy('name', 'asc')->get()
         ];
         return view('admin.restaurants.index' , $data);
 
@@ -99,7 +99,7 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        
+
         $user_id = Auth::user()->id;
         if ($restaurant && $restaurant->user_id == $user_id) {
             $data = [
@@ -122,8 +122,8 @@ class RestaurantController extends Controller
 
         if ($restaurant && $restaurant->user_id == $user_id) {
             $data = [
-                'restaurant' => $restaurant
-                // 'categories' => Categories::all()
+                'restaurant' => $restaurant,
+                'categories' => Category::all()
             ];
             return view('admin.restaurants.edit', $data);
         }
@@ -143,7 +143,7 @@ class RestaurantController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'address' => 'required | max:255',
-            // 'categories' => 'exists:categories,id',
+            'categories' => 'exists:categories,id',
             'phone' => 'required|max:255'
         ]);
 
@@ -169,9 +169,9 @@ class RestaurantController extends Controller
         // }
 
         $restaurant->update($form_data);
-        // if(array_key_exists('tags', $form_data)) {
-        //     $restaurant->tags()->sync($form_data['tags']);
-        // }
+        if(array_key_exists('categories', $form_data)) {
+            $restaurant->categories()->sync($form_data['categories']);
+        }
         return redirect()->route('admin.restaurants.index');
 
     }

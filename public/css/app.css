@@ -667,6 +667,10 @@ footer {
   .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
     background-color: #FFA500;
   }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-elimina {
+    background-color: #DC143C;
+    border: none;
+  }
 }
 @media screen and (min-width: 500px) {
   .container-restaurant .row-table .restaurants .restaurant-card {
@@ -840,6 +844,125 @@ footer {
   .container-button button {
     padding: 15px;
     margin: 0px 50px;
+  }
+}
+@media screen and (min-width: 200px) {
+  .dashboard .btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+  }
+  .dashboard .dashboard-header {
+    background-color: #101927;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+  }
+  .dashboard .dashboard-header h1 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 25px;
+  }
+  .dashboard .dashboard-body {
+    display: flex;
+    height: calc(100vh - 100px - 48px);
+  }
+  .dashboard .dashboard-body .dashboard-body-menu {
+    background-color: #101927;
+    height: 100%;
+    flex-basis: 40%;
+  }
+  .dashboard .dashboard-body .dashboard-body-menu ul li {
+    border-bottom: 1px solid #c1c1c1;
+  }
+  .dashboard .dashboard-body .dashboard-body-menu ul li a {
+    width: 100%;
+    padding: 15px 0;
+  }
+  .dashboard .dashboard-body .dashboard-body-menu ul li a:hover {
+    background-color: #3A5FCD;
+  }
+  .dashboard .dashboard-body .dashboard-body-content {
+    background-color: #e3e8f1;
+    height: 100%;
+    flex-basis: 80%;
+    overflow-y: scroll;
+  }
+
+  .container-restaurant {
+    height: 100%;
+  }
+  .container-restaurant .row-title h1 {
+    text-align: center;
+  }
+  .container-restaurant .btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .container-restaurant .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container-restaurant .restaurants .restaurant-card {
+    flex-basis: 100%;
+    background-color: #B0C4DE;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+  }
+  .container-restaurant .restaurants .restaurant-card .title-restaurant-card {
+    text-align: center;
+  }
+  .container-restaurant .restaurants .restaurant-card .title-restaurant-card h1 {
+    font-size: 20px;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .details-restaurant-card {
+    padding: 20px 0;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action {
+    text-align: center;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn {
+    margin-bottom: 5px;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-dettagli {
+    background-color: #4169E1;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
+    background-color: #FFA500;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-elimina {
+    background-color: #dc143c;
+  }
+}
+@media screen and (min-width: 500px) {
+  .container-restaurant .row-table .restaurants .restaurant-card {
+    max-width: 80%;
+  }
+
+  .container-restaurant .restaurants {
+    justify-content: center;
+  }
+  .container-restaurant .restaurants .container-restaurant .restaurants .restaurant-card {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .dashboard .dashboard-body .dashboard-body-menu {
+    flex-basis: 25%;
+  }
+
+  .container-restaurant .restaurants .restaurant-card {
+    flex-basis: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dashboard .dashboard-body .dashboard-body-menu {
+    flex-basis: 20%;
   }
 }
 @media screen and (min-width: 200px) {

@@ -59,7 +59,7 @@
                                       <td><a class="btn btn-info" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica piatto</a></td>
                                       <td>
                                           <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                              <button type="submit" name="button" class="btn btn-elimina">Elimina piatto</button>
+                                              <button class="btn btn-elimina" type="submit" name="button">Elimina piatto</button>
                                               @csrf
                                               @method('DELETE')
                                           </form>
@@ -67,7 +67,7 @@
                                   </tr>
                               @endforeach
                               </tbody>
-                          </table> --}}
+                          </table>
                         </div>
                       </div>
                     </div>

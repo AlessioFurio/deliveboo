@@ -1,0 +1,189 @@
+@media screen and (min-width: 200px){
+
+    .dashboard {
+
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .dashboard-header {
+            background-color: #101927;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+
+            h1 {
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 25px;
+            }
+        }
+        .dashboard-body {
+            display: flex;
+            height: calc(100vh - 100px - 48px);
+
+            .dashboard-body-menu{
+                background-color: #101927;
+                height: 100%;
+                flex-basis: 40%;
+
+                ul{
+                    li {
+                        border-bottom: 1px solid #c1c1c1;
+                        a{
+                            width: 100%;
+                            padding: 15px 0;
+
+                            &:hover {
+                                background-color: #3A5FCD;
+
+                            }
+                        }
+                    }
+                }
+
+            }
+            .dashboard-body-content{
+                background-color: #e3e8f1;
+                height: 100%;
+                flex-basis: 80%;
+                overflow-y: scroll;
+            }
+        }
+    }
+
+    .container-restaurant {
+
+        height: 100%;
+
+        .row-title{
+            h1 {
+                text-align: center;
+            }
+        }
+
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+
+
+        .restaurants {
+            display: flex;
+            flex-wrap: wrap;
+
+            .restaurant-card {
+                flex-basis: 100%;
+                background-color: #B0C4DE;
+                border-radius: 10px;
+                margin: 20px;
+                padding: 10px;
+
+                .title-restaurant-card{
+                    text-align: center;
+
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+
+                .body-restaurant-card{
+
+                    .details-restaurant-card {
+                        padding: 20px 0;
+                    }
+
+                    .action-restaurant-card {
+
+                        .container-btn-action{
+
+                            text-align: center;
+
+                            .btn {
+                                margin-bottom: 5px;
+                            }
+
+                            .btn-dettagli {
+                                background-color: #4169E1;
+                            }
+
+                            .btn-modifica {
+                                background-color: #FFA500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+            // .table {
+            //     width: 100%;
+            //     tbody{
+            //         tr{
+            //             .btn {
+            //                 display: inline-block;
+            //                 padding: 8px;
+            //                 border: 1px solid #000;
+            //                 border-radius: 5px;
+            //                 text-decoration: none;
+            //                 color: #fff;
+            //                 text-transform: uppercase;
+            //             }
+            //
+            //             .btn-dettagli {
+            //                 background-color: #4169E1;
+            //             }
+            //
+            //             .btn-modifica {
+            //                 background-color: #FFA500;
+            //             }
+            //         }
+            //     }
+            // }
+        }
+
+    }
+
+
+@media screen and (min-width: 500px){
+
+    .container-restaurant .row-table .restaurants .restaurant-card {
+        max-width: 80%;
+    }
+
+    .container-restaurant .restaurants{
+        justify-content: center;
+
+        .container-restaurant .restaurants .restaurant-card {
+            flex-basis: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .dashboard .dashboard-body .dashboard-body-menu{
+        flex-basis: 25%;
+    }
+
+    .container-restaurant .restaurants .restaurant-card {
+        flex-basis: 40%;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .dashboard .dashboard-body .dashboard-body-menu{
+        flex-basis: 20%;
+    }
+}

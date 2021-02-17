@@ -55,10 +55,10 @@
                               </div>
                               <div class="action-restaurant-card">
                                 <div class="container-btn-action">
-                                  <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-primary btn-dettagli">Dettagli</a>
-                                  <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-warning btn-modifica">Modifica</a>
+                                  <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-dettagli">Dettagli</a>
+                                  <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-modifica">Modifica</a>
                                   <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                    <button type="submit" name="button" class="btn btn-danger">Elimina piatto</button>
+                                  <button type="submit" name="button">Elimina piatto</button>
                                     @csrf
                                     @method('DELETE')
                                   </form>

@@ -43,7 +43,7 @@
                                 </span>
                             @endif
                         @else
-                            <span class="nav-item dropdown">
+                            <span class="nav-item">
                                 <a id="navbarDropdown" class="nav-link" href="#">
                                     {{ Auth::user()->name }}
                                 </a>

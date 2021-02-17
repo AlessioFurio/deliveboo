@@ -33,14 +33,13 @@
 
                           <div class="restaurant-card">
                             <div class="title-restaurant-card">
-                              <h4>Nome ristorante: </h4>
+                              <h4>Nome piatto: </h4>
                               <h1>{{ $dish->name }}</h1>
                             </div>
                             <div class="body-restaurant-card">
                               <div class="details-restaurant-card">
 
                                 <p>ID: <strong>{{ $dish->id }}</strong></p>
-                                <p>Nome piatto: <strong>{{ $dish->name }}</strong></p>
                                 <p>Ingredienti:</p> <strong>{{ $dish->ingredients }}</strong></p>
                                 <p>Portata:</p> <strong>{{ $dish->course->name }}</strong></p>
                                 <p>Visibilita':</p>

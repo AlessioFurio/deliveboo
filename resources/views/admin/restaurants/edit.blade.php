@@ -7,13 +7,7 @@
         <h1>Dashboard</h1>
     </div>
     <div class="dashboard-body">
-        <div class="dashboard-body-menu">
-            <ul>
-                <li>
-                    <a href="{{route('admin.restaurants.create')}}" class="btn add-restaurant">Aggiungi Ristorante</a>
-                </li>
-            </ul>
-        </div>
+        @include('layouts.layout-dashboard-body-menu')
 
         <div class="dashboard-body-content">
             <div class="card-form">

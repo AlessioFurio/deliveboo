@@ -380,7 +380,7 @@ footer {
 }
 .container-general-login {
   height: 100vh;
-  background-color: grey;
+  background-color: #101927;
 }
 
 .container-form-login {
@@ -392,7 +392,7 @@ footer {
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: lightgrey;
+  background-color: #e3e8f1;
 }
 .card-login .card-header-login {
   font-size: 30px;
@@ -495,7 +495,7 @@ footer {
 }
 .container-general-register {
   height: 100vh;
-  background-color: grey;
+  background-color: #101927;
 }
 
 .container-form-register {
@@ -507,7 +507,7 @@ footer {
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: lightgrey;
+  background-color: #e3e8f1;
 }
 
 .card-header-register {
@@ -693,9 +693,47 @@ footer {
     flex-basis: 20%;
   }
 }
+@media screen and (min-width: 200px) {
+  .dashboard-body-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dashboard-body-content .card-form {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  .dashboard-body-content .card-form .card-title {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .dashboard-body-content .card-form form .content-form {
+    text-align: center;
+  }
+  .dashboard-body-content .card-form form .content-form input {
+    padding: 20px 0;
+    margin: 10px 0;
+    width: 70%;
+    border-radius: 5px;
+    background-color: #e3e8f1;
+    border: none;
+    color: #fff;
+  }
+  .dashboard-body-content .card-form form .content-form button {
+    background-color: #101927;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
 .container-general-dashboard {
   height: 100vh;
-  background-color: grey;
+  background-color: #101927;
 }
 
 .container-card {
@@ -707,7 +745,7 @@ footer {
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: lightgrey;
+  background-color: #e3e8f1;
 }
 .card-dashboard .card-header-dashboard {
   font-size: 30px;

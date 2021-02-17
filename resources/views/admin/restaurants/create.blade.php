@@ -1,49 +1,89 @@
+
 @extends('layouts.app')
 
 @section('content')
-    <form method="post" action="{{route('admin.restaurants.store')}}" enctype="multipart/form-data">
-        @csrf
-        @method('POST')
-        <div>
-            <div >
-                <label>Nome ristorante</label>
-                <input value="{{old('name')}}" type="text" name="name" required>
-                @error('name')
-                <div>{{ $message }}</div>
-                @enderror
-            </div>
-            <div >
-                <label>indirizzo</label>
-                <input value="{{old('address')}}" type="text" name="address" required>
-                @error('address')
-                <div>{{ $message }}</div>
-                @enderror
-            </div>
-            <div >
-                <label>Telefono</label>
-                <input value="{{old('phone')}}" type="number" name="phone" required>
-                @error('phone')
-                <div>{{ $message }}</div>
-                @enderror
-            </div>
-            <div class="form-group col-12">
-                @foreach ($categories as $category)
-                <div class="form-check">
-                    <input name="categories[]" class="form-check-input" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
-                    <label class="form-check-label">
-                        {{ $category->name }}
-                    </label>
+
+<div class="dashboard">
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="dashboard-body">
+        <div class="dashboard-body-menu">
+            <ul>
+                <li>
+                    <a href="{{route('admin.restaurants.create')}}" class="btn add-restaurant">Aggiungi Ristorante</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dashboard-body-content">
+
+            <div class="card-form">
+
+                <div class="card-title">
+                    <h2>Aggiungi Ristorante</h2>
                 </div>
-                @endforeach
-                @error('categories')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
+                <form method="post" action="{{route('admin.restaurants.store')}}" enctype="multipart/form-data">
+                    @csrf
+                    @method('POST')
+                    <div class="content-form">
+                        <div>
+                            <input value="{{old('name')}}" type="text" name="name" required placeholder="Nome Ristorante">
+                            @error('name')
+                            <div>{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div>
+                            <input value="{{old('address')}}" type="text" name="address" required placeholder="Indirizzo">
+                            @error('address')
+                            <div>{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div>
+                            <input value="{{old('phone')}}" type="text" name="phone" required placeholder="Telefono">
+                            @error('phone')
+                            <div>{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <label for="">Categoria</label>
+                            <div class="form-group col-12">
+                                @foreach ($categories as $category)
+                                <div class="form-check">
+                                    <input name="categories[]" class="form-check-input" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
+                                    <label class="form-check-label">
+                                        {{ $category->name }}
+                                    </label>
+                                </div>
+                                @endforeach
+                                @error('categories')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        {{-- <div class="form-group col-12">
+                            @foreach ($categories as $category)
+                            <div class="form-check">
+                                <input name="categories[]" class="form-check-input" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
+                                <label class="form-check-label">
+                                    {{ $category->name }}
+                                </label>
+                            </div>
+                            @endforeach
+                            @error('categories')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div> --}}
+                        <button type="submit">Aggiungi</button>
+                    </div>
+                </form>
             </div>
 
         </div>
-        <button type="submit">Aggiungi</button>
-    </form>
-
-
+    </div>
+</div>
 
 @endsection

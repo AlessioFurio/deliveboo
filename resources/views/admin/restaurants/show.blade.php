@@ -21,100 +21,64 @@
           </div>
 
           <div class="dashboard-body-content">
-              <div class="container-restaurant">
+              <div class="container-restaurant-show">
                   <div class="row row-title">
                       <h1>
-                        Dettaglio ristorante
+                        Dettagli ristorante
                       </h1>
+                      <h2>
+                        {{$restaurant->name}}
+                      </h2>
+                      <h3>
+                        {{$restaurant->address}}
+                      </h3>
+                      <h4>
+                        {{$restaurant->phone}}
+                      </h4>
+                      <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="btn btn-new">
+                        Crea nuovo piatto
+                      </a>
                   </div>
-                  <div class="restaurants">
-                    <div class="restaurant-card">
-                      <div class="title-restaurant-card">
-                        <h4>{{$restaurant->name}}</h4>
-                        <p>
-                          {{$restaurant->address}}
-                        </p>
-                        <p>
-                          {{$restaurant->phone}}
-                        </p>
-                      </div>
-                      <div class="body-restaurant-card">
-                        <div class="details-restaurant-card">
-                          <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="btn btn-primary">
-                              Crea nuovo piatto
-                          </a>
 
-                          <table class="table">
-                              <thead>
-                                  <tr>
-                                      <th>Nome</th>
-                                      <th>Azioni</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                              @foreach ($restaurant->dishes as $dish)
-                                  <tr>
-                                      <td>{{$dish->name}}</td>
-                                      <td><a class="btn btn-info" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">Visualizza piatto</a></td>
-                                      <td><a class="btn btn-info" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica piatto</a></td>
-                                      <td>
-                                          <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                              <button type="submit" name="button" class="btn btn-elimina">Elimina piatto</button>
-                                              @csrf
-                                              @method('DELETE')
-                                          </form>
-                                      </td>
-                                  </tr>
-                              @endforeach
-                              </tbody>
-                          </table> --}}
+                  <h3>
+                    I tuoi piatti:
+                  </h3>
+                  <div class="restaurants">
+
+                      @foreach ($restaurant->dishes as $dish)
+                        <div class="restaurant-card-show">
+                          <div class="body-restaurant-card">
+                            <h3>
+                              {{$dish->name}}
+                            </h3>
+
+                            <div class="details-restaurant-card">
+                              <div class="action-restaurant-card">
+                                <div class="container-btn-action">
+                                  <a class="btn btn-dettagli" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">
+                                    Visualizza
+                                  </a>
+                                  <a class="btn btn-modifica" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">
+                                    Modifica
+                                  </a>
+
+                                  <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
+                                    <button type="submit" name="button" class="btn btn-elimina">Elimina</button>
+                                    @csrf
+                                    @method('DELETE')
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
+                      @endforeach
+
                   </div>
               </div>
           </div>
       </div>
   </div>
 
-{{-- <ul>
-    <li>
-        nome Ristorante: {{$restaurant->name}}
-    </li>
-    <li>
-        indirizzo: {{$restaurant->address}}
-    </li>
-    <li>
-        telefono: {{$restaurant->phone}}
-    </li>
-</ul>
-<br>
-<a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="btn btn-primary">
-    Crea nuovo piatto
-</a>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Azioni</th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach ($restaurant->dishes as $dish)
-        <tr>
-            <td>{{$dish->name}}</td>
-            <td><a class="btn btn-info" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">Visualizza piatto</a></td>
-            <td><a class="btn btn-info" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">Modifica piatto</a></td>
-            <td>
-                <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                    <button type="submit" name="button" class="btn btn-danger">Elimina piatto</button>
-                    @csrf
-                    @method('DELETE')
-                </form>
-            </td>
-        </tr>
-    @endforeach
-    </tbody>
-</table> --}}
 @endsection

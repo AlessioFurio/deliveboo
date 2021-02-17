@@ -54,14 +54,24 @@
         }
     }
 
-    .container-restaurant {
-
+    .container-restaurant-show {
+        max-width: 80%;
         height: 100%;
 
         .row-title{
-            h1 {
-                text-align: center;
-            }
+
+          h1, h2 {
+            padding-bottom: 20px;
+          }
+
+          h1 {
+              text-align: center;
+          }
+
+          .btn-new {
+            background-color: green;
+            margin: 20px 0;
+          }
         }
 
         .btn{
@@ -79,25 +89,17 @@
             display: flex;
             flex-wrap: wrap;
 
-            .restaurant-card {
-                flex-basis: 100%;
+            .restaurant-card-show {
+                flex-basis: 30%;
                 background-color: #B0C4DE;
                 border-radius: 10px;
-                margin: 20px;
+                margin: 20px 10px;
                 padding: 10px;
 
-                .title-restaurant-card{
-                    text-align: center;
-
-                    h1 {
-                        font-size: 20px;
-                    }
-                }
-
                 .body-restaurant-card{
-
                     .details-restaurant-card {
                         padding: 20px 0;
+
                     }
 
                     .action-restaurant-card {
@@ -159,16 +161,14 @@
 
 @media screen and (min-width: 500px){
 
-    .container-restaurant .row-table .restaurants .restaurant-card {
+    .container-restaurant .row-table .restaurants .restaurant-card-show {
         max-width: 80%;
     }
 
     .container-restaurant .restaurants{
         justify-content: center;
 
-        .container-restaurant .restaurants .restaurant-card {
-            flex-basis: 50%;
-        }
+
     }
 }
 
@@ -178,9 +178,7 @@
         flex-basis: 25%;
     }
 
-    .container-restaurant .restaurants .restaurant-card {
-        flex-basis: 40%;
-    }
+
 
 
 }
@@ -190,4 +188,6 @@
     .dashboard .dashboard-body .dashboard-body-menu{
         flex-basis: 20%;
     }
+
+
 }

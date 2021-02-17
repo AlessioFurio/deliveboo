@@ -3,11 +3,11 @@
 @section('content')
 <div class="container-general-register">
     <div class="container-form-register">
-        <div class="container-card">
-            <div class="card-register">
-                <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
+            <div class="card-register">
+                <div class="card-header-register">{{ __('Register') }}</div>
+
+                <div class="card-body-register">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="label-email-address">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="label-email-address-register">{{ __('E-Mail Address') }}</label>
 
                             <div class="container-input-email-address">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="label-password">{{ __('Password') }}</label>
+                            <label for="password" class="label-password-register">{{ __('Password') }}</label>
 
                             <div class="container-input-password">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -99,7 +99,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+
     </div>
 </div>
 @endsection

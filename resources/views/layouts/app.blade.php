@@ -25,44 +25,42 @@
 <body>
     <div id="app">
         <nav class="navbar">
-            <div class="container-general">
-                <div class="container-brand">
+            <div class="container-general-navbar">
+                <div class="container-brand-navbar">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Deliveroo') }}
                     </a>
                 </div>
                 <div class="container-login-register">
-                    <div class="container-navbar">
-                        <div class="navbar-nav">
-                            @guest
+                    <div class="navbar-nav">
+                        @guest
+                            <span class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </span>
+                            @if (Route::has('register'))
                                 <span class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </span>
-                                @if (Route::has('register'))
-                                    <span class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                    </span>
-                                @endif
-                            @else
-                                <span class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link" href="#">
-                                        {{ Auth::user()->name }}
+                            @endif
+                        @else
+                            <span class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link" href="#">
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
                                     </a>
 
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </span>
-                            @endguest
-                        </div>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </span>
+                        @endguest
                     </div>
                 </div>
             </div>

@@ -275,96 +275,124 @@ footer {
 }
 
 #app {
-  width: 100%;
   height: 100px;
   background-color: black;
 }
 
 .navbar {
-  width: 1200px;
   height: 100%;
-  margin: auto;
 }
 
-.container-general {
+.container-general-navbar {
   height: 100%;
   display: flex;
 }
 
-.container-brand {
+.container-brand-navbar {
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.container-brand .navbar-brand {
+.container-brand-navbar .navbar-brand {
   text-decoration: none;
   color: #00ccbc;
-  font-size: 50px;
+  font-size: 30px;
+  padding-left: 20px;
 }
 
 .container-login-register {
   width: 50%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
-.container-login-register .container-navbar {
+.container-login-register .navbar-nav {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
 }
-.container-login-register .container-navbar .navbar-nav .nav-item a {
+.container-login-register .navbar-nav .nav-item {
+  margin-bottom: 5px;
+}
+.container-login-register .navbar-nav .nav-item a {
   text-decoration: none;
   list-style-type: none;
   color: white;
   font-size: 20px;
-  margin-right: 50px;
 }
 
+@media screen and (min-width: 768px) {
+  .container-brand-navbar .navbar-brand {
+    padding-left: 40px;
+    font-size: 40px;
+  }
+
+  .container-login-register {
+    justify-content: flex-end;
+  }
+  .container-login-register .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-login-register .navbar-nav .nav-item {
+    margin-bottom: 0;
+  }
+  .container-login-register .navbar-nav .nav-item a {
+    margin-right: 40px;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-brand-navbar .navbar-brand {
+    padding-left: 50px;
+    font-size: 50px;
+  }
+
+  .container-login-register {
+    justify-content: flex-end;
+  }
+  .container-login-register .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-login-register .navbar-nav .nav-item {
+    margin-bottom: 0;
+  }
+  .container-login-register .navbar-nav .nav-item a {
+    margin-right: 50px;
+    font-size: 30px;
+  }
+}
 .container-general-login {
-  width: 100%;
   height: 100vh;
   background-color: grey;
 }
 
 .container-form-login {
-  width: 1200px;
-  margin: auto;
   padding-top: 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: grey;
 }
 
-.container-card {
-  width: 100%;
-}
-
-.card {
-  width: 70%;
+.card-login {
+  width: 80%;
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
   background-color: lightgrey;
 }
-
-.card-header {
-  font-size: 50px;
+.card-login .card-header-login {
+  font-size: 30px;
   margin: 20px 0 20px 0;
   text-align: center;
 }
-
-.card-body {
-  padding: 0 100px;
+.card-login .card-body-login {
+  padding: 0 20px;
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 .form-group .label-email-address, .form-group .label-password {
-  font-size: 20px;
+  font-size: 18px;
 }
 .form-group .container-input-email input, .form-group .container-input-password input {
   width: 100%;
@@ -372,50 +400,91 @@ footer {
   border: 1px solid black;
   border-radius: 10px;
 }
-.form-group .form-check .form-check-label {
+
+.form-check .form-check-label {
   font-size: 18px;
   margin-left: 5px;
 }
-.form-group .container-button-login {
+
+.container-button-login {
   display: flex;
   justify-content: center;
 }
-.form-group .container-button-login .button-login {
-  font-size: 30px;
+.container-button-login .button-login {
+  font-size: 20px;
   padding: 5px 20px;
   background-color: #00ccbc;
   color: black;
   border: 1px solid black;
   border-radius: 5px;
 }
-.form-group .forgot-password {
+
+.forgot-password {
   text-align: center;
   padding: 25px 0 5px 0;
 }
-.form-group .forgot-password a {
-  font-size: 20px;
+.forgot-password a {
+  font-size: 18px;
   text-decoration: none;
   color: black;
 }
 
+@media screen and (min-width: 1024px) {
+  .card-login {
+    width: 60%;
+  }
+  .card-login .card-header-login {
+    font-size: 40px;
+  }
+  .card-login .card-body-login {
+    padding: 0 50px;
+  }
+
+  .form-check .form-check-label {
+    font-size: 20px;
+  }
+
+  .container-button-login .button-login {
+    font-size: 30px;
+  }
+
+  .forgot-password a {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .card-login {
+    width: 50%;
+  }
+  .card-login .card-header-login {
+    font-size: 50px;
+  }
+  .card-login .card-body-login {
+    padding: 0 100px;
+  }
+
+  .form-group .label-email-address-login, .form-group .label-password-login {
+    font-size: 30px;
+  }
+  .form-check .form-check-label {
+    font-size: 20px;
+  }
+
+  .container-button-login .button-login {
+    font-size: 30px;
+  }
+
+  .forgot-password a {
+    font-size: 20px;
+  }
+}
 .container-general-register {
-  width: 100%;
   height: 100vh;
   background-color: grey;
 }
 
 .container-form-register {
-  width: 1200px;
-  margin: auto;
   padding-top: 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: grey;
-}
-
-.container-card {
-  width: 100%;
 }
 
 .card-register {
@@ -426,20 +495,20 @@ footer {
   background-color: lightgrey;
 }
 
-.card-header {
-  font-size: 50px;
+.card-header-register {
+  font-size: 30px;
   margin: 20px 0 20px 0;
   text-align: center;
 }
 
-.card-body {
-  padding: 0 100px;
+.card-body-register {
+  padding: 0 20px;
 }
 
 .form-group {
   margin-bottom: 20px;
 }
-.form-group .label-name, .form-group .label-email-address, .form-group .label-password, .form-group .label-confirm-password, .form-group .label-address, .form-group .label-vat-number {
+.form-group .label-name, .form-group .label-email-address-register, .form-group .label-password-register, .form-group .label-confirm-password, .form-group .label-address, .form-group .label-vat-number {
   font-size: 20px;
 }
 .form-group .container-input-password input, .form-group .container-input-email-address input,
@@ -452,10 +521,10 @@ footer {
 .form-group .container-button-register {
   display: flex;
   justify-content: center;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 .form-group .container-button-register .button-register {
-  font-size: 30px;
+  font-size: 20px;
   padding: 10px 40px;
   background-color: #00ccbc;
   color: black;
@@ -463,6 +532,39 @@ footer {
   border-radius: 5px;
 }
 
+@media screen and (min-width: 1024px) {
+  .card-register {
+    width: 60%;
+  }
+  .card-register .card-header-register {
+    font-size: 40px;
+  }
+  .card-register .card-body-register {
+    padding: 0 50px;
+  }
+
+  .container-button-register .button-register {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .card-register {
+    width: 50%;
+  }
+  .card-register .card-header-register {
+    font-size: 50px;
+  }
+  .card-register .card-body-register {
+    padding: 0px 70px;
+  }
+
+  .form-group .label-name, .form-group .label-email-address-register, .form-group .label-password-register, .form-group .label-confirm-password, .form-group .label-address, .form-group .label-vat-number {
+    font-size: 30px;
+  }
+  .form-group .container-button-register .button-register {
+    font-size: 30px;
+  }
+}
 @media screen and (min-width: 200px) {
   .container-restaurant .btn {
     display: inline-block;

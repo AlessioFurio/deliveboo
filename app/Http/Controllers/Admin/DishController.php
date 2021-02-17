@@ -19,8 +19,9 @@ class DishController extends Controller
     public function index()
     {
         $user_id = Auth::user()->id;
-        $restaurants = Restaurant::where('user_id' , $user_id )->get();
-        // dd($restaurants);
+        $restaurants = Restaurant::where('user_id' , $user_id )->with(['dishes' => function ($q){
+        $q->orderBy('name' , 'asc');
+        }])->get();
         $data = [
             'restaurants' => $restaurants
         ];

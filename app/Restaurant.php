@@ -20,12 +20,13 @@ class Restaurant extends Model
     }
 
     public function dishes() {
-        return $this->hasMany('App\Dish');
+        return $this->hasMany('App\Dish')->orderBy('name');
     }
 
     public function payments() {
         return $this->hasMany('App\Payment');
     }
+    //commento
 
 
 }

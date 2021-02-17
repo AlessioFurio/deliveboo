@@ -58,7 +58,7 @@
                                   <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-dettagli">Dettagli</a>
                                   <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-modifica">Modifica</a>
                                   <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                  <button type="submit" name="button">Elimina piatto</button>
+                                  <button class="btn btn-elimina" type="submit" name="button">Elimina piatto</button>
                                     @csrf
                                     @method('DELETE')
                                   </form>

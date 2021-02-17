@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
            $new_user->email = $faker->unique()->email();
            $new_user->password = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi';
            $new_user->address = $faker->unique()->address();
-           $new_user->VAT_number = ($faker->unique()->randomNumber($nbDigits = 10)).'2';
+           $new_user->VAT_number = ($faker->unique()->randomNumber($nbDigits = 9)).'22';
            $new_user->save();
         }
    }

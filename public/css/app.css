@@ -282,7 +282,7 @@ footer {
   max-width: 100%;
   margin: auto;
   height: 100%;
-  background-color: #B0c4de;
+  background-color: #e3e8f1;
 }
 
 .container-general-navbar {
@@ -296,11 +296,21 @@ footer {
   justify-content: flex-start;
   align-items: center;
 }
-.container-brand-navbar .navbar-brand {
-  text-decoration: none;
-  color: #00ccbc;
-  font-size: 30px;
-  padding-left: 20px;
+.container-brand-navbar .wp-navbar-brand {
+  padding-left: 10px;
+  width: 200px;
+  height: 100%;
+}
+.container-brand-navbar .wp-navbar-brand .navbar-brand {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.container-brand-navbar .wp-navbar-brand .navbar-brand img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .container-login-register {
@@ -310,20 +320,26 @@ footer {
   align-items: center;
 }
 .container-login-register .navbar-nav {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+}
+.container-login-register .navbar-nav .nav-item {
+  display: flex;
+}
+.container-login-register .navbar-nav .nav-item .admin {
+  padding-right: 10px;
 }
 .container-login-register .navbar-nav .nav-item a {
   text-decoration: none;
   list-style-type: none;
-  color: white;
-  font-size: 20px;
+  color: #000;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
 @media screen and (min-width: 768px) {
   .container-brand-navbar .navbar-brand {
-    padding-left: 40px;
     font-size: 40px;
   }
 
@@ -359,7 +375,7 @@ footer {
   }
   .container-login-register .navbar-nav .nav-item a {
     margin-right: 50px;
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .container-general-login {

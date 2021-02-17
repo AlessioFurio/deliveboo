@@ -62,7 +62,6 @@
                                     @csrf
                                     @method('DELETE')
                                   </form>
-
                                 </div>
                               </div>
                             </div>

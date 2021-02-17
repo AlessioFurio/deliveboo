@@ -279,10 +279,8 @@ footer {
 }
 
 .navbar {
-  max-width: 100%;
-  margin: auto;
   height: 100%;
-  background-color: #B0c4de;
+  background-color: #e3e8f1;
 }
 
 .container-general-navbar {
@@ -296,11 +294,21 @@ footer {
   justify-content: flex-start;
   align-items: center;
 }
-.container-brand-navbar .navbar-brand {
-  text-decoration: none;
-  color: #00ccbc;
-  font-size: 30px;
-  padding-left: 20px;
+.container-brand-navbar .wp-navbar-brand {
+  padding-left: 10px;
+  width: 200px;
+  height: 100%;
+}
+.container-brand-navbar .wp-navbar-brand .navbar-brand {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.container-brand-navbar .wp-navbar-brand .navbar-brand img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .container-login-register {
@@ -310,20 +318,26 @@ footer {
   align-items: center;
 }
 .container-login-register .navbar-nav {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+}
+.container-login-register .navbar-nav .nav-item {
+  display: flex;
+}
+.container-login-register .navbar-nav .nav-item .admin {
+  padding-right: 10px;
 }
 .container-login-register .navbar-nav .nav-item a {
   text-decoration: none;
   list-style-type: none;
-  color: white;
-  font-size: 20px;
+  color: #000;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
 @media screen and (min-width: 768px) {
   .container-brand-navbar .navbar-brand {
-    padding-left: 40px;
     font-size: 40px;
   }
 
@@ -359,12 +373,12 @@ footer {
   }
   .container-login-register .navbar-nav .nav-item a {
     margin-right: 50px;
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .container-general-login {
   height: 100vh;
-  background-color: grey;
+  background-color: #101927;
 }
 
 .container-form-login {
@@ -376,7 +390,7 @@ footer {
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: lightgrey;
+  background-color: #e3e8f1;
 }
 .card-login .card-header-login {
   font-size: 30px;
@@ -479,7 +493,7 @@ footer {
 }
 .container-general-register {
   height: 100vh;
-  background-color: grey;
+  background-color: #101927;
 }
 
 .container-form-register {
@@ -491,7 +505,7 @@ footer {
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: lightgrey;
+  background-color: #e3e8f1;
 }
 
 .card-header-register {
@@ -677,9 +691,47 @@ footer {
     flex-basis: 20%;
   }
 }
+@media screen and (min-width: 200px) {
+  .dashboard-body-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dashboard-body-content .card-form {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  .dashboard-body-content .card-form .card-title {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .dashboard-body-content .card-form form .content-form {
+    text-align: center;
+  }
+  .dashboard-body-content .card-form form .content-form input {
+    padding: 20px 0;
+    margin: 10px 0;
+    width: 70%;
+    border-radius: 5px;
+    background-color: #e3e8f1;
+    border: none;
+    color: #fff;
+  }
+  .dashboard-body-content .card-form form .content-form button {
+    background-color: #101927;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
 .container-general-dashboard {
   height: 100vh;
-  background-color: grey;
+  background-color: #101927;
 }
 
 .container-card {
@@ -691,7 +743,7 @@ footer {
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: lightgrey;
+  background-color: #e3e8f1;
 }
 .card-dashboard .card-header-dashboard {
   font-size: 30px;
@@ -771,5 +823,118 @@ footer {
   .container-button button {
     padding: 15px;
     margin: 0px 50px;
+  }
+}
+@media screen and (min-width: 200px) {
+  .dashboard .btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+  }
+  .dashboard .dashboard-header {
+    background-color: #101927;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+  }
+  .dashboard .dashboard-header h1 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 25px;
+  }
+  .dashboard .dashboard-body {
+    display: flex;
+    height: calc(100vh - 100px - 48px);
+  }
+  .dashboard .dashboard-body .dashboard-body-menu {
+    background-color: #101927;
+    height: 100%;
+    flex-basis: 40%;
+  }
+  .dashboard .dashboard-body .dashboard-body-menu ul li {
+    border-bottom: 1px solid #c1c1c1;
+  }
+  .dashboard .dashboard-body .dashboard-body-menu ul li a {
+    width: 100%;
+    padding: 15px 0;
+  }
+  .dashboard .dashboard-body .dashboard-body-menu ul li a:hover {
+    background-color: #3A5FCD;
+  }
+  .dashboard .dashboard-body .dashboard-body-content {
+    background-color: #e3e8f1;
+    height: 100%;
+    flex-basis: 80%;
+    overflow-y: scroll;
+  }
+
+  .container-restaurant .row-title h1 {
+    text-align: center;
+  }
+  .container-restaurant .btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .container-restaurant .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container-restaurant .restaurants .restaurant-card {
+    flex-basis: 100%;
+    background-color: #B0C4DE;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+  }
+  .container-restaurant .restaurants .restaurant-card .title-restaurant-card {
+    text-align: center;
+  }
+  .container-restaurant .restaurants .restaurant-card .title-restaurant-card h1 {
+    font-size: 20px;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .details-restaurant-card {
+    padding: 20px 0;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action {
+    text-align: center;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn {
+    margin-bottom: 5px;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-dettagli {
+    background-color: #4169E1;
+  }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
+    background-color: #FFA500;
+  }
+}
+@media screen and (min-width: 500px) {
+  .container-restaurant .row-table .restaurants .restaurant-card {
+    max-width: 80%;
+  }
+
+  .container-restaurant .restaurants {
+    justify-content: center;
+  }
+  .container-restaurant .restaurants .container-restaurant .restaurants .restaurant-card {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .dashboard .dashboard-body .dashboard-body-menu {
+    flex-basis: 25%;
+  }
+
+  .container-restaurant .restaurants .restaurant-card {
+    flex-basis: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dashboard .dashboard-body .dashboard-body-menu {
+    flex-basis: 20%;
   }
 }

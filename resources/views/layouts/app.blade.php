@@ -27,27 +27,37 @@
         <nav class="navbar">
             <div class="container-general-navbar">
                 <div class="container-brand-navbar">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Deliveroo') }}
-                    </a>
+                    <div class="wp-navbar-brand">
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            <img src="/images/logo.png" alt="">
+                        </a>
+                    </div>
+                    {{-- <div class="wp-navbar-brand">
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            <img src="/images/logo.png" alt="">
+                        </a>
+                    </div> --}}
                 </div>
                 <div class="container-login-register">
                     <div class="navbar-nav">
+
                         @guest
-                            <span class="nav-item">
+                            <div class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </span>
+                            </div>
                             @if (Route::has('register'))
-                                <span class="nav-item">
+                                <div class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </span>
+                                </div>
                             @endif
                         @else
-                            <span class="nav-item">
-                                <a id="navbarDropdown" class="nav-link" href="#">
-                                    {{ Auth::user()->name }}
-                                </a>
-
+                            <div class="nav-item">
+                                <div class="admin">
+                                    <a id="navbarDropdown" class="nav-link" href="#">
+                                        {{ Auth::user()->name }}
+                                    </a>
+                                </div>
+                            
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -59,7 +69,7 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </span>
+                            </div>
                         @endguest
                     </div>
                 </div>

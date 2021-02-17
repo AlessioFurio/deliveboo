@@ -27,27 +27,27 @@
                     @csrf
                     @method('POST')
                     <div class="content-form">
-                        <div>
+                        <div class="content-form-input">
                             <input value="{{old('name')}}" type="text" name="name" required placeholder="Nome Ristorante">
                             @error('name')
                             <div>{{ $message }}</div>
                             @enderror
                         </div>
-                        <div>
+                        <div class="content-form-input">
                             <input value="{{old('address')}}" type="text" name="address" required placeholder="Indirizzo">
                             @error('address')
                             <div>{{ $message }}</div>
                             @enderror
                         </div>
-                        <div>
+                        <div class="content-form-input">
                             <input value="{{old('phone')}}" type="text" name="phone" required placeholder="Telefono">
                             @error('phone')
                             <div>{{ $message }}</div>
                             @enderror
                         </div>
 
-                        <div>
-                            <label for="">Categoria</label>
+                        <div class="content-form-category">
+                            <p>Seleziona Categoria</p>
                             <div class="form-group col-12">
                                 @foreach ($categories as $category)
                                 <div class="form-check">
@@ -62,6 +62,23 @@
                                 @enderror
                             </div>
                         </div>
+
+                        {{-- <div class="content-form-category">
+                            <label for="">Categoria</label>
+                            <div class="form-group col-12">
+                                @foreach ($categories as $category)
+                                <div class="form-check">
+                                    <input name="categories[]" class="form-check-input" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
+                                    <label class="form-check-label">
+                                        {{ $category->name }}
+                                    </label>
+                                </div>
+                                @endforeach
+                                @error('categories')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div> --}}
 
 
                         {{-- <div class="form-group col-12">

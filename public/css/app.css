@@ -710,16 +710,30 @@ footer {
     padding: 50px 0;
   }
   .dashboard-body-content .card-form form .content-form {
+    max-width: 90%;
+    margin: auto;
     text-align: center;
+  }
+  .dashboard-body-content .card-form form .content-form .content-form-category {
+    padding: 20px 0;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #e3e8f1;
+    border: none;
+    color: #000;
+  }
+  .dashboard-body-content .card-form form .content-form .content-form-category .form-group {
+    display: flex;
+    justify-content: space-around;
   }
   .dashboard-body-content .card-form form .content-form input {
     padding: 20px 0;
     margin: 10px 0;
-    width: 70%;
+    width: 80%;
     border-radius: 5px;
     background-color: #e3e8f1;
     border: none;
-    color: #fff;
+    color: #000;
   }
   .dashboard-body-content .card-form form .content-form button {
     background-color: #101927;

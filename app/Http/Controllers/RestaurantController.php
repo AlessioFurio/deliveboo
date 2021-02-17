@@ -18,7 +18,7 @@ class RestaurantController extends Controller
     $courses_id = [];
 
     foreach ($restaurant->dishes as $dish) {
-      if (!in_array($dish->course_id)) {
+      if (!in_array($dish->course_id, $courses_id)) {
         $courses_id[] = $dish->course_id;
       }
     }

@@ -25,7 +25,7 @@ class RestaurantController extends Controller
         $user_id = Auth::user()->id;
         $data = [
             'category' => Category::all(),
-            'restaurants' => Restaurant::where('user_id' , $user_id )->get()
+            'restaurants' => Restaurant::where('user_id' , $user_id )->orderBy('name', 'asc')->get()
         ];
         return view('admin.restaurants.index' , $data);
 

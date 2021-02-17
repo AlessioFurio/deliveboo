@@ -24,7 +24,7 @@
                 @method('POST')
                 <div class="form-group">
                     @if (isset($_GET['rest']))
-                    <span>Ristorante ID N° {{ $_GET['rest']}}</span>
+                    <input type="text" name="restaurant_id" value="{{$restaurants}}" hidden>
                     @else
                     <label>Scegli il ristorante</label>
                     <select class="" name="restaurant_id">

@@ -669,6 +669,7 @@ footer {
   }
   .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-elimina {
     background-color: #DC143C;
+    border: none;
   }
 }
 @media screen and (min-width: 500px) {

@@ -10,7 +10,7 @@
 }
 
 @media screen and (min-width: 200px) {
-  header {
+  header .wp-header {
     height: 100vh;
     background: url("/images/jumbo4.jpg");
     background-size: cover;

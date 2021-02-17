@@ -1,13 +1,17 @@
 @media screen and (min-width: 200px){
 
     header{
-        height: 100vh;
-        background: url('/images/jumbo4.jpg');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        position: relative;
-        z-index: 1;
+
+        .wp-header{
+            height: 100vh;
+            background: url('/images/jumbo4.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 1;
+        }
+
 
         .filter {
             width: 100%;

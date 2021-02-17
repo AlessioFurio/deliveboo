@@ -935,6 +935,9 @@ footer {
   .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
     background-color: #FFA500;
   }
+  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-elimina {
+    background-color: #dc143c;
+  }
 }
 @media screen and (min-width: 500px) {
   .container-restaurant .row-table .restaurants .restaurant-card {

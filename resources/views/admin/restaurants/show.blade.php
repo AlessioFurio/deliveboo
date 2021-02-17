@@ -13,10 +13,6 @@
     </li>
 </ul>
 <br>
-<a href="{{ route('admin.dishes.create') }}" class="btn btn-primary">
-    Crea nuovo piatto
-</a>
-
 <table class="table">
     <thead>
         <tr>

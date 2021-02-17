@@ -12,12 +12,11 @@ class Payment_methodsTableSeeder extends Seeder
      * @return void
      */
      public function run(Faker $faker)
-         {
-             for ($i=0; $i < 2 ; $i++) {
+     {
+         for ($i=0; $i < 1 ; $i++) {
 
-                   $new_payment_method = new Payment_method();
-                   $new_payment_method->name = $faker->word();
-                   $new_payment_method->save();
-        }
-    }
+               $new_payment_method = new Payment_method();
+               $new_payment_method->name = $faker->word();
+               $new_payment_method->save();
+     }
 }

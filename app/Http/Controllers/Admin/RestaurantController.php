@@ -14,7 +14,6 @@ use Illuminate\Support\Str;
 
 class RestaurantController extends Controller
 {
-    public $attributes;
     /**
      * Display a listing of the resource.
      *

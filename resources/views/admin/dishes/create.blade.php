@@ -23,15 +23,6 @@
                 @csrf
                 @method('POST')
                 <div class="form-group">
-                    <label>Scegli il ristorante</label>
-                    <select class="" name="restaurant_id">
-                        @foreach ($restaurants as $restaurant)
-                            <option value="{{$restaurant->id}}" {{ old('restaurant_id') == $restaurant->id ? "selected=selected" : '' }}>{{$restaurant->name}}</option>
-                        @endforeach
-
-                    </select>
-                </div>
-                <div class="form-group">
                     <label>Nome</label>
                     <input type="text" name="name" class="form-control" placeholder="Inserisci il nome del piatto" value=" {{ old('name') }}" required>
                 </div>

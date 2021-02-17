@@ -34,10 +34,7 @@ class DishController extends Controller
      */
     public function create()
     {
-        $user_id = Auth::user()->id;
-
         $data = [
-            'restaurants' => Restaurant::where('user_id' , $user_id )->get(),
             'dishes' => Dish::all(),
             'courses' => Course::all(),
         ];
@@ -63,6 +60,7 @@ class DishController extends Controller
         $form_data = $request->all();
         $new_dish = new Dish();
         $new_dish->fill($form_data);
+        $new_dish->restaurant_id = Auth::user()->id;
         $new_dish->save();
 
         return redirect()->route('admin.dishes.index');

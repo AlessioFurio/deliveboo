@@ -28,7 +28,7 @@
                     @foreach ($restaurants as $restaurant)
                     <div class="restaurant-card">
                         <div class="title-restaurant-card">
-                            <h4>Nome ristorante: </h4> 
+                            <h4>Nome ristorante: </h4>
                             <h1>{{ $restaurant->name }}</h1>
                         </div>
                         <div class="body-restaurant-card">

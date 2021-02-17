@@ -17,14 +17,14 @@
                     {{ __('You are logged in!') }}
                 </div>
                 <div class="container-button">
-                    <button class="ristoranti" type="button" name="button">
-                        <a href="{{route('admin.restaurants.index')}}">I tuoi ristoranti</a>
+                    <button type="button" name="button">
+                        <a href="{{route('admin.restaurants.index')}}">ristoranti</a>
                     </button>
-                    <button class="ordini" type="button" name="button">
-                        <a href="{{route('admin.orders.index')}}">Riepilogo Ordini</a>
+                    <button type="button" name="button">
+                        <a href="{{route('admin.orders.index')}}">Ordini</a>
                     </button>
-                    <button class="piatti" type="button" name="button">
-                        <a href="{{route('admin.dishes.index')}}">I tuoi piatti</a>
+                    <button type="button" name="button">
+                        <a href="{{route('admin.dishes.index')}}">piatti</a>
                     </button>
                 </div>
             </div>

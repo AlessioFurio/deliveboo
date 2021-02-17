@@ -1,0 +1,48 @@
+@media screen and (min-width: 200px){
+
+    .dashboard-body-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card-form {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+
+            .card-title{
+                text-align: center;
+                padding: 50px 0;
+            }
+
+            form {
+                .content-form{
+                    text-align: center;
+                    input {
+
+                        padding: 20px 0;
+                        margin: 10px 0;
+                        width: 70%;
+                        border-radius: 5px;
+                        background-color: #e3e8f1;
+                        border: none;
+                        color: #fff;
+                    }
+
+                    button {
+                        background-color: #101927;
+                        color: #fff;
+                        text-transform: uppercase;
+                        border: none;
+                        padding: 20px;
+                        margin: 20px 0;
+                        border-radius: 10px;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+    }
+
+}

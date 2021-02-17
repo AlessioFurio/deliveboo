@@ -143,7 +143,7 @@ class RestaurantController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'address' => 'required | max:255',
-            // 'categories' => 'exists:categories,id',
+            'categories' => 'exists:categories,id',
             'phone' => 'required|max:255'
         ]);
 
@@ -169,9 +169,9 @@ class RestaurantController extends Controller
         // }
 
         $restaurant->update($form_data);
-        // if(array_key_exists('tags', $form_data)) {
-        //     $restaurant->tags()->sync($form_data['tags']);
-        // }
+        if(array_key_exists('categories', $form_data)) {
+            $restaurant->categories()->sync($form_data['categories']);
+        }
         return redirect()->route('admin.restaurants.index');
 
     }

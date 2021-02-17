@@ -13,7 +13,7 @@
     </li>
 </ul>
 <br>
-<a href="{{ route('admin.dishes.create') }}" class="btn btn-primary">
+<a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="btn btn-primary">
     Crea nuovo piatto
 </a>
 

@@ -23,6 +23,9 @@
                 @csrf
                 @method('POST')
                 <div class="form-group">
+                    @if (isset($_GET['rest']))
+                    <span>Ristorante ID N° {{ $_GET['rest']}}</span>
+                    @else
                     <label>Scegli il ristorante</label>
                     <select class="" name="restaurant_id">
                         @foreach ($restaurants as $restaurant)
@@ -30,6 +33,7 @@
                         @endforeach
 
                     </select>
+                    @endif
                 </div>
                 <div class="form-group">
                     <label>Nome</label>

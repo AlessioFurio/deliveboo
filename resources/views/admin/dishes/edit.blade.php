@@ -15,9 +15,23 @@
                     </div>
                 @endif
             </div>
-            <form action="{{ route('admin.dishes.update', ['dish' => $dish->id]) }}" method="post">
+            <form action="{{ route('admin.dishes.update', ['dish' => $dish->id]) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
+                <div class="form-group col-12">
+                    @if ($dish->cover)
+                        <figure>
+                            <figcaption>Immagine presente:</figcaption>
+                            <img src="{{asset('storage/'.$dish->cover )}}" alt="{{$dish->name}}">
+
+                        </figure>
+                    @endif
+                    <input type="file" name="cover" class="form-control-file">
+
+                    @error('cover')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
 
                 <div class="form-group">
                     <label>Nome</label>

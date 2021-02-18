@@ -60,10 +60,6 @@ class RestaurantController extends Controller
         ]);
         $input_data = $request->all();
         $add_restaurant = new Restaurant();
-        // if (array_key_exists('cover' , $input_data )) {
-        //     $image_path = Storage::put('cover_image' , $input_data['cover']);
-        //     $input_data['cover'] = $image_path;
-        // }
         $add_restaurant->fill($input_data);
         $slug = Str::slug($add_restaurant->name);
         $slug_base = $slug;

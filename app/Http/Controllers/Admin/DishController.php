@@ -112,8 +112,16 @@ class DishController extends Controller
     public function show(Dish $dish)
     {
         $user_id = Auth::user()->id;
+        $own_id = [];
+        $collect = Restaurant::where('user_id' , $user_id )->get();
+        foreach ($collect as $collection) {
+            if (!in_array($collection->id, $own_id )) {
+                $own_id[] = $collection->id;
+            }
+        }
 
-        if(!$dish || $dish->restaurant->user_id != $user_id ) {
+
+        if(!$dish || !in_array($dish->restaurant_id, $own_id ) ) {
             abort(404);
         }
         $data = [
@@ -132,7 +140,15 @@ class DishController extends Controller
     {
 
         $user_id = Auth::user()->id;
-        if(!$dish || $dish->restaurant->user_id != $user_id) {
+        $own_id = [];
+        $collect = Restaurant::where('user_id' , $user_id )->get();
+        foreach ($collect as $collection) {
+            if (!in_array($collection->id, $own_id )) {
+                $own_id[] = $collection->id;
+            }
+        }
+
+        if(!$dish || !in_array($dish->restaurant_id, $own_id )) {
             abort(404);
         }
         $data = [
@@ -191,8 +207,15 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
+        $own_id = [];
         $user_id = Auth::user()->id;
-        if(!$dish || $dish->restaurant->user_id != $user_id) {
+        $collect = Restaurant::where('user_id' , $user_id )->get();
+        foreach ($collect as $collection) {
+            if (!in_array($collection->id, $own_id )) {
+                $own_id[] = $collection->id;
+            }
+        }
+        if(!$dish || !in_array($dish->restaurant_id, $own_id )) {
             abort(404);
         }
 

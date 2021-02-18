@@ -32,6 +32,11 @@
                           <h4>Nome piatto: </h4>
                           <h1>{{ $dish->name }}</h1>
                         </div>
+                        <div class="col-3">
+                            @if ($dish->cover)
+                                <img src="{{asset('storage/'. $dish->cover)}}" alt="">
+                            @endif
+                        </div>
                         <div class="body-restaurant-card">
                           <div class="details-restaurant-card">
                             <p>ID: <strong>{{ $dish->id }}</strong></p>

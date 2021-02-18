@@ -324,6 +324,12 @@ footer {
 }
 .container-login-register .navbar-nav .nav-item {
   display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+.container-login-register .navbar-nav .nav-item .cart i {
+  font-size: 25px;
+  cursor: pointer;
 }
 .container-login-register .navbar-nav .nav-item a {
   text-decoration: none;

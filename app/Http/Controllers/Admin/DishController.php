@@ -75,6 +75,14 @@ class DishController extends Controller
             'course_id' => 'required',
             'cover' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:700'
         ]);
+        $own_id = [];
+        $user_id = Auth::user()->id;
+        $collect = Restaurant::where('user_id' , $user_id )->get();
+        foreach ($collect as $collection) {
+            if (!in_array($collection->id, $own_id )) {
+                $own_id[] = $collection->id;
+            }
+        }
 
 
         $form_data = $request->all();
@@ -83,10 +91,16 @@ class DishController extends Controller
             $image_path = Storage::put('cover_dish' , $form_data['cover']);
             $form_data['cover'] = $image_path;
         }
+
+        if (!in_array($form_data['restaurant_id'], $own_id )) {
+            abort(404);
+        }
         $new_dish->fill($form_data);
         $new_dish->save();
 
-        return redirect()->route('admin.dishes.index');
+
+
+        return redirect()->route('admin.restaurants.show', ['restaurant'=> $form_data['restaurant_id']]);
     }
 
     /**
@@ -145,14 +159,28 @@ class DishController extends Controller
             'course_id' => 'required',
             'cover' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:700'
         ]);
+        $own_id = [];
+        $user_id = Auth::user()->id;
+        $collect = Restaurant::where('user_id' , $user_id )->get();
+        foreach ($collect as $collection) {
+            if (!in_array($collection->id, $own_id )) {
+                $own_id[] = $collection->id;
+            }
+        }
+
         $form_data = $request->all();
         if (array_key_exists('cover' , $form_data)) {
             $image_path = Storage::put('cover_dish' , $form_data['cover']);
             $form_data['cover'] = $image_path;
         }
+        if (!in_array($dish->restaurant_id , $own_id )) {
+            abort(404);
+        }
+
+
         $dish->update($form_data);
 
-        return redirect()->route('admin.dishes.index');
+        return redirect()->route('admin.restaurants.show', ['restaurant'=> $dish->restaurant_id]);
     }
 
     /**
@@ -171,6 +199,6 @@ class DishController extends Controller
 
         $dish->delete();
 
-        return redirect()->route('admin.dishes.index');
+        return redirect()->route('admin.restaurants.show', ['restaurant'=> $dish->restaurant->id]);
     }
 }

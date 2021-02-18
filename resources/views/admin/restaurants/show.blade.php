@@ -42,6 +42,9 @@
                             <h3>
                               {{$dish->name}}
                             </h3>
+                            @if ($dish->cover)
+                                <img src="{{asset('storage/'. $dish->cover)}}" alt="">
+                            @endif
 
                             <div class="details-restaurant-card">
                               <div class="action-restaurant-card">

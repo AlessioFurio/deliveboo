@@ -37340,9 +37340,20 @@ var app = new Vue({
   data: {
     isActive: false,
     restaurants: [],
-    selectedCategory: ''
+    dishesList: [],
+    selectedCategory: '',
+    selectedDish: '',
+    totalQuantity: [0],
+    showCart: false,
+    cart: []
   },
   methods: {
+    cartBtnLessPlus: function cartBtnLessPlus() {
+      // funzione per aggiornare lista item nel carrello
+      return this.cart = this.dishesList.filter(function (product) {
+        return product.quantity > 0;
+      });
+    },
     toggleMenu: function toggleMenu() {
       // x menu mobile
       if (this.isActive == false) {
@@ -37362,8 +37373,35 @@ var app = new Vue({
       }).then(function (risposta) {
         _this.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
       }); // fine then
-    } // fine searchRestaurants
+    },
+    // fine searchRestaurants
+    updateCart: function updateCart(product, updateType) {
+      // funzione aggiornamento carrello
+      for (var i = 0; i < this.dishesList.length; i++) {
+        //scorro tutti i piatti
+        if (this.dishesList[i].id == product.id) {
+          // se id piatto corrente = id del prodotto
+          if (updateType == 'subtract') {
+            // se la funzione e' di sottrazione
+            if (this.dishesList[i].quantity != 0) {
+              // se la quantita' e' diversa da 0
+              this.dishesList[i].quantity--; // sottrai 1
 
+              return this.totalQuantity = this.dishesList.reduce(function (total, product) {
+                return total + product.quantity;
+              }, 0);
+            }
+          } else {
+            this.dishesList[i].quantity++; // altrimenti aggiungi 1
+
+            this.showCart = true;
+            return this.totalQuantity = this.dishesList.reduce(function (total, product) {
+              return total + product.quantity;
+            }, 0); // return this.cartList = this.dishesList.filter(product => product.quantity > 0);
+          }
+        }
+      }
+    }
   },
   // fine methods
   mounted: function mounted() {
@@ -37375,6 +37413,19 @@ var app = new Vue({
       }
     }).then(function (risposta) {
       _this2.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+    }); // fine then
+
+    axios.get('http://localhost:8000/api/dishes', {
+      params: {
+        query: this.selectedDish
+      }
+    }).then(function (risposta) {
+      _this2.dishesList = risposta.data.results;
+
+      for (var i = 0; i < _this2.dishesList.length; i++) {
+        _this2.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+      } // assegno ad array restaurants la risposta API
+
     }); // fine then
   } // fine mounted
 

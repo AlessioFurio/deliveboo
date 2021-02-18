@@ -15,14 +15,16 @@ class CreateDishesTable extends Migration
     {
         Schema::create('dishes', function (Blueprint $table) {
           $table->id();
-          $table->unsignedBigInteger('user_id');
-          $table->foreign('user_id')->references('id')->on('users');
+          $table->unsignedBigInteger('restaurant_id');
+          $table->foreign('restaurant_id')->references('id')->on('restaurants');
+          $table->unsignedBigInteger('course_id');
+          $table->foreign('course_id')->references('id')->on('courses');
           $table->string('name');
           $table->text('ingredients');
           $table->double('price', 4, 2);
           $table->boolean('visibility');
-          $table->string('slug')->unique();
           $table->timestamps();
+          $table->string('cover')->nullable();
         });
     }
 

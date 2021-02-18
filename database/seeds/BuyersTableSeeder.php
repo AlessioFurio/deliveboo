@@ -12,14 +12,14 @@ class BuyersTableSeeder extends Seeder
      * @return void
      */
      public function run(Faker $faker)
-         {
-             for ($i=0; $i < 19 ; $i++) {
+        {
+             for ($i=0; $i < 20 ; $i++) {
 
-                   $new_buyer = new Buyer();
-                   $new_buyer->nome = $faker->word();
-                   $new_buyer->cognome = $faker->word();
-                   $new_buyer->indirizzo = $faker->address();
-                   $new_buyer->save();
-         }
-    }
+                 $new_buyer = new Buyer();
+                 $new_buyer->nome = $faker->firstName();
+                 $new_buyer->cognome = $faker->lastName();
+                 $new_buyer->indirizzo = $faker->address();
+                 $new_buyer->save();
+               }
+        }
 }

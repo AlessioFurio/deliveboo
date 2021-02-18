@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             Payment_methodsTableSeeder::class,
             RestaurantsTableSeeder::class,
             DishesTableSeeder::class,
-            PaymentsTableSeeder::class
+            PaymentsTableSeeder::class,
+            CategoryRestaurantTableSeeder::class
         ]);
     }
 }

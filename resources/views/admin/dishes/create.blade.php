@@ -19,7 +19,7 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('admin.dishes.store') }}" method="post">
+            <form action="{{ route('admin.dishes.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
                 <div class="form-group">
@@ -34,6 +34,13 @@
 
                     </select>
                     @endif
+                </div>
+                <div class="form-group col-12">
+                    <input type="file" name="cover" placeholder="Carica immagine" class="form-control-file">
+
+                    @error('cover')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label>Nome</label>

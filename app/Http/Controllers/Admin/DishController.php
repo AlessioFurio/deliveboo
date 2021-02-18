@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use App\Dish;
 use App\Course;
 use App\Restaurant;
@@ -71,11 +72,17 @@ class DishController extends Controller
             'ingredients' => 'required',
             'price' => 'required',
             'visibility' => 'required',
-            'course_id' => 'required'
+            'course_id' => 'required',
+            'cover' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:700'
         ]);
+
 
         $form_data = $request->all();
         $new_dish = new Dish();
+        if (array_key_exists('cover' , $form_data )) {
+            $image_path = Storage::put('cover_dish' , $form_data['cover']);
+            $form_data['cover'] = $image_path;
+        }
         $new_dish->fill($form_data);
         $new_dish->save();
 
@@ -135,9 +142,14 @@ class DishController extends Controller
             'ingredients' => 'required',
             'price' => 'required',
             'visibility' => 'required',
-            'course_id' => 'required'
+            'course_id' => 'required',
+            'cover' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:700'
         ]);
         $form_data = $request->all();
+        if (array_key_exists('cover' , $form_data)) {
+            $image_path = Storage::put('cover_dish' , $form_data['cover']);
+            $form_data['cover'] = $image_path;
+        }
         $dish->update($form_data);
 
         return redirect()->route('admin.dishes.index');

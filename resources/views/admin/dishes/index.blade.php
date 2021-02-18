@@ -40,6 +40,9 @@
                             </div>
                             <div class="body-restaurant-card">
                               <div class="details-restaurant-card">
+                                  @if ($dish->cover)
+                                      <img src="{{asset('storage/'. $dish->cover)}}" alt="{{$dish->name}}">
+                                  @endif
 
                                 <p>ID: <strong>{{ $dish->id }}</strong></p>
                                 <p>Ingredienti:</p> <strong>{{ $dish->ingredients }}</strong></p>

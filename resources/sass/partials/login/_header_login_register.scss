@@ -53,6 +53,15 @@
 
             .nav-item {
                 display: flex;
+                align-items: center;
+                padding-right: 30px;
+
+                .cart {
+                    i{
+                        font-size: 25px;
+                        cursor: pointer;
+                    }
+                }
 
                 .admin {
 

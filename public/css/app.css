@@ -274,37 +274,37 @@ footer {
   color: #4c4d4e;
 }
 
-#app {
+#header {
   height: 100px;
 }
 
-.navbar {
+.container-total {
   height: 100%;
   background-color: #e3e8f1;
 }
 
-.container-general-navbar {
+.container-general-total {
   height: 100%;
   display: flex;
 }
 
-.container-brand-navbar {
+.container-brand-sx {
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.container-brand-navbar .wp-navbar-brand {
+.container-brand-sx .container-brand {
   padding-left: 10px;
   width: 200px;
   height: 100%;
 }
-.container-brand-navbar .wp-navbar-brand .navbar-brand {
+.container-brand-sx .container-brand .brand {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-.container-brand-navbar .wp-navbar-brand .navbar-brand img {
+.container-brand-sx .container-brand .brand img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -317,22 +317,22 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.container-login-register .navbar-nav {
+.container-login-register .login-register {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-.container-login-register .navbar-nav .nav-item {
+.container-login-register .login-register .route-login-register {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-right: 10px;
 }
-.container-login-register .navbar-nav .nav-item .cart i {
+.container-login-register .login-register .route-login-register .cart i {
   font-size: 20px;
   cursor: pointer;
 }
-.container-login-register .navbar-nav .nav-item a {
+.container-login-register .login-register .route-login-register a {
   text-decoration: none;
   list-style-type: none;
   color: #000;
@@ -342,42 +342,42 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  .container-brand-navbar .wp-navbar-brand {
+  .container-brand-sx .container-brand {
     padding-left: 20px;
   }
-  .container-brand-navbar .wp-navbar-brand .navbar-brand {
+  .container-brand-sx .container-brand .brand {
     font-size: 40px;
   }
   .container-login-register {
     justify-content: flex-end;
   }
-  .container-login-register .navbar-nav {
+  .container-login-register .login-register {
     display: flex;
     flex-direction: row;
   }
-  .container-login-register .navbar-nav .nav-item {
+  .container-login-register .login-register .route-login-register {
     flex-direction: row;
     padding-right: 0;
   }
-  .container-login-register .navbar-nav .nav-item .cart i {
+  .container-login-register .login-register .route-login-register .cart i {
     font-size: 25px;
     margin-right: 20px;
   }
-  .container-login-register .navbar-nav .nav-item a {
+  .container-login-register .login-register .route-login-register a {
     margin-right: 30px;
     font-size: 25px;
     display: inline;
   }
 }
 @media screen and (min-width: 1024px) {
-  .container-brand-navbar .navbar-brand {
+  .container-brand-sx .container-brand .brand {
     font-size: 50px;
   }
 
   .container-login-register {
     justify-content: flex-end;
   }
-  .container-login-register .navbar-nav {
+  .container-login-register .login-register {
     display: flex;
     flex-direction: row;
   }

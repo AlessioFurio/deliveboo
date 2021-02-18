@@ -27,12 +27,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar">
-            <div class="container-general-navbar">
-                <div class="container-brand-navbar">
-                    <div class="wp-navbar-brand">
-                        <a class="navbar-brand" href="{{ url('/') }}">
+    <div id="header">
+        <nav class="container-total">
+            <div class="container-general-total">
+                <div class="container-brand-sx">
+                    <div class="container-brand">
+                        <a class="brand" href="{{ url('/') }}">
                             <img src="/images/logo.png" alt="">
                         </a>
                     </div>
@@ -43,33 +43,33 @@
                     </div> --}}
                 </div>
                 <div class="container-login-register">
-                    <div class="navbar-nav">
+                    <div class="login-register">
 
                         @guest
-                            <div class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <div class="route-login-register">
+                                <a href="{{ route('login') }}">{{ __('Login') }}</a>
                             </div>
                             @if (Route::has('register'))
-                                <div class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <div class="route-login-register">
+                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </div>
                             @endif
                         @else
-                            <div class="nav-item">
-                                <div class="admin">
-                                    <a id="navbarDropdown" class="nav-link" href="#">
+                            <div class="route-login-register">
+                                <div class="authentication">
+                                    <a href="#">
                                         {{ Auth::user()->name }}
                                     </a>
                                 </div>
 
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <div class="logout">
+                                    <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    <form action="{{ route('logout') }}" method="POST">
                                         @csrf
                                     </form>
                                 </div>

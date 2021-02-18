@@ -1,31 +1,31 @@
-#app {
+#header {
     height: 100px;
 
 }
 
-.navbar {
+.container-total {
     height: 100%;
     background-color: #e3e8f1;
 }
 
-.container-general-navbar {
+.container-general-total {
     height: 100%;
     display: flex;
 
 }
 
-.container-brand-navbar {
+.container-brand-sx {
     width: 50%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
-    .wp-navbar-brand{
+    .container-brand{
         padding-left: 10px;
         width: 200px;
         height: 100%;
 
-        .navbar-brand {
+        .brand {
             display: inline-block;
             width: 100%;
             height: 100%;
@@ -46,12 +46,12 @@
     justify-content: center;
     align-items: center;
 
-        .navbar-nav {
+        .login-register {
             width: 100%;
             display: flex;
             justify-content: flex-end;
 
-            .nav-item {
+            .route-login-register {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -78,12 +78,12 @@
 
 @media screen and (min-width:768px){
 
-    .container-brand-navbar {
+    .container-brand-sx {
 
-        .wp-navbar-brand{
+        .container-brand{
             padding-left: 20px;
 
-            .navbar-brand {
+            .brand {
 
                 font-size: 40px;
 
@@ -97,12 +97,12 @@
     .container-login-register {
         justify-content: flex-end;
 
-            .navbar-nav {
+            .login-register {
                 display: flex;
                 flex-direction: row;
 
 
-                .nav-item {
+                .route-login-register {
                     flex-direction: row;
                     padding-right: 0;
 
@@ -127,25 +127,26 @@
 
 @media screen and (min-width:1024px){
 
-    .container-brand-navbar {
+    .container-brand-sx {
 
+        .container-brand{
 
-            .navbar-brand {
+            .brand {
 
                 font-size: 50px;
             }
-
+        }
     }
 
     .container-login-register {
         justify-content: flex-end;
 
-            .navbar-nav {
+            .login-register {
                 display: flex;
                 flex-direction: row;
 
 
-                .nav-item {
+                .route-login-register {
 
                     .cart {
 

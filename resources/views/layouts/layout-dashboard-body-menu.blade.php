@@ -6,8 +6,8 @@
         <li>
             <a href="{{route('admin.restaurants.create')}}" class="btn add-restaurant">Aggiungi Ristorante</a>
         </li>
-        <li>
+        {{-- <li>
             <a href="{{route('admin.dishes.create')}}" class="btn add-restaurant">Aggiungi Piatto</a>
-        </li>
+        </li> --}}
     </ul>
 </div>

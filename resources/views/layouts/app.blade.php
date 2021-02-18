@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     @yield('chart-css')
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -73,9 +74,8 @@
                                     </form>
                                 </div>
 
-                                <div class="cart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
+                                
+
                             </div>
                         @endguest
                     </div>
@@ -87,5 +87,7 @@
             @yield('content')
         </main>
     </div>
+
+
 </body>
 </html>

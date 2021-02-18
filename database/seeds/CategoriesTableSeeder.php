@@ -14,10 +14,12 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-      for ($i=0; $i < 5 ; $i++) {
+        $our_categories = ['Italiano','Messicano','Cinese','Fast-food','Pizzeria','Rosticceria','Pasticceria','Sushi'];
+
+        for ($i=0; $i < 8 ; $i++) {
 
             $new_category = new Category();
-            $new_category->name = $faker->word();
+            $new_category->name = $our_categories[$i];
 
             $slug = Str::slug($new_category->name);
             $current_category = Category::where('slug', $slug)->first();
@@ -30,6 +32,7 @@ class CategoriesTableSeeder extends Seeder
             }
             $new_category->slug = $slug;
             $new_category->save();
+
         }
     }
 }

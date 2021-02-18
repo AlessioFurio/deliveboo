@@ -931,6 +931,9 @@ footer {
   .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card .details-restaurant-card {
     padding: 20px 0;
   }
+  .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card img {
+    max-width: 100%;
+  }
   .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card .action-restaurant-card .container-btn-action {
     text-align: center;
   }

@@ -30,7 +30,7 @@ Route::middleware('auth')->name('admin.')->namespace('Admin')->prefix('admin')->
   Route::get('/orders', 'OrderController@index')->name('orders.index');
   Route::get('/payments', 'PaymentController@index')->name('payments.index');
   Route::get('/statistics', 'StatisticsController@index')->name('statistics.index');
-  Route::resource('/categories', 'CategoryController');
+  // Route::resource('/categories', 'CategoryController');
   Route::resource('/restaurants', 'RestaurantController');
   Route::resource('/dishes', 'DishController');
 });

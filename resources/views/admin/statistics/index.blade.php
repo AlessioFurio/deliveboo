@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('cdn-bootstrap')
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+@section('chart-css')
+  <link href="{{ asset('css/chart.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -21,14 +21,6 @@
                   <div class="graphic-container">
                     <canvas id="chart" width="500" height="500" ></canvas>
                   </div>
-                  {{-- <ul>
-                    @foreach ($payments as $payment)
-                      <li>
-                        {{ $payment->price }}
-                      </li>
-                    @endforeach
-
-                  </ul> --}}
               </div>
           </div>
       </div>

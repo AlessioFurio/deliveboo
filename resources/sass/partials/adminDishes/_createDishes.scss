@@ -62,12 +62,12 @@
             }
 
 
-    .form {
+    .list {
         margin-bottom: 10px;
 
     }
 
-    .form-group-plate {
+    .list-plate {
 
         label {
             font-size: 20px;
@@ -92,6 +92,13 @@
 
         .check {
             display: inline-block;
+        }
+
+        .input-search {
+            background-color: white;
+            color: black;
+            border: 3px solid #00ccbc;
+            margin: 5px 0;
         }
     }
 

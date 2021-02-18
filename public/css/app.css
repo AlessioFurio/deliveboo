@@ -1387,29 +1387,35 @@ footer {
     color: #101927;
   }
 
-  .form {
+  .list {
     margin-bottom: 10px;
   }
 
-  .form-group-plate label {
+  .list-plate label {
     font-size: 20px;
     color: #101927;
     margin-bottom: 5px;
     display: inline-block;
     font-weight: 700;
   }
-  .form-group-plate .input {
+  .list-plate .input {
     display: block;
     width: 100%;
     border-radius: 5px;
     border: 3px solid #00ccbc;
     height: 30px;
   }
-  .form-group-plate .textarea {
+  .list-plate .textarea {
     height: 150px;
   }
-  .form-group-plate .check {
+  .list-plate .check {
     display: inline-block;
+  }
+  .list-plate .input-search {
+    background-color: white;
+    color: black;
+    border: 3px solid #00ccbc;
+    margin: 5px 0;
   }
 
   .button-create-plate {

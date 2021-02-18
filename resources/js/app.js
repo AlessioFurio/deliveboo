@@ -8,34 +8,17 @@ var app = new Vue({
 		dishesList: [],
 		selectedCategory: '',
 		selectedDish: '',
-		products: [
-		   	{
-				id: 1,
-				name: 'Product 1',
-				description: 'This is an incredibly awesome product',
-				quantity: 0,
-		    },
-		    {
-				id: 2,
-				name: 'Product 2',
-				description: 'This is an incredibly awesome product',
-				quantity: 0,
-		    },
-		    {
-				id: 3,
-				name: 'Product 3',
-				description: 'This is an incredibly awesome product',
-				quantity: 0,
-		    }
-		],
+		totalQuantity: [0],
 		showCart: false,
-
+		cart: [],
 	},
+
+
 	methods: {
 
-		provalog(){
-			console.log(this.dishesList);
-		},
+		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
+			return this.cart = this.dishesList.filter(product => product.quantity > 0);
+    	},
 
         toggleMenu() {         // x menu mobile
 			if (this.isActive == false){
@@ -58,30 +41,29 @@ var app = new Vue({
 			}); // fine then
 		}, // fine searchRestaurants
 
-		updateCart(product, updateType) {
-        	for (let i = 0; i < this.dishesList.length; i++) {
-        		if (this.dishesList[i].id === product.id) {
-        			if (updateType === 'subtract') {
-            			if (this.dishesList[i].quantity !== 0) {
-                			this.dishesList[i].quantity--;
+		updateCart(product, updateType) { // funzione aggiornamento carrello
+        	for (let i = 0; i < this.dishesList.length; i++) { //scorro tutti i piatti
+        		if (this.dishesList[i].id == product.id) { // se id piatto corrente = id del prodotto
+
+        			if (updateType == 'subtract') { // se la funzione e' di sottrazione
+
+            			if (this.dishesList[i].quantity != 0) { // se la quantita' e' diversa da 0
+                			this.dishesList[i].quantity--; // sottrai 1
+							return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
             			}
             		} else {
-              			this.dishesList[i].quantity++;
-					}
-            break;
-          	}
-        }
-      }
-	}, // fine methods
+						this.dishesList[i].quantity++; // altrimenti aggiungi 1
+						this.showCart = true;
 
-	computed: {
-		cart() {
-	      	return this.dishesList.filter(product => product.quantity > 0);
-    	},
-    	totalQuantity() {
-      		return this.dishesList.reduce((total, product) => total + product.quantity,0);
+						return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
+
+						// return this.cartList = this.dishesList.filter(product => product.quantity > 0);
+					}
+
+          		}
+        	}
     	}
-  	},
+	}, // fine methods
 
 	mounted() {
 		axios
@@ -103,7 +85,7 @@ var app = new Vue({
 		.then((risposta) =>{
 			this.dishesList = risposta.data.results;
 			for (var i = 0; i < this.dishesList.length; i++) {
-				this.dishesList[i]['quantity'] = 0;
+				this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 			}
 			// assegno ad array restaurants la risposta API
 		}); // fine then

@@ -13,22 +13,13 @@
         <br>
         <br>
 
-        <div class="">
-          @foreach ($courses as $course)
-            <a href="#">
-              {{$course->name}}
-            </a>
-          @endforeach
-        </div>
-
-        <br>
-
         <section class="products">
+            <button @click="aggiornaCarrello()" type="button" name="button">Aggiorna Carrello</button>
             <div class="cart">
                 <button @click="showCart = !showCart" type="button" name="button">
                     <i class="fas fa-shopping-cart"></i>
                 </button>
-                <span></span>
+                <span class="total-quantity">@{{ totalQuantity }}</span>
                 <div v-if="showCart" class="cart-dropdown">
                     <ul class="cart-dropdown-list">
                         <li v-for="product in cart" :key="product.id">@{{ product.name }} @{{ product.quantity }}</li>
@@ -36,31 +27,18 @@
                 </div>
             </div>
 
-    <div v-for="product in dishesList" :key="product.id" class="product">
-      <h3 class="product__header">@{{ product.name }}</h3>
-      <img
-        src="https://via.placeholder.com/150"
-        :alt="product.name"
-        class="product__image"
-      >
-      <p class="product__description">@{{ product.description }}</p>
-      <div class="cart">
-        <button
-          @click="updateCart(product, 'subtract')"
-          class="cart__button"
-        >
-          -
-        </button>
-        <span class="cart__quantity">@{{ product.quantity }}</span>
-        <button
-          @click="updateCart(product, 'add')"
-          class="cart__button"
-        >
-          +
-        </button>
-      </div>
-    </div>
-  </section>
+            <div v-for="product in dishesList" :key="product.id" class="product">
+                <h3 class="product__header">@{{ product.name }}</h3>
+                <img src="https://via.placeholder.com/150" :alt="product.name" class="product__image">
+                <p class="product__description">@{{ product.description }}</p>
+
+                <div class="cart">
+                    <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>
+                    <span class="cart__quantity">@{{ product.quantity }}</span>
+                    <button @click="updateCart(product, 'add'), cartBtnLessPlus()" class="cart__button">+</button>
+                </div>
+            </div>
+        </section>
 
         <br>
 

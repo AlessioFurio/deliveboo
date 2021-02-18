@@ -324,11 +324,12 @@ footer {
 }
 .container-login-register .navbar-nav .nav-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-right: 30px;
+  padding-right: 10px;
 }
 .container-login-register .navbar-nav .nav-item .cart i {
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
 }
 .container-login-register .navbar-nav .nav-item a {
@@ -336,7 +337,8 @@ footer {
   list-style-type: none;
   color: #000;
   font-weight: bold;
-  margin-right: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
@@ -353,9 +355,18 @@ footer {
     display: flex;
     flex-direction: row;
   }
+  .container-login-register .navbar-nav .nav-item {
+    flex-direction: row;
+    padding-right: 0;
+  }
+  .container-login-register .navbar-nav .nav-item .cart i {
+    font-size: 25px;
+    margin-right: 20px;
+  }
   .container-login-register .navbar-nav .nav-item a {
     margin-right: 30px;
     font-size: 25px;
+    display: inline;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -369,10 +380,6 @@ footer {
   .container-login-register .navbar-nav {
     display: flex;
     flex-direction: row;
-  }
-  .container-login-register .navbar-nav .nav-item a {
-    margin-right: 40px;
-    font-size: 25px;
   }
 }
 .container-general-login {
@@ -1331,5 +1338,105 @@ footer {
 @media screen and (min-width: 1024px) {
   .dashboard .dashboard-body .dashboard-body-menu {
     flex-basis: 20%;
+  }
+}
+@media screen and (min-width: 200px) {
+  .container-general-create {
+    background-color: #101927;
+    height: 100vh;
+  }
+
+  .container-general-create-plate {
+    padding: 50px 0 100px 0;
+  }
+
+  .container-form-create-plate {
+    width: 80%;
+    margin: auto;
+    background: #e3e8f1;
+    border: 5px solid #00ccbc;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .title-create-plate h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 0;
+    color: #101927;
+  }
+
+  .link-all-plate {
+    text-align: center;
+    margin: 10px 0 20px 0;
+  }
+  .link-all-plate .link-plate {
+    background-color: #101927;
+    border: 3px solid #00ccbc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #00ccbc;
+    display: inline-block;
+  }
+  .link-all-plate .link-plate:hover {
+    background-color: #00ccbc;
+    border: 3px solid #101927;
+    color: #101927;
+  }
+
+  .form {
+    margin-bottom: 10px;
+  }
+
+  .form-group-plate label {
+    font-size: 20px;
+    color: #101927;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: 700;
+  }
+  .form-group-plate .input {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid #00ccbc;
+    height: 30px;
+  }
+  .form-group-plate .textarea {
+    height: 150px;
+  }
+  .form-group-plate .check {
+    display: inline-block;
+  }
+
+  .button-create-plate {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .button-create-plate button {
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #101927;
+    padding: 10px;
+    color: #00ccbc;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-form-create-plate {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-form-create-plate {
+    width: 30%;
+  }
+
+  .title-create-plate h1 {
+    font-size: 25px;
   }
 }

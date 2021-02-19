@@ -39,6 +39,14 @@
                             <div>{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="content-form-category">
+                            <input type="file" name="cover" placeholder="Carica immagine">
+
+                            @error('cover')
+                            <div>{{ $message }}</div>
+                            @enderror
+                        </div>
+
 
                         <div class="content-form-category">
                             <p>Seleziona Categoria</p>

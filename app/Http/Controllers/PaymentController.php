@@ -36,7 +36,7 @@ class PaymentController extends Controller
     $result = $gateway->transaction()->sale([
       'amount' => '10.00',
       'paymentMethodNonce' => $nonceFromTheClient,
-      'deviceData' => $deviceDataFromTheClient,
+      // 'deviceData' => $deviceDataFromTheClient,
       'options' => [
         'submitForSettlement' => True
       ]

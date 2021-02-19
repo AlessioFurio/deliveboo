@@ -2,7 +2,6 @@
 @section('content')
     <div id="root">
 
-        <button @click="provalog()" type="button" name="button">LOG PROVA</button>
         <h1>
           {{$restaurant->name}}
         </h1>
@@ -14,8 +13,7 @@
         <br>
 
         <section class="products">
-            <button @click="aggiornaCarrello()" type="button" name="button">Aggiorna Carrello</button>
-            <div class="cart">
+            {{-- <div class="cart">
                 <button @click="showCart = !showCart" type="button" name="button">
                     <i class="fas fa-shopping-cart"></i>
                 </button>
@@ -25,7 +23,7 @@
                         <li v-for="product in cart" :key="product.id">@{{ product.name }} @{{ product.quantity }}</li>
                     </ul>
                 </div>
-            </div>
+            </div> --}}
 
             <div v-for="product in dishesList" :key="product.id" class="product">
                 <h3 class="product__header">@{{ product.name }}</h3>

@@ -31,14 +31,21 @@
             <div class="nav-menu-top">
 
                 <div class="cart">
-                    <i class="fas fa-shopping-cart"></i>
+                    <button @click="showCart = !showCart" type="button" name="button">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <span class="total-quantity">@{{ totalQuantity }}</span>
+                    <div v-if="showCart" class="cart-dropdown">
+                        <ul class="cart-dropdown-list">
+                            <li v-for="product in cart" :key="product.id">@{{ product.name }} @{{ product.quantity }}</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="toggle-menu"  @click="toggleMenu()">
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
-
         </div>
 
 
@@ -55,11 +62,5 @@
             </div>
         </div>
 
-        <div class="header-bottom">
-
-        </div>
-
-        
     </div>
-
 </header>

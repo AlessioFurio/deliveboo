@@ -78,6 +78,14 @@
 
                     <div class="header-bottom">
                     </div>
+
+                    <div class="text-header">
+                        <h2 class="principal-text">
+                            Non si può pensare bene, amare bene, dormire bene, se non si è mangiato bene.
+                        </h2>
+                    </div>
+
+
                 </div>
             </header>
             {{-- @include('partials.footer') --}}

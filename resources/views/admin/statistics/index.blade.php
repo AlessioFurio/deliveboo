@@ -9,25 +9,41 @@
       <div class="dashboard-header">
           <h1>Dashboard</h1>
       </div>
-      <div class="dashboard-body">
-          @include('layouts.layout-dashboard-body-menu')
 
-          <div class="dashboard-body-content">
-              <div class="container-restaurant">
-                  <div class="row row-title">
-                      <h1>Statistiche</h1>
+                  {{-- <div class="graphic-container"> --}}
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-2 p-0">
+                        {{-- <div class="dashboard-body"> --}}
+                         @include('layouts.layout-dashboard-body-menu')
+
+                        {{-- <div class="dashboard-body-content">
+                          <div class="container-restaurant">
+                              <div class="row row-title">
+                                <h1>Statistiche</h1>
+                              </div>
+                          </div>
+
+                        </div> --}}
+                        </div>
+                      {{-- </div> --}}
+                      <div class="col-10">
+                        <div class="container-fluid">
+                          <canvas id="chart" style="{width: 300px; height: 300px;}" class="mt-5"></canvas>
+                        </div>
+                      </div>
+                  </div>
                   </div>
 
-                  <div class="graphic-container">
-                    <canvas id="chart" width="500" height="500" ></canvas>
-                  </div>
-              </div>
-          </div>
       </div>
   </div>
 
   <script>
     var chart = document.getElementById('chart').getContext('2d');
+
+    chart.canvas.parentNode.style.maxHeight = '600px';
+    chart.canvas.parentNode.style.maxWidth = '600px';
+
     var ordersChart = new Chart(chart, {
       type: 'bar',
       data: {
@@ -55,6 +71,7 @@
           }]
       },
       options: {
+        responsive: true,
           scales: {
               yAxes: [{
                   ticks: {

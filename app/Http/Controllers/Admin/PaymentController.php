@@ -14,7 +14,8 @@ class PaymentController extends Controller
         $user_id = Auth::user()->id;
         // dd(Auth::user()->restaurants;
 
-        // $restaurant_auth = Restaurant::where('restaurant_id'   )
+        $restaurant_auth = Restaurant::where('user_id', $user_id )->get();
+        // dd($restaurant_auth);
 
         $data = [
             'payments' => Payment::where('restaurant_id' , $user_id )->get()

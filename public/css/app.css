@@ -732,26 +732,57 @@ footer {
   }
 }
 @media screen and (min-width: 200px) {
-  .dashboard-body-content {
+  .dashboard-restaurant-create .dashboard-header-restaurant-create {
+    background-color: #101927;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+  }
+  .dashboard-restaurant-create .dashboard-header-restaurant-create h1 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 25px;
+  }
+  .dashboard-restaurant-create .dashboard-body-restaurant-create {
+    display: flex;
+    height: calc(100vh - 100px - 48px);
+  }
+  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create {
+    background-color: #101927;
+    height: 100%;
+    flex-basis: 40%;
+  }
+  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li {
+    border-bottom: 1px solid #c1c1c1;
+  }
+  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a {
+    width: 100%;
+    padding: 15px 0;
+  }
+  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a:hover {
+    background-color: #3A5FCD;
+  }
+
+  .dashboard-body-content-restaurant-create {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .dashboard-body-content .card-form {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create {
     width: 400px;
     background-color: #fff;
     border-radius: 10px;
   }
-  .dashboard-body-content .card-form .card-title {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create .card-title-restaurant-create {
     text-align: center;
     padding: 50px 0;
   }
-  .dashboard-body-content .card-form form .content-form {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create {
     max-width: 90%;
     margin: auto;
     text-align: center;
   }
-  .dashboard-body-content .card-form form .content-form .content-form-category {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-category-restaurant-create {
     padding: 20px 0;
     margin: 10px 0;
     border-radius: 5px;
@@ -759,11 +790,11 @@ footer {
     border: none;
     color: #000;
   }
-  .dashboard-body-content .card-form form .content-form .content-form-category .form-group {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-category-restaurant-create .form-group-restaurant-create {
     display: flex;
     justify-content: space-around;
   }
-  .dashboard-body-content .card-form form .content-form input {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create input {
     padding: 20px 0;
     margin: 10px 0;
     width: 80%;
@@ -772,7 +803,7 @@ footer {
     border: none;
     color: #000;
   }
-  .dashboard-body-content .card-form form .content-form button {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create button {
     background-color: #101927;
     color: #fff;
     text-transform: uppercase;

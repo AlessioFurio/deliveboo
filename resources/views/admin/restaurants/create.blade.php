@@ -3,43 +3,56 @@
 
 @section('content')
 
-<div class="dashboard">
-    <div class="dashboard-header">
+<div class="dashboard-restaurant-create">
+    <div class="dashboard-header-restaurant-create">
         <h1>Dashboard</h1>
     </div>
-    <div class="dashboard-body">
-        @include('layouts.layout-dashboard-body-menu')
+    <div class="dashboard-body-restaurant-create">
 
-        <div class="dashboard-body-content">
+        <div class="dashboard-body-menu-restaurant-create">
+            <ul>
+                <li>
+                    <a href="{{route('admin.restaurants.index')}}" >I Tuoi Ristoranti</a>
+                </li>
+                <li>
+                    <a href="{{route('admin.restaurants.create')}}" >Aggiungi Ristorante</a>
+                </li>
+                {{-- <li>
+                    <a href="{{route('admin.dishes.create')}}" class="btn add-restaurant">Aggiungi Piatto</a>
+                </li> --}}
+            </ul>
+        </div>
 
-            <div class="card-form">
+        <div class="dashboard-body-content-restaurant-create">
 
-                <div class="card-title">
+            <div class="card-form-restaurant-create">
+
+                <div class="card-title-restaurant-create">
                     <h2>Aggiungi Ristorante</h2>
                 </div>
                 <form method="post" action="{{route('admin.restaurants.store')}}" enctype="multipart/form-data">
                     @csrf
                     @method('POST')
-                    <div class="content-form">
-                        <div class="content-form-input">
+                    <div class="content-form-restaurant-create">
+                        <div class="content-form-input-restaurant-create">
                             <input value="{{old('name')}}" type="text" name="name" required placeholder="Nome Ristorante">
                             @error('name')
                             <div>{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="content-form-input">
+                        <div class="content-form-input-restaurant-create">
                             <input value="{{old('address')}}" type="text" name="address" required placeholder="Indirizzo">
                             @error('address')
                             <div>{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="content-form-input">
+                        <div class="content-form-input-restaurant-create">
                             <input value="{{old('phone')}}" type="text" name="phone" required placeholder="Telefono">
                             @error('phone')
                             <div>{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="content-form-category">
+                        <div class="content-form-category-restaurant-create">
                             <input type="file" name="cover" placeholder="Carica immagine">
 
                             @error('cover')
@@ -48,19 +61,19 @@
                         </div>
 
 
-                        <div class="content-form-category">
+                        <div class="content-form-category-restaurant-create">
                             <p>Seleziona Categoria</p>
-                            <div class="form-group col-12">
+                            <div class="form-group-restaurant-create">
                                 @foreach ($categories as $category)
-                                <div class="form-check">
-                                    <input name="categories[]" class="form-check-input" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
-                                    <label class="form-check-label">
+                                <div class="form-check-restaurant-create">
+                                    <input name="categories[]" class="form-check-input-restaurant-create" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
+                                    <label class="form-check-label-restaurant-create">
                                         {{ $category->name }}
                                     </label>
                                 </div>
                                 @endforeach
                                 @error('categories')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    <div class="message-create">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>

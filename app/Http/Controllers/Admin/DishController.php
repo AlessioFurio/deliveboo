@@ -92,7 +92,7 @@ class DishController extends Controller
             $form_data['cover'] = $image_path;
         }
 
-        if (!in_array($form_data['restaurant_id'], $own_id )) {
+        if (!array_key_exists('restaurant_id' , $form_data ) || !in_array($form_data['restaurant_id'], $own_id )) {
             abort(404);
         }
         $new_dish->fill($form_data);

@@ -625,122 +625,109 @@ footer {
   }
 }
 @media screen and (min-width: 200px) {
-  .dashboard .btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-  }
-  .dashboard .dashboard-header {
+  .dashboard-restaurant-index .dashboard-header-restaurant-index {
     background-color: #101927;
     padding: 10px;
     border-bottom: 1px solid #000;
   }
-  .dashboard .dashboard-header h1 {
+  .dashboard-restaurant-index .dashboard-header-restaurant-index h1 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 25px;
   }
-  .dashboard .dashboard-body {
+  .dashboard-restaurant-index .dashboard-body-restaurant-index {
     display: flex;
     height: calc(100vh - 100px - 48px);
   }
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
     background-color: #101927;
     height: 100%;
     flex-basis: 40%;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li {
+  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li {
     border-bottom: 1px solid #c1c1c1;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li a {
+  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
     width: 100%;
     padding: 15px 0;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li a:hover {
+  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a:hover {
     background-color: #3A5FCD;
   }
-  .dashboard .dashboard-body .dashboard-body-content {
+  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-content-restaurant-index {
     background-color: #e3e8f1;
     height: 100%;
     flex-basis: 80%;
     overflow-y: scroll;
   }
 
-  .container-restaurant {
+  .container-restaurant-index {
     height: 100%;
   }
-  .container-restaurant .row-title h1 {
+  .container-restaurant-index .title-restaurant-index h1 {
     text-align: center;
   }
-  .container-restaurant .btn {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-  }
-  .container-restaurant .restaurants {
+  .container-restaurant-index .restaurants-index {
     display: flex;
     flex-wrap: wrap;
   }
-  .container-restaurant .restaurants .restaurant-card {
+  .container-restaurant-index .restaurants-index .restaurant-card-index {
     flex-basis: 100%;
     background-color: #B0C4DE;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
   }
-  .container-restaurant .restaurants .restaurant-card .title-restaurant-card {
+  .container-restaurant-index .restaurants-index .restaurant-card-index .title-restaurant-card {
     text-align: center;
   }
-  .container-restaurant .restaurants .restaurant-card .title-restaurant-card h1 {
+  .container-restaurant-index .restaurants-index .restaurant-card-index .title-restaurant-card h1 {
     font-size: 20px;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .details-restaurant-card {
+  .container-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index {
     padding: 20px 0;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action {
+  .container-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-btn-action-index {
     text-align: center;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn {
+  .container-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-btn-action-index .button-index {
     margin-bottom: 5px;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-dettagli {
+  .container-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-btn-action-index .button-dettagli-index {
     background-color: #4169E1;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
+  .container-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-btn-action-index .button-modifica-index {
     background-color: #FFA500;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-elimina {
+  .container-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-btn-action-index .button-elimina-index {
     background-color: #DC143C;
     border: none;
   }
 }
 @media screen and (min-width: 500px) {
-  .container-restaurant .row-table .restaurants .restaurant-card {
+  .container-restaurant-index .title-restaurant-index .restaurants-index .restaurant-card-index {
     max-width: 80%;
   }
 
-  .container-restaurant .restaurants {
+  .container-restaurant-index .restaurants-index {
     justify-content: center;
   }
-  .container-restaurant .restaurants .container-restaurant .restaurants .restaurant-card {
+  .container-restaurant-index .restaurants-index .container-restaurant-index .restaurants-index .restaurant-card-index {
     flex-basis: 50%;
   }
 }
 @media screen and (min-width: 768px) {
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
     flex-basis: 25%;
   }
 
-  .container-restaurant .restaurants .restaurant-card {
+  .container-restaurant-index .restaurants-index .restaurant-card-index {
     flex-basis: 40%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
     flex-basis: 20%;
   }
 }
@@ -893,42 +880,37 @@ footer {
   }
 }
 @media screen and (min-width: 200px) {
-  .dashboard .btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-  }
-  .dashboard .dashboard-header {
+  .dashboard-restaurant-show .dashboard-header-restaurant-show {
     background-color: #101927;
     padding: 10px;
     border-bottom: 1px solid #000;
   }
-  .dashboard .dashboard-header h1 {
+  .dashboard-restaurant-show .dashboard-header-restaurant-show h1 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 25px;
   }
-  .dashboard .dashboard-body {
+  .dashboard-restaurant-show .dashboard-body-restaurant-show {
     display: flex;
     height: calc(100vh - 100px - 48px);
   }
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
     background-color: #101927;
     height: 100%;
     flex-basis: 40%;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li {
+  .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li {
     border-bottom: 1px solid #c1c1c1;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li a {
+  .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     width: 100%;
     padding: 15px 0;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li a:hover {
+  .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a:hover {
     background-color: #3A5FCD;
   }
-  .dashboard .dashboard-body .dashboard-body-content {
+  .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-content-restaurant-show {
     background-color: #e3e8f1;
     height: 100%;
     flex-basis: 80%;
@@ -939,17 +921,17 @@ footer {
     max-width: 80%;
     height: 100%;
   }
-  .container-restaurant-show .row-title h1, .container-restaurant-show .row-title h2 {
+  .container-restaurant-show .title-restaurant-show h1, .container-restaurant-show .title-restaurant-show h2 {
     padding-bottom: 20px;
   }
-  .container-restaurant-show .row-title h1 {
+  .container-restaurant-show .title-restaurant-show h1 {
     text-align: center;
   }
-  .container-restaurant-show .row-title .btn-new {
+  .container-restaurant-show .title-restaurant-show .button-new-show {
     background-color: green;
     margin: 20px 0;
   }
-  .container-restaurant-show .btn {
+  .container-restaurant-show .show {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -957,168 +939,158 @@ footer {
     border-radius: 5px;
     color: #fff;
   }
-  .container-restaurant-show .restaurants {
+  .container-restaurant-show .restaurants-show {
     display: flex;
     flex-wrap: wrap;
   }
-  .container-restaurant-show .restaurants .restaurant-card-show {
+  .container-restaurant-show .restaurants-show .restaurant-card-show {
     flex-basis: 30%;
     background-color: #B0C4DE;
     border-radius: 10px;
     margin: 20px 10px;
     padding: 10px;
   }
-  .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card .details-restaurant-card {
+  .container-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show .details-restaurant-card-show {
     padding: 20px 0;
   }
-  .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card img {
+  .container-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show img {
     max-width: 100%;
   }
-  .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card .action-restaurant-card .container-btn-action {
+  .container-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show .action-restaurant-card-show .container-btn-action-show {
     text-align: center;
   }
-  .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card .action-restaurant-card .container-btn-action .btn {
+  .container-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show .action-restaurant-card-show .container-btn-action-show .button-show {
     margin-bottom: 5px;
   }
-  .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card .action-restaurant-card .container-btn-action .btn-dettagli {
+  .container-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show .action-restaurant-card-show .container-btn-action-show .button-dettagli-show {
     background-color: #4169E1;
   }
-  .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
+  .container-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show .action-restaurant-card-show .container-btn-action-show .button-modifica-show {
     background-color: #FFA500;
   }
-  .container-restaurant-show .restaurants .restaurant-card-show .body-restaurant-card .action-restaurant-card .container-btn-action .btn-elimina {
+  .container-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show .action-restaurant-card-show .container-btn-action-show .button-elimina-show {
     background-color: #dc143c;
   }
 }
 @media screen and (min-width: 500px) {
-  .container-restaurant .row-table .restaurants .restaurant-card-show {
+  .container-restaurant-show .title-restaurant-show .restaurants-show .restaurant-card-show {
     max-width: 80%;
   }
 
-  .container-restaurant .restaurants {
+  .container-restaurant-show .restaurants-show {
     justify-content: center;
   }
 }
 @media screen and (min-width: 768px) {
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
     flex-basis: 25%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
     flex-basis: 20%;
   }
 }
 @media screen and (min-width: 200px) {
-  .dashboard .btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-  }
-  .dashboard .dashboard-header {
+  .dashboard-dishes-index .dashboard-header-dishes-index {
     background-color: #101927;
     padding: 10px;
     border-bottom: 1px solid #000;
   }
-  .dashboard .dashboard-header h1 {
+  .dashboard-dishes-index .dashboard-header-dishes-index h1 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 25px;
   }
-  .dashboard .dashboard-body {
+  .dashboard-dishes-index .dashboard-body-dishes-index {
     display: flex;
     height: calc(100vh - 100px - 48px);
   }
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-dishes-index .dashboard-body-dishes-index .dashboard-body-menu-dishes-index {
     background-color: #101927;
     height: 100%;
     flex-basis: 40%;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li {
+  .dashboard-dishes-index .dashboard-body-dishes-index .dashboard-body-menu-dishes-index ul li {
     border-bottom: 1px solid #c1c1c1;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li a {
+  .dashboard-dishes-index .dashboard-body-dishes-index .dashboard-body-menu-dishes-index ul li a {
     width: 100%;
     padding: 15px 0;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li a:hover {
+  .dashboard-dishes-index .dashboard-body-dishes-index .dashboard-body-menu-dishes-index ul li a:hover {
     background-color: #3A5FCD;
   }
-  .dashboard .dashboard-body .dashboard-body-content {
+  .dashboard-dishes-index .dashboard-body-dishes-index .dashboard-body-content-dishes-index {
     background-color: #e3e8f1;
     height: 100%;
     flex-basis: 80%;
     overflow-y: scroll;
   }
 
-  .container-restaurant .row-title h1 {
+  .container-restaurant-dishes-index .title-dishes-index h1 {
     text-align: center;
   }
-  .container-restaurant .btn {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-  }
-  .container-restaurant .restaurants {
+  .container-restaurant-dishes-index .dishes-index {
     display: flex;
     flex-wrap: wrap;
   }
-  .container-restaurant .restaurants .restaurant-card {
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index {
     flex-basis: 100%;
     background-color: #B0C4DE;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
   }
-  .container-restaurant .restaurants .restaurant-card .title-restaurant-card {
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index .title-dishes-card-index {
     text-align: center;
   }
-  .container-restaurant .restaurants .restaurant-card .title-restaurant-card h1 {
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index .title-dishes-card-index h1 {
     font-size: 20px;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .details-restaurant-card {
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index .body-dishes-card-index .details-dishes-card-index {
     padding: 20px 0;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action {
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index .body-dishes-card-index .action-dishes-card-index .container-button-action-dishes.index {
     text-align: center;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn {
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index .body-dishes-card-index .action-dishes-card-index .container-button-action-dishes.index .button-dishes-index {
     margin-bottom: 5px;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-dettagli {
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index .body-dishes-card-index .action-dishes-card-index .container-button-action-dishes.index .button-dettagli-dishes-index {
     background-color: #4169E1;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index .body-dishes-card-index .action-dishes-card-index .container-button-action-dishes.index .button-modifica-dishes-index {
     background-color: #FFA500;
+  }
+  .container-restaurant-dishes-index .dishes-index .dishes-card-index .body-dishes-card-index .action-dishes-card-index .container-button-action-dishes.index .button-elimina-dishes-index {
+    background-color: red;
   }
 }
 @media screen and (min-width: 500px) {
-  .container-restaurant .row-table .restaurants .restaurant-card {
+  .container-dishes-index .title-dishes-index .dishes-index .dishes-card-index {
     max-width: 80%;
   }
 
-  .container-restaurant .restaurants {
+  .container-dishes-index .dishes-index {
     justify-content: center;
   }
-  .container-restaurant .restaurants .container-restaurant .restaurants .restaurant-card {
+  .container-dishes-index .dishes-index .container-dishes-index .dishes-index .dishes-card-index {
     flex-basis: 50%;
   }
 }
 @media screen and (min-width: 768px) {
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-dishes-index .dashboard-body-dishes-index .dashboard-body-menu-dishes-index {
     flex-basis: 25%;
   }
 
-  .container-restaurant .restaurants .restaurant-card {
+  .container-dishes-index .dishes-index .dishes-card-index {
     flex-basis: 40%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-dishes-index .dashboard-body-dishes-index .dashboard-body-menu-dishes-index {
     flex-basis: 20%;
   }
 }
@@ -1271,115 +1243,90 @@ footer {
   }
 }
 @media screen and (min-width: 200px) {
-  .dashboard .btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-  }
-  .dashboard .dashboard-header {
+  .dashboard-dishes-show .dashboard-header-dishes-show {
     background-color: #101927;
     padding: 10px;
     border-bottom: 1px solid #000;
   }
-  .dashboard .dashboard-header h1 {
+  .dashboard-dishes-show .dashboard-header-dishes-show h1 {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 25px;
   }
-  .dashboard .dashboard-body {
+  .dashboard-dishes-show .dashboard-body-dishes-show {
     display: flex;
     height: calc(100vh - 100px - 48px);
   }
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show {
     background-color: #101927;
     height: 100%;
     flex-basis: 40%;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li {
+  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li {
     border-bottom: 1px solid #c1c1c1;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li a {
+  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
     width: 100%;
     padding: 15px 0;
   }
-  .dashboard .dashboard-body .dashboard-body-menu ul li a:hover {
+  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a:hover {
     background-color: #3A5FCD;
   }
-  .dashboard .dashboard-body .dashboard-body-content {
+  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-content-dishes-show {
     background-color: #e3e8f1;
     height: 100%;
     flex-basis: 80%;
     overflow-y: scroll;
   }
 
-  .container-restaurant .row-title h1 {
+  .container-restaurant-dishes-show .title-dishes-show h1 {
     text-align: center;
   }
-  .container-restaurant .btn {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-  }
-  .container-restaurant .restaurants {
+  .container-restaurant-dishes-show .dishes-show {
     display: flex;
     flex-wrap: wrap;
   }
-  .container-restaurant .restaurants .restaurant-card {
+  .container-restaurant-dishes-show .dishes-show .dishes-card-show {
     flex-basis: 100%;
     background-color: #B0C4DE;
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
   }
-  .container-restaurant .restaurants .restaurant-card .title-restaurant-card {
+  .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show {
     text-align: center;
   }
-  .container-restaurant .restaurants .restaurant-card .title-restaurant-card h1 {
+  .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
     font-size: 20px;
   }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .details-restaurant-card {
+  .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show {
     padding: 20px 0;
-  }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action {
-    text-align: center;
-  }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn {
-    margin-bottom: 5px;
-  }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-dettagli {
-    background-color: #4169E1;
-  }
-  .container-restaurant .restaurants .restaurant-card .body-restaurant-card .action-restaurant-card .container-btn-action .btn-modifica {
-    background-color: #FFA500;
   }
 }
 @media screen and (min-width: 500px) {
-  .container-restaurant .row-table .restaurants .restaurant-card {
+  .container-dishes-show .title-dishes-show .dishes-show .dishes-card-show {
     max-width: 80%;
   }
 
-  .container-restaurant .restaurants {
+  .container-dishes-show .dishes-show {
     justify-content: center;
   }
-  .container-restaurant .restaurants .container-restaurant .restaurants .restaurant-card {
+  .container-dishes-show .dishes-show .container-dishes-show .dishes-show .dishes-card-show {
     flex-basis: 50%;
   }
 }
 @media screen and (min-width: 768px) {
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show {
     flex-basis: 25%;
   }
 
-  .container-restaurant .restaurants .restaurant-card {
+  .container-dishes-show .dishes-show .dishes-card-show {
     flex-basis: 40%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .dashboard .dashboard-body .dashboard-body-menu {
+  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show {
     flex-basis: 20%;
   }
 }

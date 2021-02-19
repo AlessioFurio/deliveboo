@@ -2,44 +2,41 @@
 
 @section('content')
 
-  <div class="dashboard">
-      <div class="dashboard-header">
+  <div class="dashboard-dishes-index">
+      <div class="dashboard-header-dishes-index">
         <a href="{{route('admin.home')}}">
           <h1>Dashboard</h1>
         </a>
       </div>
-      <div class="dashboard-body">
-          <div class="dashboard-body-menu">
+      <div class="dashboard-body-dishes-index">
+          <div class="dashboard-body-menu-dishes-index">
               <ul>
                   <li>
-                      <a href="{{route('admin.restaurants.create')}}" class="btn add-restaurant">Aggiungi Ristorante</a>
+                      <a href="{{route('admin.restaurants.create')}}" >Aggiungi Ristorante</a>
                   </li>
                   <li>
-                      <a href="{{route('admin.dishes.create')}}" class="btn add-restaurant">Aggiungi Piatto</a>
+                      <a href="{{route('admin.dishes.create')}}">Aggiungi Piatto</a>
                   </li>
               </ul>
           </div>
 
-          <div class="dashboard-body-content">
-              <div class="container-restaurant">
-                  <div class="row row-title">
+          <div class="dashboard-body-content-dishes-index">
+              <div class="container-dishes-index">
+                  <div class="title-dishes-index">
                       <h1>I tuoi piatti:</h1>
                   </div>
-                  <div class="row">
 
-                  </div>
-
-                  <div class="restaurants">
+                  <div class="dishes-index">
                       @foreach ($restaurants as $restaurant)
                         @foreach  ($restaurant->dishes as $dish)
 
-                          <div class="restaurant-card">
-                            <div class="title-restaurant-card">
+                          <div class="dishes-card-index">
+                            <div class="title-dishes-card">
                               <h4>Nome piatto: </h4>
                               <h1>{{ $dish->name }}</h1>
                             </div>
-                            <div class="body-restaurant-card">
-                              <div class="details-restaurant-card">
+                            <div class="body-dishes-card">
+                              <div class="details-dishes-card">
                                   @if ($dish->cover)
                                       <img src="{{asset('storage/'. $dish->cover)}}" alt="{{$dish->name}}">
                                   @endif
@@ -56,12 +53,12 @@
 
                                 <p>Prezzo:</p> <strong>{{ $dish->price }}</strong></p>
                               </div>
-                              <div class="action-restaurant-card">
-                                <div class="container-btn-action">
-                                  <a href="{{route('admin.dishes.show' , ['dish' => $dish->id ] )}}" class="btn btn-dettagli">Dettagli</a>
-                                  <a href="{{route('admin.dishes.edit' , ['dish' => $dish->id ] )}}" class="btn btn-modifica">Modifica</a>
+                              <div class="action-dishes-card">
+                                <div class="container-button-action-dishes">
+                                  <a href="{{route('admin.dishes.show' , ['dish' => $dish->id ] )}}" class="button-dishes-index button-dettagli-dishes-index">Dettagli</a>
+                                  <a href="{{route('admin.dishes.edit' , ['dish' => $dish->id ] )}}" class="button-dishes-index button-modifica-dishes-index">Modifica</a>
                                   <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                  <button class="btn btn-elimina" type="submit" name="button">Elimina piatto</button>
+                                  <button class="button-dishes-index button-elimina-dishes-index" type="submit" name="button">Elimina piatto</button>
                                     @csrf
                                     @method('DELETE')
                                   </form>

@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 //guest
 Route::get('/', 'HomeController@index')->name('welcome');
-Route::get('/categories', 'CategoryController@index')->name('categories.index');
-Route::get('/categories/{slug}', 'CategoryController@show')->name('categories.show');
+// Route::get('/categories', 'CategoryController@index')->name('categories.index');
+// Route::get('/categories/{slug}', 'CategoryController@show')->name('categories.show');
 Route::get('/restaurants', 'RestaurantController@index')->name('restaurants.index');
 Route::get('/restaurants/{slug}', 'RestaurantController@show')->name('restaurants.show');
-Route::get('/dishes', 'DishesController@index')->name('dishes.index');
-Route::get('/dishes/{slug}', 'DishesController@show')->name('dishes.show');
+// Route::get('/dishes', 'DishesController@index')->name('dishes.index');
+// Route::get('/dishes/{slug}', 'DishesController@show')->name('dishes.show');
 
 Auth::routes();
 

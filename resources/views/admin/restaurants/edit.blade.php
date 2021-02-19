@@ -63,6 +63,20 @@
                                 @enderror
                             </div>
                         </div>
+                        <div>
+                            @if ($restaurant->cover)
+                                <figure>
+                                    <figcaption>Immagine presente:</figcaption>
+                                    <img src="{{asset('storage/'.$restaurant->cover )}}" alt="{{$restaurant->name}}">
+                                </figure>
+                            @endif
+                            <input type="file" name="cover" class="form-control-file">
+
+                            @error('cover')
+                            <div>{{ $message }}</div>
+                            @enderror
+                            
+                        </div>
                         <button type="submit">Modifica</button>
                     </div>
                 </form>

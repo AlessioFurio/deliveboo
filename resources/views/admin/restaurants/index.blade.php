@@ -25,6 +25,11 @@
                             <h4>Nome ristorante: </h4>
                             <h1>{{ $restaurant->name }}</h1>
                         </div>
+                        <div class="">
+                            @if ($restaurant->cover)
+                                <img src="{{asset('storage/'. $restaurant->cover)}}" alt="{{$restaurant->name}}">
+                            @endif
+                        </div>
                         <div class="body-restaurant-card">
                             <div class="details-restaurant-card">
                                 <p>ID: <strong>{{ $restaurant->id }}</strong></p>

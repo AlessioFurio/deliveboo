@@ -56,10 +56,15 @@ class RestaurantController extends Controller
             'name' => 'required|max:255',
             'address' => 'required | max:255',
             'categories' => 'exists:categories,id',
-            'phone' => 'required|max:255'
+            'phone' => 'required|max:255',
+            'cover' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:700'
         ]);
         $input_data = $request->all();
         $add_restaurant = new Restaurant();
+        if (array_key_exists('cover' , $input_data )) {
+            $image_path = Storage::put('cover_shop' , $input_data['cover']);
+            $input_data['cover'] = $image_path;
+        }
         $add_restaurant->fill($input_data);
         $slug = Str::slug($add_restaurant->name);
         $slug_base = $slug;
@@ -140,7 +145,9 @@ class RestaurantController extends Controller
             'name' => 'required|max:255',
             'address' => 'required | max:255',
             'categories' => 'exists:categories,id',
-            'phone' => 'required|max:255'
+            'phone' => 'required|max:255',
+            'cover' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:700'
+
         ]);
 
         $form_data = $request->all();
@@ -159,10 +166,10 @@ class RestaurantController extends Controller
             $form_data['slug'] = $slug;
         }
 
-        // if (array_key_exists('cover' , $form_data)) {
-        //     $image_path = Storage::put('cover_image' , $form_data['cover']);
-        //     $form_data['cover'] = $image_path;
-        // }
+        if (array_key_exists('cover' , $form_data)) {
+            $image_path = Storage::put('cover_shop' , $form_data['cover']);
+            $form_data['cover'] = $image_path;
+        }
 
         $restaurant->update($form_data);
         if(array_key_exists('categories', $form_data)) {

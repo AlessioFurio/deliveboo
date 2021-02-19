@@ -7,14 +7,21 @@ var app = new Vue({
 		restaurants: [],
 		dishesList: [],
 		selectedCategory: '',
-		selectedDish: '',
+		selectedRestaurant: '',
 		totalQuantity: 0,
 		showCart: false,
 		cart: [],
+		dishesRestaurant:[],
 	},
 
 
 	methods: {
+
+		getSlug() {
+			this.selectedRestaurant = window.location.href.slice(34);
+
+			console.log(this.selectedRestaurant);
+		},
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
@@ -79,13 +86,14 @@ var app = new Vue({
 		axios
 		.get('http://localhost:8000/api/dishes', {
 			params:{
-				query: this.selectedDish
+				query: this.selectedRestaurant
 			}
 		})
 		.then((risposta) =>{
-			this.dishesList = risposta.data.results;
-			for (var i = 0; i < this.dishesList.length; i++) {
-				this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+			this.dishesRestaurant = risposta.data.results;
+			console.log(this.dishesRestaurant);
+			for (var i = 0; i < this.dishesRestaurant.length; i++) {
+				this.dishesRestaurant[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 			}
 			// assegno ad array restaurants la risposta API
 		}); // fine then

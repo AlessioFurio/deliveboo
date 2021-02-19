@@ -42,7 +42,7 @@
                 </div>
                 <div class="list list-plate">
                     <label>Prezzo</label>
-                    <input class="input" type="text" name="price" placeholder=" Inserisci il prezzo..." value="{{ old('price') }}" required>
+                    <input class="input" type="number" name="price" placeholder=" Inserisci il prezzo..." value="{{ old('price') }}" required>
                 </div>
                 <div class="list list-plate">
                     <label>Portate</label>

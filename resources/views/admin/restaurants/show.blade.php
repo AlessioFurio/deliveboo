@@ -29,6 +29,9 @@
                       <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="btn btn-new">
                         Crea nuovo piatto
                       </a>
+                      <a href="{{ route('admin.orders.index', ['rest'=> $restaurant->id]) }}" class="btn btn-new">
+                        ordini
+                      </a>
                   </div>
 
                   <h3>

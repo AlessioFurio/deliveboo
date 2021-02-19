@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Restaurant;
 use App\Category;
+use App\Payment;
 use App\Dish;
 use Illuminate\Support\Str;
 
@@ -24,6 +25,7 @@ class RestaurantController extends Controller
     {
         $user_id = Auth::user()->id;
         $data = [
+            // 'orders' => Payment::where()
             'category' => Category::all(),
             'restaurants' => Restaurant::where('user_id' , $user_id )->orderBy('name', 'asc')->get()
         ];

@@ -40,6 +40,7 @@
                                 <div class="container-btn-action">
                                     <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-primary btn-dettagli">Dettagli</a>
                                     <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-warning btn-modifica">Modifica</a>
+                                    <a href="{{route('admin.orders.index' , ['pippo' => $restaurant->id ] )}}" class="btn btn-warning btn-modifica">Ordini</a>
                                 </div>
                             </div>
                         </div>

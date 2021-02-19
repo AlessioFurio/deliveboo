@@ -20,10 +20,13 @@
         <div class="container-card">
 
             <div class="cards">
-                    <div class="card" v-for="restaurant in restaurants">
+                <div class="card" v-for="restaurant in restaurants">
+                    <a :href="{{url('/restaurants')}}+'/'+ restaurant.slug">
                         <img src="/images/card.jpg" alt="">
                         <p>@{{ restaurant.name }}</p>
-                    </div>
+                        <p>@{{ restaurant.slug }}</p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

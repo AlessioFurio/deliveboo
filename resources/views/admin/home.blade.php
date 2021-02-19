@@ -20,9 +20,6 @@
                     <button type="button" name="button">
                         <a href="{{route('admin.restaurants.index')}}">ristoranti</a>
                     </button>
-                    <button type="button" name="button">
-                        <a href="{{route('admin.orders.index')}}">Ordini</a>
-                    </button>
                     {{-- <button type="button" name="button">
                         <a href="{{route('admin.dishes.index')}}">piatti</a>
                     </button> --}}

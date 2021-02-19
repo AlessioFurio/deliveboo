@@ -11,6 +11,10 @@ class StatisticsController extends Controller
 {
   public function index() {
     $user_id = Auth::user()->id;
+    if (isset($_GET['order_id'])) {
+        $order_id = $_GET['order_id'];
+        // code...
+    }
     $data = [
         'payments' => Payment::where('id' , $user_id )->get()
     ];

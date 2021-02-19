@@ -47,7 +47,7 @@
                                         <p>ID{{$payment->id}}</p>
                                         <p>Prezzo{{$payment->price}}</p>
                                         <p>{{$payment->created_at}}</p>
-                                        <a href="{{route('admin.statistics.index',['payment' => $payment->id ])}}">Statistiche</a>
+                                        <a href="{{route('admin.statistics.index',['order_id' => $payment->id ])}}">Statistiche</a>
                                     @endif
                                 </div>
                             </div>

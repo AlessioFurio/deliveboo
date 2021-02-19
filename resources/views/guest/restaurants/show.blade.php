@@ -22,6 +22,8 @@
                         </p>
                     </div>
 
+                    <button @click="getSlug()" type="button" name="button">LOG</button>
+
                     <div class="container-list-dishes">
                             <div v-for="product in dishesRestaurant" :key="product.id" class="card-dish">
                                 <h3 class="product__header">@{{ product.name }}</h3>

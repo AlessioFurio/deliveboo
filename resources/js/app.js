@@ -17,6 +17,12 @@ var app = new Vue({
 
 	methods: {
 
+		getSlug() {
+			this.selectedRestaurant = window.location.href.slice(34);
+
+			console.log(this.selectedRestaurant);
+		},
+
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
     	},
@@ -80,7 +86,7 @@ var app = new Vue({
 		axios
 		.get('http://localhost:8000/api/dishes', {
 			params:{
-				query: 'nam-quibusdam-sint'
+				query: this.selectedRestaurant
 			}
 		})
 		.then((risposta) =>{

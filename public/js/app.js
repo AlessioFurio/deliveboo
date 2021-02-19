@@ -37349,6 +37349,10 @@ var app = new Vue({
     dishesRestaurant: []
   },
   methods: {
+    getSlug: function getSlug() {
+      this.selectedRestaurant = window.location.href.slice(34);
+      console.log(this.selectedRestaurant);
+    },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
       return this.cart = this.dishesList.filter(function (product) {
@@ -37418,7 +37422,7 @@ var app = new Vue({
 
     axios.get('http://localhost:8000/api/dishes', {
       params: {
-        query: 'nam-quibusdam-sint'
+        query: this.selectedRestaurant
       }
     }).then(function (risposta) {
       _this2.dishesRestaurant = risposta.data.results;

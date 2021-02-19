@@ -2,12 +2,7 @@
 
 @section('content')
 
-<div class="dashboard">
-    <div class="dashboard-header">
-        <h1>Dashboard</h1>
-    </div>
-    <div class="dashboard-body">
-        @include('layouts.layout-dashboard-body-menu')
+<div class="dashboard-restaurant-edit">
 
         <div class="dashboard-body-content">
             <div class="card-form">
@@ -75,7 +70,7 @@
                             @error('cover')
                             <div>{{ $message }}</div>
                             @enderror
-                            
+
                         </div>
                         <button type="submit">Modifica</button>
                     </div>

@@ -76,12 +76,15 @@
 
 
                 .cart {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     i {
                         display: inline-block;
                         padding: 10px;
                         cursor: pointer;
-                        font-size: 30px;
-                        color: rgba(255,255,255);
+                        font-size: 25px;
+                        color: #fff;
                     }
                 }
 
@@ -247,7 +250,7 @@
         .text-header {
 
             width: 70%;
-            
+
 
 
             .principal-text {

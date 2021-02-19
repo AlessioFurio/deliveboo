@@ -8,7 +8,7 @@ var app = new Vue({
 		dishesList: [],
 		selectedCategory: '',
 		selectedDish: '',
-		totalQuantity: [0],
+		totalQuantity: 0,
 		showCart: false,
 		cart: [],
 	},

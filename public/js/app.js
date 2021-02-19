@@ -37343,7 +37343,7 @@ var app = new Vue({
     dishesList: [],
     selectedCategory: '',
     selectedDish: '',
-    totalQuantity: [0],
+    totalQuantity: 0,
     showCart: false,
     cart: []
   },
@@ -37507,9 +37507,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\chart.scss */"./resources/sass/chart.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
 
 
 /***/ })

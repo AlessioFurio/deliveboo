@@ -31,9 +31,9 @@
             <div class="nav-menu-top">
 
                 <div class="cart">
-                    <button @click="showCart = !showCart" type="button" name="button">
+                    <div @click="showCart = !showCart">
                         <i class="fas fa-shopping-cart"></i>
-                    </button>
+                    </div>
                     <span class="total-quantity">@{{ totalQuantity }}</span>
                     <div v-if="showCart" class="cart-dropdown">
                         <ul class="cart-dropdown-list">

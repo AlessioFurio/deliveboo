@@ -1,27 +1,77 @@
 @media screen and (min-width: 200px){
 
-    .dashboard-body-content{
+    .dashboard-restaurant-create {
+
+            // .btn{
+            //     display: inline-block;
+            //     text-decoration: none;
+            //     color: #fff;
+            // }
+
+            .dashboard-header-restaurant-create {
+                background-color: #101927;
+                padding: 10px;
+                border-bottom: 1px solid #000;
+
+                h1 {
+                    color: #fff;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 25px;
+                }
+            }
+            .dashboard-body-restaurant-create {
+                display: flex;
+                height: calc(100vh - 100px - 48px);
+
+                .dashboard-body-menu-restaurant-create{
+                    background-color: #101927;
+                    height: 100%;
+                    flex-basis: 40%;
+
+                    ul{
+
+                        li {
+                            border-bottom: 1px solid #c1c1c1;
+                            a{
+                                width: 100%;
+                                padding: 15px 0;
+
+                                &:hover {
+                                    background-color: #3A5FCD;
+
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    .dashboard-body-content-restaurant-create {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .card-form {
+        .card-form-restaurant-create {
             width: 400px;
             background-color: #fff;
             border-radius: 10px;
 
-            .card-title{
+            .card-title-restaurant-create {
                 text-align: center;
                 padding: 50px 0;
             }
 
             form {
-                .content-form{
+                .content-form-restaurant-create{
                     max-width: 90%;
                     margin: auto;
                     text-align: center;
 
-                    .content-form-category {
+                    .content-form-category-restaurant-create {
                         padding: 20px 0;
                         margin: 10px 0;
                         border-radius: 5px;
@@ -29,7 +79,7 @@
                         border: none;
                         color: #000;
 
-                        .form-group {
+                        .form-group-restaurant-create {
                             display: flex;
                             justify-content: space-around;
                         }

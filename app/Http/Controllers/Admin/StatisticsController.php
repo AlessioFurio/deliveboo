@@ -12,7 +12,7 @@ class StatisticsController extends Controller
   public function index() {
     $user_id = Auth::user()->id;
     $data = [
-        'payments' => Payment::where('user_id' , $user_id )->get()
+        'payments' => Payment::where('restaurant_id' , $user_id )->get()
     ];
     return view('admin.statistics.index', $data);
   }

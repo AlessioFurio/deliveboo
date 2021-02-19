@@ -2,18 +2,31 @@
 
 @section('content')
 
-  <div class="dashboard">
-      <div class="dashboard-header">
+  <div class="dashboard-restaurant-show">
+      <div class="dashboard-header-restaurant-show">
         <a href="{{route('admin.home')}}">
           <h1>Dashboard</h1>
         </a>
       </div>
-      <div class="dashboard-body">
-        @include('layouts.layout-dashboard-body-menu')
+      <div class="dashboard-body-restaurant-show">
 
-          <div class="dashboard-body-content">
+          <div class="dashboard-body-menu-restaurant-show">
+              <ul>
+                  <li>
+                      <a href="{{route('admin.restaurants.index')}}" >I Tuoi Ristoranti</a>
+                  </li>
+                  <li>
+                      <a href="{{route('admin.restaurants.create')}}" >Aggiungi Ristorante</a>
+                  </li>
+                  {{-- <li>
+                      <a href="{{route('admin.dishes.create')}}" class="btn add-restaurant">Aggiungi Piatto</a>
+                  </li> --}}
+              </ul>
+          </div>
+
+          <div class="dashboard-body-content-restaurant-show">
               <div class="container-restaurant-show">
-                  <div class="row row-title">
+                  <div class="title-restaurant-show">
                       <h1>
                         Dettagli ristorante
                       </h1>
@@ -26,19 +39,22 @@
                       <h4>
                         {{$restaurant->phone}}
                       </h4>
-                      <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="btn btn-new">
+                      <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="show button-new-show">
                         Crea nuovo piatto
+                      </a>
+                      <a href="{{ route('admin.orders.index', ['rest'=> $restaurant->id]) }}" class="show button-new-show">
+                        ordini
                       </a>
                   </div>
 
                   <h3>
                     I tuoi piatti:
                   </h3>
-                  <div class="restaurants">
+                  <div class="restaurants-show">
 
                       @foreach ($restaurant->dishes as $dish)
                         <div class="restaurant-card-show">
-                          <div class="body-restaurant-card">
+                          <div class="body-restaurant-card-show">
                             <h3>
                               {{$dish->name}}
                             </h3>
@@ -46,18 +62,18 @@
                                 <img src="{{asset('storage/'. $dish->cover)}}" alt="">
                             @endif
 
-                            <div class="details-restaurant-card">
-                              <div class="action-restaurant-card">
-                                <div class="container-btn-action">
-                                  <a class="btn btn-dettagli" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">
+                            <div class="details-restaurant-card-show">
+                              <div class="action-restaurant-card-show">
+                                <div class="container-btn-action-show">
+                                  <a class="button-show button-dettagli-show" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">
                                     Visualizza
                                   </a>
-                                  <a class="btn btn-modifica" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">
+                                  <a class="button-show button-modifica-show" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">
                                     Modifica
                                   </a>
 
                                   <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                    <button type="submit" name="button" class="btn btn-elimina">Elimina</button>
+                                    <button type="submit" name="button" class="button-show button-elimina-show">Elimina</button>
                                     @csrf
                                     @method('DELETE')
                                   </form>

@@ -2,25 +2,36 @@
 
 @section('content')
 
-<div class="dashboard">
-    <div class="dashboard-header">
+<div class="dashboard-restaurant-index">
+    <div class="dashboard-header-restaurant-index">
         <h1>Dashboard</h1>
     </div>
-    <div class="dashboard-body">
-        @include('layouts.layout-dashboard-body-menu')
+    <div class="dashboard-body-restaurant-index">
 
-        <div class="dashboard-body-content">
-            <div class="container-restaurant">
-                <div class="row row-title">
+        <div class="dashboard-body-menu-restaurant-index">
+            <ul>
+                <li>
+                    <a href="{{route('admin.restaurants.index')}}" >I Tuoi Ristoranti</a>
+                </li>
+                <li>
+                    <a href="{{route('admin.restaurants.create')}}" >Aggiungi Ristorante</a>
+                </li>
+                {{-- <li>
+                    <a href="{{route('admin.dishes.create')}}" class="btn add-restaurant">Aggiungi Piatto</a>
+                </li> --}}
+            </ul>
+        </div>
+
+
+        <div class="dashboard-body-content-restaurant-index">
+            <div class="container-restaurant-index">
+                <div class="title-restaurant-index">
                     <h1>I tuoi Ristoranti:</h1>
                 </div>
-                <div class="row">
 
-                </div>
-
-                <div class="restaurants">
+                <div class="restaurants-index">
                     @foreach ($restaurants as $restaurant)
-                    <div class="restaurant-card">
+                    <div class="restaurant-card-index">
                         <div class="title-restaurant-card">
                             <h4>Nome ristorante: </h4>
                             <h1>{{ $restaurant->name }}</h1>
@@ -30,16 +41,17 @@
                                 <img src="{{asset('storage/'. $restaurant->cover)}}" alt="{{$restaurant->name}}">
                             @endif
                         </div>
-                        <div class="body-restaurant-card">
-                            <div class="details-restaurant-card">
+                        <div class="body-restaurant-card-index">
+                            <div class="details-restaurant-card-index">
                                 <p>ID: <strong>{{ $restaurant->id }}</strong></p>
                                 <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>
                                 <p>Telefono:</p> <strong>{{ $restaurant->phone }}</strong></p>
                             </div>
-                            <div class="action-restaurant-card">
-                                <div class="container-btn-action">
-                                    <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-primary btn-dettagli">Dettagli</a>
-                                    <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="btn btn-warning btn-modifica">Modifica</a>
+                            <div class="action-restaurant-card-index">
+                                <div class="container-btn-action-index">
+                                    <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-dettagli-index">Dettagli</a>
+                                    <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-modifica-index">Modifica</a>
+                                    <a href="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-elimina-index">Elimina</a>
                                 </div>
                             </div>
                         </div>

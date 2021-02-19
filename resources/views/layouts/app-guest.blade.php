@@ -20,7 +20,9 @@
 
         <div id="root">
             @include('partials.header')
-            
+
+            @yield('content')
+
             {{-- @include('partials.footer') --}}
         </div>
 

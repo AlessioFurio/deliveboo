@@ -31,14 +31,15 @@
             <div class="nav-menu-top">
 
                 <div class="cart">
-                    <div @click="showCart = !showCart">
+                    <div class="wp-image-cart" @click="showCart = !showCart">
                         <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <span class="total-quantity">@{{ totalQuantity }}</span>
-                    <div v-if="showCart" class="cart-dropdown">
-                        <ul class="cart-dropdown-list">
-                            <li v-for="product in cart" :key="product.id">@{{ product.name }} @{{ product.quantity }}</li>
-                        </ul>
+                        <span class="total-quantity">@{{ totalQuantity }}</span>
+                        <div v-if="showCart" class="cart-dropdown">
+                            <ul class="cart-dropdown-list">
+                                <h3>Carrello</h3>
+                                <li v-for="product in cart" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 

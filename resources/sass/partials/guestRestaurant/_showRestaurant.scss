@@ -1,0 +1,53 @@
+
+main {
+    .container-restaurant {
+        max-width: 1200px;
+        margin: 0 auto;
+        border: 1px solid red;
+
+        .content-restaurant {
+
+            padding: 50px 0;
+
+            .title-restaurant{
+                padding-bottom: 20px;
+                h1{
+                    text-align: center;
+                }
+            }
+
+            .details-restaurant{
+                display: inline-block;
+                background-color: #d1d1d1;
+                border-radius: 20px;
+                padding: 10px;
+
+                & p {
+                    padding: 10px 0;
+                }
+            }
+
+            .container-list-dishes {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 50px;
+
+                .card-dish{
+                    flex-basis: 30%;
+                    background-color: lightblue;
+                    margin-top: 20px;
+
+                    h3 {
+                        padding: 10px;
+                    }
+                }
+            }
+
+
+        }
+
+
+    }
+}

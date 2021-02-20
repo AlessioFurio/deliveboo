@@ -26,7 +26,7 @@
                     <div class="container-list-dishes">
                             <div v-for="product in dishesList" :key="product.id" class="card-dish">
                                 <h3 class="product__header">@{{ product.name }}</h3>
-                                <img src="product.cover" :alt="product.name" class="product__image">
+                                <img :src="'{{url('/storage')}}' + '/' + product.cover" :alt="product.name" class="product__image">
                                 <p class="product__description">@{{ product.description }}</p>
                                 <p class="">Prezzo: @{{ product.price }} €</p>
 

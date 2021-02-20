@@ -28,6 +28,7 @@
                                 <h3 class="product__header">@{{ product.name }}</h3>
                                 <img src="product.cover" :alt="product.name" class="product__image">
                                 <p class="product__description">@{{ product.description }}</p>
+                                <p class="">Prezzo: @{{ product.price }} €</p>
 
                                 <div class="cart">
                                     <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>

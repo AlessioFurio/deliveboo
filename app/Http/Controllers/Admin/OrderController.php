@@ -14,6 +14,7 @@ class OrderController extends Controller
 {
     public function index() {
         $user_id = Auth::user()->id;
+
         $data = [
             'restaurants' =>Restaurant::where('user_id' , $user_id )->get()
         ];

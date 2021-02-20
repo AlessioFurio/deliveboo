@@ -12,10 +12,19 @@
 
             </div>
 
+
             <div class="dashboard-body-content-order">
                 <div class="container-restaurant-order">
                     <div class="order-title">
-                        <h1>I tuoi Ordini:</h1>
+                        @if (!isset($_GET['rest']))
+                            <h1>Scegli un ristorante:</h1>
+
+                            @foreach ($restaurants as $restaurant)
+                                <a href="{{route('admin.orders.details', ['id' => $restaurant->id])}}">{{$restaurant->name}}</a>
+
+                            @endforeach
+                        @endif
+                            <h1>I tuoi Ordini:</h1>
                     </div>
                         {{-- <ol>
 
@@ -47,7 +56,7 @@
                                         <p>ID{{$payment->id}}</p>
                                         <p>Prezzo{{$payment->price}}</p>
                                         <p>{{$payment->created_at}}</p>
-                                        <a href="{{route('admin.statistics.index',['order_id' => $payment->id ])}}">Statistiche</a>
+                                        <a href="{{route('admin.statistics.index',)}}">Statistiche</a>
                                     @endif
                                 </div>
                             </div>

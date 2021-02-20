@@ -42,7 +42,7 @@
                       <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="show button-new-show">
                         Crea nuovo piatto
                       </a>
-                      <a href="{{ route('admin.orders.index', ['rest'=> $restaurant->id]) }}" class="show button-new-show">
+                      <a href="{{ route('admin.orders.details', ['id'=> $restaurant->id]) }}" class="show button-new-show">
                         ordini
                       </a>
                   </div>

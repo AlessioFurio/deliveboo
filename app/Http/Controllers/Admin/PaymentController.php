@@ -18,8 +18,30 @@ class PaymentController extends Controller
         // dd($restaurant_auth);
 
         $data = [
+            'restaurant_auth' => $restaurant_auth,
             'payments' => Payment::where('restaurant_id' , $user_id )->get()
         ];
         return view('admin.payments.index', $data);
     }
+    public function show($id) {
+        $order = Payment::where('id' , $id )->first();
+        $data = [
+            'order' => $order,
+            'id' => $id
+        ];
+        return view('admin.orders.show', $data);
+
+    }
+    public function details($id) {
+        $myrestaurant = Restaurant::where('id', $id)->first();
+        $payments = Payment::where('restaurant_id' , $id)->where('status' , 2);
+        $data = [
+            'myrestaurant' => $myrestaurant,
+            // 'id' => $id,
+            // 'payments' => $payments
+        ];
+        return view('admin.orders.details', $data);
+
+    }
+
 }

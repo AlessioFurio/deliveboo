@@ -11,15 +11,12 @@ var app = new Vue({
 		totalQuantity: 0,
 		showCart: false,
 		cart: [],
-		dishesRestaurant:[],
 	},
 
 
 	methods: {
 
-		getSlug() {
-			console.log(this.selectedRestaurant);
-		},
+
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
@@ -94,9 +91,9 @@ var app = new Vue({
 			}
 		})
 		.then((risposta) =>{
-			this.dishesRestaurant = risposta.data.results;
-			for (var i = 0; i < this.dishesRestaurant.length; i++) {
-				this.dishesRestaurant[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+			this.dishesList = risposta.data.results;
+			for (var i = 0; i < this.dishesList.length; i++) {
+				this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 			}
 			// assegno ad array restaurants la risposta API
 		}); // fine then

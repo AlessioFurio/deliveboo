@@ -37345,13 +37345,9 @@ var app = new Vue({
     selectedRestaurant: '',
     totalQuantity: 0,
     showCart: false,
-    cart: [],
-    dishesRestaurant: []
+    cart: []
   },
   methods: {
-    getSlug: function getSlug() {
-      console.log(this.selectedRestaurant);
-    },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
       return this.cart = this.dishesList.filter(function (product) {
@@ -37425,10 +37421,10 @@ var app = new Vue({
         query: this.selectedRestaurant
       }
     }).then(function (risposta) {
-      _this2.dishesRestaurant = risposta.data.results;
+      _this2.dishesList = risposta.data.results;
 
-      for (var i = 0; i < _this2.dishesRestaurant.length; i++) {
-        _this2.dishesRestaurant[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+      for (var i = 0; i < _this2.dishesList.length; i++) {
+        _this2.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
       } // assegno ad array restaurants la risposta API
 
     }); // fine then

@@ -10,9 +10,9 @@
 
         <div class="dashboard-body-menu-restaurant-index">
             <ul>
-                <li>
+                {{-- <li>
                     <a href="{{route('admin.restaurants.index')}}" >I Tuoi Ristoranti</a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="{{route('admin.restaurants.create')}}" >Aggiungi Ristorante</a>
                 </li>
@@ -26,7 +26,7 @@
         <div class="dashboard-body-content-restaurant-index">
             <div class="container-restaurant-index">
                 <div class="title-restaurant-index">
-                    <h1>I tuoi Ristoranti:</h1>
+                    <h1>I Tuoi Ristoranti</h1>
                 </div>
 
                 <div class="restaurants-index">
@@ -36,7 +36,7 @@
                             <h4>Nome ristorante: </h4>
                             <h1>{{ $restaurant->name }}</h1>
                         </div>
-                        <div class="">
+                        <div class="cover-card">
                             @if ($restaurant->cover)
                                 <img src="{{asset('storage/'. $restaurant->cover)}}" alt="{{$restaurant->name}}">
                             @endif
@@ -45,10 +45,10 @@
                             <div class="details-restaurant-card-index">
                                 <p>ID: <strong>{{ $restaurant->id }}</strong></p>
                                 <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>
-                                <p>Telefono:</p> <strong>{{ $restaurant->phone }}</strong></p>
+                                <p>Telefono: <strong>{{ $restaurant->phone }}</strong></p>
                             </div>
                             <div class="action-restaurant-card-index">
-                                <div class="container-btn-action-index">
+                                <div class="container-button-action-index">
                                     <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-dettagli-index">Dettagli</a>
                                     <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-modifica-index">Modifica</a>
                                     <a href="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-elimina-index">Elimina</a>

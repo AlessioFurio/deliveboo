@@ -81,9 +81,8 @@ var app = new Vue({
 		}); // fine then
 
 
+
 		this.selectedRestaurant = window.location.href.slice(34);
-
-
 		axios
 		.get('http://localhost:8000/api/dishes', {
 			params:{

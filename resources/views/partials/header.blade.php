@@ -33,11 +33,13 @@
                 <div class="cart">
                     <div class="wp-image-cart" @click="showCart = !showCart">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="total-quantity">@{{ totalQuantity }}</span>
+                        <span class="total-quantity"></span>
                         <div v-if="showCart" class="cart-dropdown">
                             <ul class="cart-dropdown-list">
                                 <h3>Carrello</h3>
                                 <li v-for="product in cart" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
+                                <li>Prezzo totale:</li>
+                                <a href="{{ route('payments.index') }}">Paga ora</a>
                             </ul>
                         </div>
                     </div>

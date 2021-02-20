@@ -22,7 +22,7 @@ Route::get('/restaurants/{slug}', 'RestaurantController@show')->name('restaurant
 // Route::get('/dishes', 'DishesController@index')->name('dishes.index');
 // Route::get('/dishes/{slug}', 'DishesController@show')->name('dishes.show');
 
-Route::get('/payments', 'PaymentController@index')->name('payments');
+Route::get('/payments', 'PaymentController@index')->name('payments.index');
 Route::post('/transaction', 'PaymentController@transaction')->name('transaction');
 
 Auth::routes();

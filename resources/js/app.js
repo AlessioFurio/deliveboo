@@ -18,8 +18,6 @@ var app = new Vue({
 	methods: {
 
 		getSlug() {
-			this.selectedRestaurant = window.location.href.slice(34);
-
 			console.log(this.selectedRestaurant);
 		},
 
@@ -73,6 +71,8 @@ var app = new Vue({
 	}, // fine methods
 
 	mounted() {
+
+
 		axios
 		.get('http://localhost:8000/api/restaurants', {
 			params:{
@@ -83,6 +83,10 @@ var app = new Vue({
 			this.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
 		}); // fine then
 
+
+		this.selectedRestaurant = window.location.href.slice(34);
+
+
 		axios
 		.get('http://localhost:8000/api/dishes', {
 			params:{
@@ -91,7 +95,6 @@ var app = new Vue({
 		})
 		.then((risposta) =>{
 			this.dishesRestaurant = risposta.data.results;
-			console.log(this.dishesRestaurant);
 			for (var i = 0; i < this.dishesRestaurant.length; i++) {
 				this.dishesRestaurant[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 			}

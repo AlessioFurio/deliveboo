@@ -1,114 +1,532 @@
-@media screen and (min-width: 200px){
+.dashboard-restaurant-create {
 
-    .dashboard-restaurant-create {
+    .dashboard-header-restaurant-create {
 
-            // .btn{
-            //     display: inline-block;
-            //     text-decoration: none;
-            //     color: #fff;
-            // }
+        background-color: #101927;
+        padding: 10px;
+        border-bottom: 3px solid #00ccbc;
 
-            .dashboard-header-restaurant-create {
-                background-color: #101927;
-                padding: 10px;
-                border-bottom: 1px solid #000;
-
-                h1 {
-                    color: #fff;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    font-size: 25px;
-                }
+            h1 {
+                color: #e3e8f1;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 25px;
             }
-            .dashboard-body-restaurant-create {
-                display: flex;
-                height: calc(100vh - 100px - 48px);
+    }
 
-                .dashboard-body-menu-restaurant-create{
-                    background-color: #101927;
-                    height: 100%;
-                    flex-basis: 40%;
+    .dashboard-body-restaurant-create {
 
-                    ul{
 
-                        li {
-                            border-bottom: 1px solid #c1c1c1;
-                            a{
-                                width: 100%;
-                                padding: 15px 0;
+        .dashboard-body-menu-restaurant-create {
 
-                                &:hover {
-                                    background-color: #3A5FCD;
+            background-color: #101927;
 
-                                }
-                            }
+
+            ul{
+
+                li {
+
+                    border-bottom: 3px solid #00ccbc;
+                    padding: 15px;
+
+                    a{
+                        color: #e3e8f1;
+                        font-size: 20px;
+                        text-decoration: none;
+
+                        &:hover {
+
+                            color: #00ccbc;
+
                         }
                     }
-
                 }
-
-            }
-        }
-
-    .dashboard-body-content-restaurant-create {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .card-form-restaurant-create {
-            width: 400px;
-            background-color: #fff;
-            border-radius: 10px;
-
-            .card-title-restaurant-create {
-                text-align: center;
-                padding: 50px 0;
-            }
-
-            form {
-                .content-form-restaurant-create{
-                    max-width: 90%;
-                    margin: auto;
-                    text-align: center;
-
-                    .content-form-category-restaurant-create {
-                        padding: 20px 0;
-                        margin: 10px 0;
-                        border-radius: 5px;
-                        background-color: #e3e8f1;
-                        border: none;
-                        color: #000;
-
-                        .form-group-restaurant-create {
-                            display: flex;
-                            justify-content: space-around;
-                        }
-                    }
-                    input {
-
-                        padding: 20px 0;
-                        margin: 10px 0;
-                        width: 80%;
-                        border-radius: 5px;
-                        background-color: #e3e8f1;
-                        border: none;
-                        color: #000;
-                    }
-
-                    button {
-                        background-color: #101927;
-                        color: #fff;
-                        text-transform: uppercase;
-                        border: none;
-                        padding: 20px;
-                        margin: 20px 0;
-                        border-radius: 10px;
-                        cursor: pointer;
-                    }
-                }
-
             }
         }
     }
 
+    .dashboard-body-content-restaurant-create {
+
+        .card-form-restaurant-create {
+            width: 90%;
+            margin: 50px auto;
+            background-color: #101927;
+            border-radius: 10px;
+            border: 3px solid #00ccbc;
+
+            .card-title-restaurant-create {
+                text-align: center;
+                padding: 30px 0;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: #e3e8f1;
+            }
+
+            form {
+
+                .content-form-restaurant-create{
+
+                    text-align: center;
+                    padding: 0 10px;
+
+                    h3 {
+                        color: #e3e8f1;
+                        font-size: 20px;
+                        text-align: left;
+                    }
+
+                    .content-form-input-restaurant-create {
+
+                        input {
+                            padding: 15px 0;
+                            margin: 10px 0;
+                            width: 100%;
+                            border-radius: 5px;
+                            background-color: #e3e8f1;
+                            border: 3px solid #00ccbc;
+                        }
+                    }
+
+
+                    .content-form-file-restaurant-create {
+
+                        margin: 20px 0;
+                        text-align: left;
+
+
+                        input {
+                            background-color: #e3e8f1;
+                            border-radius: 5px;
+                            width: 100%;
+                        }
+
+                    }
+
+                    .content-form-category-restaurant-create {
+
+                        padding: 10px;
+                        margin: 10px 0;
+                        border-radius: 5px;
+                        background-color: #e3e8f1;
+                        border: 3px solid #00ccbc;
+
+
+                        input {
+                            border: 1px solid #101927;
+                            border-radius: 5px;
+                        }
+
+                        .form-check-restaurant-create {
+                            display: flex;
+
+
+                            input {
+
+
+                            }
+
+                            label {
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+
+                    button {
+                        background-color: #e3e8f1;
+                        color: #101927;
+                        text-transform: uppercase;
+                        border: 3px solid #00ccbc;
+                        padding: 20px;
+                        margin: 20px 0;
+                        border-radius: 10px;
+                        font-weight: 700;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #00ccbc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .dashboard-restaurant-create {
+
+        .dashboard-header-restaurant-create {
+
+
+
+                h1 {
+
+                }
+        }
+
+
+        .dashboard-body-restaurant-create {
+
+            display: flex;
+            height: calc(100vh - 100px - 48px);
+
+            .dashboard-body-menu-restaurant-create {
+
+                background-color: #101927;
+                height: 100%;
+                flex-basis: 20%;
+
+                ul{
+
+                    li {
+
+
+
+                        a{
+
+
+                            &:hover {
+
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .dashboard-body-content-restaurant-create {
+
+            flex-basis: 80%;
+
+            .card-form-restaurant-create {
+
+                margin: 20px auto;
+
+
+                .card-title-restaurant-create {
+
+                }
+
+                form {
+
+                    .content-form-restaurant-create{
+
+
+
+                        h3 {
+
+                        }
+
+                        .content-form-input-restaurant-create {
+
+                            input {
+
+                            }
+                        }
+
+
+                        .content-form-file-restaurant-create {
+
+
+
+                            input {
+
+                            }
+
+                        }
+
+                        .content-form-category-restaurant-create {
+
+
+
+
+                            input {
+
+                            }
+
+                            .form-check-restaurant-create {
+
+
+
+                                input {
+
+
+                                }
+
+                                label {
+
+                                }
+                            }
+                        }
+
+                        button {
+
+
+                            &:hover {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .dashboard-restaurant-create {
+
+        .dashboard-header-restaurant-create {
+
+
+
+                h1 {
+
+                }
+        }
+
+
+        .dashboard-body-restaurant-create {
+
+            display: flex;
+            height: calc(100vh - 100px - 48px);
+
+            .dashboard-body-menu-restaurant-create {
+
+                background-color: #101927;
+                height: 100%;
+                flex-basis: 20%;
+
+                ul{
+
+                    li {
+
+
+
+                        a{
+                            font-size: 25px;
+
+                            &:hover {
+
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .dashboard-body-content-restaurant-create {
+
+            flex-basis: 80%;
+
+            .card-form-restaurant-create {
+
+                margin: 30px auto;
+                width: 50%;
+
+
+                .card-title-restaurant-create {
+
+                }
+
+                form {
+
+                    .content-form-restaurant-create{
+
+
+
+                        h3 {
+
+                        }
+
+                        .content-form-input-restaurant-create {
+
+                            input {
+
+                            }
+                        }
+
+
+                        .content-form-file-restaurant-create {
+
+
+                            margin: 20px 0;
+                            text-align: left;
+
+
+                            input {
+
+                                background-color: #e3e8f1;
+                                width: 60%;
+                            }
+
+                        }
+
+                        .content-form-category-restaurant-create {
+
+
+
+
+                            input {
+
+                            }
+
+                            .form-check-restaurant-create {
+
+
+
+                                input {
+
+
+                                }
+
+                                label {
+
+                                }
+                            }
+                        }
+
+                        button {
+
+
+                            &:hover {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .dashboard-restaurant-create {
+
+        .dashboard-header-restaurant-create {
+
+
+
+                h1 {
+
+                }
+        }
+
+
+        .dashboard-body-restaurant-create {
+
+
+
+            .dashboard-body-menu-restaurant-create {
+
+
+
+                ul{
+
+                    li {
+
+
+
+                        a{
+
+
+                            &:hover {
+
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .dashboard-body-content-restaurant-create {
+
+
+
+            .card-form-restaurant-create {
+
+
+                width: 40%;
+
+
+                .card-title-restaurant-create {
+
+                }
+
+                form {
+
+                    .content-form-restaurant-create{
+
+
+
+                        h3 {
+
+                        }
+
+                        .content-form-input-restaurant-create {
+
+                            input {
+
+                            }
+                        }
+
+
+                        .content-form-file-restaurant-create {
+
+
+
+
+
+                            input {
+
+
+                            }
+
+                        }
+
+                        .content-form-category-restaurant-create {
+
+
+
+
+                            input {
+
+                            }
+
+                            .form-check-restaurant-create {
+
+
+
+                                input {
+
+
+                                }
+
+                                label {
+
+                                }
+                            }
+                        }
+
+                        button {
+
+
+                            &:hover {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

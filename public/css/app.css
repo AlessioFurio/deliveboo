@@ -881,15 +881,6 @@ footer {
   background-color: #e3e8f1;
   border: 3px solid #00ccbc;
 }
-.dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-file-restaurant-create {
-  margin: 20px 0;
-  text-align: left;
-}
-.dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-file-restaurant-create input {
-  background-color: #e3e8f1;
-  border-radius: 5px;
-  width: 100%;
-}
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-category-restaurant-create {
   padding: 10px;
   margin: 10px 0;
@@ -907,13 +898,22 @@ footer {
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-category-restaurant-create .form-check-restaurant-create label {
   padding-left: 10px;
 }
+.dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-file-restaurant-create {
+  margin: 20px 0;
+  text-align: left;
+}
+.dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-file-restaurant-create input {
+  background-color: #e3e8f1;
+  border-radius: 5px;
+  width: 100%;
+}
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create button {
   background-color: #e3e8f1;
   color: #101927;
   text-transform: uppercase;
   border: 3px solid #00ccbc;
   padding: 20px;
-  margin: 20px 0;
+  margin: 10px 0 20px 0;
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
@@ -928,14 +928,13 @@ footer {
     height: calc(100vh - 100px - 48px);
   }
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create {
-    background-color: #101927;
-    height: 100%;
     flex-basis: 20%;
   }
   .dashboard-restaurant-create .dashboard-body-content-restaurant-create {
     flex-basis: 80%;
   }
   .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create {
+    width: 70%;
     margin: 20px auto;
   }
 }
@@ -945,8 +944,6 @@ footer {
     height: calc(100vh - 100px - 48px);
   }
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create {
-    background-color: #101927;
-    height: 100%;
     flex-basis: 20%;
   }
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a {
@@ -957,7 +954,7 @@ footer {
   }
   .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create {
     margin: 30px auto;
-    width: 50%;
+    width: 60%;
   }
   .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-file-restaurant-create {
     margin: 20px 0;
@@ -1298,6 +1295,153 @@ footer {
   .container-restaurant-show .restaurants-show .container-button-action-show .button-show {
     width: 40%;
     margin: 5px;
+  }
+}
+.dashboard-restaurant-edit .dashboard-header-restaurant-edit {
+  background-color: #101927;
+  padding: 10px;
+  border-bottom: 3px solid #00ccbc;
+}
+.dashboard-restaurant-edit .dashboard-header-restaurant-edit h1 {
+  color: #e3e8f1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+.dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
+  background-color: #101927;
+}
+.dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li {
+  border-bottom: 3px solid #00ccbc;
+  padding: 15px;
+}
+.dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
+  color: #e3e8f1;
+  font-size: 20px;
+  text-decoration: none;
+}
+.dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a:hover {
+  color: #00ccbc;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
+  width: 90%;
+  margin: 50px auto;
+  background-color: #101927;
+  border-radius: 10px;
+  border: 3px solid #00ccbc;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit .card-title-restaurant-edit {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #e3e8f1;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit {
+  text-align: center;
+  padding: 0 10px;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit h3 {
+  color: #e3e8f1;
+  font-size: 20px;
+  text-align: left;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-input-restaurant-edit input {
+  padding: 15px 0;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #e3e8f1;
+  border: 3px solid #00ccbc;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #e3e8f1;
+  border: 3px solid #00ccbc;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit input {
+  border: 1px solid #101927;
+  border-radius: 5px;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit .form-check-restaurant-edit {
+  display: flex;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit .form-check-restaurant-edit label {
+  padding-left: 10px;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit {
+  margin: 20px 0;
+  text-align: left;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit input {
+  background-color: #e3e8f1;
+  border-radius: 5px;
+  width: 100%;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .button-edit {
+  background-color: #e3e8f1;
+  color: #101927;
+  text-transform: uppercase;
+  border: 3px solid #00ccbc;
+  padding: 20px;
+  margin: 10px 0 20px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .button-edit:hover {
+  color: #00ccbc;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard-restaurant-edit .dashboard-body-restaurant-edit {
+    display: flex;
+    height: calc(100vh - 100px - 48px);
+  }
+  .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
+    height: 100%;
+    flex-basis: 20%;
+  }
+  .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
+    font-size: 25px;
+  }
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit {
+    flex-basis: 80%;
+  }
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
+    width: 70%;
+    margin: 20px auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dashboard-restaurant-edit .dashboard-body-restaurant-edit {
+    display: flex;
+    height: calc(100vh - 100px - 48px);
+  }
+  .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
+    flex-basis: 20%;
+  }
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit {
+    flex-basis: 80%;
+  }
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
+    margin: 30px auto;
+    width: 60%;
+  }
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit {
+    margin: 20px 0;
+    text-align: left;
+  }
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit input {
+    background-color: #e3e8f1;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
+    width: 40%;
   }
 }
 @media screen and (min-width: 200px) {

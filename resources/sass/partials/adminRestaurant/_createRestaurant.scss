@@ -87,21 +87,6 @@
                         }
                     }
 
-
-                    .content-form-file-restaurant-create {
-
-                        margin: 20px 0;
-                        text-align: left;
-
-
-                        input {
-                            background-color: #e3e8f1;
-                            border-radius: 5px;
-                            width: 100%;
-                        }
-
-                    }
-
                     .content-form-category-restaurant-create {
 
                         padding: 10px;
@@ -131,13 +116,27 @@
                         }
                     }
 
+                    .content-form-file-restaurant-create {
+
+                        margin: 20px 0;
+                        text-align: left;
+
+
+                        input {
+                            background-color: #e3e8f1;
+                            border-radius: 5px;
+                            width: 100%;
+                        }
+
+                    }
+
                     button {
                         background-color: #e3e8f1;
                         color: #101927;
                         text-transform: uppercase;
                         border: 3px solid #00ccbc;
                         padding: 20px;
-                        margin: 20px 0;
+                        margin: 10px 0 20px 0;
                         border-radius: 10px;
                         font-weight: 700;
                         cursor: pointer;
@@ -173,8 +172,6 @@
 
             .dashboard-body-menu-restaurant-create {
 
-                background-color: #101927;
-                height: 100%;
                 flex-basis: 20%;
 
                 ul{
@@ -203,6 +200,7 @@
 
             .card-form-restaurant-create {
 
+                width: 70%;
                 margin: 20px auto;
 
 
@@ -297,8 +295,6 @@
 
             .dashboard-body-menu-restaurant-create {
 
-                background-color: #101927;
-                height: 100%;
                 flex-basis: 20%;
 
                 ul{
@@ -328,7 +324,7 @@
             .card-form-restaurant-create {
 
                 margin: 30px auto;
-                width: 50%;
+                width: 60%;
 
 
                 .card-title-restaurant-create {

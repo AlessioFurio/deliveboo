@@ -48,13 +48,6 @@
                             <div>{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="content-form-file-restaurant-create">
-                            <input type="file" name="cover" placeholder="Carica immagine">
-
-                            @error('cover')
-                            <div>{{ $message }}</div>
-                            @enderror
-                        </div>
                         <h3>Seleziona Categoria</h3>
                         <div class="content-form-category-restaurant-create">
                             @foreach ($categories as $category)
@@ -67,6 +60,13 @@
                             @endforeach
                             @error('categories')
                                 <div class="message-create">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="content-form-file-restaurant-create">
+                            <input type="file" name="cover" placeholder="Carica immagine">
+
+                            @error('cover')
+                            <div>{{ $message }}</div>
                             @enderror
                         </div>
                         <button type="submit">Aggiungi</button>

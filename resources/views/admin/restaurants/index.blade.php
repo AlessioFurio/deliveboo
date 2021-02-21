@@ -52,7 +52,7 @@
                                     <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-dettagli-index">Piatti</a>
                                     <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-modifica-index">Modifica</a>
                                     <a href="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-elimina-index">Elimina</a>
-                                    <a href="{{route('admin.orders.details' , ['id' => $restaurant->id ] )}}" class="button-index button-dettagli-index">Ordini</a>
+                                    <a href="{{route('admin.orders.details' , ['id' => $restaurant->id ] )}}" class="button-index button-ordini-index">Ordini</a>
                                 </div>
                             </div>
                         </div>

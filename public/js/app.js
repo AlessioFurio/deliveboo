@@ -37387,7 +37387,6 @@ var app = new Vue({
 
               this.totalPrice -= this.dishesList[i].price; // sottraggo il prezzo del piatto aggiunto nel carrello al totale
 
-              console.log(this.totalPrice);
               return this.totalQuantity = this.dishesList.reduce(function (total, product) {
                 return total + product.quantity;
               }, 0);
@@ -37397,7 +37396,6 @@ var app = new Vue({
 
             this.totalPrice += this.dishesList[i].price; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
 
-            console.log(this.totalPrice);
             this.showCart = true;
             return this.totalQuantity = this.dishesList.reduce(function (total, product) {
               return total + product.quantity;

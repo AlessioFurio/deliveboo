@@ -78,6 +78,7 @@
                 .cart {
                     padding: 5px;
                     border-radius: 10px;
+                    [v-cloak] { display: none; }
 
                     .wp-image-cart{
                         position: relative;

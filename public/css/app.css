@@ -75,6 +75,9 @@
     padding: 5px;
     border-radius: 10px;
   }
+  header .header-top .nav-menu-top .cart [v-cloak] {
+    display: none;
+  }
   header .header-top .nav-menu-top .cart .wp-image-cart {
     position: relative;
   }

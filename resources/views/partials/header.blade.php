@@ -30,11 +30,11 @@
 
             <div class="nav-menu-top">
 
-                <div class="cart">
+                <div v-cloak class="cart">
                     <div class="wp-image-cart" @click="showCart = !showCart">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="total-quantity"></span>
-                        <div v-if="showCart" class="cart-dropdown">
+                        <div v-cloak v-if="showCart" class="cart-dropdown">
                             <ul class="cart-dropdown-list">
                                 <h3>Carrello</h3>
                                 <li v-for="product in cart" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>

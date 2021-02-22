@@ -62,6 +62,7 @@ class RestaurantController extends Controller
             'cover' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:700'
         ]);
         $input_data = $request->all();
+        dd($request->cookies);
         $add_restaurant = new Restaurant();
         if (array_key_exists('cover' , $input_data )) {
             $image_path = Storage::put('cover_shop' , $input_data['cover']);

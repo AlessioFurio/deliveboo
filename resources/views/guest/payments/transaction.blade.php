@@ -5,10 +5,10 @@
     <title></title>
   </head>
   <body>
-  
+
 
     <p>
-      {{$result}}
+      {{dd($result->transaction)}}
     </p>
   </body>
 </html>

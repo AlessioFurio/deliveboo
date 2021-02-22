@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Buyer;
+use App\Payment;
 
 class PaymentController extends Controller
 {
@@ -25,36 +26,36 @@ class PaymentController extends Controller
     }
 
   public function transaction(Request $request) {
-    // $nonceFromTheClient = $_POST["payment_method_nonce"];
-    /* Use payment method nonce here */
-      $data = $request->all();
 
-      $payment_method_nonce = $data['payment_method_nonce'];
+    $data = $request->all();
 
+    dd($data);
 
-      $new_buyer = new Buyer();
-      $new_buyer->fill($data);
-      $new_buyer->save();
+    $payment_method_nonce = $data['payment_method_nonce'];
 
+    $new_buyer = new Buyer();
+    $new_buyer->fill($data);
+    $new_buyer->save();
 
-        $gateway = new \Braintree\Gateway([
-        'environment' => 'sandbox',
-        'merchantId' => '96bqgdfznc5j7zx5',
-        'publicKey' => 'b783sm8569ztywqk',
-        'privateKey' => '7eb649936b71225d258fe1467d61b1e5'
+    // $new_payment = new Payment();
+    // $new_payment->fill($new_buyer->id);
+
+    $gateway = new \Braintree\Gateway([
+      'environment' => 'sandbox',
+      'merchantId' => '96bqgdfznc5j7zx5',
+      'publicKey' => 'b783sm8569ztywqk',
+      'privateKey' => '7eb649936b71225d258fe1467d61b1e5'
     ]);
 
     $result = $gateway->transaction()->sale([
       'amount' => '10.00',
       'paymentMethodNonce' => $payment_method_nonce,
-      // 'deviceData' => $deviceDataFromTheClient,
       'options' => [
         'submitForSettlement' => True
       ]
     ]);
 
     $data = [
-      // 'nonce' => $nonceFromTheClient,
       'result' => $result
     ];
 

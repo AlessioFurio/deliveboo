@@ -708,7 +708,8 @@ footer {
 }
 
 .dashboard-body-content-restaurant-index {
-  background-color: #e3e8f1;
+  background: url("/images/i-tuoi-ristoranti.jpg");
+  background-size: cover;
   height: 100%;
   flex-basis: 80%;
   overflow-y: scroll;
@@ -722,6 +723,7 @@ footer {
 .dashboard-body-content-restaurant-index .container-restaurant-index .title-restaurant-index h1 {
   text-align: center;
   font-size: 25px;
+  color: #e3e8f1;
   text-transform: uppercase;
 }
 .dashboard-body-content-restaurant-index .restaurants-index {
@@ -730,7 +732,7 @@ footer {
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
   flex-basis: 100%;
-  background-color: #101927;
+  background-color: trasparent;
   border: 3px solid #00ccbc;
   border-radius: 10px;
   margin: 10px;

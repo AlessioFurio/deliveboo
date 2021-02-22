@@ -50,9 +50,17 @@
                             <div class="action-restaurant-card-index">
                                 <div class="container-button-action-index">
                                     <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-dettagli-index">Piatti</a>
+                                    <a href="{{route('admin.orders.details' , ['id' => $restaurant->id ] )}}" class="button-index button-dettagli-index">Ordini</a>
                                     <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-modifica-index">Modifica</a>
-                                    <a href="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-elimina-index">Elimina</a>
-                                    <a href="{{route('admin.orders.details' , ['id' => $restaurant->id ] )}}" class="button-index button-ordini-index">Ordini</a>
+                                    {{-- <a href="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-elimina-index">Elimina</a> --}}
+                                    {{-- <div class="button-index button-elimina-index">
+                                        <form action="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" method="post">
+                                            <button type="submit" name="button" >Elimina</button>
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
+
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>

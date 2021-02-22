@@ -38,7 +38,7 @@
                             <ul class="cart-dropdown-list">
                                 <h3>Carrello</h3>
                                 <li v-for="product in cart" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
-                                <li>Prezzo totale:</li>
+                                <li>Prezzo totale: @{{totalPrice}} €</li>
                                 <a href="{{ route('payments.index') }}">Paga ora</a>
                             </ul>
                         </div>

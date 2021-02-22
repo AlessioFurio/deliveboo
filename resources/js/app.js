@@ -9,6 +9,7 @@ var app = new Vue({
 		selectedCategory: '',
 		selectedRestaurant: '',
 		totalQuantity: 0,
+		totalPrice: 0,
 		showCart: false,
 		cart: [],
 	},
@@ -23,12 +24,7 @@ var app = new Vue({
     	},
 
         toggleMenu() {         // x menu mobile
-			if (this.isActive == false){
-				this.isActive = true;
-			}
-			else {
-				this.isActive = false;
-			}
+			this.isActive = !this.isActive;
 		},
 
 		searchRestaurants(){ // funzione cerca restaurants
@@ -51,10 +47,14 @@ var app = new Vue({
 
             			if (this.dishesList[i].quantity != 0) { // se la quantita' e' diversa da 0
                 			this.dishesList[i].quantity--; // sottrai 1
+							this.totalPrice -= this.dishesList[i].price; // sottraggo il prezzo del piatto aggiunto nel carrello al totale
+							console.log(this.totalPrice);
 							return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
             			}
             		} else {
 						this.dishesList[i].quantity++; // altrimenti aggiungi 1
+						this.totalPrice += this.dishesList[i].price; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
+						console.log(this.totalPrice);
 						this.showCart = true;
 
 						return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);

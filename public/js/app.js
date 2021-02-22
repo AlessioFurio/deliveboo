@@ -37338,6 +37338,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var app = new Vue({
   el: '#root',
   data: {
+    active: false,
     isActive: false,
     restaurants: [],
     dishesList: [],
@@ -37431,6 +37432,18 @@ var app = new Vue({
       } // assegno ad array restaurants la risposta API
 
     }); // fine then
+
+    window.document.onscroll = function () {
+      var navBar = document.getElementById('menu-fixed');
+
+      if (window.scrollY > navBar.offsetTop) {
+        _this2.active = true;
+        document.getElementById('menu-fixed').classList.add("sticky");
+      } else {
+        _this2.active = false;
+        document.getElementById('menu-fixed').classList.remove("sticky");
+      }
+    };
   } // fine mounted
 
 });

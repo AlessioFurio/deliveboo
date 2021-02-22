@@ -3,6 +3,7 @@ require('./bootstrap');
 var app = new Vue({
 	el: '#root',
 	data: {
+		active: false,
         isActive: false,
 		restaurants: [],
 		dishesList: [],
@@ -16,7 +17,6 @@ var app = new Vue({
 
 
 	methods: {
-
 
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
@@ -96,6 +96,17 @@ var app = new Vue({
 			}
 			// assegno ad array restaurants la risposta API
 		}); // fine then
+
+		window.document.onscroll = () => {
+      		let navBar = document.getElementById('menu-fixed');
+      			if(window.scrollY > navBar.offsetTop){
+        		this.active = true;
+				document.getElementById('menu-fixed').classList.add("sticky");
+        		} else {
+        		this.active = false;
+				document.getElementById('menu-fixed').classList.remove("sticky");
+    		}
+    	}
 
 	} // fine mounted
 

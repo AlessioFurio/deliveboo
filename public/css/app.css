@@ -28,6 +28,22 @@
     left: 0;
     z-index: -1;
   }
+  header #menu-fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  header #menu-fixed.sticky {
+    transition: 150ms;
+    box-shadow: 0px 15px 10px -15px #111;
+    background-color: #ccd6dd;
+  }
+  header #menu-fixed.sticky a {
+    color: #000;
+  }
+  header #menu-fixed.sticky i {
+    color: #000;
+  }
   header .header-log-in .top-right {
     text-align: right;
     padding-right: 30px;

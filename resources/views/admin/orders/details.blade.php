@@ -34,7 +34,9 @@
         @endforeach
     </div>
 </div>
-<br>
+@endsection
+
+{{-- <br>
     <label for="statistics">Date:</label>
 
     <input type="date" id="statistics" name=""
@@ -43,7 +45,4 @@
     <button type="button" name="button">Filtra</button>
 
 
-</div>
-
-
-@endsection
+</div> --}}

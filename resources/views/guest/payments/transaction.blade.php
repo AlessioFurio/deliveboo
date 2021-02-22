@@ -8,7 +8,7 @@
 
 
     <p>
-      {{dd($result->transaction)}}
+      {{$result->transaction}}
     </p>
   </body>
 </html>

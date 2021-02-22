@@ -30,8 +30,8 @@
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
-              <label></label>
-              <input type="hidden" name="restaurant_id" value="4"/>
+              {{-- <label></label>
+              <input type="hidden" name="restaurant_id" value="4"/> --}}
 
             </div>
           </div>

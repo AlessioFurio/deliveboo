@@ -29,8 +29,6 @@ class PaymentController extends Controller
 
     $data = $request->all();
 
-    dd($data);
-
     $payment_method_nonce = $data['payment_method_nonce'];
 
     $new_buyer = new Buyer();

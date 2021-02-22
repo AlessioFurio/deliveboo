@@ -16,20 +16,23 @@
           <div class="row">
             <div class="col-12 mb-3">
               <label>Nome</label>
-              <input type="text" class="form-control" id="firstName" placeholder="Inserisci il tuo nome" value="" required>
+              <input type="text" class="form-control" id="firstName" placeholder="Inserisci il tuo nome" value="" name="nome" required>
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
               <label>Cognome</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Inserisci il tuo cognome" value="" required>
+              <input type="text" class="form-control" id="lastName" placeholder="Inserisci il tuo cognome" value="" name="cognome" required>
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
               <label>Indirizzo</label>
-              <input type="text" class="form-control" id="address" placeholder="Inserisci l'indirizzo di consegna" required>
+              <input type="text" class="form-control" id="address" placeholder="Inserisci l'indirizzo di consegna" name="indirizzo" required>
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
+              {{-- <label></label>
+              <input type="hidden" name="restaurant_id" value="4"/> --}}
+
             </div>
           </div>
           <div class="row">

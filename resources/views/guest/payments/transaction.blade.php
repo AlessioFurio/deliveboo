@@ -5,12 +5,10 @@
     <title></title>
   </head>
   <body>
-    <p>
-      {{$nonce}}
-    </p>
+
 
     <p>
-      {{$result}}
+      {{$result->transaction}}
     </p>
   </body>
 </html>

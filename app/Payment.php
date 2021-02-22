@@ -15,4 +15,8 @@ class Payment extends Model
     public function buyer() {
         return $this->belongsTo('App\Buyer');
     }
+
+    protected $fillable = [
+        'restaurant_id'
+    ];
 }

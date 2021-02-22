@@ -8,6 +8,9 @@ use App\Course;
 
 class RestaurantController extends Controller
 {
+    public function index() {
+        return redirect()->route('welcome');
+    }
   public function show($slug)
   {
     $restaurant = Restaurant::where('slug', $slug)->first();

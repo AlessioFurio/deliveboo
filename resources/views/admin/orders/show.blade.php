@@ -15,9 +15,9 @@
         <li>
             <p>data {{$order->created_at}}</p>
         </li>
-        <li>
-            <a href="{{route('admin.statistics.index')}}">Statistiche</a>
-        </li>
+        {{-- <li>
+            <a href="{{route('admin.orders.show', ['id'=> $order->id])}}">Statistiche</a>
+        </li> --}}
 
     </ul>
 

@@ -8,6 +8,15 @@
     </div>
     <div class="container-form-details">
         <h1 class="my-restaurant-name">{{$myrestaurant->name}}</h1>
+        <div class="container-form-details-orders">
+            <div class="form-details-orders">
+                <div class="link-details-order">
+                    <a href="{{route('admin.statistics.show', ['id'=> $myrestaurant->id ])}}">Vedi Statistiche</a>
+                </div>
+            </div>
+        </div>
+
+
         @foreach ($myrestaurant->payments as $payment)
             <div class="container-form-details-orders">
                 <div class="form-details-orders">

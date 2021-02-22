@@ -1,33 +1,38 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="">
-    <h1>{{$myrestaurant->name}}</h1>
-    @foreach ($myrestaurant->payments as $payment)
-    <div class="">
 
-            <ul>
-
-                <li>
-                    <p>id {{$payment->id}}</p>
-                </li>
-                <li>
-                    <p>status {{$payment->status}}</p>
-                </li>
-                <li>
-                    <p>ristorante_id {{$payment->restaurant_id}}</p>
-                </li>
-                <li>
-                    <p>data {{$payment->created_at}}</p>
-                </li>
-                <li>
-                    <a href="{{route('admin.orders.show', ['id' => $payment->id ])}}">Vedi i dettagli
-                    </a>
-                </li>
-            </ul>
+<div class="container-restaurant-orders-details">
+    <div class="title-restaurant-orders-details">
+        <h1>Dettagli Ordini</h1>
     </div>
-@endforeach
-
+    <div class="container-form-details">
+        <h1 class="my-restaurant-name">{{$myrestaurant->name}}</h1>
+        @foreach ($myrestaurant->payments as $payment)
+            <div class="container-form-details-orders">
+                <div class="form-details-orders">
+                    <ul>
+                        <li>
+                            <span>Id: <strong>{{$payment->id}}</strong></span>
+                        </li>
+                        <li>
+                            <span>Status: <strong>{{$payment->status}}</strong></span>
+                        </li>
+                        <li>
+                            <span>Ristorante_id: <strong>{{$payment->restaurant_id}}</strong></span>
+                        </li>
+                        <li>
+                            <span>Data: <strong>{{$payment->created_at}}</strong></span>
+                        </li>
+                    </ul>
+                    <div class="link-details-order">
+                        <a href="{{route('admin.orders.show', ['id' => $payment->id ])}}">Vedi i dettagli
+                        </a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
 </div>
 
 

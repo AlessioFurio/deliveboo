@@ -1,0 +1,276 @@
+.container-restaurant-orders-details {
+
+    .title-restaurant-orders-details {
+        background-color: #101927;
+        border-bottom: 3px solid #00ccbc;
+
+            h1 {
+                text-align: center;
+                color: #e3e8f1;
+                font-size: 25px;
+                padding: 20px 0;
+                text-transform: uppercase;
+            }
+    }
+
+    .container-form-details {
+
+        background-color: #e3e8f1;
+        height: 100vh;
+
+
+        .my-restaurant-name {
+            text-align: center;
+            font-size: 25px;
+            padding: 20px 0;
+            text-transform: uppercase;
+        }
+
+        .container-form-details-orders {
+
+            
+
+            .form-details-orders {
+
+                border: 3px solid #00ccbc;
+                background-color: #101927;
+                width: 90%;
+                margin: 20px auto;
+
+                ul {
+
+                    list-style-type: none;
+
+                    li {
+                        padding: 10px;
+                        span {
+                            color: #00ccbc;
+                            font-size: 20px;
+
+                            strong {
+                                font-size: 20px;
+                                color: #e3e8f1;
+                            }
+                        }
+                    }
+                }
+
+                .link-details-order {
+                    text-align: center;
+                    padding: 20px 0;
+
+                    a {
+                        font-size: 20px;
+                        text-decoration: none;
+                        color: #101927;
+                        border: 3px solid #00ccbc;
+                        border-radius: 10px;
+                        display: inline-block;
+                        padding: 10px;
+                        background-color: #e3e8f1;
+
+                        &:hover {
+                            color: #00ccbc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .container-restaurant-orders-details {
+
+        .title-restaurant-orders-details {
+
+                h1 {
+
+                    font-size: 40px;
+
+                }
+        }
+
+        .container-form-details {
+
+
+
+            .my-restaurant-name {
+
+                font-size: 35px;
+
+            }
+
+            .container-form-details-orders {
+
+
+                .form-details-orders {
+
+
+                    width: 40%;
+
+
+                    ul {
+
+
+
+                        li {
+
+                            span {
+
+
+                                strong {
+
+                                }
+                            }
+                        }
+                    }
+
+                    .link-details-order {
+
+
+                        a {
+
+
+                            &:hover {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container-restaurant-orders-details {
+
+        .title-restaurant-orders-details {
+
+                h1 {
+
+                    font-size: 40px;
+
+                }
+        }
+
+        .container-form-details {
+
+
+
+            .my-restaurant-name {
+
+                font-size: 35px;
+
+            }
+
+            .container-form-details-orders {
+
+
+                .form-details-orders {
+
+
+                    width: 40%;
+
+
+                    ul {
+
+
+
+                        li {
+
+                            span {
+
+
+                                strong {
+
+                                }
+                            }
+                        }
+                    }
+
+                    .link-details-order {
+
+
+                        a {
+
+
+                            &:hover {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .container-restaurant-orders-details {
+
+        .title-restaurant-orders-details {
+
+                h1 {
+
+                    font-size: 40px;
+
+                }
+        }
+
+        .container-form-details {
+
+
+
+            .my-restaurant-name {
+
+                font-size: 35px;
+
+            }
+
+            .container-form-details-orders {
+
+
+                .form-details-orders {
+
+
+                    width: 25%;
+
+
+                    ul {
+
+
+
+                        li {
+
+                            span {
+
+
+                                strong {
+
+                                }
+                            }
+                        }
+                    }
+
+                    .link-details-order {
+
+
+                        a {
+
+
+                            &:hover {
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@
 
         background-color: #101927;
         padding: 10px;
-        border-bottom: 3px solid #00ccbc;
+        border-bottom: 3px solid #f5d790;
 
             h1 {
                 color: #e3e8f1;
@@ -22,11 +22,12 @@
             background-color: #101927;
 
 
+
             ul{
 
                 li {
 
-                    border-bottom: 3px solid #00ccbc;
+                    border-bottom: 3px solid #f5d790;
                     padding: 15px;
 
                     a{
@@ -36,7 +37,7 @@
 
                         &:hover {
 
-                            color: #00ccbc;
+                            color: #f5d790;
 
                         }
                     }
@@ -47,19 +48,24 @@
 
     .dashboard-body-content-restaurant-create {
 
+        background-image: url('/images/interni-rossi.jpg');
+        background-size: cover;
+        background-position: bottom;
+        height: 100vh;
+
         .card-form-restaurant-create {
             width: 90%;
             margin: 50px auto;
-            background-color: #101927;
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 10px;
-            border: 3px solid #00ccbc;
+            border: 3px solid #f5d790;
 
             .card-title-restaurant-create {
                 text-align: center;
                 padding: 30px 0;
                 font-size: 20px;
                 text-transform: uppercase;
-                color: #e3e8f1;
+                color: #101927;
             }
 
             form {
@@ -70,7 +76,7 @@
                     padding: 0 10px;
 
                     h3 {
-                        color: #e3e8f1;
+                        color: #101927;
                         font-size: 20px;
                         text-align: left;
                     }
@@ -83,7 +89,7 @@
                             width: 100%;
                             border-radius: 5px;
                             background-color: #e3e8f1;
-                            border: 3px solid #00ccbc;
+                            border: 3px solid #f5d790;
                         }
                     }
 
@@ -93,7 +99,7 @@
                         margin: 10px 0;
                         border-radius: 5px;
                         background-color: #e3e8f1;
-                        border: 3px solid #00ccbc;
+                        border: 3px solid#f5d790;
 
 
                         input {
@@ -124,6 +130,7 @@
 
                         input {
                             background-color: #e3e8f1;
+                            border: 3px solid #f5d790;
                             border-radius: 5px;
                             width: 100%;
                         }
@@ -131,10 +138,10 @@
                     }
 
                     button {
-                        background-color: #e3e8f1;
+                        background: rgba(255, 215, 0, 0.5);
                         color: #101927;
                         text-transform: uppercase;
-                        border: 3px solid #00ccbc;
+                        border: 3px solid #f5d790;
                         padding: 20px;
                         margin: 10px 0 20px 0;
                         border-radius: 10px;
@@ -142,7 +149,8 @@
                         cursor: pointer;
 
                         &:hover {
-                            color: #00ccbc;
+                            color: #f5d790;
+                            background-color: #FF8C00;
                         }
                     }
                 }
@@ -173,6 +181,7 @@
             .dashboard-body-menu-restaurant-create {
 
                 flex-basis: 20%;
+                height: 100vh;
 
                 ul{
 

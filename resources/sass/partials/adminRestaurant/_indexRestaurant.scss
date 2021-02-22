@@ -3,7 +3,7 @@
         .dashboard-header-restaurant-index {
             background-color: #101927;
             padding: 10px;
-            border-bottom: 1px solid #000;
+            border-bottom: 3px solid #f5d790;
 
                 h1 {
                     color: #e3e8f1;
@@ -15,7 +15,7 @@
 
         .dashboard-body-restaurant-index {
             display: flex;
-            height: calc(100vh - 100px - 48px);
+            height: calc(100vh - 100px - 49px);
 
             .dashboard-body-menu-restaurant-index {
 
@@ -26,7 +26,7 @@
                 ul{
 
                     li {
-                        border-bottom: 1px solid #e3e8f1;
+                        border-bottom: 3px solid #f5d790;
                         padding:10px;
 
                         a{
@@ -36,7 +36,7 @@
 
 
                             &:hover {
-                                color: #00ccbc;
+                                color: #f5d790;
 
                             }
                         }
@@ -77,22 +77,23 @@
             display: flex;
             flex-wrap: wrap;
 
+
             .restaurant-card-index {
 
                 flex-basis: 100%;
-                background-color: trasparent;
-                border: 3px solid #00ccbc;
+                border: 5px ridge #f5d790;
                 border-radius: 10px;
                 margin: 10px;
                 padding: 10px;
+                background: rgba(255, 255, 255, 0.5);
 
                 .title-restaurant-card {
                     text-align: center;
-                    color: #e3e8f1;
+                    color: #101927;
                     font-size: 15px;
 
                     h4 {
-                        color: #00ccbc;
+                        color: #f5d790;
                         font-size: 25px;
                     }
 
@@ -105,10 +106,10 @@
 
                         p {
                             padding: 5px 0;
-                            color: #00ccbc;
+                            color: #f5d790;
 
                             strong {
-                                color: #e3e8f1;
+                                color: #101927;
                             }
                         }
                     }
@@ -129,39 +130,61 @@
                                 padding: 10px;
                                 text-decoration: none;
                                 font-size: 20px;
+                                border: 3px solid #f5d790;
                                 border-radius: 10px;
-                                border: 3px solid #00ccbc;
-                                color: #e3e8f1;
-                                width: 60%;
+                                width: 80%;
                                 text-align: center;
 
-                                    &:hover {
-                                        color: #00ccbc;
-                                    }
                             }
 
                             .button-dettagli-index {
 
-                                background-color: #4169E1;
+                                color: #101927;
+                                background: rgba(65, 105, 255, 0.5);
+
+                                &:hover {
+                                    color: #f5d790;
+                                    background-color: #0000FF;
+
+                                }
+
                             }
 
                             .button-ordini-index {
 
-                                background-color: green;
+                                color: #101927;
+                                background: rgba(50, 205, 50, 0.5);
+
+                                &:hover {
+                                    color: #f5d790;
+                                    background-color: #008000;
+                                }
+
 
                             }
 
                             .button-modifica-index {
 
-                                background-color: #FFA500;
+                                color: #101927;
+                                background: rgba(255, 215, 0, 0.5);
+
+                                &:hover {
+                                    color: #f5d790;
+                                    background-color: #FF8C00;
+                                }
+
                             }
 
                             .button-elimina-index {
 
-                                background-color: #DC143C;
+                                color: #101927;
+                                background-color: red;
+
+                                &:hover {
+                                    color: #f5d790;
+                                }
 
                             }
-
                         }
                     }
                 }
@@ -181,7 +204,7 @@
     }
 
     .container-restaurant-index .restaurants-index{
-        justify-content: center;
+
 
         .container-restaurant-index .restaurants-index .restaurant-card-index {
             flex-basis: 50%;
@@ -251,7 +274,7 @@
 
         .restaurants-index {
 
-
+            margin: 50px 0 0 100px;
 
             .restaurant-card-index {
 
@@ -276,7 +299,7 @@
 
                         p {
 
-
+                            padding: 15px 0;
                             font-size: 20px;
 
                             strong {
@@ -288,14 +311,19 @@
 
                     .action-restaurant-card-index {
 
+                        padding: 10px 0 20px 0;
 
                         .container-button-action-index{
+
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
 
 
                             .button-index {
 
-
-                                width: 50%;
+                                margin: 0 10px;
+                                width: 30%;
 
 
                                     &:hover {

@@ -3,53 +3,60 @@
     <div class="wp-header">
         <div class="filter"></div>
 
-        <div class="header-log-in">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/') }}">Home</a>
-                        <a href="{{route('admin.home')}}">Dashboard</a>
+        <div id="menu-fixed">
 
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+            <div class="header-log-in">
+                @if (Route::has('login'))
+                    <div class="top-right links">
+                        @auth
+                            <a href="{{ url('/') }}">Home</a>
+                            <a href="{{route('admin.home')}}">Dashboard</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-        </div>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
 
-        <div class="header-top">
-            <div class="logo">
-                <a href="#">
-                    <img src="{{ asset('images/logo.png') }}" alt="deliveboo-logo">
-                </a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
             </div>
 
-            <div class="nav-menu-top">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="#">
+                        <img src="{{ asset('images/logo.png') }}" alt="deliveboo-logo">
+                    </a>
+                </div>
 
-                <div v-cloak class="cart">
-                    <div class="wp-image-cart" @click="showCart = !showCart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="total-quantity"></span>
-                        <div v-cloak v-if="showCart" class="cart-dropdown">
-                            <ul class="cart-dropdown-list">
-                                <h3>Carrello</h3>
-                                <li v-for="product in cart" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
-                                <li>Prezzo totale: @{{totalPrice}} €</li>
-                                <a href="{{ route('payments.index') }}">Paga ora</a>
-                            </ul>
+                <div class="nav-menu-top">
+
+                    <div v-cloak class="cart">
+                        <div class="wp-image-cart" @click="showCart = !showCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="total-quantity"></span>
+                            <div v-cloak v-if="showCart" class="cart-dropdown">
+                                <ul class="cart-dropdown-list">
+                                    <h3>Carrello</h3>
+                                    <li v-for="product in cart" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
+                                    <li>Prezzo totale: @{{totalPrice}} €</li>
+                                    <a href="{{ route('payments.index') }}">Paga ora</a>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="toggle-menu"  @click="toggleMenu()">
-                    <i class="fas fa-bars"></i>
+                    <div class="toggle-menu"  @click="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
 
 
 

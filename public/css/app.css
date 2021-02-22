@@ -677,7 +677,7 @@ footer {
 .dashboard-restaurant-index .dashboard-header-restaurant-index {
   background-color: #101927;
   padding: 10px;
-  border-bottom: 1px solid #000;
+  border-bottom: 3px solid #f5d790;
 }
 .dashboard-restaurant-index .dashboard-header-restaurant-index h1 {
   color: #e3e8f1;
@@ -687,7 +687,7 @@ footer {
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index {
   display: flex;
-  height: calc(100vh - 100px - 48px);
+  height: calc(100vh - 100px - 49px);
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
   background-color: #101927;
@@ -695,7 +695,7 @@ footer {
   flex-basis: 40%;
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li {
-  border-bottom: 1px solid #e3e8f1;
+  border-bottom: 3px solid #f5d790;
   padding: 10px;
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
@@ -704,7 +704,7 @@ footer {
   font-size: 20px;
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a:hover {
-  color: #00ccbc;
+  color: #f5d790;
 }
 
 .dashboard-body-content-restaurant-index {
@@ -732,19 +732,19 @@ footer {
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
   flex-basis: 100%;
-  background-color: trasparent;
-  border: 3px solid #00ccbc;
+  border: 5px ridge #f5d790;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .title-restaurant-card {
   text-align: center;
-  color: #e3e8f1;
+  color: #101927;
   font-size: 15px;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .title-restaurant-card h4 {
-  color: #00ccbc;
+  color: #f5d790;
   font-size: 25px;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index {
@@ -752,10 +752,10 @@ footer {
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index p {
   padding: 5px 0;
-  color: #00ccbc;
+  color: #f5d790;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index p strong {
-  color: #e3e8f1;
+  color: #101927;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index {
   padding: 10px 0;
@@ -770,26 +770,41 @@ footer {
   padding: 10px;
   text-decoration: none;
   font-size: 20px;
+  border: 3px solid #f5d790;
   border-radius: 10px;
-  border: 3px solid #00ccbc;
-  color: #e3e8f1;
-  width: 60%;
+  width: 80%;
   text-align: center;
 }
-.dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-index:hover {
-  color: #00ccbc;
-}
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-dettagli-index {
-  background-color: #4169E1;
+  color: #101927;
+  background: rgba(65, 105, 255, 0.5);
+}
+.dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-dettagli-index:hover {
+  color: #f5d790;
+  background-color: #0000FF;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-ordini-index {
-  background-color: green;
+  color: #101927;
+  background: rgba(50, 205, 50, 0.5);
+}
+.dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-ordini-index:hover {
+  color: #f5d790;
+  background-color: #008000;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-modifica-index {
-  background-color: #FFA500;
+  color: #101927;
+  background: rgba(255, 215, 0, 0.5);
+}
+.dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-modifica-index:hover {
+  color: #f5d790;
+  background-color: #FF8C00;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-elimina-index {
-  background-color: #DC143C;
+  color: #101927;
+  background-color: red;
+}
+.dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-elimina-index:hover {
+  color: #f5d790;
 }
 
 @media screen and (min-width: 500px) {
@@ -797,9 +812,6 @@ footer {
     max-width: 80%;
   }
 
-  .container-restaurant-index .restaurants-index {
-    justify-content: center;
-  }
   .container-restaurant-index .restaurants-index .container-restaurant-index .restaurants-index .restaurant-card-index {
     flex-basis: 50%;
   }
@@ -826,6 +838,9 @@ footer {
   .dashboard-body-content-restaurant-index .container-restaurant-index .title-restaurant-index h1 {
     font-size: 40px;
   }
+  .dashboard-body-content-restaurant-index .restaurants-index {
+    margin: 50px 0 0 100px;
+  }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
     flex-basis: 30%;
   }
@@ -836,19 +851,29 @@ footer {
     font-size: 30px;
   }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index p {
+    padding: 15px 0;
     font-size: 20px;
   }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index p strong {
     font-size: 20px;
   }
+  .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index {
+    padding: 10px 0 20px 0;
+  }
+  .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-index {
-    width: 50%;
+    margin: 0 10px;
+    width: 30%;
   }
 }
 .dashboard-restaurant-create .dashboard-header-restaurant-create {
   background-color: #101927;
   padding: 10px;
-  border-bottom: 3px solid #00ccbc;
+  border-bottom: 3px solid #f5d790;
 }
 .dashboard-restaurant-create .dashboard-header-restaurant-create h1 {
   color: #e3e8f1;
@@ -860,7 +885,7 @@ footer {
   background-color: #101927;
 }
 .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li {
-  border-bottom: 3px solid #00ccbc;
+  border-bottom: 3px solid #f5d790;
   padding: 15px;
 }
 .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a {
@@ -869,28 +894,34 @@ footer {
   text-decoration: none;
 }
 .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a:hover {
-  color: #00ccbc;
+  color: #f5d790;
+}
+.dashboard-restaurant-create .dashboard-body-content-restaurant-create {
+  background-image: url("/images/interni-rossi.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create {
   width: 90%;
   margin: 50px auto;
-  background-color: #101927;
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  border: 3px solid #00ccbc;
+  border: 3px solid #f5d790;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create .card-title-restaurant-create {
   text-align: center;
   padding: 30px 0;
   font-size: 20px;
   text-transform: uppercase;
-  color: #e3e8f1;
+  color: #101927;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create {
   text-align: center;
   padding: 0 10px;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create h3 {
-  color: #e3e8f1;
+  color: #101927;
   font-size: 20px;
   text-align: left;
 }
@@ -900,14 +931,14 @@ footer {
   width: 100%;
   border-radius: 5px;
   background-color: #e3e8f1;
-  border: 3px solid #00ccbc;
+  border: 3px solid #f5d790;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-category-restaurant-create {
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   background-color: #e3e8f1;
-  border: 3px solid #00ccbc;
+  border: 3px solid #f5d790;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-category-restaurant-create input {
   border: 1px solid #101927;
@@ -925,14 +956,15 @@ footer {
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-file-restaurant-create input {
   background-color: #e3e8f1;
+  border: 3px solid #f5d790;
   border-radius: 5px;
   width: 100%;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create button {
-  background-color: #e3e8f1;
+  background: rgba(255, 215, 0, 0.5);
   color: #101927;
   text-transform: uppercase;
-  border: 3px solid #00ccbc;
+  border: 3px solid #f5d790;
   padding: 20px;
   margin: 10px 0 20px 0;
   border-radius: 10px;
@@ -940,7 +972,8 @@ footer {
   cursor: pointer;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create button:hover {
-  color: #00ccbc;
+  color: #f5d790;
+  background-color: #FF8C00;
 }
 
 @media screen and (min-width: 768px) {
@@ -950,6 +983,7 @@ footer {
   }
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create {
     flex-basis: 20%;
+    height: 100vh;
   }
   .dashboard-restaurant-create .dashboard-body-content-restaurant-create {
     flex-basis: 80%;
@@ -1321,7 +1355,7 @@ footer {
 .dashboard-restaurant-edit .dashboard-header-restaurant-edit {
   background-color: #101927;
   padding: 10px;
-  border-bottom: 3px solid #00ccbc;
+  border-bottom: 3px solid #f5d790;
 }
 .dashboard-restaurant-edit .dashboard-header-restaurant-edit h1 {
   color: #e3e8f1;
@@ -1333,7 +1367,7 @@ footer {
   background-color: #101927;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li {
-  border-bottom: 3px solid #00ccbc;
+  border-bottom: 3px solid #f5d790;
   padding: 15px;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
@@ -1342,28 +1376,34 @@ footer {
   text-decoration: none;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a:hover {
-  color: #00ccbc;
+  color: #f5d790;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit {
+  background-image: url("/images/ristorante-black.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
   width: 90%;
   margin: 50px auto;
-  background-color: #101927;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  border: 3px solid #00ccbc;
+  border: 3px solid #f5d790;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit .card-title-restaurant-edit {
   text-align: center;
   padding: 30px 0;
   font-size: 20px;
   text-transform: uppercase;
-  color: #e3e8f1;
+  color: #101927;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit {
   text-align: center;
   padding: 0 10px;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit h3 {
-  color: #e3e8f1;
+  color: #101927;
   font-size: 20px;
   text-align: left;
 }
@@ -1373,14 +1413,14 @@ footer {
   width: 100%;
   border-radius: 5px;
   background-color: #e3e8f1;
-  border: 3px solid #00ccbc;
+  border: 3px solid #f5d790;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit {
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   background-color: #e3e8f1;
-  border: 3px solid #00ccbc;
+  border: 3px solid #f5d790;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit input {
   border: 1px solid #101927;
@@ -1398,14 +1438,15 @@ footer {
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit input {
   background-color: #e3e8f1;
+  border: 3px solid #f5d790;
   border-radius: 5px;
   width: 100%;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .button-edit {
-  background-color: #e3e8f1;
+  background: rgba(255, 215, 0, 0.5);
   color: #101927;
   text-transform: uppercase;
-  border: 3px solid #00ccbc;
+  border: 3px solid #f5d790;
   padding: 20px;
   margin: 10px 0 20px 0;
   border-radius: 10px;
@@ -1413,7 +1454,8 @@ footer {
   cursor: pointer;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .button-edit:hover {
-  color: #00ccbc;
+  color: #f5d790;
+  background-color: #FF8C00;
 }
 
 @media screen and (min-width: 768px) {
@@ -1422,7 +1464,7 @@ footer {
     height: calc(100vh - 100px - 48px);
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
-    height: 100%;
+    height: 100vh;
     flex-basis: 20%;
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
@@ -1895,109 +1937,102 @@ footer {
     flex-basis: 20%;
   }
 }
-@media screen and (min-width: 200px) {
-  .container-general-create {
-    background-color: #101927;
-    height: 100vh;
-  }
-
-  .container-general-create-plate {
-    padding: 50px 0 100px 0;
-  }
-
-  .container-form-create-plate {
-    width: 80%;
-    margin: auto;
-    background: #e3e8f1;
-    border: 5px solid #00ccbc;
-    border-radius: 10px;
-    padding: 10px;
-  }
-
-  .title-create-plate h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 20px;
-    padding: 10px 0;
-    color: #101927;
-  }
-
-  .link-all-plate {
-    text-align: center;
-    margin: 10px 0 20px 0;
-  }
-  .link-all-plate .link-plate {
-    background-color: #101927;
-    border: 3px solid #00ccbc;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #00ccbc;
-    display: inline-block;
-  }
-  .link-all-plate .link-plate:hover {
-    background-color: #00ccbc;
-    border: 3px solid #101927;
-    color: #101927;
-  }
-
-  .list {
-    margin-bottom: 10px;
-  }
-
-  .list-plate label {
-    font-size: 20px;
-    color: #101927;
-    margin-bottom: 5px;
-    display: inline-block;
-    font-weight: 700;
-  }
-  .list-plate .input {
-    display: block;
-    width: 100%;
-    border-radius: 5px;
-    border: 3px solid #00ccbc;
-    height: 30px;
-  }
-  .list-plate .textarea {
-    height: 150px;
-  }
-  .list-plate .check {
-    display: inline-block;
-  }
-  .list-plate .input-search {
-    background-color: white;
-    color: black;
-    border: 3px solid #00ccbc;
-    margin: 5px 0;
-  }
-
-  .button-create-plate {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-  }
-  .button-create-plate button {
-    border-radius: 5px;
-    font-size: 20px;
-    background-color: #101927;
-    padding: 10px;
-    color: #00ccbc;
-    cursor: pointer;
-  }
+.container-general-create {
+  background-image: url("/images/portate-fredde.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  border-top: 5px solid #f5d790;
 }
+.container-general-create .container-general-create-plate {
+  padding: 50px 0 100px 0;
+}
+.container-general-create .container-form-create-plate {
+  width: 90%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.6);
+  border: 5px ridge #f5d790;
+  border-radius: 10px;
+  padding: 10px;
+}
+.container-general-create .title-create-plate h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px 0;
+  color: #101927;
+}
+
+.list {
+  margin-bottom: 10px;
+}
+
+.list-plate label {
+  font-size: 20px;
+  color: #101927;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-weight: 700;
+}
+.list-plate .input {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid #f5d790;
+  height: 30px;
+}
+.list-plate .textarea {
+  height: 150px;
+}
+.list-plate .check {
+  display: inline-block;
+}
+.list-plate .input-search {
+  background-color: white;
+  color: black;
+  border: 3px solid #f5d790;
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.button-create-plate {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.button-create-plate button {
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #101927;
+  padding: 10px;
+  color: #f5d790;
+  cursor: pointer;
+}
+.button-create-plate button:hover {
+  color: #101927;
+  background-color: #f5d790;
+}
+
 @media screen and (min-width: 768px) {
-  .container-form-create-plate {
+  .container-general-create .container-form-create-plate {
     width: 50%;
+  }
+  .container-general-create .title-create-plate h1 {
+    font-size: 30px;
+  }
+  .container-general-create .list-plate label {
+    font-size: 25px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .container-form-create-plate {
+  .container-general-create .container-form-create-plate {
     width: 30%;
   }
-
-  .title-create-plate h1 {
+  .container-general-create .title-create-plate h1 {
+    font-size: 30px;
+  }
+  .container-general-create .list-plate label {
     font-size: 25px;
   }
 }

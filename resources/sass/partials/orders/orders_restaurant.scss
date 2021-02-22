@@ -1,137 +1,137 @@
-@media screen and (min-width: 200px){
+.dashboard-order {
 
-    .dashboard-order {
+    .dashboard-header-order {
 
-        .dashboard-header-order {
-            background-color: #101927;
-            padding: 10px;
-            border-bottom: 1px solid #000;
+        background-color: #101927;
+        padding: 10px;
+        border-bottom: 1px solid #000;
 
-            h1 {
-                color: #fff;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                font-size: 25px;
-            }
+        h1 {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 25px;
         }
-        .dashboard-body-order {
-            display: flex;
-            height: calc(100vh - 100px - 50px);
+    }
+
+    .dashboard-body-order {
+
+        display: flex;
+        height: calc(100vh - 100px - 50px);
+
+        .dashboard-body-menu-order{
+
+            background-color: #101927;
+            flex-basis: 40%;
+            overflow-y: scroll;
+
+            .title-restaurant {
+
+                color: white;
+                padding: 20px 0;
+                text-align: center;
+                font-size: 20px;
+            }
 
 
-            .dashboard-body-menu-order{
-                background-color: #101927;
-                flex-basis: 40%;
-                overflow-y: scroll;
+            ol{
+                border-bottom: 1px solid #c1c1c1;
+                margin-left: 25px;
+                color:white;
 
-                    .title-restaurant {
+                li {
+
+                    padding: 20px 5px;
+
+                    a{
                         color: white;
-                        padding: 20px 0;
-                        text-align: center;
-                        font-size: 20px;
-                    }
+                        font-size: 15px;
+                        text-decoration: none;
 
-
-                ol{
-                    border-bottom: 1px solid #c1c1c1;
-                    margin-left: 25px;
-                    color:white;
-
-                    li {
-
-                        padding: 20px 5px;
-
-                            a{
-                                color: white;
-                                font-size: 15px;
-                                text-decoration: none;
-
-                                &:hover {
+                        &:hover {
                                     color: #00ccbc;
 
-                                }
                             }
-                    }
-                }
-
-            }
-            .dashboard-body-content-order{
-                background-color: #e3e8f1;
-                height: 100%;
-                flex-basis: 60%;
-                overflow-y: scroll;
-
-                .container-restaurant-order {
-
-                    .order-title{
-
-                        h1 {
-                            text-align: center;
-                            font-size: 25px;
-                            padding: 30px 0;
                         }
                     }
                 }
 
-
             }
+        .dashboard-body-content-order{
 
-            .restaurants-order {
+            background-color: #e3e8f1;
+            height: 100%;
+            flex-basis: 60%;
+            overflow-y: scroll;
 
-                .restaurant-card-order {
+            .container-restaurant-order {
 
-                    background-color: #B0C4DE;
-                    border-radius: 10px;
-                    padding: 10px;
-                    width: 90%;
-                    margin: auto;
+                .order-title{
 
-                    .title-restaurant-card-order{
+                    h1 {
+                        text-align: center;
+                        font-size: 25px;
+                        padding: 30px 0;
+                    }
+                }
+            }
+        }
 
-                        h4 {
-                            text-align: center;
-                            font-size: 25px;
-                            padding: 10px 0;
-                        }
+        .restaurants-order {
 
+            .restaurant-card-order {
+
+                background-color: #B0C4DE;
+                border-radius: 10px;
+                padding: 10px;
+                width: 90%;
+                margin: auto;
+
+                .title-restaurant-card-order{
+
+                    h4 {
+                        text-align: center;
+                        font-size: 25px;
+                        padding: 10px 0;
+                    }
+
+
+                }
+
+                .body-restaurant-card-order{
+
+                    padding: 30px 0 10px 0;
+
+                    .details-restaurant-card-order {
 
                     }
 
-                    .body-restaurant-card-order{
+                    .action-restaurant-card-order {
 
-                        padding: 30px 0 10px 0;
+                        .container-btn-action-order{
 
-                        .details-restaurant-card-order {
+                            text-align: center;
 
-                        }
+                            .btn{
+                                display: inline-block;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                padding: 10px;
+                                border-radius: 5px;
+                                color: #fff;
+                            }
 
-                        .action-restaurant-card-order {
+                            .btn-dettagli {
+                                background-color: #4169E1;
+                                font-size: 15px;
+                                padding: 10px 20px;
+                                margin-bottom: 20px;
+                            }
 
-                            .container-btn-action-order{
-
-                                text-align: center;
-
-                                .btn{
-                                    display: inline-block;
-                                    text-decoration: none;
-                                    text-transform: uppercase;
-                                    padding: 10px;
-                                    border-radius: 5px;
-                                    color: #fff;
-                                }
-
-                                .btn-dettagli {
-                                    background-color: #4169E1;
-                                    font-size: 15px;
-                                    padding: 10px 20px;
-                                    margin-bottom: 20px;
-                                }
-
-                                .btn-modifica {
-                                    background-color: #FFA500;
-                                    font-size: 15px;
-                                    padding: 10px 20px;
-                                }
+                            .btn-modifica {
+                                background-color: #FFA500;
+                                font-size: 15px;
+                                padding: 10px 20px;
                             }
                         }
                     }
@@ -140,6 +140,7 @@
         }
     }
 }
+
 // .table {
 //     width: 100%;
 //     tbody{

@@ -780,14 +780,14 @@ footer {
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-dettagli-index {
   background-color: #4169E1;
 }
+.dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-ordini-index {
+  background-color: green;
+}
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-modifica-index {
   background-color: #FFA500;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-elimina-index {
   background-color: #DC143C;
-}
-.dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-ordini-index {
-  background-color: green;
 }
 
 @media screen and (min-width: 500px) {
@@ -1566,98 +1566,97 @@ footer {
     flex-basis: 20%;
   }
 }
-@media screen and (min-width: 200px) {
-  .dashboard-order .dashboard-header-order {
-    background-color: #101927;
-    padding: 10px;
-    border-bottom: 1px solid #000;
-  }
-  .dashboard-order .dashboard-header-order h1 {
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 25px;
-  }
-  .dashboard-order .dashboard-body-order {
-    display: flex;
-    height: calc(100vh - 100px - 50px);
-  }
-  .dashboard-order .dashboard-body-order .dashboard-body-menu-order {
-    background-color: #101927;
-    flex-basis: 40%;
-    overflow-y: scroll;
-  }
-  .dashboard-order .dashboard-body-order .dashboard-body-menu-order .title-restaurant {
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 20px;
-  }
-  .dashboard-order .dashboard-body-order .dashboard-body-menu-order ol {
-    border-bottom: 1px solid #c1c1c1;
-    margin-left: 25px;
-    color: white;
-  }
-  .dashboard-order .dashboard-body-order .dashboard-body-menu-order ol li {
-    padding: 20px 5px;
-  }
-  .dashboard-order .dashboard-body-order .dashboard-body-menu-order ol li a {
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-  }
-  .dashboard-order .dashboard-body-order .dashboard-body-menu-order ol li a:hover {
-    color: #00ccbc;
-  }
-  .dashboard-order .dashboard-body-order .dashboard-body-content-order {
-    background-color: #e3e8f1;
-    height: 100%;
-    flex-basis: 60%;
-    overflow-y: scroll;
-  }
-  .dashboard-order .dashboard-body-order .dashboard-body-content-order .container-restaurant-order .order-title h1 {
-    text-align: center;
-    font-size: 25px;
-    padding: 30px 0;
-  }
-  .dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order {
-    background-color: #B0C4DE;
-    border-radius: 10px;
-    padding: 10px;
-    width: 90%;
-    margin: auto;
-  }
-  .dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .title-restaurant-card-order h4 {
-    text-align: center;
-    font-size: 25px;
-    padding: 10px 0;
-  }
-  .dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order {
-    padding: 30px 0 10px 0;
-  }
-  .dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order {
-    text-align: center;
-  }
-  .dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order .btn {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-  }
-  .dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order .btn-dettagli {
-    background-color: #4169E1;
-    font-size: 15px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-  }
-  .dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order .btn-modifica {
-    background-color: #FFA500;
-    font-size: 15px;
-    padding: 10px 20px;
-  }
+.dashboard-order .dashboard-header-order {
+  background-color: #101927;
+  padding: 10px;
+  border-bottom: 1px solid #000;
 }
+.dashboard-order .dashboard-header-order h1 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+.dashboard-order .dashboard-body-order {
+  display: flex;
+  height: calc(100vh - 100px - 50px);
+}
+.dashboard-order .dashboard-body-order .dashboard-body-menu-order {
+  background-color: #101927;
+  flex-basis: 40%;
+  overflow-y: scroll;
+}
+.dashboard-order .dashboard-body-order .dashboard-body-menu-order .title-restaurant {
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 20px;
+}
+.dashboard-order .dashboard-body-order .dashboard-body-menu-order ol {
+  border-bottom: 1px solid #c1c1c1;
+  margin-left: 25px;
+  color: white;
+}
+.dashboard-order .dashboard-body-order .dashboard-body-menu-order ol li {
+  padding: 20px 5px;
+}
+.dashboard-order .dashboard-body-order .dashboard-body-menu-order ol li a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+.dashboard-order .dashboard-body-order .dashboard-body-menu-order ol li a:hover {
+  color: #00ccbc;
+}
+.dashboard-order .dashboard-body-order .dashboard-body-content-order {
+  background-color: #e3e8f1;
+  height: 100%;
+  flex-basis: 60%;
+  overflow-y: scroll;
+}
+.dashboard-order .dashboard-body-order .dashboard-body-content-order .container-restaurant-order .order-title h1 {
+  text-align: center;
+  font-size: 25px;
+  padding: 30px 0;
+}
+.dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order {
+  background-color: #B0C4DE;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+}
+.dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .title-restaurant-card-order h4 {
+  text-align: center;
+  font-size: 25px;
+  padding: 10px 0;
+}
+.dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order {
+  padding: 30px 0 10px 0;
+}
+.dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order {
+  text-align: center;
+}
+.dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order .btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+.dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order .btn-dettagli {
+  background-color: #4169E1;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order .btn-modifica {
+  background-color: #FFA500;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
 @media screen and (min-width: 768px) {
   .dashboard-order .dashboard-body-order .dashboard-body-menu-order .title-restaurant {
     font-size: 30px;
@@ -1712,6 +1711,98 @@ footer {
   .dashboard-order .dashboard-body-order .restaurants-order .restaurant-card-order .body-restaurant-card-order .action-restaurant-card-order .container-btn-action-order .btn-dettagli {
     margin-bottom: 0;
     margin-right: 10px;
+  }
+}
+.container-restaurant-orders-details .title-restaurant-orders-details {
+  background-color: #101927;
+  border-bottom: 3px solid #00ccbc;
+}
+.container-restaurant-orders-details .title-restaurant-orders-details h1 {
+  text-align: center;
+  color: #e3e8f1;
+  font-size: 25px;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+.container-restaurant-orders-details .container-form-details {
+  background-color: #e3e8f1;
+  height: 100vh;
+}
+.container-restaurant-orders-details .container-form-details .my-restaurant-name {
+  text-align: center;
+  font-size: 25px;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
+  border: 3px solid #00ccbc;
+  background-color: #101927;
+  width: 90%;
+  margin: 20px auto;
+}
+.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders ul {
+  list-style-type: none;
+}
+.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders ul li {
+  padding: 10px;
+}
+.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders ul li span {
+  color: #00ccbc;
+  font-size: 20px;
+}
+.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders ul li span strong {
+  font-size: 20px;
+  color: #e3e8f1;
+}
+.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders .link-details-order {
+  text-align: center;
+  padding: 20px 0;
+}
+.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders .link-details-order a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #101927;
+  border: 3px solid #00ccbc;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px;
+  background-color: #e3e8f1;
+}
+.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders .link-details-order a:hover {
+  color: #00ccbc;
+}
+
+@media screen and (min-width: 768px) {
+  .container-restaurant-orders-details .title-restaurant-orders-details h1 {
+    font-size: 40px;
+  }
+  .container-restaurant-orders-details .container-form-details .my-restaurant-name {
+    font-size: 35px;
+  }
+  .container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-restaurant-orders-details .title-restaurant-orders-details h1 {
+    font-size: 40px;
+  }
+  .container-restaurant-orders-details .container-form-details .my-restaurant-name {
+    font-size: 35px;
+  }
+  .container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .container-restaurant-orders-details .title-restaurant-orders-details h1 {
+    font-size: 40px;
+  }
+  .container-restaurant-orders-details .container-form-details .my-restaurant-name {
+    font-size: 35px;
+  }
+  .container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
+    width: 25%;
   }
 }
 @media screen and (min-width: 200px) {

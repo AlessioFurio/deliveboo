@@ -34,7 +34,7 @@ Route::middleware('auth')->name('admin.')->namespace('Admin')->prefix('admin')->
   Route::get('/payments', 'PaymentController@index')->name('payments.index');
   Route::get('/orders/{id}', 'PaymentController@show')->name('orders.show');
   Route::get('/details/{id}', 'PaymentController@details')->name('orders.details');
-  Route::get('/statistics', 'StatisticsController@index')->name('statistics.index');
+  Route::get('/statistics/{id}', 'StatisticsController@show')->name('statistics.show');
   // Route::resource('/categories', 'CategoryController');
   Route::resource('/restaurants', 'RestaurantController');
   Route::resource('/dishes', 'DishController');

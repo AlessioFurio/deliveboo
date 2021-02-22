@@ -12,18 +12,24 @@ class PaymentController extends Controller
 {
     public function index() {
         $user_id = Auth::user()->id;
-        // dd(Auth::user()->restaurants;
-
-        $restaurant_auth = Restaurant::where('user_id', $user_id )->get();
-        // dd($restaurant_auth);
 
         $data = [
-            'restaurant_auth' => $restaurant_auth,
-            'payments' => Payment::where('restaurant_id' , $user_id )->get()
+            'restaurants' =>Restaurant::where('user_id' , $user_id )->get()
         ];
-        return view('admin.payments.index', $data);
+        return view('admin.orders.index', $data);
     }
     public function show($id) {
+        $own_id = [];
+        $user_id = Auth::user()->id;
+        $myrestaurants = Restaurant::where('user_id', $user_id)->get();
+        foreach ($myrestaurants as $myrestaurant) {
+            if (!in_array($myrestaurant->id, $own_id )) {
+                $own_id[] = $myrestaurant->id;
+            }
+        }
+        if (!in_array($id, $own_id)) {
+            abort(404);
+        }
         $order = Payment::where('id' , $id )->first();
         $data = [
             'order' => $order,
@@ -33,10 +39,24 @@ class PaymentController extends Controller
 
     }
     public function details($id) {
-        $myrestaurant = Restaurant::where('id', $id)->first();
+        $own_id = [];
+        $user_id = Auth::user()->id;
+        $myrestaurants = Restaurant::where('user_id', $user_id)->get();
+        foreach ($myrestaurants as $myrestaurant) {
+            if (!in_array($myrestaurant->id, $own_id )) {
+                $own_id[] = $myrestaurant->id;
+            }
+        }
+        if (!in_array($id, $own_id)) {
+            abort(404);
+        }
+
+        $restaurant = Restaurant::where('id', $id)->first();
+
+
         $payments = Payment::where('restaurant_id' , $id)->where('status' , 2);
         $data = [
-            'myrestaurant' => $myrestaurant,
+            'myrestaurant' => $restaurant,
             // 'id' => $id,
             // 'payments' => $payments
         ];

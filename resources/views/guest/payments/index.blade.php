@@ -6,15 +6,15 @@
 @endsection
 
 @section('content')
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="offset-2 col-8 order-md-1">
+      <div class="offset-sm-1 col-sm-10 offset-md-3 col-md-6 order-md-1">
         <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" novalidate>
           @csrf
           @method('POST')
           <h4 class="mb-3">Dati di consegna</h4>
           <div class="row">
-            <div class="col-12 mb-3">
+            <div class="col-sm-12 mb-3">
               <label>Nome</label>
               <input type="text" class="form-control" id="firstName" placeholder="Inserisci il tuo nome" value="" name="nome" required>
               <div class="invalid-feedback">
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-12 mb-3">
+            <div class="col-sm-12 mb-3">
               <div id="dropin-container"></div>
               <input type="submit" value="Paga ora"/>
               <input type="hidden" id="nonce" name="payment_method_nonce"/>

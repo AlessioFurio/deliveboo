@@ -43,18 +43,19 @@ var app = new Vue({
         	for (let i = 0; i < this.dishesList.length; i++) { //scorro tutti i piatti
         		if (this.dishesList[i].id == product.id) { // se id piatto corrente = id del prodotto
 
+
         			if (updateType == 'subtract') { // se la funzione e' di sottrazione
 
             			if (this.dishesList[i].quantity != 0) { // se la quantita' e' diversa da 0
                 			this.dishesList[i].quantity--; // sottrai 1
-							this.totalPrice -= this.dishesList[i].price; // sottraggo il prezzo del piatto aggiunto nel carrello al totale
+							this.totalPrice -= this.dishesList[i].price;
+							 // sottraggo il prezzo del piatto aggiunto nel carrello al totale
 							return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
             			}
             		} else {
 						this.dishesList[i].quantity++; // altrimenti aggiungi 1
 						this.totalPrice += this.dishesList[i].price; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
 						this.showCart = true;
-
 						return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
 
 						// return this.cartList = this.dishesList.filter(product => product.quantity > 0);
@@ -62,6 +63,7 @@ var app = new Vue({
 
           		}
         	}
+			this.totalPrice.toFixed(2);
     	}
 	}, // fine methods
 

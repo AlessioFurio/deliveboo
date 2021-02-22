@@ -11,7 +11,7 @@
         <div class="container-form-details-orders">
             <div class="form-details-orders">
                 <div class="link-details-order">
-                    <a href="{{route('admin.statistics.show', ['id'=> $myrestaurant->id ])}}">Vedi Statistiche</a>
+                    <a href="{{route('admin.statistics.chart', ['id'=> $myrestaurant->id ])}}">Vedi Statistiche</a>
                 </div>
             </div>
         </div>

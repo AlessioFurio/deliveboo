@@ -30,6 +30,7 @@ Auth::routes();
 
 Route::middleware('auth')->name('admin.')->namespace('Admin')->prefix('admin')->group(function(){
   Route::get('/', 'HomeController@index')->name('home');
+  Route::get('/chart/{id}', 'PaymentController@chart')->name('statistics.chart');
   // Route::get('/orders', 'OrderController@index')->name('orders.index');
   Route::get('/payments', 'PaymentController@index')->name('orders.index');
   Route::get('/orders/{id}', 'PaymentController@show')->name('orders.show');

@@ -22,7 +22,5 @@
         "sass-loader": "^8.0.0",
         "vue-template-compiler": "^2.6.12"
     },
-    "dependencies": {
-        "vue-cookies": "^1.7.4"
-    }
+    "dependencies": {}
 }

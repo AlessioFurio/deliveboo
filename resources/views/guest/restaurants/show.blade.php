@@ -28,7 +28,7 @@
                                 <h3 class="product__header">@{{ product.name }}</h3>
                                 <div class="wp-img-card-dish">
                                     <img v-if="product.cover == null" src="{{url('/images/card.jpg')}}" alt="">
-                                    <img :src="'{{url ('/storage')}}' + '/' + product.cover" :alt="product.name" class="product__image">
+                                    <img v-else :src="'{{url ('/storage')}}' + '/' + product.cover" :alt="product.name" class="product__image">
                                 </div>
                                 <p class="product__description">@{{ product.description }}</p>
                                 <p class="">Prezzo: @{{ product.price }} €</p>

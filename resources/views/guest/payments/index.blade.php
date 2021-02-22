@@ -1,23 +1,50 @@
-<head>
-  <meta charset="utf-8">
+@extends('layouts.app')
+
+@section('chart-css')
+  <link href="{{ asset('css/chart.css') }}" rel="stylesheet">
   <script src="https://js.braintreegateway.com/web/dropin/1.26.0/js/dropin.min.js"></script>
-</head>
-<body>
-  <!-- Step one: add an empty container to your page -->
-  <form id="payment-form" action="{{route('transaction')}}" method="post">
-    @csrf
-   <!-- Putting the empty container you plan to pass to
-     `braintree.dropin.create` inside a form will make layout and flow
-     easier to manage -->
-   <div id="dropin-container"></div>
-   <input type="submit" />
-   <input type="hidden" id="nonce" name="payment_method_nonce"/>
- </form>
+@endsection
+
+@section('content')
+  <div class="container">
+    <div class="row">
+      <div class="offset-2 col-8 order-md-1">
+        <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" novalidate>
+          @csrf
+          @method('POST')
+          <h4 class="mb-3">Dati di consegna</h4>
+          <div class="row">
+            <div class="col-12 mb-3">
+              <label>Nome</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Inserisci il tuo nome" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+              <label>Cognome</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Inserisci il tuo cognome" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+              <label>Indirizzo</label>
+              <input type="text" class="form-control" id="address" placeholder="Inserisci l'indirizzo di consegna" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-3">
+              <div id="dropin-container"></div>
+              <input type="submit" value="Paga ora"/>
+              <input type="hidden" id="nonce" name="payment_method_nonce"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script type="text/javascript">
-  // call `braintree.dropin.create` code here
-  // Step two: create a dropin instance using that container (or a string
-  //   that functions as a query selector such as `#dropin-container`)
     const form = document.getElementById('payment-form');
 
     braintree.dropin.create({
@@ -32,15 +59,10 @@
         dropinInstance.requestPaymentMethod((error, payload) => {
           if (error) console.error(error);
 
-          // Step four: when the user is ready to complete their
-          //   transaction, use the dropinInstance to get a payment
-          //   method nonce for the user's selected payment method, then add
-          //   it a the hidden field before submitting the complete form to
-          //   a server-side integration
           document.getElementById('nonce').value = payload.nonce;
           form.submit();
         });
       });
     });
   </script>
-</body>
+@endsection

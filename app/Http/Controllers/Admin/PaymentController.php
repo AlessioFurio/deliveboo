@@ -64,4 +64,33 @@ class PaymentController extends Controller
 
     }
 
+    public function chart($id)
+    {
+        $own_id = [];
+        $user_id = Auth::user()->id;
+        $myrestaurants = Restaurant::where('user_id', $user_id)->get();
+        foreach ($myrestaurants as $myrestaurant) {
+            if (!in_array($myrestaurant->id, $own_id )) {
+                $own_id[] = $myrestaurant->id;
+            }
+        }
+        if (!in_array($id, $own_id)) {
+            abort(404);
+        }
+
+        $payments = Payment::where('restaurant_id' , $id)->get();
+
+
+        $data = [];
+        foreach($payments as $row) {
+            $data['label'][] = $row->created_at;
+            $data['data'][] = (int) $row->price;
+        }
+
+      $data['chart_data'] = json_encode($data);
+      return view('admin.statistics.chart', $data);
+
+
+    }
+
 }

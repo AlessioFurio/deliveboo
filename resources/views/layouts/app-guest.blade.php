@@ -16,6 +16,7 @@
 
 
     </head>
+
     <body>
 
         <div id="root">
@@ -23,14 +24,14 @@
 
             @yield('content')
 
-                    
+
             {{-- @include('partials.footer') --}}
         </div>
 
 
 
 
-
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script>
         <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
     </body>
 </html>

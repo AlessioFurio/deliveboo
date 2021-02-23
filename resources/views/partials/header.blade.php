@@ -40,7 +40,7 @@
                                 <ul class="cart-dropdown-list">
                                     <h3>Carrello</h3>
                                     <li v-for="product in cart" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
-                                    <li>Prezzo totale: @{{totalPrice.toFixed(2)}} €</li>
+                                    <li>Prezzo totale: <span>@{{totalPrice}} €</span></li>
                                     <a href="{{ route('payments.index') }}">Paga ora</a>
                                 </ul>
                             </div>
@@ -50,6 +50,7 @@
                     <div class="toggle-menu"  @click="toggleMenu()">
                         <i class="fas fa-bars"></i>
                     </div>
+                    <button @click="provaLog()" type="button" name="button">prova log</button>
                 </div>
             </div>
         </div>

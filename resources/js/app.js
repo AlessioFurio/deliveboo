@@ -1,19 +1,4 @@
-// require('./bootstrap');
-// // require
-// var Vue = require('vue')
-// Vue.use(require('vue-cookies'))
-//
-// // es2015 module
-// import Vue from 'vue'
-// import VueCookies from 'vue-cookies'
-// Vue.use(VueCookies)
-//
-// // set default config
-// Vue.$cookies.config('7d')
-//
-// // set global cookie
-// Vue.$cookies.set('theme','default');
-// Vue.$cookies.set('hover-time','1s');
+
 import axios from 'axios'
 
 var app = new Vue({
@@ -29,10 +14,44 @@ var app = new Vue({
 		totalPrice: 0,
 		showCart: false,
 		cart: [],
+		nome: '',
+   		cognome: '',
+   		indirizzo: '',
+   		cartCookie: [],
+		totalPriceCookie: 'ciao',
 	},
 
 
 	methods: {
+
+		provaLog(){
+			console.log(this.totalPriceCookie);
+		},
+
+		Save () {
+			var date = new Date();
+			date.setTime(date.getTime() + (60 * 1000));
+			Cookies.set('nome', this.nome, { expires: date })
+			Cookies.set('cognome', this.cognome, { expires: date })
+			Cookies.set('indirizzo', this.indirizzo, { expires: date })
+			// Cookies.set('cartCookie', this.cart, { expires: date })
+
+
+
+    },
+
+    	Clear () {
+			Cookies.remove('nome')
+			Cookies.remove('email')
+			Cookies.remove('indirizzo')
+			Cookies.remove('cartCookie')
+
+			this.nome = ''
+			this.cognome = ''
+			this.indirizzo = ''
+			this.cartCookie = ''
+
+  	},
 
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
@@ -64,13 +83,13 @@ var app = new Vue({
 
             			if (this.dishesList[i].quantity != 0) { // se la quantita' e' diversa da 0
                 			this.dishesList[i].quantity--; // sottrai 1
-							this.totalPrice -= this.dishesList[i].price;
+							this.totalPrice = parseFloat(this.totalPrice) - parseFloat(this.dishesList[i].price);
 							 // sottraggo il prezzo del piatto aggiunto nel carrello al totale
 							return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
             			}
             		} else {
 						this.dishesList[i].quantity++; // altrimenti aggiungi 1
-						this.totalPrice += this.dishesList[i].price; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
+						this.totalPrice = parseFloat(this.totalPrice) + parseFloat(this.dishesList[i].price); // aggiungo il prezzo del piatto aggiunto nel carrello al totale
 						this.showCart = true;
 						return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
 
@@ -78,7 +97,8 @@ var app = new Vue({
 					}
           		}
         	}
-    	}
+    	},
+
 	}, // fine methods
 
 	mounted() {
@@ -122,6 +142,48 @@ var app = new Vue({
     		}
     	}
 
-	} // fine mounted
+		var date = new Date();
+		date.setTime(date.getTime() + (100000000 * 1000));
+		Cookies.set('nome', this.nome, { expires: date })
+		Cookies.set('cognome', this.cognome, { expires: date })
+		Cookies.set('indirizzo', this.indirizzo, { expires: date })
+		Cookies.set('cartCookie', this.cart, { expires: date })
+		Cookies.set('totalPriceCookie', this.totalPrice, { expires: date })
+
+		this.nome = (Cookies.get('nome') !== 'undefined') && Cookies.get('nome')
+    	this.cognome = (Cookies.get('cognome') !== 'undefined') && Cookies.get('cognome')
+    	this.indirizzo = (Cookies.get('indirizzo') !== 'undefined') && Cookies.get('indirizzo')
+		this.cartCookie = (Cookies.get('cart') !== 'undefined') && Cookies.get('cart')
+		this.totalPriceCookie = (Cookies.get('totalPrice') !== 'undefined') && Cookies.get('totalPrice')
+
+		if(localStorage.nome){
+			this.nome = localStorage.nome;
+		}
+		if(localStorage.cartCookie){
+			this.cart = JSON.parse(localStorage.cartCookie);
+		}
+		if(localStorage.totalPriceCookie){
+			this.totalPrice = localStorage.totalPriceCookie;
+		}
+},
+// fine mounted
+
+	watch: {
+		nome(newNome){
+			localStorage.nome = newNome;
+		},
+
+		cart(){
+			localStorage.cartCookie = JSON.stringify(this.cart);
+		},
+
+		totalPrice(){
+			localStorage.totalPriceCookie = this.totalPrice;
+			return  localStorage.totalPriceCookie = parseFloat(localStorage.totalPriceCookie).toFixed(2);
+
+		},
+
+
+	}
 
 });

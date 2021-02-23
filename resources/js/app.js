@@ -34,7 +34,7 @@ var app = new Vue({
 			Cookies.set('nome', this.nome, { expires: date })
 			Cookies.set('cognome', this.cognome, { expires: date })
 			Cookies.set('indirizzo', this.indirizzo, { expires: date })
-			// Cookies.set('cartCookie', this.cart, { expires: date })
+			Cookies.set('cartCookie', this.cart, { expires: date })
 
 
 
@@ -124,11 +124,19 @@ var app = new Vue({
 			}
 		})
 		.then((risposta) =>{
+			// assegno ad array restaurants la risposta API
 			this.dishesList = risposta.data.results;
 			for (var i = 0; i < this.dishesList.length; i++) {
-				this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+					if (this.cart.length) {
+						for (var j = 0; j < this.cart.length; j++) {
+							if (this.cart[j].id == this.dishesList[i].id) {
+								this.dishesList[i] = this.cart[j];
+							}
+						}
+					}
 			}
-			// assegno ad array restaurants la risposta API
+
 		}); // fine then
 
 		window.document.onscroll = () => {

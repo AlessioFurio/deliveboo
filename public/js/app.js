@@ -2187,7 +2187,10 @@ var app = new Vue({
       });
       Cookies.set('indirizzo', this.indirizzo, {
         expires: date
-      }); // Cookies.set('cartCookie', this.cart, { expires: date })
+      });
+      Cookies.set('cartCookie', this.cart, {
+        expires: date
+      });
     },
     Clear: function Clear() {
       Cookies.remove('nome');
@@ -2272,12 +2275,20 @@ var app = new Vue({
         query: this.selectedRestaurant
       }
     }).then(function (risposta) {
+      // assegno ad array restaurants la risposta API
       _this2.dishesList = risposta.data.results;
 
       for (var i = 0; i < _this2.dishesList.length; i++) {
         _this2.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-      } // assegno ad array restaurants la risposta API
 
+        if (_this2.cart.length) {
+          for (var j = 0; j < _this2.cart.length; j++) {
+            if (_this2.cart[j].id == _this2.dishesList[i].id) {
+              _this2.dishesList[i] = _this2.cart[j];
+            }
+          }
+        }
+      }
     }); // fine then
 
     window.document.onscroll = function () {
@@ -2372,9 +2383,9 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\chart.scss */"./resources/sass/chart.scss");
 
 
 /***/ })

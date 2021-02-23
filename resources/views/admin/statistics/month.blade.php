@@ -7,7 +7,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 @endsection
 
-@section('content')<!DOCTYPE html>
+@section('content')
 
   <div class="chart-container">
       <div class="">
@@ -32,7 +32,7 @@
   $(function(){
       //get the pie chart canvas
       var cData = JSON.parse(`<?php echo $chart_data; ?>`);
-      var ctx = $("#pie-chart");
+      var bar = $("#pie-chart");
 
       //pie chart data
       var data = {
@@ -85,7 +85,7 @@
       };
 
       //create Pie Chart class object
-      var chart1 = new Chart(ctx, {
+      var chart1 = new Chart(bar, {
         type: "bar",
         data: data,
         options: options

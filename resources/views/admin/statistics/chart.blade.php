@@ -7,11 +7,11 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 @endsection
 
-@section('content')<!DOCTYPE html>
+@section('content')
 
   <div class="chart-container">
       <div class="">
-          <p >Filtra per mese</p>
+          <p>Filtra per mese</p>
           @foreach ($months as $key => $month)
               <a href="{{route('admin.statistics.month', ['id' => $id , 'month' => $key+1 ])}}">{{$month}}</a>
 

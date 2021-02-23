@@ -56,6 +56,7 @@ class PaymentController extends Controller
     // $data = [
     //   'result' => $result
     // ];
+    // $request->session()->put('asd', 'asd');
 
     return redirect()->route('welcome')->with(['transaction_result' => $result->success]);
   }

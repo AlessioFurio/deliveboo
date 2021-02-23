@@ -2152,22 +2152,6 @@ process.umask = function() { return 0; };
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-// require('./bootstrap');
-// // require
-// var Vue = require('vue')
-// Vue.use(require('vue-cookies'))
-//
-// // es2015 module
-// import Vue from 'vue'
-// import VueCookies from 'vue-cookies'
-// Vue.use(VueCookies)
-//
-// // set default config
-// Vue.$cookies.config('7d')
-//
-// // set global cookie
-// Vue.$cookies.set('theme','default');
-// Vue.$cookies.set('hover-time','1s');
 
 var app = new Vue({
   el: '#root',
@@ -2181,14 +2165,22 @@ var app = new Vue({
     totalQuantity: 0,
     totalPrice: 0,
     showCart: false,
-    cart: []
+    cart: [],
+    nome: '',
+    cognome: '',
+    indirizzo: '',
+    cartCookie: [],
+    totalPriceCookie: 'ciao'
   },
   methods: {
     showModal: function showModal() {
       console.log('ok');
       var modal = document.getElementById("myModal");
-      modal.style.display = 'block';
-      console.log(modal.style.display);
+
+      if (modal) {
+        modal.style.display = 'block';
+        console.log(modal.style.display);
+      }
     },
     closeModal: function closeModal() {
       var modal = document.getElementById("myModal");
@@ -2202,6 +2194,40 @@ var app = new Vue({
           modal.style.display = "none";
         }
       };
+    },
+    Save: function Save(event) {
+      event.preventDefault(); //blocca il form per far eseguire il resto del codice
+
+      var date = new Date();
+      date.setTime(date.getTime() + 60 * 1000);
+      Cookies.set('nome', this.nome, {
+        expires: date
+      });
+      Cookies.set('cognome', this.cognome, {
+        expires: date
+      });
+      Cookies.set('indirizzo', this.indirizzo, {
+        expires: date
+      });
+      Cookies.set('cartCookie', this.cart, {
+        expires: date
+      });
+      var form = document.getElementById('payment-form');
+      dropinInstance.requestPaymentMethod(function (error, payload) {
+        if (error) console.error(error);
+        document.getElementById('nonce').value = payload.nonce;
+        form.submit();
+      });
+    },
+    Clear: function Clear() {
+      Cookies.remove('nome');
+      Cookies.remove('email');
+      Cookies.remove('indirizzo');
+      Cookies.remove('cartCookie');
+      this.nome = '';
+      this.cognome = '';
+      this.indirizzo = '';
+      this.cartCookie = '';
     },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
@@ -2238,7 +2264,7 @@ var app = new Vue({
               // se la quantita' e' diversa da 0
               this.dishesList[i].quantity--; // sottrai 1
 
-              this.totalPrice -= this.dishesList[i].price; // sottraggo il prezzo del piatto aggiunto nel carrello al totale
+              this.totalPrice = Math.round(this.totalPrice * 100) / 100 - Math.round(this.dishesList[i].price * 100) / 100; // sottraggo il prezzo del piatto aggiunto nel carrello al totale
 
               return this.totalQuantity = this.dishesList.reduce(function (total, product) {
                 return total + product.quantity;
@@ -2247,7 +2273,7 @@ var app = new Vue({
           } else {
             this.dishesList[i].quantity++; // altrimenti aggiungi 1
 
-            this.totalPrice += this.dishesList[i].price; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
+            this.totalPrice = Math.round(this.totalPrice * 100) / 100 + Math.round(this.dishesList[i].price * 100) / 100; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
 
             this.showCart = true;
             return this.totalQuantity = this.dishesList.reduce(function (total, product) {
@@ -2277,12 +2303,20 @@ var app = new Vue({
         query: this.selectedRestaurant
       }
     }).then(function (risposta) {
+      // assegno ad array restaurants la risposta API
       _this2.dishesList = risposta.data.results;
 
       for (var i = 0; i < _this2.dishesList.length; i++) {
         _this2.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-      } // assegno ad array restaurants la risposta API
 
+        if (_this2.cart.length) {
+          for (var j = 0; j < _this2.cart.length; j++) {
+            if (_this2.cart[j].id == _this2.dishesList[i].id) {
+              _this2.dishesList[i] = _this2.cart[j];
+            }
+          }
+        }
+      }
     }); // fine then
 
     window.document.onscroll = function () {
@@ -2296,8 +2330,54 @@ var app = new Vue({
         document.getElementById('menu-fixed').classList.remove("sticky");
       }
     };
-  } // fine mounted
 
+    var date = new Date();
+    date.setTime(date.getTime() + 100000000 * 1000);
+    Cookies.set('nome', this.nome, {
+      expires: date
+    });
+    Cookies.set('cognome', this.cognome, {
+      expires: date
+    });
+    Cookies.set('indirizzo', this.indirizzo, {
+      expires: date
+    });
+    Cookies.set('cartCookie', this.cart, {
+      expires: date
+    });
+    Cookies.set('totalPriceCookie', this.totalPrice, {
+      expires: date
+    });
+    this.nome = Cookies.get('nome') !== 'undefined' && Cookies.get('nome');
+    this.cognome = Cookies.get('cognome') !== 'undefined' && Cookies.get('cognome');
+    this.indirizzo = Cookies.get('indirizzo') !== 'undefined' && Cookies.get('indirizzo');
+    this.cartCookie = Cookies.get('cart') !== 'undefined' && Cookies.get('cart');
+    this.totalPriceCookie = Cookies.get('totalPrice') !== 'undefined' && Cookies.get('totalPrice');
+
+    if (localStorage.nome) {
+      this.nome = localStorage.nome;
+    }
+
+    if (localStorage.cartCookie) {
+      this.cart = JSON.parse(localStorage.cartCookie);
+    }
+
+    if (localStorage.totalPriceCookie) {
+      this.totalPrice = localStorage.totalPriceCookie;
+    }
+  },
+  // fine mounted
+  watch: {
+    nome: function nome(newNome) {
+      localStorage.nome = newNome;
+    },
+    cart: function cart() {
+      localStorage.cartCookie = JSON.stringify(this.cart);
+    },
+    totalPrice: function totalPrice() {
+      localStorage.totalPriceCookie = Math.round(this.totalPrice * 100) / 100;
+    }
+  }
 });
 
 /***/ }),

@@ -1,6 +1,3 @@
-
-
-
 @extends('layouts.app')
 
 @section('chart-css')
@@ -13,7 +10,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="offset-sm-1 col-sm-10 offset-md-3 col-md-6 order-md-1">
-        <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" novalidate>
+        <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
           @csrf
           @method('POST')
           <h4 class="mb-3">Dati di consegna</h4>
@@ -41,9 +38,10 @@
           </div>
           <div class="row">
             <div class="col-sm-12 mb-3">
-              {{-- <div id="dropin-container"></div> --}}
-              <input @click="Save()" type="submit" value="Paga ora"/>
-              <button @click="provaLog()" type="button" name="button">prova cookie</button>
+              <div id="dropin-container"></div>
+              {{-- <input type="submit" value="Paga ora"/> --}}
+              {{-- <button @click="provaLog()" type="button" name="button">prova cookie</button> --}}
+               <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
               <input type="hidden" id="nonce" name="payment_method_nonce"/>
             </div>
           </div>
@@ -52,27 +50,34 @@
     </div>
   </div>
 </div>
-  {{-- <script type="text/javascript">
-    const form = document.getElementById('payment-form');
+  <script type="text/javascript">
 
-    braintree.dropin.create({
+    braintree.dropin.create(
+    {
       authorization: '{{$clientToken}}',
       container: '#dropin-container'
-    }, (error, dropinInstance) => {
+    },
+    (error, dropinInstance) =>
+    {
       if (error) console.error(error);
+      window.dropinInstance = dropinInstance; //salvo la dropinInstance nella window(finestra del browser) cioe' lo scope globale che e' accessibile da qualsiasi funzione js (variabile globale)
 
-      form.addEventListener('submit', event => {
-        event.preventDefault();
-
-        dropinInstance.requestPaymentMethod((error, payload) => {
-          if (error) console.error(error);
-
-          document.getElementById('nonce').value = payload.nonce;
-          form.submit();
-        });
-      });
+      // form.addEventListener('submit', event => {
+      //   event.preventDefault(); //non serve perche' sul submit stiamo chiamando la save
+      //
+      //   dropinInstance.requestPaymentMethod((error, payload) =>
+      //   {
+      //     if (error) console.error(error);
+      //
+      //     document.getElementById('nonce').value = payload.nonce;
+      //     form.submit();
+      //   });
+      // });
     });
-  </script> --}}
+  // });
+
+
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script>
 

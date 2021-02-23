@@ -27,8 +27,10 @@ var app = new Vue({
 			console.log('ok');
 			var modal = document.getElementById("myModal");
 
-			modal.style.display = 'block';
-			console.log(modal.style.display);
+			if(modal) {
+				modal.style.display = 'block';
+				console.log(modal.style.display);
+			}
 
 		},
 		closeModal() {
@@ -45,7 +47,9 @@ var app = new Vue({
 
 		},
 
-		Save () {
+		Save (event) {
+			event.preventDefault(); //blocca il form per far eseguire il resto del codice
+
 			var date = new Date();
 			date.setTime(date.getTime() + (60 * 1000));
 			Cookies.set('nome', this.nome, { expires: date })
@@ -53,7 +57,15 @@ var app = new Vue({
 			Cookies.set('indirizzo', this.indirizzo, { expires: date })
 			Cookies.set('cartCookie', this.cart, { expires: date })
 
+			const form = document.getElementById('payment-form');
 
+			dropinInstance.requestPaymentMethod((error, payload) =>
+			{
+				if (error) console.error(error);
+
+				document.getElementById('nonce').value = payload.nonce;
+				form.submit();
+			});
 
     },
 
@@ -174,7 +186,6 @@ var app = new Vue({
 		Cookies.set('indirizzo', this.indirizzo, { expires: date })
 		Cookies.set('cartCookie', this.cart, { expires: date })
 		Cookies.set('totalPriceCookie', this.totalPrice, { expires: date })
-	}// fine mounted
 
 		this.nome = (Cookies.get('nome') !== 'undefined') && Cookies.get('nome')
     	this.cognome = (Cookies.get('cognome') !== 'undefined') && Cookies.get('cognome')

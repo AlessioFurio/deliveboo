@@ -23,9 +23,26 @@ var app = new Vue({
 
 
 	methods: {
+		showModal() {
+			console.log('ok');
+			var modal = document.getElementById("myModal");
 
-		provaLog(){
-			console.log(this.totalPriceCookie);
+			modal.style.display = 'block';
+			console.log(modal.style.display);
+
+		},
+		closeModal() {
+			var modal = document.getElementById("myModal");
+			modal.style.display = "none";
+		},
+		closeModalOnWindow(){
+			var modal = document.getElementById("myModal");
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+
 		},
 
 		Save () {
@@ -100,9 +117,9 @@ var app = new Vue({
     	},
 
 	}, // fine methods
-
 	mounted() {
 
+		this.showModal();
 
 		axios
 		.get('http://localhost:8000/api/restaurants', {
@@ -157,6 +174,7 @@ var app = new Vue({
 		Cookies.set('indirizzo', this.indirizzo, { expires: date })
 		Cookies.set('cartCookie', this.cart, { expires: date })
 		Cookies.set('totalPriceCookie', this.totalPrice, { expires: date })
+	}// fine mounted
 
 		this.nome = (Cookies.get('nome') !== 'undefined') && Cookies.get('nome')
     	this.cognome = (Cookies.get('cognome') !== 'undefined') && Cookies.get('cognome')

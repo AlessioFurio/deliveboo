@@ -59,8 +59,11 @@
                 <div class="list list-plate">
                     <label for="visible">Imposta a visibile</label>
                     <input type="radio" class="check" name="visibility" value="1">
-                    <input class="check" type="radio" name="visibility" value="0">
+                </div>
+
+                <div class="list list-plate">
                     <label for="no-visible">Imposta a non visibile</label>
+                    <input class="check" type="radio" name="visibility" value="0">
                 </div>
                 <div class="list list-plate">
                     <button type="submit" class="btn btn-success">

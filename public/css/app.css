@@ -1895,61 +1895,87 @@ footer {
 }
 .container-restaurant-orders-details .title-restaurant-orders-details {
   background-color: #101927;
-  border-bottom: 3px solid #00ccbc;
+  border-bottom: 3px solid #f5d790;
 }
 .container-restaurant-orders-details .title-restaurant-orders-details h1 {
   text-align: center;
-  color: #e3e8f1;
+  color: #f5d790;
   font-size: 25px;
   padding: 20px 0;
   text-transform: uppercase;
 }
 .container-restaurant-orders-details .container-form-details {
-  background-color: #e3e8f1;
+  background-image: url("/images/ordini.jpg");
+  background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 .container-restaurant-orders-details .container-form-details .my-restaurant-name {
   text-align: center;
   font-size: 25px;
   padding: 20px 0;
-  text-transform: uppercase;
-}
-.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
-  border: 3px solid #00ccbc;
-  background-color: #101927;
-  width: 90%;
-  margin: 20px auto;
-}
-.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders ul {
-  list-style-type: none;
-}
-.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders ul li {
-  padding: 10px;
-}
-.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders ul li span {
-  color: #00ccbc;
-  font-size: 20px;
-}
-.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders ul li span strong {
-  font-size: 20px;
   color: #e3e8f1;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.5);
 }
-.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders .link-details-order {
+.container-restaurant-orders-details .container-form-details .link-details-order {
   text-align: center;
   padding: 20px 0;
 }
-.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders .link-details-order a {
+.container-restaurant-orders-details .container-form-details .link-details-order .link-statistics-details-orders {
+  font-size: 25px;
+  text-decoration: none;
+  color: #f5d790;
+  border: 3px solid #f5d790;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 25px 40px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.container-restaurant-orders-details .container-form-details .link-details-order .link-statistics-details-orders .fa-chart-bar {
+  padding-right: 10px;
+  font-size: 25px;
+}
+.container-restaurant-orders-details .container-form-details .link-details-order .link-statistics-details-orders:hover {
+  color: #101927;
+  border: 3px solid #101927;
+  background: rgba(255, 255, 255, 0.5);
+}
+.container-restaurant-orders-details .container-form-details .link-details-order a {
   font-size: 20px;
   text-decoration: none;
-  color: #101927;
-  border: 3px solid #00ccbc;
+  color: #f5d790;
+  border: 3px solid #f5d790;
   border-radius: 10px;
   display: inline-block;
   padding: 10px;
-  background-color: #e3e8f1;
+  background: rgba(0, 0, 0, 0.5);
 }
-.container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders .link-details-order a:hover {
-  color: #00ccbc;
+.container-restaurant-orders-details .container-form-details .link-details-order a:hover {
+  color: #101927;
+  border: 3px solid #101927;
+  background: rgba(255, 255, 255, 0.5);
+}
+.container-restaurant-orders-details .container-form-details .form-details-orders {
+  border: 3px solid #f5d790;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 90%;
+  margin: 20px auto;
+}
+.container-restaurant-orders-details .container-form-details .form-details-orders ul {
+  list-style-type: none;
+}
+.container-restaurant-orders-details .container-form-details .form-details-orders ul li {
+  padding: 15px;
+}
+.container-restaurant-orders-details .container-form-details .form-details-orders ul li span {
+  color: #101927;
+  font-size: 20px;
+}
+.container-restaurant-orders-details .container-form-details .form-details-orders ul li span strong {
+  font-size: 20px;
+  color: #101927;
 }
 
 @media screen and (min-width: 768px) {
@@ -1959,8 +1985,8 @@ footer {
   .container-restaurant-orders-details .container-form-details .my-restaurant-name {
     font-size: 35px;
   }
-  .container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
-    width: 40%;
+  .container-restaurant-orders-details .container-form-details .form-details-orders {
+    width: 50%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1970,7 +1996,7 @@ footer {
   .container-restaurant-orders-details .container-form-details .my-restaurant-name {
     font-size: 35px;
   }
-  .container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
+  .container-restaurant-orders-details .container-form-details .form-details-orders {
     width: 40%;
   }
 }
@@ -1981,8 +2007,8 @@ footer {
   .container-restaurant-orders-details .container-form-details .my-restaurant-name {
     font-size: 35px;
   }
-  .container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
-    width: 25%;
+  .container-restaurant-orders-details .container-form-details .form-details-orders {
+    width: 20%;
   }
 }
 @media screen and (min-width: 200px) {

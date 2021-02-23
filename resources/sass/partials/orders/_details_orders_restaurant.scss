@@ -2,11 +2,11 @@
 
     .title-restaurant-orders-details {
         background-color: #101927;
-        border-bottom: 3px solid #00ccbc;
+        border-bottom: 3px solid #f5d790;
 
             h1 {
                 text-align: center;
-                color: #e3e8f1;
+                color: #f5d790;
                 font-size: 25px;
                 padding: 20px 0;
                 text-transform: uppercase;
@@ -15,7 +15,9 @@
 
     .container-form-details {
 
-        background-color: #e3e8f1;
+        background-image: url('/images/ordini.jpg');
+        background-size: cover;
+        background-position: center;
         height: 100vh;
 
 
@@ -23,54 +25,80 @@
             text-align: center;
             font-size: 25px;
             padding: 20px 0;
+            color: #e3e8f1;
             text-transform: uppercase;
+            background: rgba(0,0,0,0.5);
         }
 
-        .container-form-details-orders {
+        .link-details-order {
+            text-align: center;
+            padding: 20px 0;
 
+            .link-statistics-details-orders {
 
+                font-size: 25px;
+                text-decoration: none;
+                color: #f5d790;
+                border: 3px solid #f5d790;
+                border-radius: 10px;
+                display: inline-block;
+                padding: 25px 40px;
+                background: rgba(0, 0, 0, 0.5);
 
-            .form-details-orders {
-
-                border: 3px solid #00ccbc;
-                background-color: #101927;
-                width: 90%;
-                margin: 20px auto;
-
-                ul {
-
-                    list-style-type: none;
-
-                    li {
-                        padding: 10px;
-                        span {
-                            color: #00ccbc;
-                            font-size: 20px;
-
-                            strong {
-                                font-size: 20px;
-                                color: #e3e8f1;
-                            }
-                        }
-                    }
+                .fa-chart-bar {
+                    padding-right: 10px;
+                    font-size: 25px;
                 }
 
-                .link-details-order {
-                    text-align: center;
-                    padding: 20px 0;
+                &:hover {
+                    color: #101927;
+                    border: 3px solid #101927;
+                    background: rgba(255,255,255,0.5);
+                }
 
-                    a {
-                        font-size: 20px;
-                        text-decoration: none;
+            }
+
+            a {
+                font-size: 20px;
+                text-decoration: none;
+                color: #f5d790;
+                border: 3px solid #f5d790;
+                border-radius: 10px;
+                display: inline-block;
+                padding: 10px;
+                background: rgba(0,0,0,0.5);
+
+                &:hover {
+                    color: #101927;
+                    border: 3px solid #101927;
+                    background: rgba(255,255,255,0.5);
+                }
+            }
+        }
+
+        .form-details-orders {
+
+            border: 3px solid #f5d790;
+            background: rgba(255,255,255,0.6);
+            border-radius: 10px;
+            width: 90%;
+            margin: 20px auto;
+
+            ul {
+
+                list-style-type: none;
+
+                li {
+                    padding: 15px;
+
+                    span {
+
                         color: #101927;
-                        border: 3px solid #00ccbc;
-                        border-radius: 10px;
-                        display: inline-block;
-                        padding: 10px;
-                        background-color: #e3e8f1;
+                        font-size: 20px;
 
-                        &:hover {
-                            color: #00ccbc;
+                        strong {
+                            font-size: 20px;
+                            color: #101927;
                         }
                     }
                 }
@@ -85,55 +113,54 @@
 
         .title-restaurant-orders-details {
 
-                h1 {
+            h1 {
+                font-size: 40px;
 
-                    font-size: 40px;
-
-                }
+            }
         }
 
         .container-form-details {
 
-
-
             .my-restaurant-name {
 
                 font-size: 35px;
-
             }
 
-            .container-form-details-orders {
+            .link-details-order {
+
+                .link-statistics-details-orders {
 
 
-                .form-details-orders {
+                    .fa-chart-bar {
 
-
-                    width: 40%;
-
-
-                    ul {
-
-
-
-                        li {
-
-                            span {
-
-
-                                strong {
-
-                                }
-                            }
-                        }
                     }
 
-                    .link-details-order {
+                    &:hover {
+
+                    }
+
+                }
 
 
-                        a {
+                a {
 
+                    &:hover {
 
-                            &:hover {
+                    }
+                }
+            }
+
+            .form-details-orders {
+
+                width: 50%;
+
+                ul {
+
+                    li {
+
+                        span {
+
+                            strong {
 
                             }
                         }
@@ -144,61 +171,60 @@
     }
 }
 
+
 @media screen and (min-width: 1024px) {
 
     .container-restaurant-orders-details {
 
         .title-restaurant-orders-details {
 
-                h1 {
+            h1 {
+                font-size: 40px;
 
-                    font-size: 40px;
-
-                }
+            }
         }
 
         .container-form-details {
 
-
-
             .my-restaurant-name {
 
                 font-size: 35px;
-
             }
 
-            .container-form-details-orders {
+            .link-details-order {
+
+                .link-statistics-details-orders {
 
 
-                .form-details-orders {
+                    .fa-chart-bar {
 
-
-                    width: 40%;
-
-
-                    ul {
-
-
-
-                        li {
-
-                            span {
-
-
-                                strong {
-
-                                }
-                            }
-                        }
                     }
 
-                    .link-details-order {
+                    &:hover {
 
+                    }
 
-                        a {
+                }
 
+                a {
 
-                            &:hover {
+                    &:hover {
+
+                    }
+                }
+            }
+
+            .form-details-orders {
+
+                width: 40%;
+
+                ul {
+
+                    li {
+
+                        span {
+
+                            strong {
 
                             }
                         }
@@ -215,61 +241,58 @@
 
         .title-restaurant-orders-details {
 
-                h1 {
+            h1 {
+                font-size: 40px;
 
-                    font-size: 40px;
-
-                }
+            }
         }
 
         .container-form-details {
 
-
-
             .my-restaurant-name {
 
                 font-size: 35px;
-
             }
 
-            .container-form-details-orders {
+            .link-details-order {
+
+                .link-statistics-details-orders {
 
 
-                .form-details-orders {
+                    .fa-chart-bar {
 
-
-                    width: 25%;
-
-
-                    ul {
-
-
-
-                        li {
-
-                            span {
-
-
-                                strong {
-
-                                }
-                            }
-                        }
                     }
 
-                    .link-details-order {
+                    &:hover {
 
+                    }
 
-                        a {
+                }
 
+                a {
 
-                            &:hover {
+                    &:hover {
+
+                    }
+                }
+            }
+
+            .form-details-orders {
+
+                width: 20%;
+
+                ul {
+
+                    li {
+
+                        span {
+
+                            strong {
 
                             }
                         }
                     }
                 }
-
             }
         }
     }

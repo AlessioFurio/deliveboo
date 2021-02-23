@@ -109,10 +109,6 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 
 var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
-<<<<<<< HEAD
-var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
-=======
->>>>>>> index_restaurant
 var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
 var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
 var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
@@ -133,11 +129,7 @@ module.exports = function xhrAdapter(config) {
     // HTTP basic authentication
     if (config.auth) {
       var username = config.auth.username || '';
-<<<<<<< HEAD
-      var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
-=======
       var password = config.auth.password || '';
->>>>>>> index_restaurant
       requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
     }
 
@@ -218,11 +210,8 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-<<<<<<< HEAD
-=======
       var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
 
->>>>>>> index_restaurant
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
         cookies.read(config.xsrfCookieName) :
@@ -288,11 +277,7 @@ module.exports = function xhrAdapter(config) {
       });
     }
 
-<<<<<<< HEAD
-    if (!requestData) {
-=======
     if (requestData === undefined) {
->>>>>>> index_restaurant
       requestData = null;
     }
 
@@ -361,12 +346,6 @@ axios.all = function all(promises) {
 };
 axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios/lib/helpers/spread.js");
 
-<<<<<<< HEAD
-// Expose isAxiosError
-axios.isAxiosError = __webpack_require__(/*! ./helpers/isAxiosError */ "./node_modules/axios/lib/helpers/isAxiosError.js");
-
-=======
->>>>>>> index_restaurant
 module.exports = axios;
 
 // Allow use of default import syntax in TypeScript
@@ -575,16 +554,9 @@ Axios.prototype.getUri = function getUri(config) {
 utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
   /*eslint func-names:0*/
   Axios.prototype[method] = function(url, config) {
-<<<<<<< HEAD
-    return this.request(mergeConfig(config || {}, {
-      method: method,
-      url: url,
-      data: (config || {}).data
-=======
     return this.request(utils.merge(config || {}, {
       method: method,
       url: url
->>>>>>> index_restaurant
     }));
   };
 });
@@ -592,11 +564,7 @@ utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData
 utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
   /*eslint func-names:0*/
   Axios.prototype[method] = function(url, data, config) {
-<<<<<<< HEAD
-    return this.request(mergeConfig(config || {}, {
-=======
     return this.request(utils.merge(config || {}, {
->>>>>>> index_restaurant
       method: method,
       url: url,
       data: data
@@ -856,11 +824,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   error.response = response;
   error.isAxiosError = true;
 
-<<<<<<< HEAD
-  error.toJSON = function toJSON() {
-=======
   error.toJSON = function() {
->>>>>>> index_restaurant
     return {
       // Standard
       message: this.message,
@@ -909,59 +873,6 @@ module.exports = function mergeConfig(config1, config2) {
   config2 = config2 || {};
   var config = {};
 
-<<<<<<< HEAD
-  var valueFromConfig2Keys = ['url', 'method', 'data'];
-  var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy', 'params'];
-  var defaultToConfig2Keys = [
-    'baseURL', 'transformRequest', 'transformResponse', 'paramsSerializer',
-    'timeout', 'timeoutMessage', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
-    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress', 'decompress',
-    'maxContentLength', 'maxBodyLength', 'maxRedirects', 'transport', 'httpAgent',
-    'httpsAgent', 'cancelToken', 'socketPath', 'responseEncoding'
-  ];
-  var directMergeKeys = ['validateStatus'];
-
-  function getMergedValue(target, source) {
-    if (utils.isPlainObject(target) && utils.isPlainObject(source)) {
-      return utils.merge(target, source);
-    } else if (utils.isPlainObject(source)) {
-      return utils.merge({}, source);
-    } else if (utils.isArray(source)) {
-      return source.slice();
-    }
-    return source;
-  }
-
-  function mergeDeepProperties(prop) {
-    if (!utils.isUndefined(config2[prop])) {
-      config[prop] = getMergedValue(config1[prop], config2[prop]);
-    } else if (!utils.isUndefined(config1[prop])) {
-      config[prop] = getMergedValue(undefined, config1[prop]);
-    }
-  }
-
-  utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
-    if (!utils.isUndefined(config2[prop])) {
-      config[prop] = getMergedValue(undefined, config2[prop]);
-    }
-  });
-
-  utils.forEach(mergeDeepPropertiesKeys, mergeDeepProperties);
-
-  utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
-    if (!utils.isUndefined(config2[prop])) {
-      config[prop] = getMergedValue(undefined, config2[prop]);
-    } else if (!utils.isUndefined(config1[prop])) {
-      config[prop] = getMergedValue(undefined, config1[prop]);
-    }
-  });
-
-  utils.forEach(directMergeKeys, function merge(prop) {
-    if (prop in config2) {
-      config[prop] = getMergedValue(config1[prop], config2[prop]);
-    } else if (prop in config1) {
-      config[prop] = getMergedValue(undefined, config1[prop]);
-=======
   var valueFromConfig2Keys = ['url', 'method', 'params', 'data'];
   var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy'];
   var defaultToConfig2Keys = [
@@ -995,32 +906,19 @@ module.exports = function mergeConfig(config1, config2) {
       config[prop] = config2[prop];
     } else if (typeof config1[prop] !== 'undefined') {
       config[prop] = config1[prop];
->>>>>>> index_restaurant
     }
   });
 
   var axiosKeys = valueFromConfig2Keys
     .concat(mergeDeepPropertiesKeys)
-<<<<<<< HEAD
-    .concat(defaultToConfig2Keys)
-    .concat(directMergeKeys);
-
-  var otherKeys = Object
-    .keys(config1)
-    .concat(Object.keys(config2))
-=======
     .concat(defaultToConfig2Keys);
 
   var otherKeys = Object
     .keys(config2)
->>>>>>> index_restaurant
     .filter(function filterAxiosKeys(key) {
       return axiosKeys.indexOf(key) === -1;
     });
 
-<<<<<<< HEAD
-  utils.forEach(otherKeys, mergeDeepProperties);
-=======
   utils.forEach(otherKeys, function otherKeysDefaultToConfig2(prop) {
     if (typeof config2[prop] !== 'undefined') {
       config[prop] = config2[prop];
@@ -1028,7 +926,6 @@ module.exports = function mergeConfig(config1, config2) {
       config[prop] = config1[prop];
     }
   });
->>>>>>> index_restaurant
 
   return config;
 };
@@ -1057,11 +954,7 @@ var createError = __webpack_require__(/*! ./createError */ "./node_modules/axios
  */
 module.exports = function settle(resolve, reject, response) {
   var validateStatus = response.config.validateStatus;
-<<<<<<< HEAD
-  if (!response.status || !validateStatus || validateStatus(response.status)) {
-=======
   if (!validateStatus || validateStatus(response.status)) {
->>>>>>> index_restaurant
     resolve(response);
   } else {
     reject(createError(
@@ -1193,10 +1086,6 @@ var defaults = {
   xsrfHeaderName: 'X-XSRF-TOKEN',
 
   maxContentLength: -1,
-<<<<<<< HEAD
-  maxBodyLength: -1,
-=======
->>>>>>> index_restaurant
 
   validateStatus: function validateStatus(status) {
     return status >= 200 && status < 300;
@@ -1260,10 +1149,7 @@ var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/util
 
 function encode(val) {
   return encodeURIComponent(val).
-<<<<<<< HEAD
-=======
     replace(/%40/gi, '@').
->>>>>>> index_restaurant
     replace(/%3A/gi, ':').
     replace(/%24/g, '$').
     replace(/%2C/gi, ',').
@@ -1449,32 +1335,6 @@ module.exports = function isAbsoluteURL(url) {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./node_modules/axios/lib/helpers/isAxiosError.js":
-/*!********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/isAxiosError.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Determines whether the payload is an error thrown by Axios
- *
- * @param {*} payload The value to test
- * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
- */
-module.exports = function isAxiosError(payload) {
-  return (typeof payload === 'object') && (payload.isAxiosError === true);
-};
-
-
-/***/ }),
-
-=======
->>>>>>> index_restaurant
 /***/ "./node_modules/axios/lib/helpers/isURLSameOrigin.js":
 /*!***********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
@@ -1799,24 +1659,6 @@ function isObject(val) {
 }
 
 /**
-<<<<<<< HEAD
- * Determine if a value is a plain Object
- *
- * @param {Object} val The value to test
- * @return {boolean} True if value is a plain Object, otherwise false
- */
-function isPlainObject(val) {
-  if (toString.call(val) !== '[object Object]') {
-    return false;
-  }
-
-  var prototype = Object.getPrototypeOf(val);
-  return prototype === null || prototype === Object.prototype;
-}
-
-/**
-=======
->>>>>>> index_restaurant
  * Determine if a value is a Date
  *
  * @param {Object} val The value to test
@@ -1972,14 +1814,6 @@ function forEach(obj, fn) {
 function merge(/* obj1, obj2, obj3, ... */) {
   var result = {};
   function assignValue(val, key) {
-<<<<<<< HEAD
-    if (isPlainObject(result[key]) && isPlainObject(val)) {
-      result[key] = merge(result[key], val);
-    } else if (isPlainObject(val)) {
-      result[key] = merge({}, val);
-    } else if (isArray(val)) {
-      result[key] = val.slice();
-=======
     if (typeof result[key] === 'object' && typeof val === 'object') {
       result[key] = merge(result[key], val);
     } else {
@@ -2008,7 +1842,6 @@ function deepMerge(/* obj1, obj2, obj3, ... */) {
       result[key] = deepMerge(result[key], val);
     } else if (typeof val === 'object') {
       result[key] = deepMerge({}, val);
->>>>>>> index_restaurant
     } else {
       result[key] = val;
     }
@@ -2039,22 +1872,6 @@ function extend(a, b, thisArg) {
   return a;
 }
 
-<<<<<<< HEAD
-/**
- * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
- *
- * @param {string} content with BOM
- * @return {string} content value without BOM
- */
-function stripBOM(content) {
-  if (content.charCodeAt(0) === 0xFEFF) {
-    content = content.slice(1);
-  }
-  return content;
-}
-
-=======
->>>>>>> index_restaurant
 module.exports = {
   isArray: isArray,
   isArrayBuffer: isArrayBuffer,
@@ -2064,10 +1881,6 @@ module.exports = {
   isString: isString,
   isNumber: isNumber,
   isObject: isObject,
-<<<<<<< HEAD
-  isPlainObject: isPlainObject,
-=======
->>>>>>> index_restaurant
   isUndefined: isUndefined,
   isDate: isDate,
   isFile: isFile,
@@ -2078,15 +1891,9 @@ module.exports = {
   isStandardBrowserEnv: isStandardBrowserEnv,
   forEach: forEach,
   merge: merge,
-<<<<<<< HEAD
-  extend: extend,
-  trim: trim,
-  stripBOM: stripBOM
-=======
   deepMerge: deepMerge,
   extend: extend,
   trim: trim
->>>>>>> index_restaurant
 };
 
 
@@ -2457,9 +2264,9 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\boolean\esercizi\deliveboo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\boolean\esercizi\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\esercizi\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
+__webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/sass/chart.scss */"./resources/sass/chart.scss");
 
 
 /***/ })

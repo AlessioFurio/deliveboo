@@ -33,7 +33,13 @@ var app = new Vue({
 
 
 	methods: {
+		showModal() {
+			console.log('ok');
+			var modal = document.getElementById("myModal");
 
+			modal.style.display = 'block';
+			console.log(modal.style.display);
+		},
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
@@ -80,9 +86,11 @@ var app = new Vue({
         	}
     	}
 	}, // fine methods
-
+	beforeMount(){
+ 	},
 	mounted() {
 
+		this.showModal();
 
 		axios
 		.get('http://localhost:8000/api/restaurants', {

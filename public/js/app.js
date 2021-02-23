@@ -2184,6 +2184,12 @@ var app = new Vue({
     cart: []
   },
   methods: {
+    showModal: function showModal() {
+      console.log('ok');
+      var modal = document.getElementById("myModal");
+      modal.style.display = 'block';
+      console.log(modal.style.display);
+    },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
       return this.cart = this.dishesList.filter(function (product) {
@@ -2240,9 +2246,11 @@ var app = new Vue({
     }
   },
   // fine methods
+  beforeMount: function beforeMount() {},
   mounted: function mounted() {
     var _this2 = this;
 
+    this.showModal();
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/restaurants', {
       params: {
         query: this.selectedCategory

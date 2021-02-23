@@ -2234,7 +2234,7 @@ var app = new Vue({
               // se la quantita' e' diversa da 0
               this.dishesList[i].quantity--; // sottrai 1
 
-              this.totalPrice = parseFloat(this.totalPrice) - parseFloat(this.dishesList[i].price); // sottraggo il prezzo del piatto aggiunto nel carrello al totale
+              this.totalPrice = Math.round(this.totalPrice * 100) / 100 - Math.round(this.dishesList[i].price * 100) / 100; // sottraggo il prezzo del piatto aggiunto nel carrello al totale
 
               return this.totalQuantity = this.dishesList.reduce(function (total, product) {
                 return total + product.quantity;
@@ -2243,7 +2243,7 @@ var app = new Vue({
           } else {
             this.dishesList[i].quantity++; // altrimenti aggiungi 1
 
-            this.totalPrice = parseFloat(this.totalPrice) + parseFloat(this.dishesList[i].price); // aggiungo il prezzo del piatto aggiunto nel carrello al totale
+            this.totalPrice = Math.round(this.totalPrice * 100) / 100 + Math.round(this.dishesList[i].price * 100) / 100; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
 
             this.showCart = true;
             return this.totalQuantity = this.dishesList.reduce(function (total, product) {
@@ -2336,8 +2336,7 @@ var app = new Vue({
       localStorage.cartCookie = JSON.stringify(this.cart);
     },
     totalPrice: function totalPrice() {
-      localStorage.totalPriceCookie = this.totalPrice;
-      return localStorage.totalPriceCookie = parseFloat(localStorage.totalPriceCookie).toFixed(2);
+      localStorage.totalPriceCookie = Math.round(this.totalPrice * 100) / 100;
     }
   }
 });

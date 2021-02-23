@@ -83,13 +83,13 @@ var app = new Vue({
 
             			if (this.dishesList[i].quantity != 0) { // se la quantita' e' diversa da 0
                 			this.dishesList[i].quantity--; // sottrai 1
-							this.totalPrice = parseFloat(this.totalPrice) - parseFloat(this.dishesList[i].price);
+							this.totalPrice = Math.round(this.totalPrice * 100)/100 - Math.round(this.dishesList[i].price * 100)/100;
 							 // sottraggo il prezzo del piatto aggiunto nel carrello al totale
 							return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
             			}
             		} else {
 						this.dishesList[i].quantity++; // altrimenti aggiungi 1
-						this.totalPrice = parseFloat(this.totalPrice) + parseFloat(this.dishesList[i].price); // aggiungo il prezzo del piatto aggiunto nel carrello al totale
+						this.totalPrice = Math.round(this.totalPrice * 100)/100 + Math.round(this.dishesList[i].price * 100)/100; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
 						this.showCart = true;
 						return this.totalQuantity = this.dishesList.reduce((total, product) => total + product.quantity,0);
 
@@ -178,8 +178,7 @@ var app = new Vue({
 		},
 
 		totalPrice(){
-			localStorage.totalPriceCookie = this.totalPrice;
-			return  localStorage.totalPriceCookie = parseFloat(localStorage.totalPriceCookie).toFixed(2);
+			localStorage.totalPriceCookie = Math.round(this.totalPrice * 100)/100;
 
 		},
 

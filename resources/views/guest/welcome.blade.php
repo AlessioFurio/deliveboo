@@ -1,6 +1,7 @@
 @extends('layouts.app-guest')
 
 @section('content')
+
     <section class="card-category">
         <div class="container-card-category">
             <div class="menu-filter">
@@ -26,4 +27,41 @@
             </div>
         </div>
     </section>
+
+    <div id="myModal" class="modal">
+        @if ($transaction_result)
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="text-center mt-5">
+                <i class="fas fa-check-circle fa-9x"></i>
+                <h2 class="mt-3">
+                  Pagamento riuscito
+                </h2>
+                <h3 class="mt-3 mb-3">
+                  Il tuo ordine e' stato inviato al ristorante
+                </h3>
+              </div>
+            </div>
+          {{-- </div> --}}
+        @elseif ($transaction_result == null)
+
+        @else
+          {{-- <div id="myModal" class="modal"> --}}
+           <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="text-center mt-5">
+                <i class="fas fa-times-circle fa-9x"></i>
+                <h2 class="mt-3 mb-3">
+                  Pagamento non riuscito
+                </h2>
+              </div>
+            </div>
+        @endif
+    </div>
+
+
+
+
+
+
 @endsection

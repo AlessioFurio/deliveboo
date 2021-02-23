@@ -2137,3 +2137,11 @@ main .container-restaurant .content-restaurant .container-list-dishes .card-dish
   cursor: pointer;
   margin: 0 5px;
 }
+
+div i.fas.fa-check-circle {
+  color: green;
+}
+
+div i.fas.fa-times-circle {
+  color: red;
+}

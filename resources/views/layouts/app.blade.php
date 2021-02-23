@@ -26,7 +26,7 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body onload="modal();">
+    <body>
         <div id="header">
             <nav class="container-total">
                 <div class="container-general-total">
@@ -75,6 +75,6 @@
         <main>
           @yield('content')
         </main>
-    
+
     </body>
 </html>

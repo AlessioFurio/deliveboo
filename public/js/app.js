@@ -2190,6 +2190,19 @@ var app = new Vue({
       modal.style.display = 'block';
       console.log(modal.style.display);
     },
+    closeModal: function closeModal() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    },
+    closeModalOnWindow: function closeModalOnWindow() {
+      var modal = document.getElementById("myModal");
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
       return this.cart = this.dishesList.filter(function (product) {
@@ -2246,7 +2259,6 @@ var app = new Vue({
     }
   },
   // fine methods
-  beforeMount: function beforeMount() {},
   mounted: function mounted() {
     var _this2 = this;
 

@@ -2148,7 +2148,7 @@ div i.fas.fa-times-circle {
 
 /* The Modal (background) */
 .modal {
-  display: block;
+  display: none;
   /* Hidden by default */
   position: fixed;
   /* Stay in place */

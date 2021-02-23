@@ -39,6 +39,20 @@ var app = new Vue({
 
 			modal.style.display = 'block';
 			console.log(modal.style.display);
+
+		},
+		closeModal() {
+			var modal = document.getElementById("myModal");
+			modal.style.display = "none";
+		},
+		closeModalOnWindow(){
+			var modal = document.getElementById("myModal");
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+
 		},
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
@@ -86,8 +100,6 @@ var app = new Vue({
         	}
     	}
 	}, // fine methods
-	beforeMount(){
- 	},
 	mounted() {
 
 		this.showModal();
@@ -130,6 +142,6 @@ var app = new Vue({
     		}
     	}
 
-	} // fine mounted
+	}// fine mounted
 
 });

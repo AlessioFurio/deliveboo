@@ -29,9 +29,9 @@
     </section>
 
         @if ($transaction_result)
-          <div id="myModal" class="modal" ref="myDiv">
+          <div id="myModal" class="modal" @click="closeModalOnWindow()">
             <div class="modal-content">
-              <span class="close">&times;</span>
+              <span @click="closeModal()" class="close">&times;</span>
               <div class="result">
                 <i class="fas fa-check-circle fa-9x"></i>
                 <h2 class="mt-3">
@@ -44,24 +44,10 @@
             </div>
           </div>
         @elseif ($transaction_result == null)
-          <div id="myModal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="result">
-                <i class="fas fa-check-circle fa-9x"></i>
-                <h2 class="mt-3">
-                  Pagamento riuscito
-                </h2>
-                <h3 class="mt-3 mb-3">
-                  Il tuo ordine e' stato inviato al ristorante
-                </h3>
-              </div>
-            </div>
-          </div>
         @else
-          <div id="myModal" class="modal">
+          <div id="myModal" class="modal" @click="closeModalOnWindow()">
            <div class="modal-content">
-              <span class="close">&times;</span>
+              <span @click="closeModal()" class="close">&times;</span>
               <div class="result">
                 <i class="fas fa-times-circle fa-9x"></i>
                 <h2 class="mt-3 mb-3">

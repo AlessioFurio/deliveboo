@@ -53,11 +53,11 @@ class PaymentController extends Controller
       ]
     ]);
 
-    $data = [
-      'result' => $result
-    ];
+    // $data = [
+    //   'result' => $result
+    // ];
 
-    return view('guest.payments.transaction', $data);
+    return redirect()->route('welcome')->with(['transaction_result' => $result->success]);
   }
 
 }

@@ -1647,7 +1647,6 @@ footer {
   background-image: url("/images/pizza-spicchi.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
   border-top: 5px solid #f5d790;
 }
 .container-general-edit .container-general-edit-plate {
@@ -1700,6 +1699,11 @@ footer {
   border-radius: 5px;
   margin: 5px 0;
   width: 100%;
+}
+.list-edit-plate figure .img-edit-plate {
+  max-width: 100%;
+  border: 3px solid #f5d790;
+  border-radius: 50%;
 }
 
 .button-edit-plate {

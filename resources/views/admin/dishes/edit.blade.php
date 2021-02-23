@@ -54,9 +54,8 @@
                 <div class="list list-edit-plate">
                     @if ($dish->cover)
                         <figure>
-                            <figcaption>Immagine presente:</figcaption>
-                            <img src="{{asset('storage/'.$dish->cover )}}" alt="{{$dish->name}}">
-
+                            {{-- <figcaption>Immagine:</figcaption> --}}
+                            <img class="img-edit-plate" src="{{asset('storage/'.$dish->cover )}}" alt="{{$dish->name}}">
                         </figure>
                     @endif
                     <input class="input-search" type="file" name="cover">

@@ -1643,6 +1643,105 @@ footer {
     flex-basis: 20%;
   }
 }
+.container-general-edit {
+  background-image: url("/images/pizza-spicchi.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  border-top: 5px solid #f5d790;
+}
+.container-general-edit .container-general-edit-plate {
+  padding: 50px 0 100px 0;
+}
+.container-general-edit .container-form-edit-plate {
+  width: 90%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.6);
+  border: 5px ridge #f5d790;
+  border-radius: 10px;
+  padding: 10px;
+}
+.container-general-edit .title-edit-plate h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px 0;
+  color: #101927;
+}
+
+.list {
+  margin-bottom: 10px;
+}
+
+.list-edit-plate label {
+  font-size: 20px;
+  color: #101927;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-weight: 700;
+}
+.list-edit-plate .input {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid #f5d790;
+  height: 30px;
+}
+.list-edit-plate .textarea {
+  height: 150px;
+}
+.list-edit-plate .check {
+  display: inline-block;
+}
+.list-edit-plate .input-search {
+  background-color: white;
+  color: black;
+  border: 3px solid #f5d790;
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.button-edit-plate {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.button-edit-plate button {
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #101927;
+  padding: 10px 20px;
+  color: #f5d790;
+  cursor: pointer;
+}
+.button-edit-plate button:hover {
+  color: #101927;
+  background-color: #f5d790;
+}
+
+@media screen and (min-width: 768px) {
+  .container-general-edit .container-form-edit-plate {
+    width: 50%;
+  }
+  .container-general-edit .title-edit-plate h1 {
+    font-size: 30px;
+  }
+  .container-general-edit .list-edit-plate label {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-general-edit .container-form-edit-plate {
+    width: 30%;
+  }
+  .container-general-edit .title-edit-plate h1 {
+    font-size: 30px;
+  }
+  .container-general-edit .list-edit-plate label {
+    font-size: 25px;
+  }
+}
 .dashboard-order .dashboard-header-order {
   background-color: #101927;
   padding: 10px;
@@ -2035,10 +2134,10 @@ footer {
   justify-content: center;
 }
 .button-create-plate button {
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 20px;
   background-color: #101927;
-  padding: 10px;
+  padding: 10px 30px;
   color: #f5d790;
   cursor: pointer;
 }

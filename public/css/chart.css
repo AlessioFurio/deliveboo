@@ -10025,3 +10025,11 @@ main .dashboard .row .dashboard-body-menu ul li {
   list-style-type: none;
   border-bottom: 1px solid #fff;
 }
+
+div i.fas.fa-check-circle {
+  color: green;
+}
+
+div i.fas.fa-times-circle {
+  color: red;
+}

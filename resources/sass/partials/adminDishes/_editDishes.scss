@@ -1,17 +1,17 @@
-.container-general-create {
+.container-general-edit {
 
-        background-image: url('/images/portate-fredde.jpg');
+        background-image: url('/images/pizza-spicchi.jpg');
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         height: 100vh;
         border-top: 5px solid #f5d790;;
 
-        .container-general-create-plate {
+        .container-general-edit-plate {
 
             padding: 50px 0 100px 0;
         }
 
-        .container-form-create-plate {
+        .container-form-edit-plate {
 
             width: 90%;
             margin: auto;
@@ -21,7 +21,7 @@
             padding: 10px;
         }
 
-        .title-create-plate {
+        .title-edit-plate {
 
                 h1 {
                     text-align: center;
@@ -39,7 +39,7 @@
 
     }
 
-    .list-plate {
+    .list-edit-plate {
 
         label {
             font-size: 20px;
@@ -76,7 +76,7 @@
         }
     }
 
-    .button-create-plate {
+    .button-edit-plate {
         margin: 20px 0;
         display: flex;
         justify-content: center;
@@ -86,7 +86,7 @@
             border-radius: 10px;
             font-size: 20px;
             background-color: #101927;
-            padding: 10px 30px;
+            padding: 10px 20px;
             color: #f5d790;;
             cursor: pointer;
 
@@ -102,21 +102,21 @@
 
 @media screen and (min-width:768px) {
 
-    .container-general-create {
+    .container-general-edit {
 
 
-        .container-general-create-plate {
+        .container-general-edit-plate {
 
 
         }
 
-        .container-form-create-plate {
+        .container-form-edit-plate {
 
             width: 50%;
 
         }
 
-        .title-create-plate {
+        .title-edit-plate {
 
             h1 {
 
@@ -125,7 +125,7 @@
             }
         }
 
-        .list-plate {
+        .list-edit-plate {
 
             label {
                 font-size: 25px;
@@ -154,20 +154,20 @@
 
 @media screen and (min-width:1024px) {
 
-    .container-general-create {
+    .container-general-edit {
 
-        .container-general-create-plate {
+        .container-general-edit-plate {
 
 
         }
 
-        .container-form-create-plate {
+        .container-form-edit-plate {
 
             width: 30%;
 
         }
 
-        .title-create-plate {
+        .title-edit-plate {
 
             h1 {
                 font-size: 30px;
@@ -175,7 +175,7 @@
         }
 
 
-        .list-plate {
+        .list-edit-plate {
 
             label {
                 font-size: 25px;

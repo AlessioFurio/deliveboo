@@ -11,7 +11,7 @@
 
   <div class="chart-container">
       <div class="">
-          <p>Vedi tutti gli ordini di:</p>
+          <p >Filtra per mese</p>
           @foreach ($months as $key => $month)
               <a href="{{route('admin.statistics.month', ['id' => $id , 'month' => $key+1 ])}}">{{$month}}</a>
 

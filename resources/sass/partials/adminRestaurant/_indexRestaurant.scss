@@ -20,6 +20,7 @@
             .dashboard-body-menu-restaurant-index {
 
                 background-color: #101927;
+                border-right: 3px solid #f5d790;
                 height: 100%;
                 flex-basis: 40%;
 
@@ -178,10 +179,11 @@
                             .button-elimina-index {
 
                                 color: #101927;
-                                background-color: red;
+                                background: rgba(255, 99, 71, 0.5);
 
                                 &:hover {
                                     color: #f5d790;
+                                    background-color: #FF0000;
                                 }
 
                             }

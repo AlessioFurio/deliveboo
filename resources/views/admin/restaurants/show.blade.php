@@ -38,19 +38,21 @@
                     Telefono: <strong>{{$restaurant->phone}}</strong>
                 </h3>
                 <div class="button-create-order">
-                    <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="show button-new-show">
+                    <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="show button-create-new-show">
                         Crea nuovo piatto
                     </a>
-                    <a href="{{ route('admin.orders.details', ['id'=> $restaurant->id]) }}" class="show button-new-show">
+                    <a href="{{ route('admin.orders.details', ['id'=> $restaurant->id]) }}" class="show button-order-new-show">
                         Ordini
                     </a>
                 </div>
             </div>
-            <div class="your-dishes">
-                <h3>
-                    I tuoi piatti
-                </h3>
-            </div>
+        </div>
+        <div class="your-dishes">
+            <h3>
+                I tuoi piatti
+            </h3>
+        </div>
+        <div class="container-card-restaurant-show">
             <div class="restaurants-show">
                 @foreach ($restaurant->dishes as $dish)
                     <div class="restaurant-card-show">

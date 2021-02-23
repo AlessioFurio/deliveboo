@@ -28,44 +28,44 @@
                     Dettagli ristorante
                 </h1>
                 <div class="title-restaurant-show">
-                <h3>
-                    Nome: <strong>{{$restaurant->name}}</strong>
-                </h3>
-                <h3>
-                    Indirizzo: <strong>{{$restaurant->address}}</strong>
-                </h3>
-                <h3>
-                    Telefono: <strong>{{$restaurant->phone}}</strong>
-                </h3>
-                <div class="button-create-order">
-                    <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="show button-create-new-show">
-                        Crea nuovo piatto
-                    </a>
-                    <a href="{{ route('admin.orders.details', ['id'=> $restaurant->id]) }}" class="show button-order-new-show">
-                        Ordini
-                    </a>
+                    <h3>
+                        Nome: <strong>{{$restaurant->name}}</strong>
+                    </h3>
+                    <h3>
+                        Indirizzo: <strong>{{$restaurant->address}}</strong>
+                    </h3>
+                    <h3>
+                        Telefono: <strong>{{$restaurant->phone}}</strong>
+                    </h3>
+                    <div class="button-create-order">
+                        <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="show button-create-new-show">
+                            Crea nuovo piatto
+                        </a>
+                        <a href="{{ route('admin.orders.details', ['id'=> $restaurant->id]) }}" class="show button-order-new-show">
+                            Ordini
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="your-dishes">
-            <h3>
-                I tuoi piatti
-            </h3>
-        </div>
-        <div class="container-card-restaurant-show">
-            <div class="restaurants-show">
-                @foreach ($restaurant->dishes as $dish)
-                    <div class="restaurant-card-show">
-                        <div class="body-restaurant-card-show">
-                            <h3>
-                                {{$dish->name}}
-                            </h3>
-                            @if ($dish->cover)
-                                <img src="{{asset('storage/'. $dish->cover)}}" alt="">
-                            @endif
-                        </div>
-                        <div class="details-restaurant-card-show">
-                            <div class="container-button-action-show">
+            <div class="your-dishes">
+                <h3>
+                    I tuoi piatti
+                </h3>
+            </div>
+            <div class="container-card-restaurant-show">
+                <div class="restaurants-show">
+                    @foreach ($restaurant->dishes as $dish)
+                        <div class="restaurant-card-show">
+                            <div class="body-restaurant-card-show">
+                                <h3>
+                                    {{$dish->name}}
+                                </h3>
+                                @if ($dish->cover)
+                                    <img src="{{asset('storage/'. $dish->cover)}}" alt="">
+                                @endif
+                            </div>
+                            <div class="details-restaurant-card-show">
+                                <div class="container-button-action-show">
                                     <a class="button-show button-dettagli-show" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">
                                         Visualizza
                                     </a>
@@ -85,5 +85,5 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection

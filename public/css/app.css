@@ -1317,7 +1317,7 @@ footer {
   .dashboard-body-content-restaurant-show .container-restaurant-show .title-restaurant-show {
     width: 70%;
   }
-  .dashboard-body-content-restaurant-show .container-restaurant-show .button-create-order .button-new-show {
+  .dashboard-body-content-restaurant-show .container-restaurant-show .button-create-order .show {
     width: 50%;
   }
   .dashboard-body-content-restaurant-show .your-dishes h3 {
@@ -1345,11 +1345,8 @@ footer {
     width: 50%;
   }
   .dashboard-body-content-restaurant-show .container-restaurant-show .button-create-order .show {
-    width: 50%;
-  }
-  .dashboard-body-content-restaurant-show .container-restaurant-show .button-create-order .button-new-show {
-    width: 40%;
-    margin: 5px;
+    width: 43%;
+    margin: 10px;
   }
   .dashboard-body-content-restaurant-show .your-dishes h3 {
     font-size: 40px;
@@ -1373,9 +1370,8 @@ footer {
   .dashboard-body-content-restaurant-show .container-restaurant-show .title-restaurant-show {
     width: 30%;
   }
-  .dashboard-body-content-restaurant-show .container-restaurant-show .button-create-order .button-new-show {
+  .dashboard-body-content-restaurant-show .container-restaurant-show .button-create-order .show {
     width: 40%;
-    margin: 5px;
   }
   .dashboard-body-content-restaurant-show .your-dishes h3 {
     font-size: 40px;

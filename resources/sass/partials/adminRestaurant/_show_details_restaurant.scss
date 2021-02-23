@@ -297,14 +297,26 @@
 
                 .show{
 
-
+                    width: 50%;
 
                 }
 
-                .button-new-show {
+                .button-create-new-show {
 
 
-                    width: 50%;
+
+
+
+                    &:hover {
+
+
+                    }
+                }
+
+                .button-order-new-show {
+
+
+
 
 
                     &:hover {
@@ -471,15 +483,28 @@
 
                 .show{
 
-                    width: 50%;
+                    width: 43%;
+                    margin: 10px;
 
                 }
 
-                .button-new-show {
+                .button-create-new-show {
 
 
-                    width: 40%;
-                    margin: 5px;
+
+
+
+                    &:hover {
+
+
+                    }
+                }
+
+                .button-order-new-show {
+
+
+
+
 
                     &:hover {
 
@@ -600,14 +625,25 @@
 
                 .show{
 
-
+                    width: 40%;
                 }
 
-                .button-new-show {
+                .button-create-new-show {
 
 
-                    width: 40%;
-                    margin: 5px;
+
+
+
+                    &:hover {
+
+
+                    }
+                }
+
+                .button-order-new-show {
+
+
+
 
                     &:hover {
 

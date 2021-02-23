@@ -11,9 +11,9 @@ class PaymentController extends Controller
   public function index() {
     $gateway = new \Braintree\Gateway([
       'environment' => 'sandbox',
-      'merchantId' => '96bqgdfznc5j7zx5',
-      'publicKey' => 'b783sm8569ztywqk',
-      'privateKey' => '7eb649936b71225d258fe1467d61b1e5'
+      'merchantId' => 'qcb7wf9kzqnqwmpv',
+      'publicKey' => 'pyd4m95j45tgtkqk',
+      'privateKey' => 'd1cb5596101a2ec7de8fc5565ec418b5'
     ]);
 
     $clientToken = $gateway->clientToken()->generate();
@@ -40,9 +40,9 @@ class PaymentController extends Controller
 
     $gateway = new \Braintree\Gateway([
       'environment' => 'sandbox',
-      'merchantId' => '96bqgdfznc5j7zx5',
-      'publicKey' => 'b783sm8569ztywqk',
-      'privateKey' => '7eb649936b71225d258fe1467d61b1e5'
+      'merchantId' => 'qcb7wf9kzqnqwmpv',
+      'publicKey' => 'pyd4m95j45tgtkqk',
+      'privateKey' => 'd1cb5596101a2ec7de8fc5565ec418b5'
     ]);
 
     $result = $gateway->transaction()->sale([

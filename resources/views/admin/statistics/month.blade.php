@@ -11,16 +11,18 @@
 
   <div class="chart-container">
       <div class="">
-          <p >Filtra per mese</p>
+           <a href="{{route('admin.statistics.chart', ['id'=> $id])}}" >Vedi tutti gli ordini</a>
+          <p>Filtra per mese</p>
           @foreach ($months as $key => $month)
               <a href="{{route('admin.statistics.month', ['id' => $id , 'month' => $key+1 ])}}">{{$month}}</a>
-
           @endforeach
-
-
       </div>
+
     <div class="pie-chart-container">
       <canvas id="pie-chart"></canvas>
+    </div>
+    <div class="">
+        <h1>totale ordini {{$sum}}</h1>
     </div>
   </div>
 
@@ -68,7 +70,7 @@
         title: {
           display: true,
           position: "top",
-          text: "Tutti gli ordini",
+          text: "Ordini del mese",
           fontSize: 18,
           fontColor: "#111"
         },

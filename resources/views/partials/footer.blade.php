@@ -1,5 +1,5 @@
 <footer>
-    <div class="container">
+    <div class="container-footer">
         <div class="container-totale">
             <div class="container-list">
                 <div class="list">
@@ -18,10 +18,10 @@
                     <h3>Online Reservation</h3>
                     <span>Follow</span>
                     <div class="social">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-snapchat-ghost"></i>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
                     </div>
                 </div>
             </div>

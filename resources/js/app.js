@@ -18,7 +18,7 @@ var app = new Vue({
    		cognome: '',
    		indirizzo: '',
    		cartCookie: [],
-		totalPriceCookie: 'ciao',
+		totalPriceCookie: 0,
 	},
 
 
@@ -150,21 +150,26 @@ var app = new Vue({
 		Cookies.set('cognome', this.cognome, { expires: date })
 		Cookies.set('indirizzo', this.indirizzo, { expires: date })
 
-		if (this.cartCookie) {
+		if (Cookies.get('cartCookie')) {
 			this.cartCookie = JSON.parse(Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie');
 			var cook = JSON.parse(this.cartCookie);
 			this.cartCookie = cook;
 		} else {
-
 			Cookies.set('cartCookie', this.cart, { expires: date })
 		}
-		Cookies.set('totalPriceCookie', this.totalPrice, { expires: date })
+		//nuova funzione
+		if (Cookies.get('totalPriceCookie') > 0) {
+			this.totalPriceCookie = (Cookies.get('totalPriceCookie') !== 'undefined') && Cookies.get('totalPriceCookie');
+			this.totalPrice = this.totalPriceCookie;
+		} else {
+			Cookies.set('totalPriceCookie', this.totalPriceCookie, { expires: date })
+		}
 
 		this.nome = (Cookies.get('nome') !== 'undefined') && Cookies.get('nome')
 		this.cognome = (Cookies.get('cognome') !== 'undefined') && Cookies.get('cognome')
 		this.indirizzo = (Cookies.get('indirizzo') !== 'undefined') && Cookies.get('indirizzo')
 		// this.cartCookie = JSON.parse(Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie')
-		this.totalPriceCookie = (Cookies.get('totalPrice') !== 'undefined') && Cookies.get('totalPrice')
+		// this.totalPriceCookie = (Cookies.get('totalPrice') !== 'undefined') && Cookies.get('totalPrice')
 
 
 		this.selectedRestaurant = window.location.href.slice(34);
@@ -211,14 +216,14 @@ var app = new Vue({
 		if(sessionStorage.indirizzo){
 			this.indirizzo = sessionStorage.indirizzo;
 		}
-		if(sessionStorage.cartCookie){
-			this.cart = JSON.parse(sessionStorage.cartCookie);
-		}
-		if(sessionStorage.totalPriceCookie){
-			this.totalPrice = sessionStorage.totalPriceCookie;
-		}
-},
-// fine mounted
+		// if(sessionStorage.cartCookie){
+		// 	this.cart = JSON.parse(sessionStorage.cartCookie);
+		// }
+		// if(sessionStorage.totalPriceCookie){
+		// 	this.totalPrice = sessionStorage.totalPriceCookie;
+		// }
+	},
+	// fine mounted
 
 	watch: {
 		nome(newNome){
@@ -236,13 +241,14 @@ var app = new Vue({
 		},
 
 		cart(newCart){
-			this.cartCookie = JSON.stringify(newCart);
+			sessionStorage.cartCookie = JSON.stringify(newCart);
 			this.cartCookie = this.cart;
-      		Cookies.set('cartCookie', this.cart);
+      		Cookies.set('cartCookie', this.cartCookie);
 		},
 
 		totalPrice(){
-			sessionStorage.totalPriceCookie = Math.round(this.totalPrice * 100)/100;
+			// sessionStorage.totalPriceCookie = Math.round(this.totalPrice * 100)/100;
+			// this.totalPrice = this.totalPriceCookie;
 			Cookies.set('totalPriceCookie', this.totalPrice)
 		},
 

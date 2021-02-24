@@ -27,8 +27,7 @@
                     <div class="dishes-show">
                         <div class="dishes-card-show">
                             <div class="title-dishes-card-show">
-                              <h4>piatto</h4>
-                              <h1>{{ $dish->name }}</h1>
+                               <h1>{{ $dish->name }}</h1>
                             </div>
                             <div class="cover-dishes">
                                 @if ($dish->cover)
@@ -37,7 +36,6 @@
                             </div>
                             <div class="body-dishes-card-show">
                               <div class="details-dishes-card-show">
-                                <p>ID: <span>{{ $dish->id }}</span></p>
                                 <p>Ingredienti: <span>{{ $dish->ingredients }}</span></p>
                                 <p>Portata: <span>{{ $dish->course->name }}</span></p>
                                 <p>Visibilita':

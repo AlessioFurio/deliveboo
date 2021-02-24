@@ -62,21 +62,21 @@
     flex-basis: 80%;
     overflow-y: scroll;
 
-
     .container-restaurant-show {
 
-        background-image: url('/images/take-away.jpg');
+        background-image: url('/images/patatine.jpeg');
         background-size: cover;
-        background-position: top;
+        background-position: center;
         background-repeat: no-repeat;
+        height: 50%;
 
         .title-show {
-            text-align: center;
-            padding: 20px 0 10px;
-            color: #e3e8f1;
-            text-transform: uppercase;
-            font-size: 25px;
-            background: rgba(0,0,0,0.5);
+                text-align: center;
+                padding: 20px 0 10px;
+                color: #e3e8f1;
+                text-transform: uppercase;
+                font-size: 25px;
+                background: rgba(0,0,0,0.5);
 
         }
 

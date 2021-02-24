@@ -19,7 +19,7 @@
                             <div v-cloak v-if="showCart" class="cart-dropdown">
                                 <ul class="cart-dropdown-list">
                                     <h3>Carrello</h3>
-                                    <li v-for="product in cart" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
+                                    <li v-for="product in cartCookie" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
                                     <li id="no-border">Prezzo totale: <span>@{{Math.round(totalPrice * 100)/100}} €</span></li>
                                     <a href="{{ route('payments.index') }}">Paga ora</a>
                                 </ul>

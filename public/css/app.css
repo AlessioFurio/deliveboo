@@ -336,6 +336,52 @@ header .text-header .principal-text {
   margin-top: 10px;
 }
 
+.how-to-order {
+  width: 100%;
+  height: auto;
+  background-color: #040e10;
+  color: #d2ac7b;
+  text-align: center;
+  border-top: 1px solid #d2ac7b;
+  border-bottom: 1px solid #d2ac7b;
+  padding: 50px 0;
+}
+.how-to-order h1 {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+  font-family: "Ballet", cursive;
+}
+.how-to-order .steps {
+  width: 100%;
+  height: 100%;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.how-to-order .steps .step {
+  margin: 30px 0;
+}
+.how-to-order .steps .step img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .how-to-order {
+    margin: 0 auto;
+  }
+  .how-to-order h1 {
+    font-size: 60px;
+  }
+  .how-to-order .steps {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 @media screen and (min-width: 200px) {
   footer {
     background-color: #090d0e;

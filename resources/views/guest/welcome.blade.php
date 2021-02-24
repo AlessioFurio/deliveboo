@@ -28,6 +28,7 @@
         </div>
     </section>
 
+    
         @if ($transaction_result)
           <div id="myModal" class="modal" @click="closeModalOnWindow()">
             <div class="modal-content">
@@ -44,6 +45,7 @@
             </div>
           </div>
         @elseif ($transaction_result == null)
+
         @else
           <div id="myModal" class="modal" @click="closeModalOnWindow()">
            <div class="modal-content">

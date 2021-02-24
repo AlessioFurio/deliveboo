@@ -50,12 +50,12 @@ var app = new Vue({
 		Save (event) {
 			event.preventDefault(); //blocca il form per far eseguire il resto del codice
 
-			var date = new Date();
-			date.setTime(date.getTime() + (60 * 1000));
-			Cookies.set('nome', this.nome, { expires: date })
-			Cookies.set('cognome', this.cognome, { expires: date })
-			Cookies.set('indirizzo', this.indirizzo, { expires: date })
-			Cookies.set('cartCookie', this.cart, { expires: date })
+			// var date = new Date();
+			// date.setTime(date.getTime() + (60 * 1000));
+			// Cookies.set('nome', this.nome, { expires: date })
+			// Cookies.set('cognome', this.cognome, { expires: date })
+			// Cookies.set('indirizzo', this.indirizzo, { expires: date })
+			// Cookies.set('cartCookie', this.cart, { expires: date })
 
 			const form = document.getElementById('payment-form');
 
@@ -67,7 +67,7 @@ var app = new Vue({
 				form.submit();
 			});
 
-    },
+    	},
 
     	Clear () {
 			Cookies.remove('nome')
@@ -78,9 +78,9 @@ var app = new Vue({
 			this.nome = ''
 			this.cognome = ''
 			this.indirizzo = ''
-			this.cartCookie = ''
+			this.cartCookie = [];
 
-  	},
+  		},
 
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
@@ -144,6 +144,28 @@ var app = new Vue({
 		}); // fine then
 
 
+		var date = new Date();
+		date.setTime(date.getTime() + (100000000 * 1000));
+		Cookies.set('nome', this.nome, { expires: date })
+		Cookies.set('cognome', this.cognome, { expires: date })
+		Cookies.set('indirizzo', this.indirizzo, { expires: date })
+
+		if (this.cartCookie) {
+			this.cartCookie = JSON.parse(Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie');
+			var cook = JSON.parse(this.cartCookie);
+			this.cartCookie = cook;
+		} else {
+
+			Cookies.set('cartCookie', this.cart, { expires: date })
+		}
+		Cookies.set('totalPriceCookie', this.totalPrice, { expires: date })
+
+		this.nome = (Cookies.get('nome') !== 'undefined') && Cookies.get('nome')
+		this.cognome = (Cookies.get('cognome') !== 'undefined') && Cookies.get('cognome')
+		this.indirizzo = (Cookies.get('indirizzo') !== 'undefined') && Cookies.get('indirizzo')
+		// this.cartCookie = JSON.parse(Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie')
+		this.totalPriceCookie = (Cookies.get('totalPrice') !== 'undefined') && Cookies.get('totalPrice')
+
 
 		this.selectedRestaurant = window.location.href.slice(34);
 		axios
@@ -157,10 +179,10 @@ var app = new Vue({
 			this.dishesList = risposta.data.results;
 			for (var i = 0; i < this.dishesList.length; i++) {
 				this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-				if (this.cart.length) {
-						for (var j = 0; j < this.cart.length; j++) {
-							if (this.cart[j].id == this.dishesList[i].id) {
-								this.dishesList[i] = this.cart[j];
+				if (this.cartCookie.length) {
+						for (var j = 0; j < this.cartCookie.length; j++) {
+							if (this.cartCookie[j].id == this.dishesList[i].id) {
+								this.dishesList[i] = this.cartCookie[j];
 							}
 						}
 					}
@@ -179,19 +201,6 @@ var app = new Vue({
     		}
     	}
 
-		var date = new Date();
-		date.setTime(date.getTime() + (100000000 * 1000));
-		Cookies.set('nome', this.nome, { expires: date })
-		Cookies.set('cognome', this.cognome, { expires: date })
-		Cookies.set('indirizzo', this.indirizzo, { expires: date })
-		Cookies.set('cartCookie', this.cart, { expires: date })
-		Cookies.set('totalPriceCookie', this.totalPrice, { expires: date })
-
-		this.nome = (Cookies.get('nome') !== 'undefined') && Cookies.get('nome')
-    	this.cognome = (Cookies.get('cognome') !== 'undefined') && Cookies.get('cognome')
-    	this.indirizzo = (Cookies.get('indirizzo') !== 'undefined') && Cookies.get('indirizzo')
-		this.cartCookie = (Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie')
-		this.totalPriceCookie = (Cookies.get('totalPrice') !== 'undefined') && Cookies.get('totalPrice')
 
 		if(sessionStorage.nome){
 			this.nome = sessionStorage.nome;
@@ -227,8 +236,9 @@ var app = new Vue({
 		},
 
 		cart(newCart){
-			sessionStorage.cartCookie = JSON.stringify(newCart);
-			Cookies.set('cartCookie', this.cart)
+			this.cartCookie = JSON.stringify(newCart);
+			this.cartCookie = this.cart;
+      		Cookies.set('cartCookie', this.cart);
 		},
 
 		totalPrice(){

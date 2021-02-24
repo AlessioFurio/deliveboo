@@ -24,7 +24,7 @@ class StatisticsController extends Controller
     }
 
     $data = [
-        'restaurants' =>Payment::where('restaurant_id' , $id )->get()
+        'restaurants' =>Payment::where('restaurant_id' , $id )->orderBy('created_at', 'desc')->get()
     ];
     return view('admin.statistics.show', $data);
   }

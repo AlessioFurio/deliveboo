@@ -2170,7 +2170,7 @@ var app = new Vue({
     cognome: '',
     indirizzo: '',
     cartCookie: [],
-    totalPriceCookie: 'ciao'
+    totalPriceCookie: 0
   },
   methods: {
     showModal: function showModal() {
@@ -2197,21 +2197,13 @@ var app = new Vue({
     },
     Save: function Save(event) {
       event.preventDefault(); //blocca il form per far eseguire il resto del codice
+      // var date = new Date();
+      // date.setTime(date.getTime() + (60 * 1000));
+      // Cookies.set('nome', this.nome, { expires: date })
+      // Cookies.set('cognome', this.cognome, { expires: date })
+      // Cookies.set('indirizzo', this.indirizzo, { expires: date })
+      // Cookies.set('cartCookie', this.cart, { expires: date })
 
-      var date = new Date();
-      date.setTime(date.getTime() + 60 * 1000);
-      Cookies.set('nome', this.nome, {
-        expires: date
-      });
-      Cookies.set('cognome', this.cognome, {
-        expires: date
-      });
-      Cookies.set('indirizzo', this.indirizzo, {
-        expires: date
-      });
-      Cookies.set('cartCookie', this.cart, {
-        expires: date
-      });
       var form = document.getElementById('payment-form');
       dropinInstance.requestPaymentMethod(function (error, payload) {
         if (error) console.error(error);
@@ -2227,7 +2219,7 @@ var app = new Vue({
       this.nome = '';
       this.cognome = '';
       this.indirizzo = '';
-      this.cartCookie = '';
+      this.cartCookie = [];
     },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
@@ -2297,6 +2289,43 @@ var app = new Vue({
       _this2.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
     }); // fine then
 
+    var date = new Date();
+    date.setTime(date.getTime() + 100000000 * 1000);
+    Cookies.set('nome', this.nome, {
+      expires: date
+    });
+    Cookies.set('cognome', this.cognome, {
+      expires: date
+    });
+    Cookies.set('indirizzo', this.indirizzo, {
+      expires: date
+    });
+
+    if (Cookies.get('cartCookie')) {
+      this.cartCookie = JSON.parse(Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie');
+      var cook = JSON.parse(this.cartCookie);
+      this.cartCookie = cook;
+    } else {
+      Cookies.set('cartCookie', this.cart, {
+        expires: date
+      });
+    } //nuova funzione
+
+
+    if (Cookies.get('totalPriceCookie') > 0) {
+      this.totalPriceCookie = Cookies.get('totalPriceCookie') !== 'undefined' && Cookies.get('totalPriceCookie');
+      this.totalPrice = this.totalPriceCookie;
+    } else {
+      Cookies.set('totalPriceCookie', this.totalPriceCookie, {
+        expires: date
+      });
+    }
+
+    this.nome = Cookies.get('nome') !== 'undefined' && Cookies.get('nome');
+    this.cognome = Cookies.get('cognome') !== 'undefined' && Cookies.get('cognome');
+    this.indirizzo = Cookies.get('indirizzo') !== 'undefined' && Cookies.get('indirizzo'); // this.cartCookie = JSON.parse(Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie')
+    // this.totalPriceCookie = (Cookies.get('totalPrice') !== 'undefined') && Cookies.get('totalPrice')
+
     this.selectedRestaurant = window.location.href.slice(34);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
       params: {
@@ -2309,10 +2338,10 @@ var app = new Vue({
       for (var i = 0; i < _this2.dishesList.length; i++) {
         _this2.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 
-        if (_this2.cart.length) {
-          for (var j = 0; j < _this2.cart.length; j++) {
-            if (_this2.cart[j].id == _this2.dishesList[i].id) {
-              _this2.dishesList[i] = _this2.cart[j];
+        if (_this2.cartCookie.length) {
+          for (var j = 0; j < _this2.cartCookie.length; j++) {
+            if (_this2.cartCookie[j].id == _this2.dishesList[i].id) {
+              _this2.dishesList[i] = _this2.cartCookie[j];
             }
           }
         }
@@ -2331,29 +2360,6 @@ var app = new Vue({
       }
     };
 
-    var date = new Date();
-    date.setTime(date.getTime() + 100000000 * 1000);
-    Cookies.set('nome', this.nome, {
-      expires: date
-    });
-    Cookies.set('cognome', this.cognome, {
-      expires: date
-    });
-    Cookies.set('indirizzo', this.indirizzo, {
-      expires: date
-    });
-    Cookies.set('cartCookie', this.cart, {
-      expires: date
-    });
-    Cookies.set('totalPriceCookie', this.totalPrice, {
-      expires: date
-    });
-    this.nome = Cookies.get('nome') !== 'undefined' && Cookies.get('nome');
-    this.cognome = Cookies.get('cognome') !== 'undefined' && Cookies.get('cognome');
-    this.indirizzo = Cookies.get('indirizzo') !== 'undefined' && Cookies.get('indirizzo');
-    this.cartCookie = Cookies.get('cartCookie') !== 'undefined' && Cookies.get('cartCookie');
-    this.totalPriceCookie = Cookies.get('totalPrice') !== 'undefined' && Cookies.get('totalPrice');
-
     if (sessionStorage.nome) {
       this.nome = sessionStorage.nome;
     }
@@ -2364,15 +2370,13 @@ var app = new Vue({
 
     if (sessionStorage.indirizzo) {
       this.indirizzo = sessionStorage.indirizzo;
-    }
+    } // if(sessionStorage.cartCookie){
+    // 	this.cart = JSON.parse(sessionStorage.cartCookie);
+    // }
+    // if(sessionStorage.totalPriceCookie){
+    // 	this.totalPrice = sessionStorage.totalPriceCookie;
+    // }
 
-    if (sessionStorage.cartCookie) {
-      this.cart = JSON.parse(sessionStorage.cartCookie);
-    }
-
-    if (sessionStorage.totalPriceCookie) {
-      this.totalPrice = sessionStorage.totalPriceCookie;
-    }
   },
   // fine mounted
   watch: {
@@ -2390,10 +2394,12 @@ var app = new Vue({
     },
     cart: function cart(newCart) {
       sessionStorage.cartCookie = JSON.stringify(newCart);
-      Cookies.set('cartCookie', this.cart);
+      this.cartCookie = this.cart;
+      Cookies.set('cartCookie', this.cartCookie);
     },
     totalPrice: function totalPrice() {
-      sessionStorage.totalPriceCookie = Math.round(this.totalPrice * 100) / 100;
+      // sessionStorage.totalPriceCookie = Math.round(this.totalPrice * 100)/100;
+      // this.totalPrice = this.totalPriceCookie;
       Cookies.set('totalPriceCookie', this.totalPrice);
     }
   }
@@ -2430,9 +2436,9 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\chart.scss */"./resources/sass/chart.scss");
 
 
 /***/ })

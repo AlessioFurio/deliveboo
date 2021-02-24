@@ -1,111 +1,139 @@
-footer {
-    background-color: #0b0d0f;
-}
-
-.container-totale {
-    display: flex;
-    padding: 100px 0;
-    justify-content: center;
-}
-
-
-.container-list {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .list {
-        font-weight: 700;
-        font-size: 16px;
-        ul {
-
-            li {
-                list-style-type: none;
-                padding-bottom: 10px;
-                color: white;
-
-            }
-        }
+@media screen and (min-width: 200px){
+    footer {
+        background-color: #090d0e;
     }
 
-}
+    .container-footer {
+        width: 90%;
+        margin:auto;
+    }
 
-.container-social-online {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-
-    .social-online {
-        font-weight: 700;
+    .container-totale {
         display: flex;
+        padding: 85px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        h3 {
-            font-size: 20px;
-            color: #cc9933;
-            border: 1px solid #cc9933;
-            padding: 20px;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-        }
-
-        span {
-            color: #4c4d4e;
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-
-        }
-
-        i {
-            padding: 0 20px;
-            font-size: 16px;
-            color: #4c4d4e;
-        }
+        text-align: center;
     }
 
-}
 
-.container-contact {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .container-list {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        .list {
+            font-weight: 700;
 
-    .contact {
-        font-weight: 700;
-        font-size: 16px;
+            ul {
 
-        a {
-            text-decoration: none;
-            font-size: 15px;
-            color: #cc9933;
+                li {
+                    list-style-type: none;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    padding-bottom: 10px;
+                    color: white;
 
-        }
-
-        h5 {
-            color: white;
-            font-size: 15px;
-            margin: 10px 0 20px 0;
-        }
-
-        ul {
-            font-size: 12px;
-
-            li {
-                list-style-type: none;
-                padding-bottom: 10px;
-                color: #4c4d4e;
-
+                }
             }
         }
 
     }
 
+    .container-social-online {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px 0px 25px 0px;
+
+
+        .social-online {
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                font-size: 20px;
+                color: #cc9933;
+                border: 1px solid #cc9933;
+                padding: 20px;
+                text-transform: uppercase;
+                margin-bottom: 40px;
+            }
+
+            span {
+                color: #4c4d4e;
+                font-size: 16px;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+
+            }
+
+            i {
+                padding: 5px 20px;
+                border-radius: 6px;
+                font-size: 16px;
+                color: #4c4d4e;
+
+                &:hover {
+                    background-color: #cc9933;
+                    transition: 1s ease;
+                }
+            }
+        }
+
+    }
+
+    .container-contact {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+
+
+        .contact {
+            font-weight: 700;
+            font-size: 16px;
+
+            a {
+                text-decoration: none;
+                font-size: 15px;
+                color: #cc9933;
+
+            }
+
+            h5 {
+                color: white;
+                font-size: 15px;
+                margin: 10px 0 20px 0;
+            }
+
+            ul {
+                font-size: 12px;
+
+                li {
+                    list-style-type: none;
+                    padding-bottom: 10px;
+                    color: #4c4d4e;
+
+                }
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container-totale {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
 }

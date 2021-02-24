@@ -20,6 +20,9 @@
                         <span>Id: <strong>{{$payment->id}}</strong></span>
                     </li>
                     <li>
+                        <span>Prezzo: <strong>{{$payment->price}}</strong></span>
+                    </li>
+                    <li>
                         <span>Status: <strong>{{$payment->status}}</strong></span>
                     </li>
                     <li>

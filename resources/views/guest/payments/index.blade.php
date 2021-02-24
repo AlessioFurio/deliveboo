@@ -16,7 +16,8 @@
           <h4 class="mb-3">Dati di consegna</h4>
           <div class="row">
             <div class="col-sm-12 mb-3">
-              <input type="text" name="amount" :value="parseFloat(totalPrice)" hidden>
+              <input type="text" name="price" :value="parseFloat(totalPrice)" hidden>
+              <input type="text" name="restaurant_id" :value="parseFloat(cartCookie[0].restaurant_id)" hidden>
               <label>Nome</label>
               <input v-model="nome" type="text" class="form-control" id="firstName" placeholder="Inserisci il tuo nome" value="" name="nome" required>
               <div class="invalid-feedback">

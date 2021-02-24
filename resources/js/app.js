@@ -228,7 +228,7 @@ var app = new Vue({
 
 		cart(newCart){
 			sessionStorage.cartCookie = JSON.stringify(newCart);
-
+			Cookies.set('cartCookie', this.cart)
 		},
 
 		totalPrice(){

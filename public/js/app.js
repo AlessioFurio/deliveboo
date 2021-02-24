@@ -2390,6 +2390,7 @@ var app = new Vue({
     },
     cart: function cart(newCart) {
       sessionStorage.cartCookie = JSON.stringify(newCart);
+      Cookies.set('cartCookie', this.cart);
     },
     totalPrice: function totalPrice() {
       sessionStorage.totalPriceCookie = Math.round(this.totalPrice * 100) / 100;

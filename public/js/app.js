@@ -2229,6 +2229,14 @@ var app = new Vue({
 
       for (var i = 0; i < _this2.dishesList.length; i++) {
         _this2.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+
+        if (_this2.cart.length) {
+          for (var j = 0; j < _this2.cart.length; j++) {
+            if (_this2.cart[j].id == _this2.dishesList[i].id) {
+              _this2.dishesList[i] = _this2.cart[j];
+            }
+          }
+        }
       } // assegno ad array restaurants la risposta API
 
     }); // fine then
@@ -2325,15 +2333,9 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
-=======
 __webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/sass/app.scss */"./resources/sass/app.scss");
 module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/sass/chart.scss */"./resources/sass/chart.scss");
->>>>>>> details_orders
 
 
 /***/ })

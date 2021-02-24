@@ -1,43 +1,185 @@
-@media screen and (min-width: 200px){
+.dashboard-dishes-show {
 
-    .dashboard-dishes-show {
+    .dashboard-header-dishes-show {
 
-        // .btn{
-        //     display: inline-block;
-        //     text-decoration: none;
-        //     color: #fff;
-        // }
+        background-color: #101927;
+        padding: 10px;
+        border-bottom: 3px solid #f5d790;
 
-        .dashboard-header-dishes-show {
-            background-color: #101927;
-            padding: 10px;
-            border-bottom: 1px solid #000;
+        a {
+            text-decoration: none;
 
             h1 {
-                color: #fff;
+                color: #e3e8f1;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-size: 25px;
             }
         }
-        .dashboard-body-dishes-show {
-            display: flex;
-            height: calc(100vh - 100px - 48px);
+    }
 
-            .dashboard-body-menu-dishes-show{
-                background-color: #101927;
-                height: 100%;
-                flex-basis: 40%;
+    .dashboard-body-dishes-show {
+
+        display: flex;
+        height: calc(100vh - 100px - 49px);
+
+        .dashboard-body-menu-dishes-show {
+
+            background-color: #101927;
+            border-right: 3px solid #f5d790;
+            height: 100%;
+            flex-basis: 40%;
+
+            ul{
+
+                li {
+                    border-bottom: 3px solid #f5d790;
+                    padding:10px;
+
+                    a{
+                        color: #e3e8f1;
+                        text-decoration: none;
+                        font-size: 20px;
+
+
+                        &:hover {
+                            color: #f5d790;
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.dashboard-body-content-dishes-show{
+
+
+    flex-basis: 80%;
+    overflow-y: scroll;
+
+
+
+    .container-restaurant-dishes-show {
+
+        background-image: url('/images/portate-piatti.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+
+
+        .title-dishes-show{
+
+            h1 {
+                text-align: center;
+                padding: 20px 0;
+                text-transform: uppercase;
+                font-size: 25px;
+                background: rgba(0,0,0,0.5);
+                color: #e3e8f1;
+            }
+        }
+
+        .dishes-show {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .dishes-card-show {
+                flex-basis: 90%;
+                background: rgba(255, 255, 255, 0.8);
+                border: 5px ridge #f5d790;
+                border-radius: 10px;
+                margin: 30px auto;
+                padding: 10px;
+
+                .title-dishes-card-show {
+                    text-align: center;
+                    color: #101927;
+
+                    h4 {
+                        font-size: 20px;
+                        color: #101927;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+
+                .cover-dishes {
+                    img {
+
+                    }
+                }
+
+                .body-dishes-card-show {
+
+                    .details-dishes-card-show {
+
+                        padding: 20px 0;
+
+                        p {
+                            font-size: 20px;
+                            color: #101927;
+                            padding: 10px 0;
+                            font-weight: 700;
+                        }
+
+                        span {
+                            font-size: 20px;
+                            color: #101927;
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .dashboard-dishes-show {
+
+        .dashboard-header-dishes-show {
+
+
+
+            a {
+
+
+                h1 {
+
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .dashboard-body-dishes-show {
+
+
+
+            .dashboard-body-menu-dishes-show {
+
+                flex-basis: 25%;
 
                 ul{
+
                     li {
-                        border-bottom: 1px solid #c1c1c1;
+
+
                         a{
-                            width: 100%;
-                            padding: 15px 0;
+
+                            font-size: 26px;
+
 
                             &:hover {
-                                background-color: #3A5FCD;
+
 
                             }
                         }
@@ -45,124 +187,186 @@
                 }
 
             }
-            .dashboard-body-content-dishes-show{
-                background-color: #e3e8f1;
-                height: 100%;
-                flex-basis: 80%;
-                overflow-y: scroll;
-            }
         }
     }
 
-    .container-restaurant-dishes-show {
-
-        .title-dishes-show{
-
-            h1 {
-                text-align: center;
-            }
-        }
-
-        // .btn{
-        //     display: inline-block;
-        //     text-decoration: none;
-        //     text-transform: uppercase;
-        //     padding: 10px;
-        //     border-radius: 5px;
-        //     color: #fff;
-        // }
+    .dashboard-body-content-dishes-show{
 
 
 
-        .dishes-show {
-            display: flex;
-            flex-wrap: wrap;
+        .container-restaurant-dishes-show {
 
-            .dishes-card-show {
-                flex-basis: 100%;
-                background-color: #B0C4DE;
-                border-radius: 10px;
-                margin: 20px;
-                padding: 10px;
+            .title-dishes-show{
 
-                .title-dishes-card-show {
-                    text-align: center;
+                h1 {
 
-                    h1 {
-                        font-size: 20px;
-                    }
-                }
+                    font-size: 35px;
 
-                .body-dishes-card-show {
-
-                    .details-dishes-card-show {
-                        padding: 20px 0;
-                    }
-
-                    // .action-dishes-card-show {
-                    //
-                    //     .container-button-action-dishes-show {
-                    //
-                    //         text-align: center;
-                    //
-                    //         .button-dishes-show {
-                    //             margin-bottom: 5px;
-                    //         }
-                    //
-                    //         .button-dettagli-dishes-show {
-                    //             background-color: #4169E1;
-                    //         }
-                    // 
-                    //         .button-modifica-dishes-show {
-                    //             background-color: #FFA500;
-                    //         }
-                    //
-                    //         .button-elimina-dishes-show {
-                    //             background-color: red;
-                    //         }
-                    //
-                    //     }
-                    // }
                 }
             }
+
+            .dishes-show {
+
+
+
+                .dishes-card-show {
+                    flex-basis: 60%;
+                    margin: 50px auto;
+
+
+                    .title-dishes-card-show {
+
+
+                        h4 {
+                            font-size: 25px;
+
+                        }
+
+                        h1 {
+                            font-size: 25px;
+                        }
+                    }
+
+                    .cover-dishes {
+                        img {
+
+                        }
+                    }
+
+                    .body-dishes-card-show {
+
+                        .details-dishes-card-show {
+
+
+
+                            p {
+                                font-size: 25px;
+
+                            }
+
+                            span {
+                                font-size: 25px;
+
+                            }
+                        }
+                    }
+                }
+            }
         }
-
-        }
-
     }
-
-
-@media screen and (min-width: 500px){
-
-    .container-dishes-show .title-dishes-show .dishes-show .dishes-card-show {
-        max-width: 80%;
-    }
-
-    .container-dishes-show .dishes-show {
-        justify-content: center;
-
-        .container-dishes-show .dishes-show .dishes-card-show {
-            flex-basis: 50%;
-        }
-    }
-}
-
-@media screen and (min-width: 768px){
-
-    .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show {
-        flex-basis: 25%;
-    }
-
-    .container-dishes-show .dishes-show .dishes-card-show {
-        flex-basis: 40%;
-    }
-
-
 }
 
 @media screen and (min-width: 1024px){
 
-    .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show {
-        flex-basis: 20%;
+    .dashboard-dishes-show {
+
+        .dashboard-header-dishes-show {
+
+
+
+            a {
+
+
+                h1 {
+
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .dashboard-body-dishes-show {
+
+
+
+            .dashboard-body-menu-dishes-show {
+
+                flex-basis: 20%;
+
+                ul{
+
+                    li {
+
+
+                        a{
+
+                            font-size: 26px;
+
+
+                            &:hover {
+
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .dashboard-body-content-dishes-show{
+
+
+
+        .container-restaurant-dishes-show {
+
+            .title-dishes-show{
+
+                h1 {
+
+                    font-size: 40px;
+
+                }
+            }
+
+            .dishes-show {
+
+
+
+                .dishes-card-show {
+
+                    flex-basis: 35%;
+
+
+
+                    .title-dishes-card-show {
+
+
+                        h4 {
+                            font-size: 30px;
+
+                        }
+
+                        h1 {
+                            font-size: 30px;
+                        }
+                    }
+
+                    .cover-dishes {
+                        img {
+
+                        }
+                    }
+
+                    .body-dishes-card-show {
+
+                        .details-dishes-card-show {
+
+
+
+                            p {
+                                font-size: 30px;
+
+                            }
+
+                            span {
+                                font-size: 30px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

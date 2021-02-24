@@ -156,8 +156,8 @@ var app = new Vue({
 			// assegno ad array restaurants la risposta API
 			this.dishesList = risposta.data.results;
 			for (var i = 0; i < this.dishesList.length; i++) {
-					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-					if (this.cart.length) {
+				this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+				if (this.cart.length) {
 						for (var j = 0; j < this.cart.length; j++) {
 							if (this.cart[j].id == this.dishesList[i].id) {
 								this.dishesList[i] = this.cart[j];

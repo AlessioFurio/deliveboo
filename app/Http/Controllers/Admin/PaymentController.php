@@ -27,10 +27,10 @@ class PaymentController extends Controller
                 $own_id[] = $myrestaurant->id;
             }
         }
-        if (!in_array($id, $own_id)) {
+        $order = Payment::where('id' , $id )->first();
+        if (!in_array($order->restaurant_id, $own_id)) {
             abort(404);
         }
-        $order = Payment::where('id' , $id )->first();
         $data = [
             'order' => $order,
             'id' => $id

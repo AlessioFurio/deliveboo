@@ -17,6 +17,6 @@ class Payment extends Model
     }
 
     protected $fillable = [
-        'restaurant_id'
+        'restaurant_id', 'buyer_id', 'status', 'payment_method_id' , 'price'
     ];
 }

@@ -36,8 +36,12 @@ class PaymentController extends Controller
     $new_buyer->fill($data);
     $new_buyer->save();
 
-    // $new_payment = new Payment();
-    // $new_payment->fill($new_buyer->id);
+    $new_payment = new Payment();
+    $new_payment->fill($data);
+    $new_payment->buyer_id =$new_buyer->id;
+    $new_payment->status = 2 ;
+    $new_payment->payment_method_id = 2 ;
+    $new_payment->save();
 
     $gateway = new \Braintree\Gateway([
       'environment' => 'sandbox',
@@ -47,7 +51,7 @@ class PaymentController extends Controller
     ]);
 
     $result = $gateway->transaction()->sale([
-      'amount' => $data['amount'],
+      'amount' => $data['price'],
       'paymentMethodNonce' => $payment_method_nonce,
       'options' => [
         'submitForSettlement' => True

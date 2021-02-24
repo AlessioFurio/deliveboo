@@ -190,33 +190,50 @@ var app = new Vue({
 		this.nome = (Cookies.get('nome') !== 'undefined') && Cookies.get('nome')
     	this.cognome = (Cookies.get('cognome') !== 'undefined') && Cookies.get('cognome')
     	this.indirizzo = (Cookies.get('indirizzo') !== 'undefined') && Cookies.get('indirizzo')
-		this.cartCookie = (Cookies.get('cart') !== 'undefined') && Cookies.get('cart')
+		this.cartCookie = (Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie')
 		this.totalPriceCookie = (Cookies.get('totalPrice') !== 'undefined') && Cookies.get('totalPrice')
 
-		if(localStorage.nome){
-			this.nome = localStorage.nome;
+		if(sessionStorage.nome){
+			this.nome = sessionStorage.nome;
 		}
-		if(localStorage.cartCookie){
-			this.cart = JSON.parse(localStorage.cartCookie);
+		if(sessionStorage.cognome){
+			this.cognome = sessionStorage.cognome;
 		}
-		if(localStorage.totalPriceCookie){
-			this.totalPrice = localStorage.totalPriceCookie;
+		if(sessionStorage.indirizzo){
+			this.indirizzo = sessionStorage.indirizzo;
+		}
+		if(sessionStorage.cartCookie){
+			this.cart = JSON.parse(sessionStorage.cartCookie);
+		}
+		if(sessionStorage.totalPriceCookie){
+			this.totalPrice = sessionStorage.totalPriceCookie;
 		}
 },
 // fine mounted
 
 	watch: {
 		nome(newNome){
-			localStorage.nome = newNome;
+			sessionStorage.nome = newNome;
+			Cookies.set('nome', this.nome)
+		},
+		cognome(newCognome){
+			sessionStorage.cognome = newCognome;
+			Cookies.set('cognome', this.cognome)
 		},
 
-		cart(){
-			localStorage.cartCookie = JSON.stringify(this.cart);
+		indirizzo(newIndirizzo){
+			sessionStorage.indirizzo = newIndirizzo;
+			Cookies.set('indirizzo', this.indirizzo)
+		},
+
+		cart(newCart){
+			sessionStorage.cartCookie = JSON.stringify(newCart);
+
 		},
 
 		totalPrice(){
-			localStorage.totalPriceCookie = Math.round(this.totalPrice * 100)/100;
-
+			sessionStorage.totalPriceCookie = Math.round(this.totalPrice * 100)/100;
+			Cookies.set('totalPriceCookie', this.totalPrice)
 		},
 
 

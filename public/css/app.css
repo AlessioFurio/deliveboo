@@ -4,13 +4,21 @@
   box-sizing: border-box;
 }
 
-* {
-  font-family: "Ubuntu", sans-serif;
-}
-
 .container {
   width: 1500px;
   margin: auto;
+}
+
+#no-border {
+  border: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
 }
 
 header .wp-header {
@@ -42,7 +50,7 @@ header #menu-fixed.sticky {
   background-color: #ccd6dd;
 }
 header #menu-fixed.sticky a {
-  color: #000;
+  color: #fff;
 }
 header #menu-fixed.sticky i {
   color: #000;
@@ -72,6 +80,68 @@ header .header-log-in .logo span {
   margin-left: 10px;
   margin-top: 20px;
 }
+header .header-log-in .header-right {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header-log-in .toggle-menu {
+  padding: 0 20px;
+  font-size: 25px;
+  color: #d2ac7b;
+  cursor: pointer;
+}
+header .header-log-in .toggle-menu i {
+  display: inline-block;
+  padding: 10px;
+}
+header .header-log-in .cart {
+  padding: 5px;
+  border-radius: 10px;
+}
+header .header-log-in .cart [v-cloak] {
+  display: none;
+}
+header .header-log-in .cart .wp-image-cart {
+  position: relative;
+}
+header .header-log-in .cart .wp-image-cart i {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+}
+header .header-log-in .cart .total-quantity {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  padding: 0 3px;
+  background-color: #7FFFD4;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 20px;
+}
+header .header-log-in .cart .cart-dropdown {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: -50px;
+  min-width: 200px;
+}
+header .header-log-in .cart .cart-dropdown ul {
+  list-style-type: none;
+  text-align: left;
+}
+header .header-log-in .cart .cart-dropdown ul li {
+  padding: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid #d1d1d1;
+  border-radius: 10px;
+}
 header .header-log-in .top-right {
   text-align: center;
 }
@@ -95,82 +165,72 @@ header .header-top .nav-menu-top {
   justify-content: space-between;
   align-items: center;
 }
-header .header-top .nav-menu-top .cart {
-  padding: 5px;
-  border-radius: 10px;
-}
-header .header-top .nav-menu-top .cart [v-cloak] {
-  display: none;
-}
-header .header-top .nav-menu-top .cart .wp-image-cart {
-  position: relative;
-}
-header .header-top .nav-menu-top .cart .wp-image-cart i {
-  display: inline-block;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 25px;
-  color: #fff;
-}
-header .header-top .nav-menu-top .cart .total-quantity {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  display: inline-block;
-  padding: 0 3px;
-  background-color: #7FFFD4;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 20px;
-}
-header .header-top .nav-menu-top .cart .cart-dropdown {
+header .header-top .nav-menu-top .cart-dropdown {
   border: 1px solid #c1c1c1;
   border-radius: 10px;
+  padding: 20px;
   background-color: #fff;
   position: absolute;
   left: -50px;
-  min-width: 200px;
+  min-width: 210px;
 }
-header .header-top .nav-menu-top .cart .cart-dropdown ul {
+header .header-top .nav-menu-top .cart-dropdown ul {
   list-style-type: none;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
-header .header-top .nav-menu-top .cart .cart-dropdown ul li {
-  padding: 5px;
-  font-size: 16px;
-  border-bottom: 1px solid #d1d1d1;
-  border-radius: 10px;
+header .header-top .nav-menu-top .cart-dropdown ul h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 10px;
 }
-header .header-top .nav-menu-top .toggle-menu {
+header .header-top .nav-menu-top .cart-dropdown ul li {
+  padding: 15px 0px;
+  font-size: 13px;
+  border-bottom: 1px solid #d2ac7b;
+  text-transform: uppercase;
+}
+header .header-top .nav-menu-top .cart-dropdown ul a {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  background-color: #040e10;
+  text-decoration: none;
+}
+header .header-top .toggle-menu {
   padding: 0 20px;
   font-size: 25px;
   color: #d2ac7b;
   cursor: pointer;
 }
-header .header-top .nav-menu-top .toggle-menu i {
+header .header-top .toggle-menu i {
   display: inline-block;
   padding: 10px;
 }
-header .menu-mobile {
+
+.menu-mobile {
   max-width: 100%;
   padding-bottom: 50px;
   display: none;
   justify-content: flex-end;
 }
-header .menu-mobile.active {
+.menu-mobile.active {
   display: flex;
 }
-header .menu-mobile .nav-menu-mobile {
+.menu-mobile .nav-menu-mobile {
   width: 100%;
   height: 100%;
   border: 1px solid #d2ac7b;
   border-radius: 5%;
 }
-header .menu-mobile .nav-menu-mobile ul {
+.menu-mobile .nav-menu-mobile ul {
   list-style-type: none;
   text-align: center;
 }
-header .menu-mobile .nav-menu-mobile ul li a {
+.menu-mobile .nav-menu-mobile ul li a {
   display: inline-block;
   padding: 10px;
   color: #fff;
@@ -178,31 +238,33 @@ header .menu-mobile .nav-menu-mobile ul li a {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-header .header-bottom {
+
+.header-bottom {
   display: flex;
   justify-content: flex-end;
 }
-header .header-bottom .nav-menu-bottom {
+.header-bottom .nav-menu-bottom {
   width: 100%;
   text-align: center;
   padding-right: 30px;
 }
-header .header-bottom .nav-menu-bottom .category-select {
+.header-bottom .nav-menu-bottom .category-select {
   border: none;
   border-radius: 5px;
   padding: 5px;
   margin-left: 10px;
 }
-header .header-bottom .nav-menu-bottom .ricerca-avanzata {
+.header-bottom .nav-menu-bottom .ricerca-avanzata {
   color: #fff;
   cursor: pointer;
   display: inline-block;
   padding: 10px;
 }
-header .text-header {
+
+.text-header {
   margin: 150px 0;
 }
-header .text-header .principal-text {
+.text-header .principal-text {
   font-size: 30px;
   color: white;
   text-align: center;
@@ -211,6 +273,16 @@ header .text-header .principal-text {
 }
 
 @media screen and (min-width: 500px) {
+  header .header-log-in {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .header-log-in .header-right {
+    max-width: 50%;
+    justify-content: none;
+  }
+
   header .menu-mobile .nav-menu-mobile {
     max-width: 40%;
   }
@@ -259,31 +331,44 @@ header .text-header .principal-text {
   background-color: #040e10;
   color: #d2ac7b;
 }
-@media screen and (min-width: 200px) {
-  footer {
-    background-color: #090d0e;
-  }
 .card-category .container-card-category {
-  padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .card-category .container-card-category .menu-filter {
-  padding: 10px 30px;
+  padding: 50px 30px;
   border-bottom: 1px solid #d2ac7b;
+  border-top: 1px solid #d2ac7b;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #090d0e;
 }
 .card-category .container-card-category .menu-filter h3 {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
 }
 .card-category .container-card-category .menu-filter .selection {
   display: flex;
+  align-items: center;
 }
 .card-category .container-card-category .menu-filter .selection .category-select {
-  max-width: 70%;
+  padding: 10px 75px;
+  border-radius: 6px;
+  font-size: 19px;
+  color: #d2ac7b;
+}
+.card-category .container-card-category .menu-filter button {
+  height: 44px;
+  background-color: #fff;
+  color: #d2ac7b;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 6px;
+  border-style: none;
 }
 .card-category .container-card-category .container-card {
   margin: auto;
@@ -294,12 +379,13 @@ header .text-header .principal-text {
   flex-wrap: wrap;
 }
 .card-category .container-card-category .container-card .cards .card {
-  border-radius: 20px;
-  border: 1px solid #d2ac7b;
   margin: 0 50px 50px 50px;
   max-width: 400px;
   max-height: 250px;
   position: relative;
+}
+.card-category .container-card-category .container-card .cards .card:hover {
+  border: 1px solid #d2ac7b;
 }
 .card-category .container-card-category .container-card .cards .card a {
   max-width: 400px;
@@ -309,7 +395,6 @@ header .text-header .principal-text {
   color: #d2ac7b;
 }
 .card-category .container-card-category .container-card .cards .card a img {
-  border-radius: 20px 20px 0 0;
   width: 100%;
   height: 80%;
   -o-object-fit: cover;
@@ -320,9 +405,56 @@ header .text-header .principal-text {
   margin-top: 10px;
 }
 
-footer {
-  background-color: #0b0d0f;
+.how-to-order {
+  width: 100%;
+  height: auto;
+  background-color: #040e10;
+  color: #d2ac7b;
+  text-align: center;
+  border-top: 1px solid #d2ac7b;
+  border-bottom: 1px solid #d2ac7b;
+  padding: 50px 0;
 }
+.how-to-order h1 {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+  font-family: "Ballet", cursive;
+}
+.how-to-order .steps {
+  width: 100%;
+  height: 100%;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.how-to-order .steps .step {
+  margin: 30px 0;
+}
+.how-to-order .steps .step img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .how-to-order {
+    margin: 0 auto;
+  }
+  .how-to-order h1 {
+    font-size: 60px;
+  }
+  .how-to-order .steps {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 200px) {
+  footer {
+    background-color: #090d0e;
+  }
 
   .container-footer {
     width: 90%;
@@ -331,7 +463,7 @@ footer {
 
   .container-totale {
     display: flex;
-    padding: 85px;
+    padding: 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -2333,7 +2465,7 @@ footer {
   }
 }
 main {
-  background: url("/images/bg-ristorante.jpg");
+  background: url("/images/pizza-fast-food-vegetables.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -2415,6 +2547,17 @@ div i.fas.fa-times-circle {
 }
 
 /* The Modal (background) */
+label {
+  color: #fff;
+  font-weight: 500;
+}
+
+h4 {
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
 .modal {
   display: none;
   /* Hidden by default */
@@ -2468,6 +2611,10 @@ div i.fas.fa-times-circle {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+#payment-form {
+  padding-bottom: 70px;
 }
 
 @media screen and (min-width: 414px) {

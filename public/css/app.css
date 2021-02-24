@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
-* {
-  font-family: "Ubuntu", sans-serif;
-}
-
 .container {
   width: 1500px;
   margin: auto;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
 }
 
 header .wp-header {
@@ -306,12 +310,13 @@ header .text-header .principal-text {
   flex-wrap: wrap;
 }
 .card-category .container-card-category .container-card .cards .card {
-  border-radius: 20px;
-  border: 1px solid #d2ac7b;
   margin: 0 50px 50px 50px;
   max-width: 400px;
   max-height: 250px;
   position: relative;
+}
+.card-category .container-card-category .container-card .cards .card:hover {
+  border: 1px solid #d2ac7b;
 }
 .card-category .container-card-category .container-card .cards .card a {
   max-width: 400px;
@@ -321,7 +326,6 @@ header .text-header .principal-text {
   color: #d2ac7b;
 }
 .card-category .container-card-category .container-card .cards .card a img {
-  border-radius: 20px 20px 0 0;
   width: 100%;
   height: 80%;
   -o-object-fit: cover;

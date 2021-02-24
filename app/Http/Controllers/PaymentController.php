@@ -29,6 +29,7 @@ class PaymentController extends Controller
 
     $data = $request->all();
 
+
     $payment_method_nonce = $data['payment_method_nonce'];
 
     $new_buyer = new Buyer();
@@ -46,7 +47,7 @@ class PaymentController extends Controller
     ]);
 
     $result = $gateway->transaction()->sale([
-      'amount' => '10.00',
+      'amount' => $data['amount'],
       'paymentMethodNonce' => $payment_method_nonce,
       'options' => [
         'submitForSettlement' => True

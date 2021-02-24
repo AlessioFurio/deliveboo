@@ -1,5 +1,10 @@
 
 main {
+
+    background: url('/images/bg-ristorante.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
     .container-restaurant {
         max-width: 1200px;
         margin: 0 auto;

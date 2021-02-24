@@ -2,26 +2,26 @@
 
     header{
 
-        // .wp-header{
-        //     height: 100vh;
-        //     background: url('/images/bg-ristorante.jpg');
-        //     background-size: cover;
-        //     background-position: center center;
-        //     background-repeat: no-repeat;
-        //     position: relative;
-        //     z-index: 1;
-        // }
-        //
-        //
-        // .filter {
-        //     width: 100%;
-        //     height: 100%;
-        //     background-color: rgba(0,0,0,0.1);
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     z-index: -1;
-        // }
+        .wp-header{
+            height: 80vh;
+            background: url('/images/bg-ristorante-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center 80%;
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .filter {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
 
         #menu-fixed {
             width: 100%;
@@ -43,9 +43,34 @@
         }
 
         .header-log-in {
+            padding: 0 30px 0;
+            display: block;
+
+            .logo {
+                max-width: 100px;
+                max-height: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+                span{
+                    color: #d2ac7b;
+                    font-family: 'Ballet', cursive;
+                    font-size: 60px;
+                    letter-spacing: 2px;
+                    margin-left: 10px;
+                    margin-top: 20px;
+                }
+
+            }
+
             .top-right {
-                text-align: right;
-                padding-right: 30px;
+                text-align: center;
             }
 
             .links > a {
@@ -53,7 +78,7 @@
                 color: #fff;
                 padding: 20px;
                 font-size: 16px;
-                font-weight: 600;
+
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -64,29 +89,9 @@
 
         .header-top{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 0 30px 0;
-
-            .logo{
-                min-width: 150px;
-                min-height: 150px;
-                max-width: 150px;
-                max-height: 150px;
-                display: flex;
-                align-items: center;
-
-                a{
-                    display: inline-block;
-                    padding: 20px 10px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                    }
-                }
-            }
 
             .nav-menu-top {
                 display: flex;
@@ -148,7 +153,7 @@
                 .toggle-menu {
                     padding: 0 20px;
                     font-size: 25px;
-                    color: #fff;
+                    color: #d2ac7b;
                     cursor: pointer;
                 }
 
@@ -175,7 +180,7 @@
             .nav-menu-mobile {
                 width: 100%;
                 height: 100%;
-                border: 1px solid #fff;
+                border: 1px solid #d2ac7b;
                 border-radius: 5%;
 
                 ul {
@@ -258,6 +263,16 @@
 
 
 @media screen and (min-width: 768px){
+
+    header .header-log-in{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .header-top {
+        justify-content: flex-end;
+    }
 
     header {
 

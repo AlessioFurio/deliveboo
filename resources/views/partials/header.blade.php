@@ -6,6 +6,10 @@
         <div id="menu-fixed">
 
             <div class="header-log-in">
+                <div class="logo">
+                        <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
+                        <span>Deliveboo</span>
+                </div>
                 @if (Route::has('login'))
                     <div class="top-right links">
                         @auth
@@ -16,7 +20,7 @@
                             <a href="{{ route('login') }}">Login</a>
 
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}">Register</a>
+                                <a href="{{ route('register') }}">Sign in</a>
                             @endif
                         @endauth
                     </div>
@@ -24,11 +28,11 @@
             </div>
 
             <div class="header-top">
-                <div class="logo">
+                {{-- <div class="logo">
                     <a href="#">
                         <img src="{{ asset('images/logo.png') }}" alt="deliveboo-logo">
                     </a>
-                </div>
+                </div> --}}
 
                 <div class="nav-menu-top">
 
@@ -50,7 +54,6 @@
                     <div class="toggle-menu"  @click="toggleMenu()">
                         <i class="fas fa-bars"></i>
                     </div>
-                    <button @click="provaLog()" type="button" name="button">prova log</button>
                 </div>
             </div>
         </div>
@@ -73,13 +76,11 @@
             </div>
         </div>
 
-        <div class="header-bottom">
 
-        </div>
 
-        <div class="text-header">
+        {{-- <div class="text-header">
             <h2 class="principal-text">Non si può pensare bene, amare bene, dormire bene, se non si è mangiato bene.</h2>
-        </div>
+        </div> --}}
 
 
     </div>

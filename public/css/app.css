@@ -9,6 +9,24 @@
   margin: auto;
 }
 
+header .wp-header {
+  height: 80vh;
+  background: url("/images/bg-ristorante-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 80%;
+  position: relative;
+  z-index: 1;
+}
+header .filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 header #menu-fixed {
   width: 100%;
   position: fixed;
@@ -25,43 +43,48 @@ header #menu-fixed.sticky a {
 header #menu-fixed.sticky i {
   color: #000;
 }
+header .header-log-in {
+  padding: 0 30px 0;
+  display: block;
+}
+header .header-log-in .logo {
+  max-width: 100px;
+  max-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-log-in .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .header-log-in .logo span {
+  color: #d2ac7b;
+  font-family: "Ballet", cursive;
+  font-size: 60px;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
 header .header-log-in .top-right {
-  text-align: right;
-  padding-right: 30px;
+  text-align: center;
 }
 header .header-log-in .links > a {
   display: inline-block;
   color: #fff;
   padding: 20px;
   font-size: 16px;
-  font-weight: 600;
   letter-spacing: 0.1rem;
   text-decoration: none;
   text-transform: uppercase;
 }
 header .header-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 30px 0;
-}
-header .header-top .logo {
-  min-width: 150px;
-  min-height: 150px;
-  max-width: 150px;
-  max-height: 150px;
-  display: flex;
-  align-items: center;
-}
-header .header-top .logo a {
-  display: inline-block;
-  padding: 20px 10px;
-}
-header .header-top .logo a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 header .header-top .nav-menu-top {
   display: flex;
@@ -117,7 +140,7 @@ header .header-top .nav-menu-top .cart .cart-dropdown ul li {
 header .header-top .nav-menu-top .toggle-menu {
   padding: 0 20px;
   font-size: 25px;
-  color: #fff;
+  color: #d2ac7b;
   cursor: pointer;
 }
 header .header-top .nav-menu-top .toggle-menu i {
@@ -136,7 +159,7 @@ header .menu-mobile.active {
 header .menu-mobile .nav-menu-mobile {
   width: 100%;
   height: 100%;
-  border: 1px solid #fff;
+  border: 1px solid #d2ac7b;
   border-radius: 5%;
 }
 header .menu-mobile .nav-menu-mobile ul {
@@ -194,6 +217,16 @@ header .text-header .principal-text {
   }
 }
 @media screen and (min-width: 768px) {
+  header .header-log-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .header-top {
+    justify-content: flex-end;
+  }
+
   header .text-header {
     width: 80%;
     margin: 150px auto;
@@ -2267,6 +2300,11 @@ footer {
   .container-general-create .list-plate label {
     font-size: 25px;
   }
+}
+main {
+  background: url("/images/bg-ristorante.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 main .container-restaurant {
   max-width: 1200px;

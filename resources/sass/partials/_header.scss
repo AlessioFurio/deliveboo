@@ -2,14 +2,13 @@
 
     header{
 
-        .wp-header{
-            height: 80vh;
+        .wp-header {
             background: url('/images/bg-ristorante-1.jpg');
+            height: 700px;
+            background-attachment: fixed;
             background-size: cover;
+            background-position: bottom;
             background-repeat: no-repeat;
-            background-position: center 80%;
-            position: relative;
-            z-index: 1;
         }
 
 
@@ -29,8 +28,8 @@
             top: 0;
         }
 
-        #menu-fixed.sticky{
-        transition: 150ms;
+        #menu-fixed.sticky {
+        transition: 400ms ease;
         box-shadow: 0px 15px 10px -15px #111;
         background-color:  #ccd6dd;
         }

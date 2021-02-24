@@ -98,13 +98,7 @@
                 .title-dishes-card-show {
                     text-align: center;
                     color: #101927;
-
-                    h4 {
-                        font-size: 20px;
-                        color: #101927;
-                        text-transform: uppercase;
-                        font-weight: 700;
-                    }
+                    padding: 10px 0;
 
                     h1 {
                         font-size: 20px;
@@ -112,8 +106,9 @@
                 }
 
                 .cover-dishes {
-                    img {
 
+                    img {
+                        max-width: 100%;
                     }
                 }
 
@@ -217,11 +212,6 @@
                     .title-dishes-card-show {
 
 
-                        h4 {
-                            font-size: 25px;
-
-                        }
-
                         h1 {
                             font-size: 25px;
                         }
@@ -240,12 +230,12 @@
 
 
                             p {
-                                font-size: 25px;
+
 
                             }
 
                             span {
-                                font-size: 25px;
+
 
                             }
                         }
@@ -331,12 +321,6 @@
 
                     .title-dishes-card-show {
 
-
-                        h4 {
-                            font-size: 30px;
-
-                        }
-
                         h1 {
                             font-size: 30px;
                         }
@@ -355,12 +339,12 @@
 
 
                             p {
-                                font-size: 30px;
+                                font-size: 25px;
 
                             }
 
                             span {
-                                font-size: 30px;
+                                font-size: 25px;
 
                             }
                         }

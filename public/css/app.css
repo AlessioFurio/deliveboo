@@ -1365,10 +1365,11 @@ header .header-top .toggle-menu i {
   overflow-y: scroll;
 }
 .dashboard-body-content-restaurant-show .container-restaurant-show {
-  background-image: url("/images/take-away.jpg");
+  background-image: url("/images/patatine.jpeg");
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
+  height: 50%;
 }
 .dashboard-body-content-restaurant-show .container-restaurant-show .title-show {
   text-align: center;
@@ -2281,16 +2282,26 @@ header .header-top .toggle-menu i {
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show {
   text-align: center;
   color: #101927;
+<<<<<<< HEAD
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h4 {
   font-size: 20px;
   color: #101927;
   text-transform: uppercase;
   font-weight: 700;
+=======
+  padding: 10px 0;
+>>>>>>> show_restaurant
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
   font-size: 20px;
 }
+<<<<<<< HEAD
+=======
+.dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .cover-dishes img {
+  max-width: 100%;
+}
+>>>>>>> show_restaurant
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show {
   padding: 20px 0;
 }
@@ -2315,6 +2326,7 @@ header .header-top .toggle-menu i {
   }
   .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
     font-size: 26px;
+<<<<<<< HEAD
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
     font-size: 35px;
@@ -2333,6 +2345,17 @@ header .header-top .toggle-menu i {
     font-size: 25px;
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show span {
+=======
+  }
+  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
+    font-size: 35px;
+  }
+  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show {
+    flex-basis: 60%;
+    margin: 50px auto;
+  }
+  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
+>>>>>>> show_restaurant
     font-size: 25px;
   }
 }
@@ -2352,6 +2375,7 @@ header .header-top .toggle-menu i {
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show {
     flex-basis: 35%;
   }
+<<<<<<< HEAD
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h4 {
     font-size: 30px;
   }
@@ -2363,6 +2387,16 @@ header .header-top .toggle-menu i {
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show span {
     font-size: 30px;
+=======
+  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
+    font-size: 30px;
+  }
+  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show p {
+    font-size: 25px;
+  }
+  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show span {
+    font-size: 25px;
+>>>>>>> show_restaurant
   }
 }
 .container-general-create {

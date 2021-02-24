@@ -6,13 +6,15 @@
         <div class="container-card-category">
             <div class="menu-filter">
                 <h3 class="ricerca-avanzata">Ricerca Avanzata</h3>
-                <select class="category-select" name="" v-model="selectedCategory">
-                        <option value="">Categoria</option>
-                            @foreach ($categories as $category)
-                              <option :value="{{$category->id}}">{{$category->name}}</option>
-                            @endforeach
-                    </select>
-                    <button @click="searchRestaurants()" type="button" name="button">Cerca</button>
+                <div class="selection">
+                  <select class="category-select" name="" v-model="selectedCategory">
+                    <option value="">Categoria</option>
+                    @foreach ($categories as $category)
+                      <option :value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                  </select>
+                  <button @click="searchRestaurants()" type="button" name="button">Cerca</button>
+                </div>
             </div>
             <div class="container-card">
                 <div class="cards">
@@ -20,7 +22,7 @@
                         <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">
                             <img v-if="restaurant.cover == null" src="{{url('/images/card.jpg')}}" alt="">
                             <img v-else :src="'{{url('/storage')}}' + '/' + restaurant.cover" alt="">
-                            <p>@{{ restaurant.name }}</p>
+                            <h3>@{{ restaurant.name }}</h3>
                         </a>
                     </div>
                 </div>
@@ -28,7 +30,7 @@
         </div>
     </section>
 
-    
+
         @if ($transaction_result)
           <div id="myModal" class="modal" @click="closeModalOnWindow()">
             <div class="modal-content">

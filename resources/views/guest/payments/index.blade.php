@@ -76,8 +76,8 @@
     });
   // });
 
-
   </script>
+  @include('partials.footer')
 
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script>
 

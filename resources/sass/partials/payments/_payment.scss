@@ -8,6 +8,18 @@ div i.fas.fa-times-circle {
 
 
 /* The Modal (background) */
+
+label {
+    color: #fff;
+    font-weight: 500;
+}
+
+h4 {
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -60,6 +72,10 @@ div i.fas.fa-times-circle {
       cursor: pointer;
     }
   }
+}
+
+#payment-form {
+    padding-bottom: 70px;
 }
 
 @media screen and (min-width: 414px) {

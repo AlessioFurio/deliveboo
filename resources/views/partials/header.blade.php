@@ -10,31 +10,7 @@
                         <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
                         <span>Deliveboo</span>
                 </div>
-                @if (Route::has('login'))
-                    <div class="top-right links">
-                        @auth
-                            <a href="{{ url('/') }}">Home</a>
-                            <a href="{{route('admin.home')}}">Dashboard</a>
-
-                        @else
-                            <a href="{{ route('login') }}">Login</a>
-
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}">Sign in</a>
-                            @endif
-                        @endauth
-                    </div>
-                @endif
-            </div>
-
-            <div class="header-top">
-                {{-- <div class="logo">
-                    <a href="#">
-                        <img src="{{ asset('images/logo.png') }}" alt="deliveboo-logo">
-                    </a>
-                </div> --}}
-
-                <div class="nav-menu-top">
+                <div class="header-right">
 
                     <div v-cloak class="cart">
                         <div class="wp-image-cart" @click="showCart = !showCart">
@@ -55,6 +31,22 @@
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
+
+            </div>
+
+            <div class="header-top">
+                {{-- <div class="logo">
+                    <a href="#">
+                        <img src="{{ asset('images/logo.png') }}" alt="deliveboo-logo">
+                    </a>
+                </div> --}}
+
+                <div class="nav-menu-top">
+
+
+
+
+                </div>
             </div>
         </div>
 
@@ -67,6 +59,21 @@
         <div class="menu-mobile" :class="isActive ? 'active' : ''">
             <div class="nav-menu-mobile">
                 <ul>
+                    @if (Route::has('login'))
+                        <div class="top-right links">
+                            @auth
+                                <a href="{{ url('/') }}">Home</a>
+                                <a href="{{route('admin.home')}}">Dashboard</a>
+
+                            @else
+                                <a href="{{ route('login') }}">Login</a>
+
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}">Sign in</a>
+                                @endif
+                            @endauth
+                        </div>
+                    @endif
                     <li><a href="">Home</a></li>
                     <li><a href="">Ristoranti</a></li>
                     <li><a href="">Categorie</a></li>

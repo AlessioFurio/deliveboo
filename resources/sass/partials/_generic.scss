@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-* {
-    font-family: 'Ubuntu', sans-serif;
-}
-
 .container {
     width: 1500px;
     margin: auto;
@@ -15,4 +11,12 @@
 
 #no-border {
     border: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
 }

@@ -69,6 +69,76 @@
 
             }
 
+            .header-right {
+                max-width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .toggle-menu {
+                padding: 0 20px;
+                font-size: 25px;
+                color: #d2ac7b;
+                cursor: pointer;
+            }
+
+            .toggle-menu i {
+                display: inline-block;
+                padding: 10px;
+            }
+
+            .cart {
+                padding: 5px;
+                border-radius: 10px;
+                [v-cloak] { display: none; }
+
+                .wp-image-cart{
+                    position: relative;
+                    i {
+                        display: inline-block;
+                        padding: 10px;
+                        cursor: pointer;
+                        font-size: 25px;
+                        color: #fff;
+                    }
+                }
+
+                .total-quantity {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    display: inline-block;
+                    padding: 0 3px;
+                    background-color: #7FFFD4;
+                    border-radius: 50%;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+
+                .cart-dropdown {
+                    border: 1px solid #c1c1c1;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    position: absolute;
+                    left: -50px;
+                    min-width: 200px;
+
+                    ul {
+                        list-style-type: none;
+                        text-align: left;
+
+                        li {
+                            padding: 5px;
+                            font-size: 16px;
+                            border-bottom: 1px solid #d1d1d1;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+
             .top-right {
                 text-align: center;
             }
@@ -99,33 +169,8 @@
                 align-items: center;
 
 
-                .cart {
-                    padding: 5px;
-                    border-radius: 10px;
-                    [v-cloak] { display: none; }
 
-                    .wp-image-cart{
-                        position: relative;
-                        i {
-                            display: inline-block;
-                            padding: 10px;
-                            cursor: pointer;
-                            font-size: 25px;
-                            color: #fff;
-                        }
-                    }
 
-                    .total-quantity {
-                        position: absolute;
-                        top: 0px;
-                        right: 0px;
-                        display: inline-block;
-                        padding: 0 3px;
-                        background-color: #7FFFD4;
-                        border-radius: 50%;
-                        font-weight: bold;
-                        font-size: 20px;
-                    }
 
 
                     .cart-dropdown {
@@ -269,6 +314,16 @@
 
 
 @media screen and (min-width: 500px){
+
+    header .header-log-in {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .header-log-in .header-right{
+        max-width: 50%;
+        justify-content: none;
+    }
 
     header .menu-mobile .nav-menu-mobile{
         max-width: 40%;

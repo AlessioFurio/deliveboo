@@ -2686,6 +2686,24 @@ h4 {
     margin: 10%;
   }
 }
+.cart-flex {
+  display: flex;
+}
+
+.cartpay {
+  color: white;
+  margin-left: 20px;
+}
+.cartpay li {
+  list-style-type: none;
+}
+.cartpay .border-cart {
+  background-color: red;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 3px;
+}
+
 @media screen and (min-width: 768px) {
   .modal .modal-content {
     min-width: 60%;

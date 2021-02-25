@@ -249,7 +249,9 @@ var app = new Vue({
 
 		totalPrice(){
 			// sessionStorage.totalPriceCookie = Math.round(this.totalPrice * 100)/100;
-			// this.totalPrice = this.totalPriceCookie;
+			if (!this.cartCookie.length) {
+				this.totalPrice = 0;
+			}
 			Cookies.set('totalPriceCookie', this.totalPrice)
 		},
 

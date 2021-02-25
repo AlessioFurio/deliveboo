@@ -9,15 +9,15 @@
 <div id="root">
   <div class="container-fluid">
     <div class="row">
-      <div class="offset-sm-1 col-sm-10 offset-md-3 col-md-6 order-md-1">
+      <div class="cart-flex offset-sm-1 col-sm-10 offset-md-2 col-md-6 order-md-1">
         <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
           @csrf
           @method('POST')
           <h4 class="mb-3">Dati di consegna</h4>
           <div class="row">
             <div class="col-sm-12 mb-3">
-              <input type="text" name="price" :value="parseFloat(totalPrice)" hidden>
-              <input type="text" name="restaurant_id" :value="parseFloat(cartCookie[0].restaurant_id)" hidden>
+              <input v-if="cartCookie.length" type="text" name="price" :value="parseFloat(totalPrice)" hidden>
+              <input v-if="cartCookie.length" type="text" name="restaurant_id" :value="parseFloat(cartCookie[0].restaurant_id)" hidden>
               <label>Nome</label>
               <input v-model="nome" type="text" class="form-control" id="firstName" placeholder="Inserisci il tuo nome" value="" name="nome" required>
               <div class="invalid-feedback">
@@ -33,8 +33,6 @@
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
-              {{-- <label></label>
-              <input type="hidden" name="restaurant_id" value="4"/> --}}
 
             </div>
           </div>
@@ -48,10 +46,34 @@
             </div>
           </div>
         </form>
+        <div v-cloak class="cartpay mt-5" v-if="cartCookie.length">
+            <div class="wp-image-cart">
+                <span class="total-quantity"></span>
+                <div v-cloak class="cart-dropdown">
+                    <ul class="cart-dropdown-list">
+                        <h4 class="mb-3">Carrello</h4>
+                            <label>Riepilogo</label>
+                            <div class="border-cart">
+
+                            <div v-for="product in cartCookie" :key="product.id" >
+                                <li >@{{ product.name }} (@{{ product.quantity }})</li>
+                                <div class="cart">
+                                    <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>
+                                    <span class="cart__quantity">@{{ product.quantity }}</span>
+                                    <button @click="updateCart(product, 'add'), cartBtnLessPlus()" class="cart__button">+</button>
+                                </div>
+                        </div>
+                        </div>
+                        <li class="border-cart">Prezzo totale: <span>@{{Math.round(totalPrice * 100)/100}} €</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
   <script type="text/javascript">
 
     braintree.dropin.create(

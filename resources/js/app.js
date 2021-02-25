@@ -23,6 +23,7 @@ var app = new Vue({
 
 
 	methods: {
+
 		showModal() {
 			console.log('ok');
 			var modal = document.getElementById("myModal");

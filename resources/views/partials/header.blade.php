@@ -34,20 +34,6 @@
 
             </div>
 
-            <div class="header-top">
-                {{-- <div class="logo">
-                    <a href="#">
-                        <img src="{{ asset('images/logo.png') }}" alt="deliveboo-logo">
-                    </a>
-                </div> --}}
-
-                <div class="nav-menu-top">
-
-
-
-
-                </div>
-            </div>
         </div>
 
 
@@ -75,6 +61,24 @@
                             @endauth
                         @endif
                     <li><a href="#">Contatti</a></li>
+                    <li>
+                        @guest
+
+                        @else
+                            <div class="route-login-register">
+                                <div class="logout">
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </div>
+                        @endguest
+                    </li>
                 </ul>
             </div>
         </div>

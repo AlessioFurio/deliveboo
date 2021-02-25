@@ -32,7 +32,7 @@
     </head>
     <body>
         <div id="root">
-            @include('partials.header-admin')
+            @include('partials.header-dashboard')
             @yield('content')
         </div>
 

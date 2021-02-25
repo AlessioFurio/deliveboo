@@ -1,6 +1,7 @@
 
 import axios from 'axios'
 
+
 var app = new Vue({
 	el: '#root',
 	data: {
@@ -19,6 +20,8 @@ var app = new Vue({
    		indirizzo: '',
    		cartCookie: [],
 		totalPriceCookie: 0,
+		valueInputEmail: '',
+		valueInputPassword: '',
 	},
 
 

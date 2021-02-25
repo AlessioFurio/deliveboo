@@ -404,6 +404,11 @@ header.active .menu-mobile {
     font-size: 76px;
   }
 }
+.wp-header-dashboard {
+  background-color: #040e10;
+  height: 97px;
+}
+
 .card-category {
   background-color: #ffffff;
   color: #d2ac7b;
@@ -2580,27 +2585,35 @@ header.active .menu-mobile {
   }
 }
 main {
-  background: url("/images/pizza-fast-food-vegetables.jpg");
+  background-color: #0F1D22;
   background-size: cover;
   background-repeat: no-repeat;
 }
 main .container-restaurant {
   max-width: 1200px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 main .container-restaurant .content-restaurant {
   padding: 50px 0;
 }
 main .container-restaurant .content-restaurant .title-restaurant {
   padding-bottom: 20px;
+  width: 500px;
 }
 main .container-restaurant .content-restaurant .title-restaurant h1 {
   text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #d2ac7b;
+  padding: 20px 20px;
+  background-color: #040e10;
+  color: #d1d1d1;
+  border-radius: 6px;
 }
 main .container-restaurant .content-restaurant .details-restaurant {
   display: inline-block;
-  background-color: #d1d1d1;
+  background-color: #040e10;
+  color: #d1d1d1;
+  border: 1px solid #d2ac7b;
   border-radius: 20px;
   padding: 10px;
 }
@@ -2616,13 +2629,15 @@ main .container-restaurant .content-restaurant .container-list-dishes {
 }
 main .container-restaurant .content-restaurant .container-list-dishes .card-dish {
   flex-basis: 30%;
-  border: 1px solid #d9d9d9;
   margin-top: 20px;
-  border-radius: 10px;
+  border: 1px solid #d2ac7b;
+  border-radius: 6px;
 }
 main .container-restaurant .content-restaurant .container-list-dishes .card-dish h3 {
   padding: 20px;
   text-align: center;
+  text-transform: uppercase;
+  color: white;
 }
 main .container-restaurant .content-restaurant .container-list-dishes .card-dish .wp-img-card-dish {
   width: 100%;
@@ -2634,6 +2649,12 @@ main .container-restaurant .content-restaurant .container-list-dishes .card-dish
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .container-restaurant .content-restaurant .container-list-dishes .card-dish p {
+  text-align: center;
+  color: white;
+  font-family: cursive;
+  padding-top: 5px;
+}
 main .container-restaurant .content-restaurant .container-list-dishes .card-dish .cart {
   text-align: center;
   padding: 20px;
@@ -2641,6 +2662,7 @@ main .container-restaurant .content-restaurant .container-list-dishes .card-dish
 main .container-restaurant .content-restaurant .container-list-dishes .card-dish .cart span {
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 main .container-restaurant .content-restaurant .container-list-dishes .card-dish .cart button {
   width: 30px;

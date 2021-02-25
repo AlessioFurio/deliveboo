@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.app-guest')
 
 @section('content')
 {{-- <div class="container-general-login"> --}}
     {{-- <div class="container-form-login"> --}}
 
-            <div class="card-login">
+            <div id="form-login" class="card-login">
                 <div class="card-header-login">{{ __('Login') }}</div>
 
                 <div class="card-body-login">
@@ -15,7 +15,7 @@
                             <label for="email" class="label-email-address-login"></label>
 
                             <div class="container-input-email">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{__('E-Mail')}}">
+                                <input id="email" v-model.trim="valueInputEmail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{__('E-Mail')}}">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                             <label for="password" class="label-password-login"></label>
 
                             <div class="container-input-password">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="{{ __('Password') }}">
+                                <input id="password" v-model.trim="valueInputPassword" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="{{ __('Password') }}">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -54,6 +54,7 @@
                                 <button type="submit" class="button-login">
                                     {{ __('Login') }}
                                 </button>
+
                             </div>
                             <div class="forgot-password">
                                 @if (Route::has('password.request'))

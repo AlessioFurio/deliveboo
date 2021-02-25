@@ -21,14 +21,51 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-header .wp-header {
-  height: 80vh;
-  background: url("/images/bg-ristorante-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 80%;
+header {
   position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 180px;
+  height: 120px;
+  background: transparent;
   z-index: 1;
+  transition: 1s;
+}
+header.active::before {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #040e10;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  width: 180px;
+  height: 120px;
+  background: transparent;
+  transition: 1s;
+}
+header.active::after {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #040e10;
+}
+header .wp-header {
+  background: url("/images/bg-ristorante-1.jpg");
+  height: 700px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 header .filter {
   width: 100%;
@@ -43,9 +80,10 @@ header #menu-fixed {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 header #menu-fixed.sticky {
-  transition: 150ms;
+  transition: 400ms ease;
   box-shadow: 0px 15px 10px -15px #111;
   background-color: #ccd6dd;
 }
@@ -142,18 +180,6 @@ header .header-log-in .cart .cart-dropdown ul li {
   border-bottom: 1px solid #d1d1d1;
   border-radius: 10px;
 }
-header .header-log-in .top-right {
-  text-align: center;
-}
-header .header-log-in .links > a {
-  display: inline-block;
-  color: #fff;
-  padding: 20px;
-  font-size: 16px;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 header .header-top {
   display: flex;
   justify-content: center;
@@ -212,31 +238,64 @@ header .header-top .toggle-menu i {
 }
 
 .menu-mobile {
-  max-width: 100%;
-  padding-bottom: 50px;
-  display: none;
-  justify-content: flex-end;
-}
-.menu-mobile.active {
+  min-width: 400px;
+  min-height: 400px;
   display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 0s;
 }
 .menu-mobile .nav-menu-mobile {
+  border: 1px solid #d2ac7b;
   width: 100%;
   height: 100%;
-  border: 1px solid #d2ac7b;
-  border-radius: 5%;
+}
+.menu-mobile .nav-menu-mobile .links > a {
+  display: inline-block;
+  color: #d2ac7b;
+  padding: 20px;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu-mobile .nav-menu-mobile .links > a:hover {
+  background-color: #d2ac7b;
+  color: #fff;
+  transition: 1s;
 }
 .menu-mobile .nav-menu-mobile ul {
   list-style-type: none;
   text-align: center;
 }
+.menu-mobile .nav-menu-mobile ul li:hover {
+  background-color: #d2ac7b;
+  color: #fff;
+  transition: 1s;
+}
+.menu-mobile .nav-menu-mobile ul li:hover a {
+  color: #fff;
+}
 .menu-mobile .nav-menu-mobile ul li a {
   display: inline-block;
-  padding: 10px;
-  color: #fff;
+  padding: 20px 60px;
+  color: #d2ac7b;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+header.active .menu-mobile {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 1s;
 }
 
 .header-bottom {
@@ -281,10 +340,6 @@ header .header-top .toggle-menu i {
   header .header-log-in .header-right {
     max-width: 50%;
     justify-content: none;
-  }
-
-  header .menu-mobile .nav-menu-mobile {
-    max-width: 40%;
   }
 
   header .header-bottom .nav-menu-bottom {

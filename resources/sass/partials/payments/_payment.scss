@@ -87,6 +87,22 @@ h4 {
     }
   }
 }
+.cart-flex {
+    display: flex;
+}
+.cartpay {
+    color: white;
+    margin-left: 20px;
+    li {
+        list-style-type: none;
+    }
+    .border-cart {
+        background-color: red;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 3px;
+    }
+}
 
 @media screen and (min-width: 768px) {
   .modal {

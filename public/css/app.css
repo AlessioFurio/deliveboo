@@ -26,10 +26,10 @@ header {
 }
 header::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 300px;
-  width: 180px;
+  left: 180px;
+  width: 100px;
   height: 120px;
   background: transparent;
   z-index: 2;
@@ -44,7 +44,7 @@ header.active::before {
 }
 header::after {
   content: "";
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 100px;
   width: 180px;
@@ -62,7 +62,7 @@ header.active::after {
 }
 header .wp-header {
   background: url("/images/bg-ristorante-1.jpg");
-  height: 700px;
+  height: 100vh;
   background-attachment: fixed;
   background-size: cover;
   background-position: bottom;
@@ -115,10 +115,11 @@ header .header-log-in .logo img {
 header .header-log-in .logo span {
   color: #d2ac7b;
   font-family: "Ballet", cursive;
-  font-size: 60px;
-  letter-spacing: 2px;
+  font-size: 50px;
+  letter-spacing: 3px;
   margin-left: 10px;
   margin-top: 20px;
+  font-weight: bold;
 }
 header .header-log-in .header-right {
   max-width: 100%;
@@ -167,20 +168,37 @@ header .header-log-in .cart .total-quantity {
 header .header-log-in .cart .cart-dropdown {
   border: 1px solid #c1c1c1;
   border-radius: 10px;
+  padding: 20px;
   background-color: #fff;
   position: absolute;
   left: -50px;
-  min-width: 200px;
+  min-width: 210px;
 }
 header .header-log-in .cart .cart-dropdown ul {
   list-style-type: none;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+header .header-log-in .cart .cart-dropdown ul h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 10px;
 }
 header .header-log-in .cart .cart-dropdown ul li {
-  padding: 5px;
-  font-size: 16px;
-  border-bottom: 1px solid #d1d1d1;
-  border-radius: 10px;
+  padding: 15px 0px;
+  font-size: 13px;
+  border-bottom: 1px solid lightgrey;
+  text-transform: uppercase;
+}
+header .header-log-in .cart .cart-dropdown ul a {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #040e10;
+  color: #fff;
+  text-decoration: none;
 }
 header .header-top {
   display: flex;
@@ -240,11 +258,13 @@ header .header-top .toggle-menu i {
 }
 
 .menu-mobile {
-  min-width: 400px;
-  min-height: 400px;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 600px;
+  max-width: 600px;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -385,7 +405,7 @@ header.active .menu-mobile {
   }
 }
 .card-category {
-  background-color: #040e10;
+  background-color: #ffffff;
   color: #d2ac7b;
 }
 .card-category .container-card-category {
@@ -408,21 +428,22 @@ header.active .menu-mobile {
 }
 .card-category .container-card-category .menu-filter .selection {
   display: flex;
+  width: 100%;
+  justify-content: center;
   align-items: center;
 }
 .card-category .container-card-category .menu-filter .selection .category-select {
-  padding: 10px 75px;
+  width: 70%;
+  padding: 8px 30px;
   border-radius: 6px;
-  font-size: 19px;
   color: #d2ac7b;
 }
 .card-category .container-card-category .menu-filter button {
-  height: 44px;
   background-color: #fff;
   color: #d2ac7b;
   font-size: 14px;
   font-weight: 500;
-  padding: 5px 10px;
+  padding: 9px 10px;
   margin-left: 10px;
   border-radius: 6px;
   border-style: none;
@@ -440,6 +461,7 @@ header.active .menu-mobile {
   max-width: 400px;
   max-height: 250px;
   position: relative;
+  box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
 }
 .card-category .container-card-category .container-card .cards .card:hover {
   border: 1px solid #d2ac7b;
@@ -452,14 +474,17 @@ header.active .menu-mobile {
   color: #d2ac7b;
 }
 .card-category .container-card-category .container-card .cards .card a img {
-  width: 100%;
-  height: 80%;
+  min-width: 100%;
+  min-height: 80%;
+  max-width: 100%;
+  max-height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
 }
-.card-category .container-card-category .container-card .cards .card a h3 {
-  margin-top: 10px;
+.card-category .container-card-category .container-card .cards .card a p {
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .how-to-order {
@@ -497,6 +522,18 @@ header.active .menu-mobile {
 }
 
 @media screen and (min-width: 480px) {
+  .card-category .container-card-category .menu-filter .selection {
+    width: 50%;
+    margin: auto;
+  }
+  .card-category .container-card-category .menu-filter .selection .category-select, .card-category .container-card-category .menu-filter .selection button {
+    font-size: 18px;
+  }
+
+  .card-category .container-card-category .container-card .cards .card a p {
+    font-size: 22px;
+  }
+
   .how-to-order {
     margin: 0 auto;
   }
@@ -560,8 +597,8 @@ header.active .menu-mobile {
   }
   .container-social-online .social-online h3 {
     font-size: 20px;
-    color: #cc9933;
-    border: 1px solid #cc9933;
+    color: #d2ac7b;
+    border: 1px solid #d2ac7b;
     padding: 20px;
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -579,7 +616,7 @@ header.active .menu-mobile {
     color: #4c4d4e;
   }
   .container-social-online .social-online i:hover {
-    background-color: #cc9933;
+    background-color: #d2ac7b;
     transition: 1s ease;
   }
 
@@ -597,7 +634,7 @@ header.active .menu-mobile {
   .container-contact .contact a {
     text-decoration: none;
     font-size: 15px;
-    color: #cc9933;
+    color: #d2ac7b;
   }
   .container-contact .contact h5 {
     color: white;
@@ -612,12 +649,27 @@ header.active .menu-mobile {
     padding-bottom: 10px;
     color: #4c4d4e;
   }
+
+  .container-social-online .social-online i {
+    font-size: 30px;
+  }
+
+  .container-social-online .social-online .social a {
+    display: inline-block;
+  }
+  .container-social-online .social-online .social a:nth-child(2) i {
+    margin-left: 10px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container-totale {
     flex-direction: row;
     justify-content: center;
     text-align: left;
+  }
+
+  .container-social-online .social-online .social a:nth-child(2) i {
+    margin-left: 0px;
   }
 }
 #header {
@@ -742,12 +794,18 @@ header.active .menu-mobile {
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #e3e8f1;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .card-login .card-header-login {
-  font-size: 30px;
+  font-size: 60px;
   margin: 20px 0 20px 0;
   text-align: center;
+  color: #d2ac7b;
+  font-family: "Ballet", cursive;
 }
 .card-login .card-body-login {
   padding: 0 20px;
@@ -756,14 +814,26 @@ header.active .menu-mobile {
 .form-group {
   margin-bottom: 20px;
 }
+.form-group label {
+  color: #000;
+  font-size: 20px;
+}
 .form-group .label-email-address, .form-group .label-password {
   font-size: 18px;
 }
 .form-group .container-input-email input, .form-group .container-input-password input {
+  font-size: 18px;
   width: 100%;
-  height: 30px;
-  border: 1px solid black;
-  border-radius: 10px;
+  height: 40px;
+  border: 1px solid #d2ac7b;
+  border-radius: 5px;
+}
+.form-group .container-input-password input {
+  font-size: 18px;
+  width: 100% !important;
+  height: 40px !important;
+  border: 1px solid #d2ac7b !important;
+  border-radius: 5px !important;
 }
 
 .form-check .form-check-label {
@@ -778,10 +848,11 @@ header.active .menu-mobile {
 .container-button-login .button-login {
   font-size: 20px;
   padding: 5px 20px;
-  background-color: #00ccbc;
-  color: black;
-  border: 1px solid black;
+  background-color: #d2ac7b;
+  color: #fff;
+  border: 1px solid #d2ac7b;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .forgot-password {
@@ -799,7 +870,7 @@ header.active .menu-mobile {
     width: 60%;
   }
   .card-login .card-header-login {
-    font-size: 40px;
+    font-size: 70px;
   }
   .card-login .card-body-login {
     padding: 0 50px;
@@ -2669,6 +2740,24 @@ h4 {
     margin: 10%;
   }
 }
+.cart-flex {
+  display: flex;
+}
+
+.cartpay {
+  color: white;
+  margin-left: 20px;
+}
+.cartpay li {
+  list-style-type: none;
+}
+.cartpay .border-cart {
+  background-color: red;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 3px;
+}
+
 @media screen and (min-width: 768px) {
   .modal .modal-content {
     min-width: 60%;

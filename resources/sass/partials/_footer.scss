@@ -59,8 +59,8 @@
 
             h3 {
                 font-size: 20px;
-                color: #cc9933;
-                border: 1px solid #cc9933;
+                color: $gold;
+                border: 1px solid $gold;
                 padding: 20px;
                 text-transform: uppercase;
                 margin-bottom: 40px;
@@ -81,7 +81,7 @@
                 color: #4c4d4e;
 
                 &:hover {
-                    background-color: #cc9933;
+                    background-color: $gold;
                     transition: 1s ease;
                 }
             }
@@ -104,7 +104,7 @@
             a {
                 text-decoration: none;
                 font-size: 15px;
-                color: #cc9933;
+                color: $gold;
 
             }
 
@@ -128,6 +128,17 @@
         }
 
     }
+
+    .container-social-online .social-online i{
+        font-size: 30px;
+    }
+    .container-social-online .social-online .social a {
+        display: inline-block;
+
+        &:nth-child(2) i{
+            margin-left: 10px;
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -135,5 +146,13 @@
         flex-direction: row;
         justify-content: center;
         text-align: left;
+    }
+
+    .container-social-online .social-online .social a {
+        
+
+        &:nth-child(2) i{
+            margin-left: 0px;
+        }
     }
 }

@@ -58,7 +58,7 @@
 
 
   @if ($transaction_result)
-    <div id="myModal" class="modal" @click="closeModalOnWindow()">
+    <div class="modal" @click="closeModalOnWindow()">
       <div class="modal-content">
         <span @click="closeModal()" class="close">&times;</span>
         <div class="result">
@@ -75,7 +75,7 @@
   @elseif ($transaction_result == null)
 
   @else
-    <div id="myModal" class="modal" @click="closeModalOnWindow()">
+    <div class="modal" @click="closeModalOnWindow()">
      <div class="modal-content">
         <span @click="closeModal()" class="close">&times;</span>
         <div class="result">

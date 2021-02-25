@@ -7,8 +7,8 @@
 
 @section('content')
 
-  <div class="container-fluid">
-    <div class="row g-3" v-if="cartCookie.length" v-cloak>
+  <div class="container-fluid" v-if="cartCookie.length">
+    <div class="row g-3" v-cloak>
       <div class="offset-xs-1 col-xs-10 col-md-5 col-lg-4 order-md-last mt-5">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span>Il tuo carrello</span>
@@ -29,7 +29,6 @@
               </span>
             </div>
             <span class="text-muted">@{{ product.price }}</span>
-            {{-- (@{{ product.quantity }}) --}}
           </li>
           <li class="list-group-item d-flex justify-content-between">
             <span>Total (USD)</span>
@@ -62,7 +61,6 @@
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
-
             </div>
           </div>
           <div class="row">
@@ -76,18 +74,25 @@
       </div>
     </div>
   </div>
-  <div v-else class="container-fluid">
-      <div class="row">
-          non hai ancora inserito prodotti nel carrello!
 
+  {{-- modal --}}
+  <div v-else class="modal" @click="closeModalOnWindow()">
+    <div class="modal-content">
+      <span @click="closeModal()" class="close">&times;</span>
+      <div class="result">
+        <i class="fas fa-check-circle fa-9x"></i>
+        <h2 class="mt-3">
+          Non hai ancora inserito prodotti nel carrello!
+        </h2>
       </div>
+    </div>
   </div>
 
 @endsection
 
 @section('script')
 
-  <script type="text/javascript">
+  <script type="text/javascript" v-if="cartCookie.length">
 
     braintree.dropin.create(
       {

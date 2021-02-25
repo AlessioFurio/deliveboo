@@ -2804,10 +2804,30 @@ h4 {
 }
 
 .contact-developer {
+  border-radius: 3px;
+  border: 1px solid gold;
+  background-color: white;
   text-align: center;
   padding: 10px;
   margin: 10px;
 }
 .contact-developer i {
   font-size: 30px;
+}
+.contact-developer p {
+  margin-top: 30px;
+}
+.contact-developer a {
+  text-decoration: none;
+}
+.contact-developer h4 {
+  color: red;
+}
+
+.group {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid gold;
+  background-color: white;
+  border-radius: 3px;
 }

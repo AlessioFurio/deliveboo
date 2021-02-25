@@ -1,5 +1,4 @@
 
-
     header{
 
         position: relative;
@@ -197,6 +196,13 @@
                             background-color: #040e10;
                             color: #fff;
                             text-decoration: none;
+                            margin: 6px 0px;
+                        }
+
+                        #btn-clear {
+                            background-color: #a01111;
+                            cursor: pointer;
+                            font-size: 13px;
                         }
                     }
                 }

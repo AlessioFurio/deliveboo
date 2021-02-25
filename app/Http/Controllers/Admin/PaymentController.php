@@ -78,14 +78,14 @@ class PaymentController extends Controller
             abort(404);
         }
 
-        $payments = Payment::where('restaurant_id' , $id)->get();
+        $payments = Payment::where('restaurant_id' , $id)->orderBy('created_at' , 'desc')->get();
         $months = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
         $data = [
             'id' => $id,
             'months' => $months
         ];
         foreach($payments as $row) {
-            $data['label'][] = $row->created_at->isoFormat('d MMMM');
+            $data['label'][] = $row->created_at->isoFormat('DD MMMM');
             $data['data'][] = (int) $row->price;
         }
 
@@ -111,6 +111,7 @@ class PaymentController extends Controller
 
         $payments = Payment::where('restaurant_id' , $id)
         ->whereMonth('created_at', $month)
+        ->orderBy('created_at' , 'desc')
         ->get();
         $sum = Payment::where('restaurant_id' , $id)->whereMonth('created_at', $month)->sum('price');
         $months = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
@@ -124,7 +125,7 @@ class PaymentController extends Controller
         // $data['data'][] =  0;
 
         foreach($payments as $row) {
-            $data['label'][] = $row->created_at->isoFormat('d MMMM');
+            $data['label'][] = $row->created_at->isoFormat('DD MMMM');
             $data['data'][] =  $row->price;
         }
 

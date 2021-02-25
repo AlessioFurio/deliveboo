@@ -165,8 +165,7 @@
 
 .container-card-restaurant-show {
 
-    // background-image: url('/images/patatine.jpeg');
-    // background-position: top;
+
     background-color: #e3e8f1;
 
 
@@ -187,16 +186,17 @@
 
             .body-restaurant-card-show{
 
-                h3 {
-                    text-align: center;
-                    padding: 10px 0;
-                    font-size: 25px;
-                    color: #101927
-                }
-
                 img {
                     max-width: 100%;
                     border-radius: 10px;
+                }
+
+                h3 {
+                    text-align: center;
+                    text-transform:uppercase;
+                    padding: 10px 0;
+                    font-size: 25px;
+                    color: #101927
                 }
 
 
@@ -687,12 +687,12 @@
 
                     .body-restaurant-card-show{
 
-                        h3 {
+                        img {
 
                         }
 
-                        img {
-
+                        h3 {
+                            font-size: 20px;
                         }
 
 

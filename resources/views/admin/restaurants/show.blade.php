@@ -57,12 +57,12 @@
                     @foreach ($restaurant->dishes as $dish)
                         <div class="restaurant-card-show">
                             <div class="body-restaurant-card-show">
-                                <h3>
-                                    {{$dish->name}}
-                                </h3>
                                 @if ($dish->cover)
                                     <img src="{{asset('storage/'. $dish->cover)}}" alt="">
                                 @endif
+                                <h3>
+                                    {{$dish->name}}
+                                </h3>
                             </div>
                             <div class="details-restaurant-card-show">
                                 <div class="container-button-action-show">

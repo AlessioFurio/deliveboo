@@ -1589,15 +1589,16 @@ header.active .menu-mobile {
   margin: 20px 10px;
   padding: 5px;
 }
-.container-card-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show h3 {
-  text-align: center;
-  padding: 10px 0;
-  font-size: 25px;
-  color: #101927;
-}
 .container-card-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show img {
   max-width: 100%;
   border-radius: 10px;
+}
+.container-card-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show h3 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+  font-size: 25px;
+  color: #101927;
 }
 .container-card-restaurant-show .restaurants-show .details-restaurant-card-show {
   padding: 10px 0;
@@ -1717,6 +1718,9 @@ header.active .menu-mobile {
   }
   .dashboard-body-content-restaurant-show .container-card-restaurant-show .restaurants-show .restaurant-card-show {
     flex-basis: 20%;
+  }
+  .dashboard-body-content-restaurant-show .container-card-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show h3 {
+    font-size: 20px;
   }
   .dashboard-body-content-restaurant-show .container-card-restaurant-show .restaurants-show .container-button-action-show .button-show {
     padding: 5px 15px;

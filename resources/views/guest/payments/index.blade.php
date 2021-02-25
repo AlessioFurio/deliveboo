@@ -7,7 +7,7 @@
 
 @section('content')
 <div id="root">
-  <div class="container-fluid">
+  <div class="container-fluid" v-if="cartCookie.length">
     <div class="row">
       <div class="cart-flex offset-sm-1 col-sm-10 offset-md-2 col-md-6 order-md-1">
         <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
@@ -54,16 +54,15 @@
                         <h4 class="mb-3">Carrello</h4>
                             <label>Riepilogo</label>
                             <div class="border-cart">
-
-                            <div v-for="product in cartCookie" :key="product.id" >
-                                <li >@{{ product.name }} (@{{ product.quantity }})</li>
-                                <div class="cart">
-                                    <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>
-                                    <span class="cart__quantity">@{{ product.quantity }}</span>
-                                    <button @click="updateCart(product, 'add'), cartBtnLessPlus()" class="cart__button">+</button>
+                                <div v-for="product in cartCookie" :key="product.id" >
+                                    <li >@{{ product.name }} (@{{ product.quantity }})</li>
+                                    <div class="cart">
+                                        <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>
+                                        <span class="cart__quantity">@{{ product.quantity }}</span>
+                                        <button @click="updateCart(product, 'add'), cartBtnLessPlus()" class="cart__button">+</button>
+                                    </div>
                                 </div>
-                        </div>
-                        </div>
+                            </div>
                         <li class="border-cart">Prezzo totale: <span>@{{Math.round(totalPrice * 100)/100}} €</span></li>
                     </ul>
                 </div>
@@ -71,6 +70,12 @@
         </div>
       </div>
     </div>
+  </div>
+  <div v-else class="container-fluid">
+      <div class="row">
+          non hai ancora inserito prodotti nel carrello!
+          
+      </div>
   </div>
 </div>
 

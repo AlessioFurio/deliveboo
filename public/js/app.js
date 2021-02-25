@@ -2170,7 +2170,9 @@ var app = new Vue({
     cognome: '',
     indirizzo: '',
     cartCookie: [],
-    totalPriceCookie: 0
+    totalPriceCookie: 0,
+    valueInputEmail: '',
+    valueInputPassword: ''
   },
   methods: {
     showModal: function showModal() {

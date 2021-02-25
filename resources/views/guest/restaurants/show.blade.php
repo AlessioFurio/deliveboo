@@ -36,7 +36,8 @@
 
                             <div class="cart">
                                 <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>
-                                <span class="cart__quantity">@{{ product.quantity }}</span>
+                                <span v-if="totalPrice != 0" class="cart__quantity">@{{ product.quantity }}</span>
+                                <span v-else class="cart__quantity">0</span>
                                 <button @click="updateCart(product, 'add'), cartBtnLessPlus()" class="cart__button">+</button>
                             </div>
                         </div>

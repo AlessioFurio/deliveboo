@@ -78,12 +78,15 @@ var app = new Vue({
 			Cookies.remove('email')
 			Cookies.remove('indirizzo')
 			Cookies.remove('cartCookie')
+			Cookies.remove('totalPriceCookie')
+			Cookies.remove('totalQuantity')
 
 			this.nome = ''
 			this.cognome = ''
 			this.indirizzo = ''
 			this.cartCookie = [];
-
+			this.totalPriceCookie = 0;
+			Cookies.remove('cartCookie')
   		},
 
 

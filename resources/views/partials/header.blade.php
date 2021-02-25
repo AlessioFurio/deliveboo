@@ -25,7 +25,12 @@
                                     <li v-for="product in cartCookie" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
                                     <li id="no-border">Prezzo totale: <span v-cloak>@{{Math.round(totalPrice * 100)/100}} €</span></li>
                                     <a v-if="cartCookie.length != 0" href="{{ route('payments.index') }}">Paga ora</a>
+<<<<<<< Updated upstream
                                     <a v-if="cartCookie.length != 0" id="btn-clear" @click="Clear">Svuota carrello</a>
+=======
+                                    <a id="btn-clear" @click="Clear">Svuota carrello</a>
+
+>>>>>>> Stashed changes
                                 </ul>
                             </div>
                         </div>

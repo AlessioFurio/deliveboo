@@ -67,13 +67,13 @@
                             <div class="details-restaurant-card-show">
                                 <div class="container-button-action-show">
                                     <a class="button-show button-dettagli-show" href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}">
-                                        Visualizza
+                                        <i class="fas fa-eye"></i>
                                     </a>
                                     <a class="button-show button-modifica-show" href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}">
-                                        Modifica
+                                        <i class="fas fa-edit"></i>
                                     </a>
                                     <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                    <button type="submit" name="button" class="button-show button-elimina-show">Elimina</button>
+                                    <button type="submit" name="button" class="button-show button-elimina-show"><i class="fas fa-trash-alt"></i></button>
                                     @csrf
                                     @method('DELETE')
                                     </form>

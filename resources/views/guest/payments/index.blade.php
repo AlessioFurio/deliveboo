@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-<div id="root">
+{{-- <div id="root"> --}}
   <div class="container-fluid" v-if="cartCookie.length">
     <div class="row">
       <div class="cart-flex offset-sm-1 col-sm-10 offset-md-2 col-md-6 order-md-1">
@@ -74,38 +74,41 @@
   <div v-else class="container-fluid">
       <div class="row">
           non hai ancora inserito prodotti nel carrello!
-          
+
       </div>
   </div>
-</div>
+{{-- </div> --}}
+@endsection
+
+@section('script')
 
   <script type="text/javascript">
 
     braintree.dropin.create(
-    {
-      authorization: '{{$clientToken}}',
-      container: '#dropin-container'
-    },
-    (error, dropinInstance) =>
-    {
-      if (error) console.error(error);
-      window.dropinInstance = dropinInstance; //salvo la dropinInstance nella window(finestra del browser) cioe' lo scope globale che e' accessibile da qualsiasi funzione js (variabile globale)
+      {
+        authorization: '{{$clientToken}}',
+        container: '#dropin-container'
+      },
+      (error, dropinInstance) =>
+      {
+        if (error) console.error(error);
+        window.dropinInstance = dropinInstance; //salvo la dropinInstance nella window(finestra del browser) cioe' lo scope globale che e' accessibile da qualsiasi funzione js (variabile globale)
 
-      // form.addEventListener('submit', event => {
-      //   event.preventDefault(); //non serve perche' sul submit stiamo chiamando la save
-      //
-      //   dropinInstance.requestPaymentMethod((error, payload) =>
-      //   {
-      //     if (error) console.error(error);
-      //
-      //     document.getElementById('nonce').value = payload.nonce;
-      //     form.submit();
-      //   });
+        // form.addEventListener('submit', event => {
+        //   event.preventDefault(); //non serve perche' sul submit stiamo chiamando la save
+        //
+        //   dropinInstance.requestPaymentMethod((error, payload) =>
+        //   {
+        //     if (error) console.error(error);
+        //
+        //     document.getElementById('nonce').value = payload.nonce;
+        //     form.submit();
+        //   });
+        // });
+      });
       // });
-    });
-  // });
 
-  </script>
+    </script>
   @include('partials.footer')
 
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script>

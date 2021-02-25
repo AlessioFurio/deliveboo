@@ -116,9 +116,10 @@ header .header-log-in .logo span {
   color: #d2ac7b;
   font-family: "Ballet", cursive;
   font-size: 50px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   margin-left: 10px;
   margin-top: 20px;
+  font-weight: bold;
 }
 header .header-log-in .header-right {
   max-width: 100%;
@@ -579,8 +580,8 @@ header.active .menu-mobile {
   }
   .container-social-online .social-online h3 {
     font-size: 20px;
-    color: #cc9933;
-    border: 1px solid #cc9933;
+    color: #d2ac7b;
+    border: 1px solid #d2ac7b;
     padding: 20px;
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -598,7 +599,7 @@ header.active .menu-mobile {
     color: #4c4d4e;
   }
   .container-social-online .social-online i:hover {
-    background-color: #cc9933;
+    background-color: #d2ac7b;
     transition: 1s ease;
   }
 
@@ -616,7 +617,7 @@ header.active .menu-mobile {
   .container-contact .contact a {
     text-decoration: none;
     font-size: 15px;
-    color: #cc9933;
+    color: #d2ac7b;
   }
   .container-contact .contact h5 {
     color: white;
@@ -631,12 +632,27 @@ header.active .menu-mobile {
     padding-bottom: 10px;
     color: #4c4d4e;
   }
+
+  .container-social-online .social-online i {
+    font-size: 30px;
+  }
+
+  .container-social-online .social-online .social a {
+    display: inline-block;
+  }
+  .container-social-online .social-online .social a:nth-child(2) i {
+    margin-left: 10px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container-totale {
     flex-direction: row;
     justify-content: center;
     text-align: left;
+  }
+
+  .container-social-online .social-online .social a:nth-child(2) i {
+    margin-left: 0px;
   }
 }
 #header {

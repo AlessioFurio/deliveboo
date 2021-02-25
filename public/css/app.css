@@ -26,10 +26,10 @@ header {
 }
 header::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 300px;
-  width: 180px;
+  left: 180px;
+  width: 100px;
   height: 120px;
   background: transparent;
   z-index: 2;
@@ -44,7 +44,7 @@ header.active::before {
 }
 header::after {
   content: "";
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 100px;
   width: 180px;
@@ -62,7 +62,7 @@ header.active::after {
 }
 header .wp-header {
   background: url("/images/bg-ristorante-1.jpg");
-  height: 700px;
+  height: 100vh;
   background-attachment: fixed;
   background-size: cover;
   background-position: bottom;
@@ -115,7 +115,7 @@ header .header-log-in .logo img {
 header .header-log-in .logo span {
   color: #d2ac7b;
   font-family: "Ballet", cursive;
-  font-size: 60px;
+  font-size: 50px;
   letter-spacing: 2px;
   margin-left: 10px;
   margin-top: 20px;
@@ -240,11 +240,13 @@ header .header-top .toggle-menu i {
 }
 
 .menu-mobile {
-  min-width: 400px;
-  min-height: 400px;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 600px;
+  max-width: 600px;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -742,12 +744,18 @@ header.active .menu-mobile {
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #e3e8f1;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .card-login .card-header-login {
-  font-size: 30px;
+  font-size: 60px;
   margin: 20px 0 20px 0;
   text-align: center;
+  color: #d2ac7b;
+  font-family: "Ballet", cursive;
 }
 .card-login .card-body-login {
   padding: 0 20px;
@@ -756,14 +764,26 @@ header.active .menu-mobile {
 .form-group {
   margin-bottom: 20px;
 }
+.form-group label {
+  color: #000;
+  font-size: 20px;
+}
 .form-group .label-email-address, .form-group .label-password {
   font-size: 18px;
 }
 .form-group .container-input-email input, .form-group .container-input-password input {
+  font-size: 18px;
   width: 100%;
-  height: 30px;
-  border: 1px solid black;
-  border-radius: 10px;
+  height: 40px;
+  border: 1px solid #d2ac7b;
+  border-radius: 5px;
+}
+.form-group .container-input-password input {
+  font-size: 18px;
+  width: 100% !important;
+  height: 40px !important;
+  border: 1px solid #d2ac7b !important;
+  border-radius: 5px !important;
 }
 
 .form-check .form-check-label {
@@ -778,10 +798,11 @@ header.active .menu-mobile {
 .container-button-login .button-login {
   font-size: 20px;
   padding: 5px 20px;
-  background-color: #00ccbc;
-  color: black;
-  border: 1px solid black;
+  background-color: #d2ac7b;
+  color: #fff;
+  border: 1px solid #d2ac7b;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .forgot-password {
@@ -799,7 +820,7 @@ header.active .menu-mobile {
     width: 60%;
   }
   .card-login .card-header-login {
-    font-size: 40px;
+    font-size: 70px;
   }
   .card-login .card-body-login {
     padding: 0 50px;

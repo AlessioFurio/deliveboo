@@ -13,12 +13,18 @@
     margin: auto;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: #e3e8f1;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
         .card-header-login {
-            font-size: 30px;
+            font-size: 60px;
             margin: 20px 0 20px 0;
             text-align: center;
+            color: $gold;
+            font-family: 'Ballet', cursive;
         }
             .card-body-login {
                 padding: 0 20px;
@@ -29,6 +35,11 @@
 .form-group {
     margin-bottom: 20px;
 
+    label{
+        color: #000;
+        font-size: 20px;
+    }
+
     .label-email-address, .label-password {
         font-size: 18px;
     }
@@ -36,13 +47,26 @@
         .container-input-email, .container-input-password  {
 
             input {
+                font-size: 18px;
                 width: 100%;
-                height: 30px;
-                border: 1px solid black;
-                border-radius: 10px;
+                height: 40px;
+                border: 1px solid $gold;
+                border-radius: 5px;
+            }
+        }
+
+        .container-input-password {
+            input {
+                font-size: 18px;
+                width: 100% !important;
+                height: 40px !important;
+                border: 1px solid $gold !important;
+                border-radius: 5px !important;
             }
         }
 }
+
+
 
 .form-check {
 
@@ -54,7 +78,6 @@
 }
 
 .container-button-login {
-
     display: flex;
     justify-content: center;
 
@@ -62,10 +85,11 @@
     .button-login {
         font-size: 20px;
         padding: 5px 20px;
-        background-color: #00ccbc;
-        color: black;
-        border: 1px solid black;
+        background-color: $gold;
+        color: #fff;
+        border: 1px solid $gold;
         border-radius: 5px;
+        cursor: pointer;
     }
 
 
@@ -92,7 +116,7 @@
         width: 60%;
 
         .card-header-login {
-            font-size: 40px;
+            font-size: 70px;
         }
             .card-body-login {
                 padding: 0 50px;

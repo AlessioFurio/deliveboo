@@ -1,14 +1,12 @@
 
 main {
-
-    background: url('/images/pizza-fast-food-vegetables.jpg');
+    background-color: #0F1D22;
     background-size: cover;
     background-repeat: no-repeat;
 
     .container-restaurant {
         max-width: 1200px;
         margin: 0 auto;
-        border: 1px solid red;
 
         .content-restaurant {
 
@@ -16,14 +14,24 @@ main {
 
             .title-restaurant{
                 padding-bottom: 20px;
+                width: 500px;
+
                 h1{
                     text-align: center;
+                    text-transform: uppercase;
+                    border: 1px solid $gold;
+                    padding: 20px 20px;
+                    background-color: #040e10;
+                    color: #d1d1d1;
+                    border-radius: 6px;
                 }
             }
 
             .details-restaurant{
                 display: inline-block;
-                background-color: #d1d1d1;
+                background-color: #040e10;
+                color: #d1d1d1;
+                border: 1px solid $gold;
                 border-radius: 20px;
                 padding: 10px;
 
@@ -41,13 +49,19 @@ main {
 
                 .card-dish{
                     flex-basis: 30%;
-                    border: 1px solid #d9d9d9;
                     margin-top: 20px;
-                    border-radius: 10px;
+                    border: 1px solid #d2ac7b;
+                    border-radius: 6px;
+
+                    &:hover {
+
+                    }
 
                     h3 {
                         padding: 20px;
                         text-align: center;
+                        text-transform: uppercase;
+                        color: white;
                     }
 
                     .wp-img-card-dish{
@@ -61,6 +75,13 @@ main {
                         }
                     }
 
+                    p {
+                        text-align: center;
+                        color: white;
+                        font-family: cursive;
+                        padding-top: 5px;
+                    }
+
 
                     .cart {
                         text-align: center;
@@ -69,6 +90,7 @@ main {
                         span {
                             font-size: 20px;
                             font-weight: bold;
+                            color: white;
                         }
 
                         button {

@@ -167,20 +167,37 @@ header .header-log-in .cart .total-quantity {
 header .header-log-in .cart .cart-dropdown {
   border: 1px solid #c1c1c1;
   border-radius: 10px;
+  padding: 20px;
   background-color: #fff;
   position: absolute;
   left: -50px;
-  min-width: 200px;
+  min-width: 210px;
 }
 header .header-log-in .cart .cart-dropdown ul {
   list-style-type: none;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+header .header-log-in .cart .cart-dropdown ul h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 10px;
 }
 header .header-log-in .cart .cart-dropdown ul li {
-  padding: 5px;
-  font-size: 16px;
-  border-bottom: 1px solid #d1d1d1;
-  border-radius: 10px;
+  padding: 15px 0px;
+  font-size: 13px;
+  border-bottom: 1px solid lightgrey;
+  text-transform: uppercase;
+}
+header .header-log-in .cart .cart-dropdown ul a {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #040e10;
+  color: #fff;
+  text-decoration: none;
 }
 header .header-top {
   display: flex;

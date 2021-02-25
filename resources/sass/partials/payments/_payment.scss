@@ -2,6 +2,7 @@
   max-width: 1000px;
   margin: auto;
 
+
   h4 {
     color: $body_bg;
   }
@@ -21,6 +22,10 @@
       cursor: pointer;
     }
   }
+}
+
+.modal-container {
+  height: calc(100vh - 425px);
 }
 
 /* The Modal (background) */

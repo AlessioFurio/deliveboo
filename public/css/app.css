@@ -2713,6 +2713,10 @@ main .container-restaurant .content-restaurant .container-list-dishes .card-dish
   cursor: pointer;
 }
 
+.modal-container {
+  height: calc(100vh - 425px);
+}
+
 /* The Modal (background) */
 label {
   font-weight: 500;

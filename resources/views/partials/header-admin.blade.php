@@ -12,7 +12,7 @@
                 </div>
                 <div class="header-right">
 
-                    <div v-cloak class="cart">
+                    {{-- <div v-cloak class="cart">
                         <div class="wp-image-cart" @click="showCart = !showCart">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="total-quantity"></span>
@@ -25,7 +25,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="toggle-menu"  @click="toggleMenu()">
                         <i class="fas fa-bars"></i>

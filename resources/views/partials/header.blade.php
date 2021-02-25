@@ -60,7 +60,7 @@
                         </li>
                             @endauth
                         @endif
-                    <li><a href="#">Contatti</a></li>
+                    <li><a href="{{route('contacts')}}">Contatti</a></li>
                     <li>
                         @guest
 

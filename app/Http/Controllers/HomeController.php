@@ -25,4 +25,9 @@ class HomeController extends Controller
 
     return view('guest.welcome', $data);
   }
+
+  public function contacts() {
+
+      return view('guest.contacts.index');
+  }
 }

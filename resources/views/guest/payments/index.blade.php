@@ -6,11 +6,40 @@
 @endsection
 
 @section('content')
-{{-- <div id="root"> --}}
-  <div class="container-fluid" v-if="cartCookie.length">
-    <div class="row">
-      <div class="cart-flex offset-sm-1 col-sm-10 offset-md-2 col-md-6 order-md-1">
-        <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
+
+  <div class="container-fluid">
+    <div class="row g-3" v-if="cartCookie.length" v-cloak>
+      <div class="offset-xs-1 col-xs-10 col-md-5 col-lg-4 order-md-last mt-5">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span>Il tuo carrello</span>
+          {{-- <span class="badge bg-secondary rounded-pill">@{{cartCookie.length}}</span> --}}
+        </h4>
+        <ul class="list-group mb-3">
+          <li v-for="product in cartCookie" :key="product.id" class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">@{{ product.name }}</h6>
+              <span class="cart">
+                <a @click="updateCart(product, 'subtract'), cartBtnLessPlus()">
+                  <i class="far fa-minus-square"></i>
+                </a>
+                <span class="cart__quantity">@{{ product.quantity }}</span>
+                <a @click="updateCart(product, 'add'), cartBtnLessPlus()">
+                  <i class="far fa-plus-square"></i>
+                </a>
+              </span>
+            </div>
+            <span class="text-muted">@{{ product.price }}</span>
+            {{-- (@{{ product.quantity }}) --}}
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>&euro; @{{Math.round(totalPrice * 100)/100}}</strong>
+          </li>
+        </ul>
+      </div>
+
+      <div class="offset-xs-1 col-xs-10 col-md-7 col-lg-8">
+        <form action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
           @csrf
           @method('POST')
           <h4 class="mb-3">Dati di consegna</h4>
@@ -39,35 +68,11 @@
           <div class="row">
             <div class="col-sm-12 mb-3">
               <div id="dropin-container"></div>
-              {{-- <input type="submit" value="Paga ora"/> --}}
-              {{-- <button @click="provaLog()" type="button" name="button">prova cookie</button> --}}
-               <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+               <button class="btn btn-primary btn-lg btn-block" type="submit">Paga ora</button>
               <input type="hidden" id="nonce" name="payment_method_nonce"/>
             </div>
           </div>
         </form>
-        <div v-cloak class="cartpay mt-5" v-if="cartCookie.length">
-            <div class="wp-image-cart">
-                <span class="total-quantity"></span>
-                <div v-cloak class="cart-dropdown">
-                    <ul class="cart-dropdown-list">
-                        <h4 class="mb-3">Carrello</h4>
-                            <label>Riepilogo</label>
-                            <div class="border-cart">
-                                <div v-for="product in cartCookie" :key="product.id" >
-                                    <li >@{{ product.name }} (@{{ product.quantity }})</li>
-                                    <div class="cart">
-                                        <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>
-                                        <span class="cart__quantity">@{{ product.quantity }}</span>
-                                        <button @click="updateCart(product, 'add'), cartBtnLessPlus()" class="cart__button">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        <li class="border-cart">Prezzo totale: <span>@{{Math.round(totalPrice * 100)/100}} €</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
       </div>
     </div>
   </div>
@@ -77,7 +82,7 @@
 
       </div>
   </div>
-{{-- </div> --}}
+
 @endsection
 
 @section('script')

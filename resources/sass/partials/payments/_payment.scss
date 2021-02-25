@@ -1,23 +1,45 @@
+.container-fluid {
+  max-width: 1000px;
+  margin: auto;
+
+  h4 {
+    color: $body_bg;
+  }
+
+  [v-cloak] {
+    display: none;
+
+  }
+
+
+  .fa-minus-square,
+  .fa-plus-square {
+    font-size: 22px;
+
+    &:hover {
+      color: $gold;
+      cursor: pointer;
+    }
+  }
+}
+
+/* The Modal (background) */
+label {
+  font-weight: 500;
+}
+
+h4 {
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
 div i.fas.fa-check-circle {
   color: green;
 }
 
 div i.fas.fa-times-circle {
   color: red;
-}
-
-
-/* The Modal (background) */
-
-label {
-    color: #fff;
-    font-weight: 500;
-}
-
-h4 {
-    color: #fff;
-    font-size: 30px;
-    padding-bottom: 30px;
 }
 
 .modal {
@@ -74,9 +96,6 @@ h4 {
   }
 }
 
-#payment-form {
-    padding-bottom: 70px;
-}
 
 @media screen and (min-width: 414px) {
   .modal {
@@ -86,22 +105,6 @@ h4 {
       margin: 10%;
     }
   }
-}
-.cart-flex {
-    display: flex;
-}
-.cartpay {
-    color: white;
-    margin-left: 20px;
-    li {
-        list-style-type: none;
-    }
-    .border-cart {
-        background-color: red;
-        border: 1px solid white;
-        padding: 10px;
-        border-radius: 3px;
-    }
 }
 
 @media screen and (min-width: 768px) {

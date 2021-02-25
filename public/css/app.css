@@ -2685,17 +2685,28 @@ main .container-restaurant .content-restaurant .container-list-dishes .card-dish
   margin: 0 5px;
 }
 
-div i.fas.fa-check-circle {
-  color: green;
+.container-fluid {
+  max-width: 1000px;
+  margin: auto;
 }
-
-div i.fas.fa-times-circle {
-  color: red;
+.container-fluid h4 {
+  color: #040e10;
+}
+.container-fluid [v-cloak] {
+  display: none;
+}
+.container-fluid .fa-minus-square,
+.container-fluid .fa-plus-square {
+  font-size: 22px;
+}
+.container-fluid .fa-minus-square:hover,
+.container-fluid .fa-plus-square:hover {
+  color: #d2ac7b;
+  cursor: pointer;
 }
 
 /* The Modal (background) */
 label {
-  color: #fff;
   font-weight: 500;
 }
 
@@ -2703,6 +2714,14 @@ h4 {
   color: #fff;
   font-size: 30px;
   padding-bottom: 30px;
+}
+
+div i.fas.fa-check-circle {
+  color: green;
+}
+
+div i.fas.fa-times-circle {
+  color: red;
 }
 
 .modal {
@@ -2760,10 +2779,6 @@ h4 {
   cursor: pointer;
 }
 
-#payment-form {
-  padding-bottom: 70px;
-}
-
 @media screen and (min-width: 414px) {
   .modal .modal-content {
     min-width: 80%;
@@ -2772,24 +2787,6 @@ h4 {
     margin: 10%;
   }
 }
-.cart-flex {
-  display: flex;
-}
-
-.cartpay {
-  color: white;
-  margin-left: 20px;
-}
-.cartpay li {
-  list-style-type: none;
-}
-.cartpay .border-cart {
-  background-color: red;
-  border: 1px solid white;
-  padding: 10px;
-  border-radius: 3px;
-}
-
 @media screen and (min-width: 768px) {
   .modal .modal-content {
     min-width: 60%;

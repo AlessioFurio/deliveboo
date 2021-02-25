@@ -1,5 +1,4 @@
 
-
     header{
 
         position: relative;
@@ -70,6 +69,7 @@
             position: fixed;
             top: 0;
             z-index: 2;
+            height: 97px;
         }
 
         #menu-fixed.sticky {
@@ -87,11 +87,13 @@
 
         .header-log-in {
             padding: 0 30px 0;
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
 
             .logo {
-                max-width: 100px;
-                max-height: 100px;
+                max-width: 50px;
+                max-height: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -104,7 +106,7 @@
                 span{
                     color: #d2ac7b;
                     font-family: 'Ballet', cursive;
-                    font-size: 50px;
+                    font-size: 30px;
                     letter-spacing: 3px;
                     margin-left: 10px;
                     margin-top: 20px;
@@ -197,6 +199,13 @@
                             background-color: #040e10;
                             color: #fff;
                             text-decoration: none;
+                            margin: 6px 0px;
+                        }
+
+                        #btn-clear {
+                            background-color: #a01111;
+                            cursor: pointer;
+                            font-size: 13px;
                         }
                     }
                 }
@@ -410,6 +419,14 @@
     header .header-bottom .nav-menu-bottom{
         text-align: right;
         padding-right: 50px;
+    }
+
+    header .header-log-in .logo {
+        max-width: 100px;
+    }
+
+    header .header-log-in .logo span{
+        font-size: 50px;
     }
 }
 

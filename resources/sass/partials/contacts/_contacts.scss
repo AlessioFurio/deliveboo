@@ -4,10 +4,31 @@
     justify-content: center;
 }
 .contact-developer {
+    border-radius: 3px;
+
+    border: 1px solid gold;
+    background-color: white;
     text-align: center;
     padding: 10px;
     margin: 10px;
     i {
         font-size: 30px;
     }
+    p {
+        margin-top: 30px;
+    }
+    a {
+        text-decoration: none;
+    }
+    h4 {
+        color: red;
+    }
+}
+
+.group {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid gold;
+    background-color: white;
+    border-radius: 3px;
 }

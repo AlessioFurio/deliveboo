@@ -1,4 +1,4 @@
-<section class="card-category">
+{{-- <section class="card-category">
     <div class="container-card-category">
 
         <div class="menu-filter">
@@ -30,4 +30,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}

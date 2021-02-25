@@ -22,6 +22,7 @@
                                     <li v-for="product in cartCookie" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
                                     <li id="no-border">Prezzo totale: <span>@{{Math.round(totalPrice * 100)/100}} €</span></li>
                                     <a v-if="cartCookie.length != 0" href="{{ route('payments.index') }}">Paga ora</a>
+                                    <a id="btn-clear" @click="Clear">Svuota carrello</a>
                                 </ul>
                             </div>
                         </div>

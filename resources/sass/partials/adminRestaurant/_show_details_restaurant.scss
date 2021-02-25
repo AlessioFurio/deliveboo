@@ -4,7 +4,7 @@
 
         background-color: #101927;
         padding: 10px;
-        border-bottom: 3px solid #f5d790;
+        border-bottom: 3px solid $gold;
 
         a {
             text-decoration: none;
@@ -27,7 +27,7 @@
         .dashboard-body-menu-restaurant-show {
 
             background-color: #101927;
-            border-right: 3px solid #f5d790;
+            border-right: 3px solid $gold;
             height: 100%;
             flex-basis: 40%;
 
@@ -35,7 +35,7 @@
 
                 li {
 
-                    border-bottom: 3px solid #f5d790;
+                    border-bottom: 3px solid $gold;
                     padding: 15px;
 
                     a{
@@ -45,7 +45,7 @@
 
                         &:hover {
 
-                            color: #f5d790;
+                            color: $gold;
 
                         }
                     }
@@ -68,7 +68,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 50%;
+        height: 65%;
 
         .title-show {
                 text-align: center;
@@ -82,7 +82,7 @@
 
         .title-restaurant-show{
 
-            border: 5px ridge #f5d790;
+            border: 5px ridge $gold;
             background: rgba(255,255,255,0.5);
             padding: 10px;
             width: 90%;
@@ -112,7 +112,7 @@
                 padding: 10px;
                 border-radius: 10px;
                 color: #e3e8f1;
-                border: 3px solid #f5d790;
+                border: 3px solid $gold;
                 font-size: 13px;
                 width: 80%;
             }
@@ -127,7 +127,7 @@
 
                 &:hover {
 
-                    color: #f5d790;
+                    color: $gold;
                     background-color: #000080;
                 }
             }
@@ -139,7 +139,7 @@
                 margin: 10px 0;
 
                 &:hover {
-                    color: #f5d790;
+                    color: $gold;
                     background-color: #008000;
                 }
             }
@@ -151,8 +151,8 @@
 
 
     background-color: #101927;
-    border-top: 3px solid #f5d790;
-    border-bottom: 3px solid #f5d790;
+    border-top: 3px solid $gold;
+    border-bottom: 3px solid $gold;
     text-align: center;
     padding: 20px 0;
 
@@ -179,11 +179,11 @@
         .restaurant-card-show {
 
             flex-basis: 90%;
-            border: 5px ridge #f5d790;
+            border: 5px ridge $gold;
             background: rgba(255,255,255,0.5);
             border-radius: 10px;
             margin: 20px 10px;
-            padding: 10px;
+            padding: 5px;
 
             .body-restaurant-card-show{
 
@@ -196,6 +196,7 @@
 
                 img {
                     max-width: 100%;
+                    border-radius: 10px;
                 }
 
 
@@ -204,7 +205,7 @@
 
         .details-restaurant-card-show {
 
-            padding: 20px 0;
+            padding: 10px 0;
         }
 
         .container-button-action-show{
@@ -214,14 +215,16 @@
             .button-show {
                 margin-bottom: 10px;
                 text-decoration: none;
-                padding: 10px;
+                padding: 6px;
                 display: inline-block;
                 border-radius: 10px;
                 font-size: 20px;
-                width: 80%;
-                border: 3px solid #f5d790;
+                border: 3px solid $gold;
+                margin: 3px;
+                transition: background-color 2s;
+        }
 
-            }
+
 
             .button-dettagli-show {
 
@@ -229,7 +232,7 @@
                 background: rgba(65, 105, 255, 0.5);
 
                 &:hover {
-                    color: #f5d790;
+                    color: $gold;
                     background-color: #0000FF;
 
                 }
@@ -241,21 +244,25 @@
                 background: rgba(255, 215, 0, 0.5);
 
                 &:hover {
-                    color: #f5d790;
+                    color: $gold;
                     background-color: #FF8C00;
                 }
             }
 
-            .button-elimina-show {
+            form {
+                display: inline-block;
 
-                color: #101927;
-                background: rgba(255, 99, 71, 0.5);
+                .button-elimina-show {
 
-                &:hover {
-                    color: #f5d790;
-                    background-color: #FF0000;
+                    color: #101927;
+                    background: rgba(255, 99, 71, 0.5);
+
+                    &:hover {
+                        color: $gold;
+                        background-color: #FF0000;
+                    }
+
                 }
-
             }
         }
     }
@@ -270,6 +277,8 @@
     .dashboard-body-content-restaurant-show {
 
         .container-restaurant-show {
+
+            height: 50%;
 
             .title-show {
 
@@ -343,7 +352,7 @@
 
                 .restaurant-card-show {
 
-                    flex-basis: 70%;
+                    flex-basis: 45%;
 
 
                     .body-restaurant-card-show{
@@ -371,7 +380,8 @@
 
                     .button-show {
 
-                        width: 40%;
+                        padding: 5px 15px;
+                        margin: 5px;
 
                         &:hover {
 
@@ -532,7 +542,7 @@
 
                 .restaurant-card-show {
 
-                    flex-basis: 50%;
+
 
 
                     .body-restaurant-card-show{
@@ -560,7 +570,7 @@
 
                     .button-show {
 
-                        width: 30%;
+                        padding: 5px 15px;
                         margin: 5px;
 
                         &:hover {
@@ -672,7 +682,7 @@
 
                 .restaurant-card-show {
 
-                    flex-basis: 30%;
+                    flex-basis: 20%;
 
 
                     .body-restaurant-card-show{
@@ -700,7 +710,7 @@
 
                     .button-show {
 
-                        width: 40%;
+                        padding: 5px 15px;
                         margin: 5px;
 
                         &:hover {

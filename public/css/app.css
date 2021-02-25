@@ -21,6 +21,45 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+header {
+  position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 180px;
+  height: 120px;
+  background: transparent;
+  z-index: 2;
+  transition: 1s;
+}
+header.active::before {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #040e10;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  width: 180px;
+  height: 120px;
+  background: transparent;
+  transition: 1s;
+  z-index: 1;
+}
+header.active::after {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #040e10;
+}
 header .wp-header {
   background: url("/images/bg-ristorante-1.jpg");
   height: 700px;
@@ -28,6 +67,7 @@ header .wp-header {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 header .filter {
   width: 100%;
@@ -42,6 +82,7 @@ header #menu-fixed {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 header #menu-fixed.sticky {
   transition: 400ms ease;
@@ -141,18 +182,6 @@ header .header-log-in .cart .cart-dropdown ul li {
   border-bottom: 1px solid #d1d1d1;
   border-radius: 10px;
 }
-header .header-log-in .top-right {
-  text-align: center;
-}
-header .header-log-in .links > a {
-  display: inline-block;
-  color: #fff;
-  padding: 20px;
-  font-size: 16px;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 header .header-top {
   display: flex;
   justify-content: center;
@@ -211,31 +240,64 @@ header .header-top .toggle-menu i {
 }
 
 .menu-mobile {
-  max-width: 100%;
-  padding-bottom: 50px;
-  display: none;
-  justify-content: flex-end;
-}
-.menu-mobile.active {
+  min-width: 400px;
+  min-height: 400px;
   display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 0s;
 }
 .menu-mobile .nav-menu-mobile {
+  border: 1px solid #d2ac7b;
   width: 100%;
   height: 100%;
-  border: 1px solid #d2ac7b;
-  border-radius: 5%;
+}
+.menu-mobile .nav-menu-mobile .links > a {
+  display: inline-block;
+  color: #d2ac7b;
+  padding: 20px;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu-mobile .nav-menu-mobile .links > a:hover {
+  background-color: #d2ac7b;
+  color: #fff;
+  transition: 1s;
 }
 .menu-mobile .nav-menu-mobile ul {
   list-style-type: none;
   text-align: center;
 }
+.menu-mobile .nav-menu-mobile ul li:hover {
+  background-color: #d2ac7b;
+  color: #fff;
+  transition: 1s;
+}
+.menu-mobile .nav-menu-mobile ul li:hover a {
+  color: #fff;
+}
 .menu-mobile .nav-menu-mobile ul li a {
   display: inline-block;
-  padding: 10px;
-  color: #fff;
+  padding: 20px 60px;
+  color: #d2ac7b;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+header.active .menu-mobile {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 1s;
 }
 
 .header-bottom {
@@ -280,10 +342,6 @@ header .header-top .toggle-menu i {
   header .header-log-in .header-right {
     max-width: 50%;
     justify-content: none;
-  }
-
-  header .menu-mobile .nav-menu-mobile {
-    max-width: 40%;
   }
 
   header .header-bottom .nav-menu-bottom {
@@ -2281,26 +2339,14 @@ header .header-top .toggle-menu i {
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show {
   text-align: center;
   color: #101927;
-<<<<<<< HEAD
-}
-.dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h4 {
-  font-size: 20px;
-  color: #101927;
-  text-transform: uppercase;
-  font-weight: 700;
-=======
   padding: 10px 0;
->>>>>>> show_restaurant
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
   font-size: 20px;
 }
-<<<<<<< HEAD
-=======
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .cover-dishes img {
   max-width: 100%;
 }
->>>>>>> show_restaurant
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show {
   padding: 20px 0;
 }
@@ -2325,26 +2371,6 @@ header .header-top .toggle-menu i {
   }
   .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
     font-size: 26px;
-<<<<<<< HEAD
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
-    font-size: 35px;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show {
-    flex-basis: 60%;
-    margin: 50px auto;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h4 {
-    font-size: 25px;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
-    font-size: 25px;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show p {
-    font-size: 25px;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show span {
-=======
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
     font-size: 35px;
@@ -2354,7 +2380,6 @@ header .header-top .toggle-menu i {
     margin: 50px auto;
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
->>>>>>> show_restaurant
     font-size: 25px;
   }
 }
@@ -2374,19 +2399,6 @@ header .header-top .toggle-menu i {
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show {
     flex-basis: 35%;
   }
-<<<<<<< HEAD
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h4 {
-    font-size: 30px;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
-    font-size: 30px;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show p {
-    font-size: 30px;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show span {
-    font-size: 30px;
-=======
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
     font-size: 30px;
   }
@@ -2395,7 +2407,6 @@ header .header-top .toggle-menu i {
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .body-dishes-card-show .details-dishes-card-show span {
     font-size: 25px;
->>>>>>> show_restaurant
   }
 }
 .container-general-create {

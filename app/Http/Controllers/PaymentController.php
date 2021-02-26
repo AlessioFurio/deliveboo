@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Buyer;
+use App\User;
 use App\Payment;
+use App\Restaurant;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailFromOrder;
 
@@ -65,8 +67,17 @@ class PaymentController extends Controller
     //   'result' => $result
     // ];
     // $request->session()->put('asd', 'asd');
-    Mail::to('adminordine@deliveboo.com')->send(new MailFromOrder($new_payment));
-    Mail::to('cliente@deliveboo.com')->send(new MailFromOrder($new_payment));
+    // dd($new_payment);
+    // $user_id = Auth::user()->id;
+    // dd($user_id = Auth::user()->email);
+
+    $restaurant = Restaurant::where('id' , $new_payment->restaurant_id)->first();
+    // dd($new_payment->restaurant_id);
+    $user = User::where('id' , $restaurant->user_id)->first();
+    $restaurant_mail = $user->email;
+
+    Mail::to($restaurant_mail)->send(new MailFromOrder($new_payment));
+    Mail::to($data['email'])->send(new MailFromOrder($new_payment));
 
     return redirect()->route('welcome')->with(['transaction_result' => $result->success]);
   }

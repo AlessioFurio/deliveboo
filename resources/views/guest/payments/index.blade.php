@@ -62,6 +62,11 @@
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
+              <label>email</label>
+              <input  type="email" class="form-control" id="mail" placeholder="Inserisci l'indirizzo email" name="email" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
             </div>
           </div>
           <div class="row">

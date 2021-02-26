@@ -2239,24 +2239,6 @@ var app = new Vue({
         });
       }
     },
-    Save: function Save(event) {
-      event.preventDefault(); //blocca il form per far eseguire il resto del codice
-      // var date = new Date();
-      // date.setTime(date.getTime() + (60 * 1000));
-      // Cookies.set('nome', this.nome, { expires: date })
-      // Cookies.set('cognome', this.cognome, { expires: date })
-      // Cookies.set('indirizzo', this.indirizzo, { expires: date })
-      // Cookies.set('cartCookie', this.cart, { expires: date })
-      // const form = document.getElementById('payment-form');
-
-      dropinInstance.requestPaymentMethod(function (error, payload) {
-        if (error) console.error(error);
-        document.getElementById('nonce').value = payload.nonce; // form.submit();
-
-        document.getElementById('payment-form').submit();
-        data.clear();
-      });
-    },
     clear: function clear() {
       var _this = this;
 
@@ -2286,6 +2268,27 @@ var app = new Vue({
         }
       }); // Cookies.remove('cartCookie')
     },
+    Save: function Save(event) {
+      var _this2 = this;
+
+      event.preventDefault(); //blocca il form per far eseguire il resto del codice
+      // var date = new Date();
+      // date.setTime(date.getTime() + (60 * 1000));
+      // Cookies.set('nome', this.nome, { expires: date })
+      // Cookies.set('cognome', this.cognome, { expires: date })
+      // Cookies.set('indirizzo', this.indirizzo, { expires: date })
+      // Cookies.set('cartCookie', this.cart, { expires: date })
+      // const form = document.getElementById('payment-form');
+
+      dropinInstance.requestPaymentMethod(function (error, payload) {
+        if (error) console.error(error);
+        document.getElementById('nonce').value = payload.nonce; // form.submit();
+
+        document.getElementById('payment-form').submit();
+
+        _this2.clear();
+      });
+    },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
       return this.cart = this.dishesList.filter(function (product) {
@@ -2297,7 +2300,7 @@ var app = new Vue({
       this.isActive = !this.isActive;
     },
     searchRestaurants: function searchRestaurants() {
-      var _this2 = this;
+      var _this3 = this;
 
       // funzione cerca restaurants
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/restaurants', {
@@ -2305,7 +2308,7 @@ var app = new Vue({
           query: this.selectedCategory
         }
       }).then(function (risposta) {
-        _this2.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+        _this3.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
       }); // fine then
     },
     // fine searchRestaurants
@@ -2343,7 +2346,7 @@ var app = new Vue({
   },
   // fine methods
   mounted: function mounted() {
-    var _this3 = this;
+    var _this4 = this;
 
     this.showModal();
     this.showChart();
@@ -2352,7 +2355,7 @@ var app = new Vue({
         query: this.selectedCategory
       }
     }).then(function (risposta) {
-      _this3.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+      _this4.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
     }); // fine then
 
     var date = new Date();
@@ -2399,15 +2402,15 @@ var app = new Vue({
       }
     }).then(function (risposta) {
       // assegno ad array restaurants la risposta API
-      _this3.dishesList = risposta.data.results;
+      _this4.dishesList = risposta.data.results;
 
-      for (var i = 0; i < _this3.dishesList.length; i++) {
-        _this3.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+      for (var i = 0; i < _this4.dishesList.length; i++) {
+        _this4.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 
-        if (_this3.cartCookie.length) {
-          for (var j = 0; j < _this3.cartCookie.length; j++) {
-            if (_this3.cartCookie[j].id == _this3.dishesList[i].id) {
-              _this3.dishesList[i] = _this3.cartCookie[j];
+        if (_this4.cartCookie.length) {
+          for (var j = 0; j < _this4.cartCookie.length; j++) {
+            if (_this4.cartCookie[j].id == _this4.dishesList[i].id) {
+              _this4.dishesList[i] = _this4.cartCookie[j];
             }
           }
         }
@@ -2418,12 +2421,12 @@ var app = new Vue({
       var navBar = document.getElementById('menu-fixed');
 
       if (window.scrollY > navBar.offsetTop) {
-        _this3.active = true;
-        _this3.btnGoUp = true;
+        _this4.active = true;
+        _this4.btnGoUp = true;
         document.getElementById('menu-fixed').classList.add("sticky"); // document.getElementsByClassName('btn-go-up').classList.add("active");
       } else {
-        _this3.active = false;
-        _this3.btnGoUp = false;
+        _this4.active = false;
+        _this4.btnGoUp = false;
         document.getElementById('menu-fixed').classList.remove("sticky");
       }
     };

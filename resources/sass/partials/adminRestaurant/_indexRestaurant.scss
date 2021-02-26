@@ -1,6 +1,9 @@
 .dashboard-restaurant-index {
 
-    .dashboard-header-restaurant-index {
+        .dashboard-header-restaurant-index {
+            background-color: #101927;
+            padding: 10px;
+            border-bottom: 1px solid $gold;
 
         background-color: #101927;
         padding: 10px;
@@ -19,14 +22,19 @@
         display: flex;
         height: calc(100vh - 100px - 50px);
 
-        .dashboard-body-menu-restaurant-index {
+                background-color: #101927;
+                border-right: 3px solid $gold;
+                height: 100%;
+                flex-basis: 40%;
 
             background-color: #101927;
             border-right: 3px solid $gold;
             height: 100%;
             flex-basis: 40%;
 
-            ul{
+                    li {
+                        border-bottom: 3px solid $gold;
+                        padding:10px;
 
                 li {
                     border-bottom: 3px solid $gold;
@@ -90,7 +98,10 @@
             padding: 10px;
             background: rgba(255, 255, 255, 0.5);
 
-            .title-restaurant-card {
+                .title-restaurant-card {
+                    text-align: center;
+                    color: #101927;
+                    font-size: 15px;
 
                 text-align: center;
                 color: #101927;
@@ -119,8 +130,13 @@
                         padding: 5px 0;
                         color: $gold;
 
-                        strong {
-                            color: #101927;
+                        p {
+                            padding: 5px 0;
+                            color: $gold;
+
+                            strong {
+                                color: #101927;
+                            }
                         }
                     }
                 }
@@ -137,16 +153,16 @@
 
                         .button-index {
 
-                            margin-bottom: 10px;
-                            padding: 10px;
-                            text-decoration: none;
-                            font-size: 20px;
-                            border: 3px solid $gold;
-                            border-radius: 10px;
-                            width: 80%;
-                            text-align: center;
+                                margin-bottom: 10px;
+                                padding: 10px;
+                                text-decoration: none;
+                                font-size: 20px;
+                                border: 3px solid $gold;
+                                border-radius: 10px;
+                                width: 80%;
+                                text-align: center;
 
-                        }
+                            }
 
                         .button-dettagli-index {
 
@@ -172,9 +188,13 @@
                             }
 
 
-                        }
+                                color: #101927;
+                                background: rgba(255, 215, 0, 0.5);
 
-                        .button-modifica-index {
+                                &:hover {
+                                    color: $gold;
+                                    background-color: #FF8C00;
+                                }
 
                             color: #101927;
                             background: rgba(255, 215, 0, 0.5);
@@ -184,18 +204,17 @@
                                 background-color: #FF8C00;
                             }
 
-                        }
+                            .button-elimina-index {
 
-                        .button-elimina-index {
+                                color: #101927;
+                                background: rgba(255, 99, 71, 0.5);
 
-                            color: #101927;
-                            background: rgba(255, 99, 71, 0.5);
+                                &:hover {
+                                    color: $gold;
+                                    background-color: #FF0000;
+                                }
 
-                            &:hover {
-                                color: $gold;
-                                background-color: #FF0000;
                             }
-
                         }
                     }
                 }
@@ -229,8 +248,129 @@
         }
     }
 
-    .container-restaurant-index .restaurants-index .restaurant-card-index {
-        flex-basis: 50%;
+    .dashboard-body-content-restaurant-index{
+
+
+
+        .container-restaurant-index {
+
+
+
+            .title-restaurant-index {
+
+
+
+                h1 {
+
+                }
+            }
+        }
+
+        .restaurants-index {
+
+            justify-content: center;
+
+
+            .restaurant-card-index {
+
+                flex-basis: 50%;
+
+
+                .title-restaurant-card {
+
+
+                    h1 {
+
+                    }
+
+                }
+                .cover-card {
+                    img {
+                        max-width: 70%;
+                        display: block;
+                        margin: auto;
+                    }
+                }
+
+                .body-restaurant-card-index{
+
+                    .details-restaurant-card-index {
+
+
+                        p {
+
+
+                            strong {
+
+                            }
+                        }
+                    }
+
+                    .action-restaurant-card-index {
+
+
+
+                        .container-button-action-index{
+
+
+
+                            .button-index {
+
+
+
+                                &:hover {
+
+
+                                }
+
+                            }
+
+                            .button-dettagli-index {
+
+
+
+                                &:hover {
+
+
+                                }
+
+                            }
+
+                            .button-ordini-index {
+
+
+
+                                &:hover {
+
+                                }
+
+
+                            }
+
+                            .button-modifica-index {
+
+
+
+                                &:hover {
+
+                                }
+
+                            }
+
+                            // .button-elimina-index {
+                            //
+                            //
+                            //
+                            //     &:hover {
+                            //
+                            //     }
+                            //
+                            // }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }
@@ -263,7 +403,7 @@
 
         .restaurants-index {
 
-            margin: 20px 0 0 100px;
+            margin: 20px 0;
 
             .restaurant-card-index {
 
@@ -271,7 +411,7 @@
 
                 .title-restaurant-card {
 
-                    font-size: 20px;
+                    font-size: 15px;
 
                     h1 {
 
@@ -317,13 +457,31 @@
                                 margin: 0 10px;
                                 width: 30%;
 
+                                &:hover {
+
+                                    &:hover {
+
+                                    }
+                            }
+
+                            .button-dettagli-index {
+
+
+
+                                &:hover {
+
+
+                                }
+
+                            }
+
+                            .button-ordini-index {
+
+
 
                                 &:hover {
 
                                 }
-                            }
-
-                            .button-dettagli-index {
 
 
                             }
@@ -331,11 +489,163 @@
                             .button-modifica-index {
 
 
+
+                                &:hover {
+
+                                }
+
                             }
 
-                            .button-elimina-index {
+                            // .button-elimina-index {
+                            //
+                            //
+                            //
+                            //     &:hover {
+                            //
+                            //     }
+                            //
+                            // }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
                             }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    .dashboard-body-content-restaurant-index{
+
+
+        .container-restaurant-index {
+
+
+
+            .title-restaurant-index {
+
+
+
+                h1 {
+
+                    font-size: 40px;
+
+                }
+            }
+        }
+
+        .restaurants-index {
+
+
+
+            .restaurant-card-index {
+
+                flex-basis: 30%;
+
+                .title-restaurant-card {
+
+                    font-size: 20px;
+
+                    h1 {
+
+                    }
+
+                }
+                .cover-card {
+                    img {
+                        max-width: 60%;
+                    }
+                }
+
+                .body-restaurant-card-index{
+
+                    .details-restaurant-card-index {
+
+
+                        p {
+
+                            padding: 5px 0;
+                            font-size: 20px;
+
+                            strong {
+
+                                font-size: 20px;
+                            }
+                        }
+                    }
+
+                    .action-restaurant-card-index {
+
+
+
+                        .container-button-action-index{
+
+
+
+
+                            .button-index {
+
+                                margin: 0 15px;
+                                width: 25%;
+
+                                &:hover {
+
+
+                                }
+
+                            }
+
+                            .button-dettagli-index {
+
+
+
+                                &:hover {
+
+
+                                }
+
+                            }
+
+                            .button-ordini-index {
+
+
+
+                                &:hover {
+
+                                }
+
+
+                            }
+
+                            .button-modifica-index {
+
+
+
+                                &:hover {
+
+                                }
+
+                            }
+
+                            // .button-elimina-index {
+                            //
+                            //
+                            //
+                            //     &:hover {
+                            //
+                            //     }
+                            //
+                            // }
                         }
                     }
                 }

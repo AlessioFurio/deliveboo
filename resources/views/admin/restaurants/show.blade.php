@@ -27,23 +27,25 @@
                 <h1 class="title-show">
                     Dettagli ristorante
                 </h1>
-                <div class="title-restaurant-show">
-                    <h3>
-                        Nome: <strong>{{$restaurant->name}}</strong>
-                    </h3>
-                    <h3>
-                        Indirizzo: <strong>{{$restaurant->address}}</strong>
-                    </h3>
-                    <h3>
-                        Telefono: <strong>{{$restaurant->phone}}</strong>
-                    </h3>
-                    <div class="button-create-order">
-                        <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="show button-create-new-show">
-                            Crea nuovo piatto
-                        </a>
-                        <a href="{{ route('admin.orders.details', ['id'=> $restaurant->id]) }}" class="show button-order-new-show">
-                            Ordini
-                        </a>
+                <div class="container-title-restaurant-show">
+                    <div class="title-restaurant-show">
+                        <h3>
+                            Nome: <strong>{{$restaurant->name}}</strong>
+                        </h3>
+                        <h3>
+                            Indirizzo: <strong>{{$restaurant->address}}</strong>
+                        </h3>
+                        <h3>
+                            Telefono: <strong>{{$restaurant->phone}}</strong>
+                        </h3>
+                        <div class="button-create-order">
+                            <a href="{{ route('admin.dishes.create', ['rest'=> $restaurant->id]) }}" class="show button-create-new-show">
+                                Crea nuovo piatto
+                            </a>
+                            <a href="{{ route('admin.orders.details', ['id'=> $restaurant->id]) }}" class="show button-order-new-show">
+                                Ordini
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

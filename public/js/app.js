@@ -2237,6 +2237,7 @@ var app = new Vue({
 
       dropinInstance.requestPaymentMethod(function (error, payload) {
         if (error) console.error(error);
+<<<<<<< HEAD
         document.getElementById('nonce').value = payload.nonce; // form.submit();
 
         document.getElementById('payment-form').submit();
@@ -2265,6 +2266,84 @@ var app = new Vue({
     }).then(function (risposta) {
       // assegno ad array restaurants la risposta API
       _this2.dishesList = risposta.data.results;
+=======
+        document.getElementById('nonce').value = payload.nonce;
+        form.submit();
+      });
+    },
+    clear: function clear() {
+      var _this = this;
+
+      this.nome = '';
+      this.cognome = '';
+      this.indirizzo = '';
+      this.cartCookie = [];
+      this.cart = [];
+      this.totalPriceCookie = 0;
+      this.totalPrice = 0;
+      Cookies.remove('nome');
+      Cookies.remove('email');
+      Cookies.remove('indirizzo');
+      Cookies.remove('cartCookie');
+      Cookies.remove('totalPriceCookie');
+      Cookies.remove('totalQuantity');
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
+        params: {
+          query: this.selectedRestaurant
+        }
+      }).then(function (risposta) {
+        // assegno ad array restaurants la risposta API
+        _this.dishesList = risposta.data.results;
+
+        for (var i = 0; i < _this.dishesList.length; i++) {
+          _this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+        }
+      }); // Cookies.remove('cartCookie')
+    },
+    cartBtnLessPlus: function cartBtnLessPlus() {
+      // funzione per aggiornare lista item nel carrello
+      return this.cart = this.dishesList.filter(function (product) {
+        return product.quantity > 0;
+      });
+    },
+    toggleMenu: function toggleMenu() {
+      // x menu mobile
+      this.isActive = !this.isActive;
+    },
+    searchRestaurants: function searchRestaurants() {
+      var _this2 = this;
+
+      // funzione cerca restaurants
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/restaurants', {
+        params: {
+          query: this.selectedCategory
+        }
+      }).then(function (risposta) {
+        _this2.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+      }); // fine then
+    },
+    // fine searchRestaurants
+    updateCart: function updateCart(product, updateType) {
+      // funzione aggiornamento carrello
+      for (var i = 0; i < this.dishesList.length; i++) {
+        //scorro tutti i piatti
+        if (this.dishesList[i].id == product.id) {
+          // se id piatto corrente = id del prodotto
+          if (updateType == 'subtract') {
+            // se la funzione e' di sottrazione
+            if (this.dishesList[i].quantity != 0) {
+              // se la quantita' e' diversa da 0
+              this.dishesList[i].quantity--; // sottrai 1
+
+              this.totalPrice = Math.round(this.totalPrice * 100) / 100 - Math.round(this.dishesList[i].price * 100) / 100; // sottraggo il prezzo del piatto aggiunto nel carrello al totale
+
+              return this.totalQuantity = this.dishesList.reduce(function (total, product) {
+                return total + product.quantity;
+              }, 0);
+            }
+          } else {
+            this.dishesList[i].quantity++; // altrimenti aggiungi 1
+>>>>>>> modifche_varie
 
       for (var i = 0; i < _this2.dishesList.length; i++) {
         _this2.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
@@ -2358,7 +2437,11 @@ var app = new Vue({
   }), _methods),
   // fine methods
   mounted: function mounted() {
+<<<<<<< HEAD
     var _this5 = this;
+=======
+    var _this3 = this;
+>>>>>>> modifche_varie
 
     this.showModal();
     this.showChart();
@@ -2367,7 +2450,11 @@ var app = new Vue({
         query: this.selectedCategory
       }
     }).then(function (risposta) {
+<<<<<<< HEAD
       _this5.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+=======
+      _this3.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+>>>>>>> modifche_varie
     }); // fine then
 
     var date = new Date();
@@ -2414,6 +2501,7 @@ var app = new Vue({
       }
     }).then(function (risposta) {
       // assegno ad array restaurants la risposta API
+<<<<<<< HEAD
       _this5.dishesList = risposta.data.results;
 
       for (var i = 0; i < _this5.dishesList.length; i++) {
@@ -2423,6 +2511,17 @@ var app = new Vue({
           for (var j = 0; j < _this5.cartCookie.length; j++) {
             if (_this5.cartCookie[j].id == _this5.dishesList[i].id) {
               _this5.dishesList[i] = _this5.cartCookie[j];
+=======
+      _this3.dishesList = risposta.data.results;
+
+      for (var i = 0; i < _this3.dishesList.length; i++) {
+        _this3.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+
+        if (_this3.cartCookie.length) {
+          for (var j = 0; j < _this3.cartCookie.length; j++) {
+            if (_this3.cartCookie[j].id == _this3.dishesList[i].id) {
+              _this3.dishesList[i] = _this3.cartCookie[j];
+>>>>>>> modifche_varie
             }
           }
         }
@@ -2433,12 +2532,19 @@ var app = new Vue({
       var navBar = document.getElementById('menu-fixed');
 
       if (window.scrollY > navBar.offsetTop) {
+<<<<<<< HEAD
         _this5.active = true;
         _this5.btnGoUp = true;
         document.getElementById('menu-fixed').classList.add("sticky"); // document.getElementsByClassName('btn-go-up').classList.add("active");
       } else {
         _this5.active = false;
         _this5.btnGoUp = false;
+=======
+        _this3.active = true;
+        document.getElementById('menu-fixed').classList.add("sticky");
+      } else {
+        _this3.active = false;
+>>>>>>> modifche_varie
         document.getElementById('menu-fixed').classList.remove("sticky");
       }
     };

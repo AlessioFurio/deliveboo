@@ -10004,12 +10004,13 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.container .row .col-xs-12 a {
-  color: #d2ac7b;
-  border: 1px solid #d2ac7b;
-  margin-top: 20px;
-}
-.container .row .col-xs-12 a:hover {
+.btn-outline-dark:hover {
   color: #ffffff;
+  border: 1px solid #d2ac7b;
   background-color: #d2ac7b;
+}
+
+.chart-buttons {
+  display: flex;
+  justify-content: space-between;
 }

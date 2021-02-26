@@ -17,6 +17,10 @@ body {
   font-family: "Iceberg", cursive;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
@@ -352,12 +356,13 @@ header.active .menu-mobile {
 }
 
 .text-header .principal-text {
-  font-size: 30px;
   color: white;
   text-align: center;
   padding: 15px;
   line-height: 1.3;
-  font-family: "Parisienne", cursive !important;
+  font-family: "ballet", cursive;
+  font-size: 102px;
+  padding-top: 405px;
 }
 
 @media screen and (min-width: 500px) {
@@ -401,12 +406,12 @@ header.active .menu-mobile {
 }
 @media screen and (min-width: 1024px) {
   header .text-header .principal-text {
-    font-size: 50px;
+    font-size: 102px;
   }
 }
 @media screen and (min-width: 1300px) {
   header .text-header .principal-text {
-    font-size: 50px;
+    font-size: 102px;
   }
 }
 .wp-header-dashboard {
@@ -428,7 +433,6 @@ header.active .menu-mobile {
   font-size: 30px;
   letter-spacing: 0.1em;
   margin-bottom: 30px;
-  font-family: "Ballet", cursive;
 }
 .how-to-order .steps {
   width: 100%;
@@ -496,6 +500,7 @@ header.active .menu-mobile {
   margin-left: 10px;
   border-radius: 6px;
   border-style: none;
+  cursor: pointer;
 }
 .card-category .container-card-category .container-card {
   margin: auto;
@@ -1059,7 +1064,7 @@ header.active .menu-mobile {
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index {
   display: flex;
-  height: calc(100vh - 100px - 49px);
+  height: calc(100vh - 100px - 50px);
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
   background-color: #101927;
@@ -1660,6 +1665,9 @@ header.active .menu-mobile {
   border: 3px solid #d2ac7b;
   margin: 3px;
   transition: background-color 2s;
+}
+.container-card-restaurant-show .restaurants-show .container-button-action-show .button-show:hover {
+  border-radius: 50%;
 }
 .container-card-restaurant-show .restaurants-show .container-button-action-show .button-dettagli-show {
   color: #101927;

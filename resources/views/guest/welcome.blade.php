@@ -33,14 +33,14 @@
           <div class="menu-filter">
               <h3 class="ricerca-avanzata">Seleziona una categoria</h3>
               <div class="selection">
-                <select class="category-select" name="" v-model="selectedCategory">
+                <select @change="searchRestaurants()" class="category-select" name="" v-model="selectedCategory">
                   <option value="">Categoria</option>
                   @foreach ($categories as $category)
                     <option :value="{{$category->id}}">{{$category->name}}</option>
                   @endforeach
                 </select>
-                <button @click="searchRestaurants()" type="button" name="button">Cerca</button>
-              </div>
+                {{-- <button  type="button" name="button">Cerca</button>
+              </div> --}}
           </div>
           <div class="container-card">
               <div class="cards">

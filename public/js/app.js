@@ -2205,27 +2205,42 @@ var app = new Vue({
       // Cookies.set('cognome', this.cognome, { expires: date })
       // Cookies.set('indirizzo', this.indirizzo, { expires: date })
       // Cookies.set('cartCookie', this.cart, { expires: date })
+      // const form = document.getElementById('payment-form');
 
-      var form = document.getElementById('payment-form');
       dropinInstance.requestPaymentMethod(function (error, payload) {
         if (error) console.error(error);
         document.getElementById('nonce').value = payload.nonce;
-        form.submit();
+        document.getElementById('payment-form').submit();
       });
     },
-    Clear: function Clear() {
+    clear: function clear() {
+      var _this = this;
+
+      this.nome = '';
+      this.cognome = '';
+      this.indirizzo = '';
+      this.cartCookie = [];
+      this.cart = [];
+      this.totalPriceCookie = 0;
+      this.totalPrice = 0;
       Cookies.remove('nome');
       Cookies.remove('email');
       Cookies.remove('indirizzo');
       Cookies.remove('cartCookie');
       Cookies.remove('totalPriceCookie');
       Cookies.remove('totalQuantity');
-      this.nome = '';
-      this.cognome = '';
-      this.indirizzo = '';
-      this.cartCookie = [];
-      this.totalPriceCookie = 0;
-      Cookies.remove('cartCookie');
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
+        params: {
+          query: this.selectedRestaurant
+        }
+      }).then(function (risposta) {
+        // assegno ad array restaurants la risposta API
+        _this.dishesList = risposta.data.results;
+
+        for (var i = 0; i < _this.dishesList.length; i++) {
+          _this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+        }
+      }); // Cookies.remove('cartCookie')
     },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
@@ -2238,7 +2253,7 @@ var app = new Vue({
       this.isActive = !this.isActive;
     },
     searchRestaurants: function searchRestaurants() {
-      var _this = this;
+      var _this2 = this;
 
       // funzione cerca restaurants
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/restaurants', {
@@ -2246,7 +2261,7 @@ var app = new Vue({
           query: this.selectedCategory
         }
       }).then(function (risposta) {
-        _this.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+        _this2.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
       }); // fine then
     },
     // fine searchRestaurants
@@ -2284,7 +2299,7 @@ var app = new Vue({
   },
   // fine methods
   mounted: function mounted() {
-    var _this2 = this;
+    var _this3 = this;
 
     this.showModal();
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/restaurants', {
@@ -2292,7 +2307,7 @@ var app = new Vue({
         query: this.selectedCategory
       }
     }).then(function (risposta) {
-      _this2.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
+      _this3.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
     }); // fine then
 
     var date = new Date();
@@ -2339,15 +2354,15 @@ var app = new Vue({
       }
     }).then(function (risposta) {
       // assegno ad array restaurants la risposta API
-      _this2.dishesList = risposta.data.results;
+      _this3.dishesList = risposta.data.results;
 
-      for (var i = 0; i < _this2.dishesList.length; i++) {
-        _this2.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+      for (var i = 0; i < _this3.dishesList.length; i++) {
+        _this3.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 
-        if (_this2.cartCookie.length) {
-          for (var j = 0; j < _this2.cartCookie.length; j++) {
-            if (_this2.cartCookie[j].id == _this2.dishesList[i].id) {
-              _this2.dishesList[i] = _this2.cartCookie[j];
+        if (_this3.cartCookie.length) {
+          for (var j = 0; j < _this3.cartCookie.length; j++) {
+            if (_this3.cartCookie[j].id == _this3.dishesList[i].id) {
+              _this3.dishesList[i] = _this3.cartCookie[j];
             }
           }
         }
@@ -2358,10 +2373,10 @@ var app = new Vue({
       var navBar = document.getElementById('menu-fixed');
 
       if (window.scrollY > navBar.offsetTop) {
-        _this2.active = true;
+        _this3.active = true;
         document.getElementById('menu-fixed').classList.add("sticky");
       } else {
-        _this2.active = false;
+        _this3.active = false;
         document.getElementById('menu-fixed').classList.remove("sticky");
       }
     };
@@ -2399,7 +2414,7 @@ var app = new Vue({
       Cookies.set('indirizzo', this.indirizzo);
     },
     cart: function cart(newCart) {
-      sessionStorage.cartCookie = JSON.stringify(newCart);
+      // sessionStorage.cartCookie = JSON.stringify(newCart);
       this.cartCookie = this.cart;
       Cookies.set('cartCookie', this.cartCookie);
     },
@@ -2408,6 +2423,8 @@ var app = new Vue({
       if (!this.cartCookie.length) {
         this.totalPrice = 0;
         this.totalPriceCookie = 0;
+        this.cart = [];
+        this.cartCookie = [];
       }
 
       if (this.cartCookie.length == 1) {
@@ -2450,9 +2467,9 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\chart.scss */"./resources/sass/chart.scss");
 
 
 /***/ })

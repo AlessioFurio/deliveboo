@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Buyer;
 use App\Payment;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailFromOrder;
 
 class PaymentController extends Controller
 {
@@ -43,6 +45,7 @@ class PaymentController extends Controller
     $new_payment->payment_method_id = 2 ;
     $new_payment->save();
 
+
     $gateway = new \Braintree\Gateway([
       'environment' => 'sandbox',
       'merchantId' => '96bqgdfznc5j7zx5',
@@ -62,6 +65,7 @@ class PaymentController extends Controller
     //   'result' => $result
     // ];
     // $request->session()->put('asd', 'asd');
+    Mail::to('nuovordine@deliveboo.com')->send(new MailFromOrder($new_payment));
 
     return redirect()->route('welcome')->with(['transaction_result' => $result->success]);
   }

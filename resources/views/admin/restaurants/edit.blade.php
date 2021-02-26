@@ -55,7 +55,7 @@
                                         <input name="categories[]" type="checkbox" value="{{ $category->id }}"
                                         {{ in_array($category->id , old('categories', [])) ? 'checked=checked' : '' }}>
                                         <label>
-                                            {{ $tag->name }}
+                                            {{ $restaurant->name }}
                                         </label>
                                         @else
                                         <input name="categories[]"  type="checkbox" value="{{ $category->id }}"

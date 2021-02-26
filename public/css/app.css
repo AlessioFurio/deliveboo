@@ -554,27 +554,27 @@ header.active .menu-mobile {
   flex-wrap: wrap;
 }
 .card-category .container-card-category .container-card .cards .card {
-  margin: 0 50px 50px 50px;
+  margin: 100px 50px;
+  min-width: 250px;
+  min-height: 150px;
   max-width: 400px;
-  max-height: 250px;
+  max-height: 270px;
   position: relative;
   box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
-}
-.card-category .container-card-category .container-card .cards .card:hover {
   border: 1px solid #d2ac7b;
+  position: relative;
 }
 .card-category .container-card-category .container-card .cards .card a {
-  max-width: 400px;
-  max-height: 280px;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   text-align: center;
   color: #d2ac7b;
+  display: inline-block;
 }
 .card-category .container-card-category .container-card .cards .card a img {
-  min-width: 100%;
-  min-height: 80%;
-  max-width: 100%;
-  max-height: 80%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
@@ -582,11 +582,33 @@ header.active .menu-mobile {
 .card-category .container-card-category .container-card .cards .card a p {
   font-size: 14px;
   margin-top: 5px;
+  padding-bottom: 13px;
 }
 .card-category .container-card-category .container-card .cards .card .card-restaurant-details {
-  border: 1px solid red;
-  width: 200px;
-  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 1.5s;
+  background-color: #fff;
+  transform: scale(0);
+  transform-origin: bottom;
+  border: 1px solid #d2ac7b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.card-category .container-card-category .container-card .cards .card .card-restaurant-details h2 {
+  color: #000;
+  text-align: center;
+}
+.card-category .container-card-category .container-card .cards .card .card-restaurant-details p {
+  padding: 5px;
+}
+.card-category .container-card-category .container-card .cards .card .card-restaurant-details p i {
+  margin-right: 5px;
+}
+.card-category .container-card-category .container-card .cards .card:hover .card-restaurant-details {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media screen and (min-width: 480px) {

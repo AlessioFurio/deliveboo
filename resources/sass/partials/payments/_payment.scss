@@ -24,8 +24,29 @@
   }
 }
 
-.modal-container {
+.message-container {
+  width: 100%;
   height: calc(100vh - 425px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 150px;
+  }
+
+  .btn {
+    color: $gold;
+    border: 1px solid $gold;
+    margin-top: 20px;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $gold;
+    }
+  }
+
 }
 
 /* The Modal (background) */

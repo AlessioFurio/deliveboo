@@ -36,6 +36,11 @@
                     padding-bottom: 10px;
                     color: white;
 
+                    &:hover {
+                            color: $gold;
+
+                    }
+
                 }
             }
         }
@@ -149,7 +154,7 @@
     }
 
     .container-social-online .social-online .social a {
-        
+
 
         &:nth-child(2) i{
             margin-left: 0px;

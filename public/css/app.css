@@ -90,7 +90,7 @@ header.active::after {
   background: #040e10;
 }
 header .wp-header {
-  background: url("/images/french-fries-hamburger-fast-food.jpg");
+  background: url("/images/tasty-appetizing-italian-mediterranean-food-ingredients-flat-lay-dark-old-black-background-top-view-copy-space.jpg");
   height: 80vh;
   background-attachment: fixed;
   background-size: cover;
@@ -386,8 +386,8 @@ header.active .menu-mobile {
   padding: 15px;
   line-height: 1.3;
   font-family: "Dancing Script", cursive;
-  font-size: 100px;
-  padding-top: 366px;
+  font-size: 80px;
+  padding-top: 250px;
 }
 
 @media screen and (min-width: 500px) {
@@ -413,6 +413,16 @@ header.active .menu-mobile {
   header .header-log-in .logo span {
     font-size: 50px;
   }
+
+  .principal-text {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    line-height: 1.3;
+    font-family: "Dancing Script", cursive;
+    font-size: 100px;
+    padding-top: 250px;
+  }
 }
 @media screen and (min-width: 768px) {
   header .header-log-in {
@@ -432,11 +442,19 @@ header.active .menu-mobile {
 @media screen and (min-width: 1024px) {
   header .text-header .principal-text {
     font-size: 125px;
+    padding-top: 366px;
   }
 }
 @media screen and (min-width: 1300px) {
   header .text-header .principal-text {
     font-size: 125px;
+    padding-top: 366px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  header .text-header .principal-text {
+    font-size: 125px;
+    padding-top: 280px;
   }
 }
 .wp-header-dashboard {
@@ -659,6 +677,9 @@ header.active .menu-mobile {
     font-size: 14px;
     padding-bottom: 10px;
     color: white;
+  }
+  .container-list .list ul li:hover {
+    color: #d2ac7b;
   }
 
   .container-social-online {

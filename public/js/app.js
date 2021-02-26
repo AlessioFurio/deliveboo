@@ -2158,6 +2158,7 @@ var app = new Vue({
   data: {
     active: false,
     isActive: false,
+    btnGoUp: false,
     restaurants: [],
     dishesList: [],
     selectedCategory: '',
@@ -2175,6 +2176,13 @@ var app = new Vue({
     valueInputPassword: ''
   },
   methods: {
+    goUp: function goUp() {
+      // x button scrollUP
+      var element = document.getElementById('wp-header');
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    },
     showModal: function showModal() {
       console.log('ok');
       var modal = document.getElementById("myModal");
@@ -2239,12 +2247,13 @@ var app = new Vue({
       // Cookies.set('cognome', this.cognome, { expires: date })
       // Cookies.set('indirizzo', this.indirizzo, { expires: date })
       // Cookies.set('cartCookie', this.cart, { expires: date })
+      // const form = document.getElementById('payment-form');
 
-      var form = document.getElementById('payment-form');
       dropinInstance.requestPaymentMethod(function (error, payload) {
         if (error) console.error(error);
-        document.getElementById('nonce').value = payload.nonce;
-        form.submit();
+        document.getElementById('nonce').value = payload.nonce; // form.submit();
+
+        document.getElementById('payment-form').submit();
       });
     },
     clear: function clear() {
@@ -2409,9 +2418,11 @@ var app = new Vue({
 
       if (window.scrollY > navBar.offsetTop) {
         _this3.active = true;
-        document.getElementById('menu-fixed').classList.add("sticky");
+        _this3.btnGoUp = true;
+        document.getElementById('menu-fixed').classList.add("sticky"); // document.getElementsByClassName('btn-go-up').classList.add("active");
       } else {
         _this3.active = false;
+        _this3.btnGoUp = false;
         document.getElementById('menu-fixed').classList.remove("sticky");
       }
     };
@@ -2502,9 +2513,9 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Esercizi-Boolean\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
 
 
 /***/ })

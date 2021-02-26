@@ -39,7 +39,7 @@
       </div>
 
       <div class="offset-xs-1 col-xs-10 col-md-7 col-lg-8">
-        <form action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
+        <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
           @csrf
           @method('POST')
           <h4 class="mb-3">Dati di consegna</h4>
@@ -99,7 +99,6 @@
 
   <script type="text/javascript">
 
-    if (document.getElementById('#dropin-container')) {
       braintree.dropin.create(
         {
           authorization: '{{$clientToken}}',
@@ -124,7 +123,6 @@
         });
         // });
 
-    }
 
     </script>
   @include('partials.footer')

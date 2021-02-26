@@ -6,10 +6,12 @@
         <div id="menu-fixed">
 
             <div class="header-log-in">
-                <div class="logo">
-                        <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
-                        <span>Deliveboo</span>
-                </div>
+                <a href="{{ route('welcome') }}">
+                    <div class="logo">
+                            <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
+                            <span>Deliveboo</span>
+                    </div>
+                </a>
                 <div class="header-right">
                     <div class="toggle-menu"  @click="toggleMenu()">
                         <i class="fas fa-bars"></i>

@@ -7,6 +7,7 @@ var app = new Vue({
 	data: {
 		active: false,
         isActive: false,
+		btnGoUp:false,
 		restaurants: [],
 		dishesList: [],
 		selectedCategory: '',
@@ -26,6 +27,11 @@ var app = new Vue({
 
 
 	methods: {
+
+		goUp() {  // x button scrollUP
+			const element = document.getElementById('wp-header');
+    			element.scrollIntoView({ behavior: 'smooth' });
+		},
 
 		showModal() {
 			console.log('ok');
@@ -222,12 +228,16 @@ var app = new Vue({
       		let navBar = document.getElementById('menu-fixed');
       			if(window.scrollY > navBar.offsetTop){
         		this.active = true;
+				this.btnGoUp = true;
 				document.getElementById('menu-fixed').classList.add("sticky");
+				// document.getElementsByClassName('btn-go-up').classList.add("active");
         		} else {
         		this.active = false;
+				this.btnGoUp = false;
 				document.getElementById('menu-fixed').classList.remove("sticky");
     		}
     	}
+
 
 
 		if(sessionStorage.nome){

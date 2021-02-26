@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
 
@@ -30,17 +30,19 @@
 
         <div id="root">
             @include('partials.header')
+            
 
             @yield('content')
 
-
             @include('partials.footer')
+
         </div>
 
 
 
 
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script>
+
         <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
     </body>
 </html>

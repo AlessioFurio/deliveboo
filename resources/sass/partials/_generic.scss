@@ -25,3 +25,17 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
+
+.btn-go-up {
+    color: red;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transition: 1s;
+    transform-origin: bottom;
+    transform: scale(0);
+}
+
+.btn-go-up.active {
+    transform: scale(1);
+}

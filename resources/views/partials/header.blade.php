@@ -1,6 +1,6 @@
 <header :class="isActive ? 'active' : ''">
 
-    <div class="wp-header">
+    <div id="wp-header" class="wp-header">
         <div class="filter"></div>
 
         <div id="menu-fixed">
@@ -33,6 +33,7 @@
                     <div class="toggle-menu"  @click="toggleMenu()">
                         <i class="fas fa-bars"></i>
                     </div>
+                    <button :class="btnGoUp ? 'active' : ''" class="btn-go-up" @click="goUp()" type="button" name="button">Torna su</button>
                 </div>
 
             </div>

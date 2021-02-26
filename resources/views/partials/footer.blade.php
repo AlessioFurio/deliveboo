@@ -4,12 +4,12 @@
             <div class="container-list">
                 <div class="list">
                     <ul>
-                        <li>Home</li>
-                        <li>Menu</li>
-                        <li>Reservation</li>
-                        <li>Shop</li>
-                        <li>News</li>
-                        <li>Contact</li>
+                        <a href="{{ route('welcome') }}"><li>Home</li></a>
+                        <a href="#"><li>Menu</li></a>
+                        <a href="#"><li>Reservation</li></a>
+                        <a href="#"><li>Shop</li></a>
+                        <a href="#"><li>News</li></a>
+                        <a href="{{ route('contacts') }}"><li>Contact</li></a>
                     </ul>
                 </div>
             </div>

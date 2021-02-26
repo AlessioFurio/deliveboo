@@ -36,6 +36,11 @@
                     padding-bottom: 10px;
                     color: white;
 
+                    &:hover {
+                            color: $gold;
+
+                    }
+
                 }
             }
         }

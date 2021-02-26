@@ -6,10 +6,12 @@
         <div id="menu-fixed">
 
             <div class="header-log-in">
-                <div class="logo">
-                        <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
-                        <span>Deliveboo</span>
-                </div>
+                <a href="{{ route('welcome') }}">
+                    <div class="logo">
+                            <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
+                            <span>Deliveboo</span>
+                    </div>
+                </a>
                 <div class="header-right">
 
                     {{-- <div v-cloak class="cart">

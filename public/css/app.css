@@ -2779,8 +2779,25 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
   cursor: pointer;
 }
 
-.modal-container {
+.message-container {
+  width: 100%;
   height: calc(100vh - 425px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.message-container img {
+  width: 150px;
+}
+.message-container .btn {
+  color: #d2ac7b;
+  border: 1px solid #d2ac7b;
+  margin-top: 20px;
+}
+.message-container .btn:hover {
+  color: #ffffff;
+  background-color: #d2ac7b;
 }
 
 /* The Modal (background) */

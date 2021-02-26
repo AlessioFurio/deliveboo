@@ -86,6 +86,7 @@ var app = new Vue({
 			this.indirizzo = ''
 			this.cartCookie = [];
 			this.totalPriceCookie = 0;
+			this.totalPrice = 0;
 			Cookies.remove('cartCookie')
   		},
 

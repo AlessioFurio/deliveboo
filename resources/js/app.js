@@ -73,21 +73,37 @@ var app = new Vue({
 
     	},
 
-    	Clear () {
-			Cookies.remove('nome')
-			Cookies.remove('email')
-			Cookies.remove('indirizzo')
-			Cookies.remove('cartCookie')
-			Cookies.remove('totalPriceCookie')
-			Cookies.remove('totalQuantity')
-
-			this.nome = ''
-			this.cognome = ''
-			this.indirizzo = ''
+    	clear() {
+			this.nome = '';
+			this.cognome = '';
+			this.indirizzo = '';
 			this.cartCookie = [];
+			this.cart = [];
 			this.totalPriceCookie = 0;
 			this.totalPrice = 0;
-			Cookies.remove('cartCookie')
+			Cookies.remove('nome');
+			Cookies.remove('email');
+			Cookies.remove('indirizzo');
+			Cookies.remove('cartCookie');
+			Cookies.remove('totalPriceCookie');
+			Cookies.remove('totalQuantity');
+			axios
+			.get('http://localhost:8000/api/dishes', {
+				params:{
+					query: this.selectedRestaurant
+				}
+			})
+			.then((risposta) =>{
+				// assegno ad array restaurants la risposta API
+				this.dishesList = risposta.data.results;
+				for (var i = 0; i < this.dishesList.length; i++) {
+					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+
+				}
+
+			});
+
+			// Cookies.remove('cartCookie')
   		},
 
 
@@ -193,12 +209,12 @@ var app = new Vue({
 			for (var i = 0; i < this.dishesList.length; i++) {
 				this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 				if (this.cartCookie.length) {
-						for (var j = 0; j < this.cartCookie.length; j++) {
-							if (this.cartCookie[j].id == this.dishesList[i].id) {
-								this.dishesList[i] = this.cartCookie[j];
-							}
+					for (var j = 0; j < this.cartCookie.length; j++) {
+						if (this.cartCookie[j].id == this.dishesList[i].id) {
+							this.dishesList[i] = this.cartCookie[j];
 						}
 					}
+				}
 			}
 
 		}); // fine then
@@ -249,9 +265,10 @@ var app = new Vue({
 		},
 
 		cart(newCart){
-			sessionStorage.cartCookie = JSON.stringify(newCart);
+			// sessionStorage.cartCookie = JSON.stringify(newCart);
 			this.cartCookie = this.cart;
       		Cookies.set('cartCookie', this.cartCookie);
+
 		},
 
 		totalPrice(){
@@ -259,6 +276,8 @@ var app = new Vue({
 			if (!this.cartCookie.length) {
 				this.totalPrice = 0;
 				this.totalPriceCookie = 0;
+				this.cart = [];
+				this.cartCookie = [];
 			}
 			if (this.cartCookie.length == 1) {
 				this.totalPrice = this.cartCookie[0].price * this.cartCookie[0].quantity;

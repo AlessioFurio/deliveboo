@@ -137,7 +137,7 @@ var app = new Vue({
 	      });
 			}
 		},
-<<<<<<< HEAD
+
 		clear() {
 			this.nome = '';
 			this.cognome = '';
@@ -197,8 +197,6 @@ var app = new Vue({
 
     	},
 
-=======
-
 		Save (event) {
 			event.preventDefault(); //blocca il form per far eseguire il resto del codice
 
@@ -226,7 +224,7 @@ var app = new Vue({
     	},
 
 
->>>>>>> merge-general
+
 
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello

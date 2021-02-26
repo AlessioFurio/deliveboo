@@ -385,9 +385,9 @@ header.active .menu-mobile {
   text-align: center;
   padding: 15px;
   line-height: 1.3;
-  font-family: "ballet", cursive;
-  font-size: 102px;
-  padding-top: 405px;
+  font-family: "Dancing Script", cursive;
+  font-size: 100px;
+  padding-top: 366px;
 }
 
 @media screen and (min-width: 500px) {
@@ -426,17 +426,17 @@ header.active .menu-mobile {
   }
 
   header .text-header .principal-text {
-    font-size: 50px;
+    font-size: 125px;
   }
 }
 @media screen and (min-width: 1024px) {
   header .text-header .principal-text {
-    font-size: 102px;
+    font-size: 125px;
   }
 }
 @media screen and (min-width: 1300px) {
   header .text-header .principal-text {
-    font-size: 102px;
+    font-size: 125px;
   }
 }
 .wp-header-dashboard {
@@ -496,7 +496,7 @@ header.active .menu-mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #090d0e;
+  background-color: #fff;
 }
 .card-category .container-card-category .menu-filter h3 {
   margin-bottom: 40px;

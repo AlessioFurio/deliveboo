@@ -10004,24 +10004,12 @@ h3 {
     border-color: #dee2e6;
   }
 }
-main {
-  height: calc(100vh - 159px);
+.container .row .col-xs-12 a {
+  color: #d2ac7b;
+  border: 1px solid #d2ac7b;
+  margin-top: 20px;
 }
-main .container-fluid, main .container-sm, main .container-md, main .container-lg, main .container-xl {
-  height: 100%;
-}
-main .dashboard {
-  height: 100%;
-}
-main .dashboard .row {
-  height: 100%;
-}
-main .dashboard .row .dashboard-body-menu {
-  width: 100%;
-  height: 100%;
-  background-color: #101927;
-}
-main .dashboard .row .dashboard-body-menu ul li {
-  list-style-type: none;
-  border-bottom: 1px solid #fff;
+.container .row .col-xs-12 a:hover {
+  color: #ffffff;
+  background-color: #d2ac7b;
 }

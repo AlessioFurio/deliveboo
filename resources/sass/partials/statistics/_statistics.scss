@@ -1,10 +1,10 @@
-.container .row .col-xs-12 a {
-  color: #d2ac7b;
+.btn-outline-dark:hover {
+  color: #ffffff;
   border: 1px solid #d2ac7b;
-  margin-top: 20px;
+  background-color: #d2ac7b;
+}
 
-  &:hover {
-    color: #ffffff;
-    background-color: #d2ac7b;
-  }
+.chart-buttons {
+  display: flex;
+  justify-content: space-between;
 }

@@ -46,6 +46,31 @@
         }
 
     }
+    
+    .logo {
+      max-width: 50px;
+      max-height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      h3 {
+        color: #d2ac7b;
+        font-family: 'Ballet', cursive;
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin-left: 10px;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+    }
 
     .container-social-online {
         width: 30%;
@@ -62,23 +87,14 @@
             justify-content: center;
             align-items: center;
 
-            h3 {
-                font-size: 20px;
-                color: $gold;
-                border: 1px solid $gold;
-                padding: 20px;
-                text-transform: uppercase;
-                margin-bottom: 40px;
-            }
 
-            span {
-                color: #4c4d4e;
-                font-size: 16px;
-                text-transform: uppercase;
-                margin-bottom: 20px;
+          span {
+            color: #4c4d4e;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
 
-            }
-
+          }
             i {
                 padding: 5px 20px;
                 border-radius: 6px;

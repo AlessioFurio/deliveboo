@@ -98,7 +98,6 @@ var app = new Vue({
 				this.dishesList = risposta.data.results;
 				for (var i = 0; i < this.dishesList.length; i++) {
 					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-
 				}
 
 			});

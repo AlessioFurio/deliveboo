@@ -117,14 +117,14 @@ var app = new Vue({
 			// Cookies.set('indirizzo', this.indirizzo, { expires: date })
 			// Cookies.set('cartCookie', this.cart, { expires: date })
 
-			const form = document.getElementById('payment-form');
+			// const form = document.getElementById('payment-form');
 
 			dropinInstance.requestPaymentMethod((error, payload) =>
 			{
 				if (error) console.error(error);
 
 				document.getElementById('nonce').value = payload.nonce;
-				form.submit();
+				document.getElementById('payment-form').submit();
 			});
 
     	},

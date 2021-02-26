@@ -2239,12 +2239,12 @@ var app = new Vue({
       // Cookies.set('cognome', this.cognome, { expires: date })
       // Cookies.set('indirizzo', this.indirizzo, { expires: date })
       // Cookies.set('cartCookie', this.cart, { expires: date })
+      // const form = document.getElementById('payment-form');
 
-      var form = document.getElementById('payment-form');
       dropinInstance.requestPaymentMethod(function (error, payload) {
         if (error) console.error(error);
         document.getElementById('nonce').value = payload.nonce;
-        form.submit();
+        document.getElementById('payment-form').submit();
       });
     },
     clear: function clear() {
@@ -2502,9 +2502,9 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Boolean\Esercizi\deliveboo-progetto\deliveboo\resources\sass\chart.scss */"./resources/sass/chart.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\chart.scss */"./resources/sass/chart.scss");
 
 
 /***/ })

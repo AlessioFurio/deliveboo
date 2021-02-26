@@ -2158,6 +2158,7 @@ var app = new Vue({
   data: {
     active: false,
     isActive: false,
+    btnGoUp: false,
     restaurants: [],
     dishesList: [],
     selectedCategory: '',
@@ -2175,6 +2176,13 @@ var app = new Vue({
     valueInputPassword: ''
   },
   methods: {
+    goUp: function goUp() {
+      // x button scrollUP
+      var element = document.getElementById('wp-header');
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    },
     showModal: function showModal() {
       console.log('ok');
       var modal = document.getElementById("myModal");
@@ -2409,9 +2417,11 @@ var app = new Vue({
 
       if (window.scrollY > navBar.offsetTop) {
         _this3.active = true;
-        document.getElementById('menu-fixed').classList.add("sticky");
+        _this3.btnGoUp = true;
+        document.getElementById('menu-fixed').classList.add("sticky"); // document.getElementsByClassName('btn-go-up').classList.add("active");
       } else {
         _this3.active = false;
+        _this3.btnGoUp = false;
         document.getElementById('menu-fixed').classList.remove("sticky");
       }
     };

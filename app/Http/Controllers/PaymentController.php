@@ -65,7 +65,8 @@ class PaymentController extends Controller
     //   'result' => $result
     // ];
     // $request->session()->put('asd', 'asd');
-    Mail::to('nuovordine@deliveboo.com')->send(new MailFromOrder($new_payment));
+    Mail::to('adminordine@deliveboo.com')->send(new MailFromOrder($new_payment));
+    Mail::to('cliente@deliveboo.com')->send(new MailFromOrder($new_payment));
 
     return redirect()->route('welcome')->with(['transaction_result' => $result->success]);
   }

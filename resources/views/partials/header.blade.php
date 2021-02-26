@@ -33,7 +33,7 @@
                     <div class="toggle-menu"  @click="toggleMenu()">
                         <i class="fas fa-bars"></i>
                     </div>
-                    <button :class="btnGoUp ? 'active' : ''" class="btn-go-up" @click="goUp()" type="button" name="button">Torna su</button>
+                    <div :class="btnGoUp ? 'active' : ''" class="btn-go-up" @click="goUp()" type="button" name="button"><i class="fas fa-arrow-alt-circle-up"></i></div>
                 </div>
 
             </div>

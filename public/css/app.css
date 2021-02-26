@@ -26,13 +26,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-go-up {
-  color: red;
+  border: none;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 20px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: #ccd6dd;
   transition: 1s;
   transform-origin: bottom;
   transform: scale(0);
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-go-up:hover {
+  background-color: #d2ac7b;
+}
+.btn-go-up i {
+  font-size: 30px;
 }
 
 .btn-go-up.active {

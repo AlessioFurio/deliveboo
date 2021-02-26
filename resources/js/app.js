@@ -27,6 +27,37 @@ var app = new Vue({
 
 
 	methods: {
+		clear() {
+			this.nome = '';
+			this.cognome = '';
+			this.indirizzo = '';
+			this.cartCookie = [];
+			this.cart = [];
+			this.totalPriceCookie = 0;
+			this.totalPrice = 0;
+			Cookies.remove('nome');
+			Cookies.remove('email');
+			Cookies.remove('indirizzo');
+			Cookies.remove('cartCookie');
+			Cookies.remove('totalPriceCookie');
+			Cookies.remove('totalQuantity');
+			axios
+			.get('http://localhost:8000/api/dishes', {
+				params:{
+					query: this.selectedRestaurant
+				}
+			})
+			.then((risposta) =>{
+				// assegno ad array restaurants la risposta API
+				this.dishesList = risposta.data.results;
+				for (var i = 0; i < this.dishesList.length; i++) {
+					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+				}
+
+			});
+
+			// Cookies.remove('cartCookie')
+  		},
 
 		goUp() {  // x button scrollUP
 			const element = document.getElementById('wp-header');
@@ -133,37 +164,7 @@ var app = new Vue({
 
     	},
 
-    	clear() {
-			this.nome = '';
-			this.cognome = '';
-			this.indirizzo = '';
-			this.cartCookie = [];
-			this.cart = [];
-			this.totalPriceCookie = 0;
-			this.totalPrice = 0;
-			Cookies.remove('nome');
-			Cookies.remove('email');
-			Cookies.remove('indirizzo');
-			Cookies.remove('cartCookie');
-			Cookies.remove('totalPriceCookie');
-			Cookies.remove('totalQuantity');
-			axios
-			.get('http://localhost:8000/api/dishes', {
-				params:{
-					query: this.selectedRestaurant
-				}
-			})
-			.then((risposta) =>{
-				// assegno ad array restaurants la risposta API
-				this.dishesList = risposta.data.results;
-				for (var i = 0; i < this.dishesList.length; i++) {
-					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-				}
 
-			});
-
-			// Cookies.remove('cartCookie')
-  		},
 
 
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello

@@ -2176,6 +2176,35 @@ var app = new Vue({
     valueInputPassword: ''
   },
   methods: {
+    clear: function clear() {
+      var _this = this;
+
+      this.nome = '';
+      this.cognome = '';
+      this.indirizzo = '';
+      this.cartCookie = [];
+      this.cart = [];
+      this.totalPriceCookie = 0;
+      this.totalPrice = 0;
+      Cookies.remove('nome');
+      Cookies.remove('email');
+      Cookies.remove('indirizzo');
+      Cookies.remove('cartCookie');
+      Cookies.remove('totalPriceCookie');
+      Cookies.remove('totalQuantity');
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
+        params: {
+          query: this.selectedRestaurant
+        }
+      }).then(function (risposta) {
+        // assegno ad array restaurants la risposta API
+        _this.dishesList = risposta.data.results;
+
+        for (var i = 0; i < _this.dishesList.length; i++) {
+          _this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+        }
+      }); // Cookies.remove('cartCookie')
+    },
     goUp: function goUp() {
       // x button scrollUP
       var element = document.getElementById('wp-header');
@@ -2255,35 +2284,6 @@ var app = new Vue({
 
         document.getElementById('payment-form').submit();
       });
-    },
-    clear: function clear() {
-      var _this = this;
-
-      this.nome = '';
-      this.cognome = '';
-      this.indirizzo = '';
-      this.cartCookie = [];
-      this.cart = [];
-      this.totalPriceCookie = 0;
-      this.totalPrice = 0;
-      Cookies.remove('nome');
-      Cookies.remove('email');
-      Cookies.remove('indirizzo');
-      Cookies.remove('cartCookie');
-      Cookies.remove('totalPriceCookie');
-      Cookies.remove('totalQuantity');
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
-        params: {
-          query: this.selectedRestaurant
-        }
-      }).then(function (risposta) {
-        // assegno ad array restaurants la risposta API
-        _this.dishesList = risposta.data.results;
-
-        for (var i = 0; i < _this.dishesList.length; i++) {
-          _this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-        }
-      }); // Cookies.remove('cartCookie')
     },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello

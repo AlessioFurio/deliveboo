@@ -50,7 +50,11 @@
                           <img v-else :src="'{{url('/storage')}}' + '/' + restaurant.cover" alt="">
                           <p>@{{ restaurant.name }}</p>
                       </a>
-                      
+                      <div class="card-restaurant-details">
+                          <h2>Dettagli ristoranti</h2>
+                          <p><i class="fas fa-phone-alt"></i>@{{restaurant.phone}}</p>
+                          <p><i class="fas fa-map-marker-alt"></i>@{{restaurant.address}}</p>
+                      </div>
                   </div>
               </div>
           </div>

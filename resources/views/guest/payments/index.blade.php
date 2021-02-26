@@ -99,7 +99,6 @@
 
   <script type="text/javascript">
 
-    if (document.getElementById('#dropin-container')) {
       braintree.dropin.create(
         {
           authorization: '{{$clientToken}}',
@@ -124,7 +123,6 @@
         });
         // });
 
-    }
 
     </script>
   @include('partials.footer')

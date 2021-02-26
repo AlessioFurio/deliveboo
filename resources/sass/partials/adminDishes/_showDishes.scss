@@ -4,7 +4,7 @@
 
         background-color: #101927;
         padding: 10px;
-        border-bottom: 3px solid #f5d790;
+        border-bottom: 3px solid $gold;
 
         a {
             text-decoration: none;
@@ -26,14 +26,14 @@
         .dashboard-body-menu-dishes-show {
 
             background-color: #101927;
-            border-right: 3px solid #f5d790;
+            border-right: 3px solid $gold;
             height: 100%;
             flex-basis: 40%;
 
             ul{
 
                 li {
-                    border-bottom: 3px solid #f5d790;
+                    border-bottom: 3px solid $gold;
                     padding:10px;
 
                     a{
@@ -43,7 +43,7 @@
 
 
                         &:hover {
-                            color: #f5d790;
+                            color: $gold;
 
                         }
                     }
@@ -68,6 +68,7 @@
         background-size: cover;
         background-position: center;
         height: 100vh;
+        overflow-y: scroll;
 
 
         .title-dishes-show{
@@ -90,7 +91,7 @@
             .dishes-card-show {
                 flex-basis: 90%;
                 background: rgba(255, 255, 255, 0.8);
-                border: 5px ridge #f5d790;
+                border: 5px ridge $gold;
                 border-radius: 10px;
                 margin: 30px auto;
                 padding: 10px;

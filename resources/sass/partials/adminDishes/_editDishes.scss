@@ -3,7 +3,7 @@
         background-image: url('/images/burgerKing.jpeg');
         background-size: cover;
         background-position: center;
-        border-top: 5px solid #f5d790;
+        border-top: 5px solid $gold;
 
         .container-general-edit-plate {
 
@@ -15,7 +15,7 @@
             width: 90%;
             margin: auto;
             background: rgba(255, 255, 255, 0.6);
-            border: 5px ridge #f5d790;
+            border: 5px ridge $gold;
             border-radius: 10px;
             padding: 10px;
         }
@@ -52,7 +52,7 @@
             display: block;
             width: 100%;
             border-radius: 5px;
-            border: 3px solid #f5d790;;
+            border: 3px solid $gold;
             height: 30px;
 
         }
@@ -68,7 +68,7 @@
         .input-search {
             background-color: white;
             color: black;
-            border: 3px solid #f5d790;
+            border: 3px solid $gold;
             border-radius: 5px;
             margin: 5px 0;
             width: 100%;
@@ -78,8 +78,8 @@
 
             .img-edit-plate {
                 max-width: 100%;
-                border: 3px solid #f5d790;
-                border-radius: 50%;
+                border: 3px solid $gold;
+                border-radius: 20%;
 
             }
         }
@@ -97,12 +97,12 @@
             font-size: 20px;
             background-color: #101927;
             padding: 10px 20px;
-            color: #f5d790;;
+            color: $gold;
             cursor: pointer;
 
             &:hover {
                 color: #101927;
-                background-color: #f5d790;;
+                background-color: $gold;
 
             }
         }

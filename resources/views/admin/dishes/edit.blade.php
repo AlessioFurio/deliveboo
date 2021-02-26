@@ -24,6 +24,14 @@
                     <input class="input" type="text" name="name" placeholder="Inserisci il nome del piatto" value=" {{ old('name', $dish->name) }}" required>
                 </div>
                 <div class="list list-edit-plate">
+                    @if ($dish->cover)
+                        <figure>
+                            {{-- <figcaption>Immagine:</figcaption> --}}
+                            <img class="img-edit-plate" src="{{asset('storage/'.$dish->cover )}}" alt="{{$dish->name}}">
+                        </figure>
+                    @endif
+                </div>
+                <div class="list list-edit-plate">
                     <label>Ingredienti</label>
                     <textarea class="textarea input" name="ingredients" rows="10" placeholder="Inizia a scrivere qualcosa..."  required>{{ old('ingredients', $dish->ingredients) }}</textarea>
                 </div>
@@ -52,12 +60,6 @@
                     <label for="no-visible">Imposta a non visibile</label>
                 </div>
                 <div class="list list-edit-plate">
-                    @if ($dish->cover)
-                        <figure>
-                            {{-- <figcaption>Immagine:</figcaption> --}}
-                            <img class="img-edit-plate" src="{{asset('storage/'.$dish->cover )}}" alt="{{$dish->name}}">
-                        </figure>
-                    @endif
                     <input class="input-search" type="file" name="cover">
                     @error('cover')
                     <div class="alert alert-danger">{{ $message }}</div>

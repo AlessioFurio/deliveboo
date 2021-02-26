@@ -16,6 +16,8 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
 
         <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">

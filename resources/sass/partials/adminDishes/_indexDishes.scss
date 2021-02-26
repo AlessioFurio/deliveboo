@@ -1,160 +1,127 @@
-@media screen and (min-width: 200px){
+.dashboard-dishes-index {
 
-    .dashboard-dishes-index {
+    .dashboard-header-dishes-index {
 
-        // .btn{
-        //     display: inline-block;
-        //     text-decoration: none;
-        //     color: #fff;
-        // }
+        background-color: #101927;
+        padding: 10px;
+        border-bottom: 1px solid #000;
 
-        .dashboard-header-dishes-index {
+        h1 {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 25px;
+        }
+    }
+    .dashboard-body-dishes-index {
+
+        display: flex;
+        height: calc(100vh - 100px - 48px);
+
+        .dashboard-body-menu-dishes-index{
+
             background-color: #101927;
-            padding: 10px;
-            border-bottom: 1px solid #000;
+            height: 100%;
+            flex-basis: 40%;
 
-            h1 {
-                color: #fff;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                font-size: 25px;
-            }
-        }
-        .dashboard-body-dishes-index {
-            display: flex;
-            height: calc(100vh - 100px - 48px);
+            ul{
 
-            .dashboard-body-menu-dishes-index{
-                background-color: #101927;
-                height: 100%;
-                flex-basis: 40%;
+                li {
 
-                ul{
-                    li {
-                        border-bottom: 1px solid #c1c1c1;
-                        a{
-                            width: 100%;
-                            padding: 15px 0;
+                    border-bottom: 1px solid #c1c1c1;
 
-                            &:hover {
-                                background-color: #3A5FCD;
+                    a{
+                        width: 100%;
+                        padding: 15px 0;
 
-                            }
+                        &:hover {
+
+                            background-color: #3A5FCD;
+
                         }
                     }
                 }
+            }
 
-            }
-            .dashboard-body-content-dishes-index{
-                background-color: #e3e8f1;
-                height: 100%;
-                flex-basis: 80%;
-                overflow-y: scroll;
-            }
+        }
+        .dashboard-body-content-dishes-index{
+
+            background-color: #e3e8f1;
+            height: 100%;
+            flex-basis: 80%;
+            overflow-y: scroll;
         }
     }
+}
 
-    .container-restaurant-dishes-index {
+.container-dishes-index {
 
-        .title-dishes-index{
 
-            h1 {
+    .title-dishes-index{
+
+        h1 {
                 text-align: center;
-            }
         }
-
-        // .btn{
-        //     display: inline-block;
-        //     text-decoration: none;
-        //     text-transform: uppercase;
-        //     padding: 10px;
-        //     border-radius: 5px;
-        //     color: #fff;
-        // }
-
-
-
-        .dishes-index {
-            display: flex;
-            flex-wrap: wrap;
-
-            .dishes-card-index {
-                flex-basis: 100%;
-                background-color: #B0C4DE;
-                border-radius: 10px;
-                margin: 20px;
-                padding: 10px;
-
-                .title-dishes-card-index {
-                    text-align: center;
-
-                    h1 {
-                        font-size: 20px;
-                    }
-                }
-
-                .body-dishes-card-index {
-
-                    .details-dishes-card-index {
-                        padding: 20px 0;
-                    }
-
-                    .action-dishes-card-index {
-
-                        .container-button-action-dishes.index{
-
-                            text-align: center;
-
-                            .button-dishes-index {
-                                margin-bottom: 5px;
-                            }
-
-                            .button-dettagli-dishes-index {
-                                background-color: #4169E1;
-                            }
-
-                            .button-modifica-dishes-index {
-                                background-color: #FFA500;
-                            }
-
-                            .button-elimina-dishes-index {
-                                background-color: red;
-                            }
-
-                        }
-                    }
-                }
-            }
-        }
-
-
-            // .table {
-            //     width: 100%;
-            //     tbody{
-            //         tr{
-            //             .btn {
-            //                 display: inline-block;
-            //                 padding: 8px;
-            //                 border: 1px solid #000;
-            //                 border-radius: 5px;
-            //                 text-decoration: none;
-            //                 color: #fff;
-            //                 text-transform: uppercase;
-            //             }
-            //
-            //             .btn-dettagli {
-            //                 background-color: #4169E1;
-            //             }
-            //
-            //             .btn-modifica {
-            //                 background-color: #FFA500;
-            //             }
-            //         }
-            //     }
-            // }
-        }
-
     }
+
+    .dishes-index {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .dishes-card-index {
+
+            flex-basis: 100%;
+            background-color: #B0C4DE;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 10px;
+
+            .title-dishes-card-index {
+                text-align: center;
+
+                h1 {
+                    font-size: 20px;
+                }
+            }
+
+            .body-dishes-card-index {
+
+                .details-dishes-card-index {
+                    padding: 20px 0;
+
+                }
+
+                .action-dishes-card-index {
+
+                    .container-button-action-dishes.index{
+
+                        text-align: center;
+
+                        .button-dishes-index {
+                            margin-bottom: 5px;
+                        }
+
+                        .button-dettagli-dishes-index {
+                            background-color: #4169E1;
+                        }
+
+                        .button-modifica-dishes-index {
+                            background-color: #FFA500;
+                        }
+
+                        .button-elimina-dishes-index {
+                            background-color: red;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 
 @media screen and (min-width: 500px){

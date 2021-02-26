@@ -3,7 +3,7 @@
         .dashboard-header-restaurant-index {
             background-color: #101927;
             padding: 10px;
-            border-bottom: 3px solid #f5d790;
+            border-bottom: 3px solid $gold;
 
                 h1 {
                     color: #e3e8f1;
@@ -20,14 +20,14 @@
             .dashboard-body-menu-restaurant-index {
 
                 background-color: #101927;
-                border-right: 3px solid #f5d790;
+                border-right: 3px solid $gold;
                 height: 100%;
                 flex-basis: 40%;
 
                 ul{
 
                     li {
-                        border-bottom: 3px solid #f5d790;
+                        border-bottom: 3px solid $gold;
                         padding:10px;
 
                         a{
@@ -37,7 +37,7 @@
 
 
                             &:hover {
-                                color: #f5d790;
+                                color: $gold;
 
                             }
                         }
@@ -82,7 +82,7 @@
             .restaurant-card-index {
 
                 flex-basis: 100%;
-                border: 5px ridge #f5d790;
+                border: 5px ridge $gold;
                 border-radius: 10px;
                 margin: 10px;
                 padding: 10px;
@@ -93,21 +93,25 @@
                     color: #101927;
                     font-size: 15px;
 
-                    h4 {
-                        color: #f5d790;
-                        font-size: 25px;
+                    h1 {
+                        padding-bottom: 10px;
                     }
 
+                }
+                .cover-card {
+                    img {
+                        max-width: 100%;
+                    }
                 }
 
                 .body-restaurant-card-index{
 
                     .details-restaurant-card-index {
-                        padding: 20px 0;
+                        padding: 5px 0;
 
                         p {
                             padding: 5px 0;
-                            color: #f5d790;
+                            color: $gold;
 
                             strong {
                                 color: #101927;
@@ -131,7 +135,7 @@
                                 padding: 10px;
                                 text-decoration: none;
                                 font-size: 20px;
-                                border: 3px solid #f5d790;
+                                border: 3px solid $gold;
                                 border-radius: 10px;
                                 width: 80%;
                                 text-align: center;
@@ -144,7 +148,7 @@
                                 background: rgba(65, 105, 255, 0.5);
 
                                 &:hover {
-                                    color: #f5d790;
+                                    color: $gold;
                                     background-color: #0000FF;
 
                                 }
@@ -157,7 +161,7 @@
                                 background: rgba(50, 205, 50, 0.5);
 
                                 &:hover {
-                                    color: #f5d790;
+                                    color: $gold;
                                     background-color: #008000;
                                 }
 
@@ -170,7 +174,7 @@
                                 background: rgba(255, 215, 0, 0.5);
 
                                 &:hover {
-                                    color: #f5d790;
+                                    color: $gold;
                                     background-color: #FF8C00;
                                 }
 
@@ -182,7 +186,7 @@
                                 background: rgba(255, 99, 71, 0.5);
 
                                 &:hover {
-                                    color: #f5d790;
+                                    color: $gold;
                                     background-color: #FF0000;
                                 }
 
@@ -193,26 +197,6 @@
             }
         }
     }
-
-
-
-
-
-
-@media screen and (min-width: 500px){
-
-    .container-restaurant-index .title-restaurant-index .restaurants-index .restaurant-card-index {
-        max-width: 80%;
-    }
-
-    .container-restaurant-index .restaurants-index{
-
-
-        .container-restaurant-index .restaurants-index .restaurant-card-index {
-            flex-basis: 50%;
-        }
-    }
-}
 
 @media screen and (min-width: 768px){
 
@@ -276,22 +260,25 @@
 
         .restaurants-index {
 
-            margin: 50px 0 0 100px;
+            margin: 20px 0 0 100px;
 
             .restaurant-card-index {
 
                 flex-basis: 30%;
 
-
                 .title-restaurant-card {
 
                     font-size: 20px;
 
-                    h4 {
+                    h1 {
 
-                        font-size: 30px;
                     }
 
+                }
+                .cover-card {
+                    img {
+
+                    }
                 }
 
                 .body-restaurant-card-index{
@@ -301,7 +288,7 @@
 
                         p {
 
-                            padding: 15px 0;
+                            padding: 5px 0;
                             font-size: 20px;
 
                             strong {
@@ -313,7 +300,7 @@
 
                     .action-restaurant-card-index {
 
-                        padding: 10px 0 20px 0;
+                        padding: 10px 0;
 
                         .container-button-action-index{
 

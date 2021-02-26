@@ -33,7 +33,6 @@
                     @foreach ($restaurants as $restaurant)
                     <div class="restaurant-card-index">
                         <div class="title-restaurant-card">
-                            <h4>Nome ristorante: </h4>
                             <h1>{{ $restaurant->name }}</h1>
                         </div>
                         <div class="cover-card">
@@ -43,7 +42,6 @@
                         </div>
                         <div class="body-restaurant-card-index">
                             <div class="details-restaurant-card-index">
-                                <p>ID: <strong>{{ $restaurant->id }}</strong></p>
                                 <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>
                                 <p>Telefono: <strong>{{ $restaurant->phone }}</strong></p>
                             </div>

@@ -4,7 +4,7 @@
 
         background-color: #101927;
         padding: 10px;
-        border-bottom: 3px solid #f5d790;
+        border-bottom: 3px solid $gold;
 
             h1 {
                 color: #e3e8f1;
@@ -25,7 +25,7 @@
 
                 li {
 
-                    border-bottom: 3px solid #f5d790;
+                    border-bottom: 3px solid $gold;
                     padding: 15px;
 
                     a{
@@ -35,7 +35,7 @@
 
                         &:hover {
 
-                            color: #f5d790;
+                            color: $gold;
 
                         }
                     }
@@ -56,7 +56,7 @@
             margin: 50px auto;
             background: rgba(255,255,255,0.5);
             border-radius: 10px;
-            border: 3px solid #f5d790;
+            border: 3px solid $gold;
 
             .card-title-restaurant-edit {
                 text-align: center;
@@ -87,7 +87,7 @@
                             width: 100%;
                             border-radius: 5px;
                             background-color: #e3e8f1;
-                            border: 3px solid #f5d790;
+                            border: 3px solid $gold;
                         }
                     }
 
@@ -97,7 +97,7 @@
                         margin: 10px 0;
                         border-radius: 5px;
                         background-color: #e3e8f1;
-                        border: 3px solid #f5d790;
+                        border: 3px solid $gold;
 
 
                         input {
@@ -125,10 +125,17 @@
                         margin: 20px 0;
                         text-align: left;
 
+                        figure {
+
+                            img {
+                                max-width: 100%;
+                            }
+                        }
+
 
                         input {
                             background-color: #e3e8f1;
-                            border: 3px solid #f5d790;
+                            border: 3px solid $gold;
                             border-radius: 5px;
                             width: 100%;
                         }
@@ -140,7 +147,7 @@
                         background: rgba(255, 215, 0, 0.5);
                         color: #101927;
                         text-transform: uppercase;
-                        border: 3px solid #f5d790;
+                        border: 3px solid $gold;
                         padding: 20px;
                         margin: 10px 0 20px 0;
                         border-radius: 10px;
@@ -148,7 +155,7 @@
                         cursor: pointer;
 
                         &:hover {
-                            color: #f5d790;
+                            color: $gold;
                             background-color: #FF8C00;
                         }
                     }
@@ -179,7 +186,7 @@
 
             .dashboard-body-menu-restaurant-edit {
 
-                border-right: 3px solid #f5d790;
+                border-right: 3px solid $gold;
                 height: 100vh;
                 flex-basis: 20%;
 

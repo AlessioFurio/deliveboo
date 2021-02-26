@@ -129,6 +129,7 @@ var app = new Vue({
 				// form.submit();
 
 				document.getElementById('payment-form').submit();
+				data.clear() ;
 			});
 
     	},

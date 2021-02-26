@@ -50,6 +50,7 @@
                           <img v-else :src="'{{url('/storage')}}' + '/' + restaurant.cover" alt="">
                           <p>@{{ restaurant.name }}</p>
                       </a>
+                      
                   </div>
               </div>
           </div>

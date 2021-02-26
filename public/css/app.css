@@ -61,7 +61,7 @@ header::before {
   width: 100px;
   height: 120px;
   background: transparent;
-  z-index: 2;
+  z-index: 10;
   transition: 1s;
 }
 header.active::before {
@@ -80,7 +80,7 @@ header::after {
   height: 120px;
   background: transparent;
   transition: 1s;
-  z-index: 1;
+  z-index: 9;
 }
 header.active::after {
   bottom: 0;
@@ -111,7 +111,7 @@ header #menu-fixed {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   height: 97px;
 }
 header #menu-fixed.sticky {
@@ -306,7 +306,7 @@ header .header-top .toggle-menu i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 10;
   visibility: hidden;
   opacity: 0;
   transition: 1s;
@@ -565,6 +565,11 @@ header.active .menu-mobile {
   font-size: 14px;
   margin-top: 5px;
 }
+.card-category .container-card-category .container-card .cards .card .card-restaurant-details {
+  border: 1px solid red;
+  width: 200px;
+  height: 100%;
+}
 
 @media screen and (min-width: 480px) {
   .how-to-order {
@@ -692,6 +697,7 @@ header.active .menu-mobile {
   }
   .container-social-online .social-online i:hover {
     background-color: #d2ac7b;
+    color: #fff;
     transition: 1s ease;
   }
 
@@ -874,6 +880,7 @@ header.active .menu-mobile {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 .card-login .card-header-login {
   font-size: 60px;

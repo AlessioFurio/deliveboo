@@ -82,6 +82,7 @@
 
                 &:hover {
                     background-color: $gold;
+                    color: #fff;
                     transition: 1s ease;
                 }
             }
@@ -149,7 +150,7 @@
     }
 
     .container-social-online .social-online .social a {
-        
+
 
         &:nth-child(2) i{
             margin-left: 0px;

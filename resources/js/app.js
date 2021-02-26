@@ -124,10 +124,10 @@ var app = new Vue({
 				if (error) console.error(error);
 
 				document.getElementById('nonce').value = payload.nonce;
-<<<<<<< HEAD
-=======
+
+
 				// form.submit();
->>>>>>> pushoTutto
+
 				document.getElementById('payment-form').submit();
 			});
 

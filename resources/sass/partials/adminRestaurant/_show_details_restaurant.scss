@@ -9,11 +9,13 @@
         a {
             text-decoration: none;
 
+
             h1 {
                 color: #e3e8f1;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-size: 25px;
+
             }
         }
 
@@ -42,6 +44,7 @@
                         color: #e3e8f1;
                         font-size: 20px;
                         text-decoration: none;
+
 
                         &:hover {
 
@@ -92,10 +95,13 @@
             h3 {
 
                 padding-bottom: 20px;
-                color: #101927;
+                color: #422e20;
+                text-transform: uppercase;
+                font-weight: 700;
 
                 strong {
                     color: #101927;
+                    text-transform: none;
                 }
             }
         }

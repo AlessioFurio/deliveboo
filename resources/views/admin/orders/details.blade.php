@@ -13,31 +13,33 @@
                 <a class="link-statistics-details-orders" href="{{route('admin.statistics.chart', ['id'=> $myrestaurant->id ])}}"><i class="fas fa-chart-bar"></i>Vedi Statistiche</a>
             </div>
         </div>
-        @foreach ($myrestaurant->payments as $payment)
-            <div class="form-details-orders">
-                <ul>
-                    <li>
-                        <span>Id: <strong>{{$payment->id}}</strong></span>
-                    </li>
-                    <li>
-                        <span>Prezzo: <strong>{{$payment->price}}</strong></span>
-                    </li>
-                    <li>
-                        <span>Status: <strong>{{$payment->status}}</strong></span>
-                    </li>
-                    <li>
-                        <span>Ristorante_id: <strong>{{$payment->restaurant_id}}</strong></span>
-                    </li>
-                    <li>
-                        <span>Data: <strong>{{$payment->created_at}}</strong></span>
-                    </li>
-                </ul>
-                <div class="link-details-order">
-                    <a href="{{route('admin.orders.show', ['id' => $payment->id ])}}">Vedi i dettagli
-                    </a>
+        <div class="container-form-details-orders">
+            @foreach ($myrestaurant->payments as $payment)
+                <div class="form-details-orders">
+                    <ul>
+                        <li>
+                            <span>Id: <strong>{{$payment->id}}</strong></span>
+                        </li>
+                        <li>
+                            <span>Prezzo: <strong>{{$payment->price}}</strong></span>
+                        </li>
+                        <li>
+                            <span>Status: <strong>{{$payment->status}}</strong></span>
+                        </li>
+                        <li>
+                            <span>Ristorante_id: <strong>{{$payment->restaurant_id}}</strong></span>
+                        </li>
+                        <li>
+                            <span>Data: <strong>{{$payment->created_at}}</strong></span>
+                        </li>
+                    </ul>
+                    <div class="link-details-order">
+                        <a href="{{route('admin.orders.show', ['id' => $payment->id ])}}">Vedi i dettagli
+                        </a>
+                    </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
     </div>
 </div>
 @endsection

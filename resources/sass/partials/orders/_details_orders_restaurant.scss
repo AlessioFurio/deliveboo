@@ -2,11 +2,11 @@
 
     .title-restaurant-orders-details {
         background-color: #101927;
-        border-bottom: 3px solid #f5d790;
+        border-bottom: 3px solid $gold;
 
             h1 {
                 text-align: center;
-                color: #f5d790;
+                color: $gold;
                 font-size: 25px;
                 padding: 20px 0;
                 text-transform: uppercase;
@@ -19,6 +19,7 @@
         background-size: cover;
         background-position: center;
         height: 100vh;
+        overflow-y: scroll;
 
 
         .my-restaurant-name {
@@ -38,8 +39,8 @@
 
                 font-size: 25px;
                 text-decoration: none;
-                color: #f5d790;
-                border: 3px solid #f5d790;
+                color: $gold;
+                border: 3px solid $gold;
                 border-radius: 10px;
                 display: inline-block;
                 padding: 25px 40px;
@@ -61,8 +62,8 @@
             a {
                 font-size: 20px;
                 text-decoration: none;
-                color: #f5d790;
-                border: 3px solid #f5d790;
+                color: $gold;
+                border: 3px solid $gold;
                 border-radius: 10px;
                 display: inline-block;
                 padding: 10px;
@@ -76,30 +77,38 @@
             }
         }
 
-        .form-details-orders {
+        .container-form-details-orders {
 
-            border: 3px solid #f5d790;
-            background: rgba(255,255,255,0.6);
-            border-radius: 10px;
-            width: 90%;
-            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-            ul {
 
-                list-style-type: none;
+            .form-details-orders {
 
-                li {
-                    padding: 15px;
+                border: 3px solid $gold;
+                background: rgba(255,255,255,0.6);
+                border-radius: 10px;
+                width: 90%;
+                margin: 20px 0;
 
-                    span {
+                ul {
 
-                        color: #101927;
-                        font-size: 20px;
-                        font-weight: 700;
+                    list-style-type: none;
 
-                        strong {
-                            font-size: 20px;
+                    li {
+                        padding: 15px;
+
+                        span {
+
                             color: #101927;
+                            font-size: 20px;
+                            font-weight: 700;
+
+                            strong {
+                                font-size: 20px;
+                                color: #101927;
+                            }
                         }
                     }
                 }
@@ -151,18 +160,26 @@
                 }
             }
 
-            .form-details-orders {
+            .container-form-details-orders {
 
-                width: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
 
-                ul {
+                .form-details-orders {
 
-                    li {
+                    width: 45%;
+                    margin: 10px;
 
-                        span {
+                    ul {
 
-                            strong {
+                        li {
 
+                            span {
+
+                                strong {
+
+                                }
                             }
                         }
                     }
@@ -189,7 +206,7 @@
 
             .my-restaurant-name {
 
-                font-size: 35px;
+                font-size: 40px;
             }
 
             .link-details-order {
@@ -215,18 +232,22 @@
                 }
             }
 
-            .form-details-orders {
+            .container-form-details-orders {
 
-                width: 40%;
 
-                ul {
+                .form-details-orders {
 
-                    li {
+                    width: 40%;
 
-                        span {
+                    ul {
 
-                            strong {
+                        li {
 
+                            span {
+
+                                strong {
+
+                                }
                             }
                         }
                     }
@@ -252,7 +273,8 @@
 
             .my-restaurant-name {
 
-                font-size: 35px;
+                font-size: 50px;
+
             }
 
             .link-details-order {
@@ -278,18 +300,22 @@
                 }
             }
 
-            .form-details-orders {
+            .container-form-details-orders {
 
-                width: 20%;
 
-                ul {
+                .form-details-orders {
 
-                    li {
+                    width: 20%;
 
-                        span {
+                    ul {
 
-                            strong {
+                        li {
 
+                            span {
+
+                                strong {
+
+                                }
                             }
                         }
                     }

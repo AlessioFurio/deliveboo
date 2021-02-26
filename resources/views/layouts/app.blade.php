@@ -43,10 +43,12 @@
             @include('partials.header-dashboard')
             @yield('content')
         </div>
+
         @yield('script')
 
-
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script>
-        <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8">
+        </script>
+        <script src="{{ asset('js/app.js') }}" charset="utf-8">
+        </script>
     </body>
 </html>

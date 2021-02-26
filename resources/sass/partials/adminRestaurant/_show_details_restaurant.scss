@@ -228,6 +228,11 @@
                 border: 3px solid $gold;
                 margin: 3px;
                 transition: background-color 2s;
+
+                &:hover {
+                    border-radius: 50%;
+                }
+
         }
 
 
@@ -236,6 +241,7 @@
 
                 color: #101927;
                 background: rgba(65, 105, 255, 0.5);
+
 
                 &:hover {
                     color: $gold;

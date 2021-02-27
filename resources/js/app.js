@@ -58,7 +58,7 @@ var app = new Vue({
 			});
 
 			// Cookies.remove('cartCookie')
-  		},
+		},
 
 		goUp() {  // x button scrollUP
 			const element = document.getElementById('wp-header');
@@ -94,9 +94,9 @@ var app = new Vue({
 
 			if(chart) {
 				var ordersChart = document.getElementById('ordersChart').getContext('2d');
-	      		var cData = window.cData;
+	      var cData = window.cData;
 				console.log(cData);
-	      		ordersChart.canvas.parentNode.style.maxHeight = '60%';
+	      ordersChart.canvas.parentNode.style.maxHeight = '60%';
 	      ordersChart.canvas.parentNode.style.maxWidth = '100%';
 
 	      var ordersChart = new Chart(ordersChart, {
@@ -189,7 +189,6 @@ var app = new Vue({
 				if (error) console.error(error);
 
 				document.getElementById('nonce').value = payload.nonce;
-
 
 				// form.submit();
 
@@ -390,6 +389,6 @@ var app = new Vue({
 		},
 
 
-	},
+	}
 
 });

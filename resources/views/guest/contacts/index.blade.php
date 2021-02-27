@@ -6,7 +6,7 @@
 
 @section('content')
         <div class="row">
-            <div class="contacts-flex col-12">
+            <div class="contacts-flex text col-12">
                 <h1>Get in Touch!</h1>
             </div>
             <div class="contacts-flex col-12">

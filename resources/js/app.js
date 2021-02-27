@@ -197,39 +197,6 @@ var app = new Vue({
 
     	},
 
-<<<<<<< HEAD
-=======
-		Save (event) {
-			event.preventDefault(); //blocca il form per far eseguire il resto del codice
-
-			// var date = new Date();
-			// date.setTime(date.getTime() + (60 * 1000));
-			// Cookies.set('nome', this.nome, { expires: date })
-			// Cookies.set('cognome', this.cognome, { expires: date })
-			// Cookies.set('indirizzo', this.indirizzo, { expires: date })
-			// Cookies.set('cartCookie', this.cart, { expires: date })
-
-			// const form = document.getElementById('payment-form');
-
-			dropinInstance.requestPaymentMethod((error, payload) =>
-			{
-				if (error) console.error(error);
-
-				document.getElementById('nonce').value = payload.nonce;
-
-
-				// form.submit();
-
-				document.getElementById('payment-form').submit();
-			});
-
-    	},
-
-
-
-
-
->>>>>>> main
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
     	},

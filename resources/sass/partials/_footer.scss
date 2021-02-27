@@ -33,40 +33,9 @@ footer {
 
     }
 
-<<<<<<< HEAD
 
-    .container-list {
-        width: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .list {
-            font-weight: 700;
-
-            ul {
-
-                li {
-                    list-style-type: none;
-                    text-transform: uppercase;
-                    font-size: 15px;
-                    letter-spacing: 2px;
-                    padding-bottom: 10px;
-                    color: white;
-
-                    &:hover {
-                            color: $gold;
-
-                    }
-
-                }
-            }
-        }
-
-=======
     h2, .social a {
       color: #6A6B6D;
->>>>>>> footer
     }
 
     h2 {

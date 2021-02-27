@@ -57,7 +57,7 @@ var app = new Vue({
 			});
 
 			// Cookies.remove('cartCookie')
-  		},
+		},
 
 		goUp() {  // x button scrollUP
 			const element = document.getElementById('wp-header');
@@ -92,9 +92,9 @@ var app = new Vue({
 
 			if(chart) {
 				var ordersChart = document.getElementById('ordersChart').getContext('2d');
-	      		var cData = window.cData;
+	      var cData = window.cData;
 				console.log(cData);
-	      		ordersChart.canvas.parentNode.style.maxHeight = '60%';
+	      ordersChart.canvas.parentNode.style.maxHeight = '60%';
 	      ordersChart.canvas.parentNode.style.maxWidth = '100%';
 
 	      var ordersChart = new Chart(ordersChart, {
@@ -138,38 +138,6 @@ var app = new Vue({
 			}
 		},
 
-		clear() {
-			this.nome = '';
-			this.cognome = '';
-			this.indirizzo = '';
-			this.cartCookie = [];
-			this.cart = [];
-			this.totalPriceCookie = 0;
-			this.totalPrice = 0;
-			Cookies.remove('nome');
-			Cookies.remove('email');
-			Cookies.remove('indirizzo');
-			Cookies.remove('cartCookie');
-			Cookies.remove('totalPriceCookie');
-			Cookies.remove('totalQuantity');
-			axios
-			.get('http://localhost:8000/api/dishes', {
-				params:{
-					query: this.selectedRestaurant
-				}
-			})
-			.then((risposta) =>{
-				// assegno ad array restaurants la risposta API
-				this.dishesList = risposta.data.results;
-				for (var i = 0; i < this.dishesList.length; i++) {
-					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-				}
-
-			});
-
-			// Cookies.remove('cartCookie')
-		},
-
 		Save (event) {
 			event.preventDefault(); //blocca il form per far eseguire il resto del codice
 
@@ -188,36 +156,6 @@ var app = new Vue({
 
 				document.getElementById('nonce').value = payload.nonce;
 
-
-				// form.submit();
-
-				document.getElementById('payment-form').submit();
-				this.clear() ;
-			});
-
-    	},
-
-<<<<<<< HEAD
-=======
-		Save (event) {
-			event.preventDefault(); //blocca il form per far eseguire il resto del codice
-
-			// var date = new Date();
-			// date.setTime(date.getTime() + (60 * 1000));
-			// Cookies.set('nome', this.nome, { expires: date })
-			// Cookies.set('cognome', this.cognome, { expires: date })
-			// Cookies.set('indirizzo', this.indirizzo, { expires: date })
-			// Cookies.set('cartCookie', this.cart, { expires: date })
-
-			// const form = document.getElementById('payment-form');
-
-			dropinInstance.requestPaymentMethod((error, payload) =>
-			{
-				if (error) console.error(error);
-
-				document.getElementById('nonce').value = payload.nonce;
-
-
 				// form.submit();
 
 				document.getElementById('payment-form').submit();
@@ -226,10 +164,6 @@ var app = new Vue({
     	},
 
 
-
-
-
->>>>>>> main
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
     	},
@@ -415,6 +349,6 @@ var app = new Vue({
 		},
 
 
-	},
+	}
 
 });

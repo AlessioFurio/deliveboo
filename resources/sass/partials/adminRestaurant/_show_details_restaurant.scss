@@ -24,7 +24,7 @@
 
     .dashboard-body-restaurant-show {
         display: flex;
-        height: calc(100vh - 100px - 48px);
+        height: calc(100vh - 100px - 50px);
 
         .dashboard-body-menu-restaurant-show {
 
@@ -71,14 +71,14 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 65%;
+        height: 60%;
 
         .title-show {
                 text-align: center;
                 padding: 20px 0 10px;
                 color: #e3e8f1;
                 text-transform: uppercase;
-                font-size: 25px;
+                font-size: 23px;
                 background: rgba(0,0,0,0.5);
 
         }
@@ -93,8 +93,8 @@
 
                 border: 5px ridge $gold;
                 background: rgba(255,255,255,0.5);
-                padding: 10px;
-                width: 90%;
+                padding: 20px 10px;
+                width: 95%;
                 margin: 20px auto 0;
                 border-radius: 10px;
 
@@ -109,11 +109,14 @@
                     padding-bottom: 20px;
                     color: #422e20;
                     text-transform: uppercase;
-                    font-weight: 700;
+                    font-size: 18px;
 
                     strong {
                         color: #101927;
                         text-transform: none;
+                        font-size: 15px;
+                        padding-top: 5px;
+                        display: block;
                     }
                 }
             }
@@ -127,7 +130,6 @@
                     display: inline-block;
                     text-decoration: none;
                     text-transform: uppercase;
-                    padding: 10px;
                     border-radius: 10px;
                     color: #e3e8f1;
                     border: 1px solid $gold;
@@ -146,7 +148,7 @@
 
                     color: #101927;
                     background: rgba(0, 0, 255, 0.5);
-                    margin: 10px 0;
+                    padding: 10px 5px;
 
 
 
@@ -161,7 +163,8 @@
 
                     color: #101927;
                     background: rgba(50, 205, 50, 0.5);
-                    margin: 10px 0;
+                    margin-top: 10px;
+                    padding: 15px 10px;
 
                     &:hover {
                         color: $gold;
@@ -203,11 +206,11 @@
 
         .restaurant-card-show {
 
-            flex-basis: 90%;
+            flex-basis: 95%;
             border: 5px ridge $gold;
             background: rgba(0,0,0,0.8);
             border-radius: 10px;
-            margin: 20px 10px;
+            margin: 20px 5px;
             padding: 5px;
 
 
@@ -228,7 +231,7 @@
                     text-align: center;
                     text-transform:uppercase;
                     padding: 10px 0;
-                    font-size: 25px;
+                    font-size: 20px;
                     color: $gold;
 
                 }
@@ -247,12 +250,12 @@
             .button-show {
                 margin-bottom: 10px;
                 text-decoration: none;
-                padding: 6px;
+                padding: 6px 11px;
                 display: inline-block;
                 border-radius: 10px;
                 font-size: 20px;
                 border: 1px solid $gold;
-                margin: 3px;
+                margin: 0 3px;
 
 
                 &:hover {
@@ -263,8 +266,6 @@
                 }
 
         }
-
-
 
             .button-dettagli-show {
 
@@ -313,15 +314,62 @@
 
 @media screen and (min-width: 768px) {
 
-    .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
-        flex-basis: 25%;
+    .dashboard-restaurant-show {
+
+        .dashboard-header-restaurant-show {
+
+
+
+            a {
+
+
+
+                h1 {
+
+                    font-size: 30px;
+
+                }
+            }
+
+
+            }
+
+        .dashboard-body-restaurant-show {
+
+
+            .dashboard-body-menu-restaurant-show {
+
+
+
+                ul{
+
+                    li {
+
+
+
+                        a{
+
+
+
+                            &:hover {
+
+
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
     }
 
     .dashboard-body-content-restaurant-show {
 
+
         .container-restaurant-show {
 
-            height: 50%;
+            height: 55%;
 
             .title-show {
 
@@ -337,21 +385,26 @@
 
 
                     h3 {
-
+                        font-size: 20px;
 
                         strong {
-
+                            font-size: 20px;
                         }
                     }
                 }
 
                 .button-create-order {
 
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
 
                     .show{
 
-                        width: 50%;
+                        margin: 0 5px;
+                        width: 45%;
 
                     }
 
@@ -369,7 +422,8 @@
 
                     .button-order-new-show {
 
-
+                        padding: 10px 5px;
+                        margin-top: 0;
 
 
 
@@ -402,12 +456,12 @@
 
                     .body-restaurant-card-show{
 
-                        h3 {
+                        img {
 
                         }
 
-                        img {
-
+                        h3 {
+                            font-size: 25px;
                         }
 
 
@@ -417,33 +471,31 @@
                 .details-restaurant-card-show {
 
 
-                }
-
-                .container-button-action-show{
+                    .container-button-action-show{
 
 
+                        .button-show {
 
-                    .button-show {
+                            padding: 5px 15px;
+                            margin: 5px;
 
-                        padding: 5px 15px;
-                        margin: 5px;
+                            &:hover {
 
-                        &:hover {
+                            }
+                        }
+
+                        .button-dettagli-show {
 
                         }
-                    }
 
-                    .button-dettagli-show {
+                        .button-modifica-show {
 
-                    }
+                        }
 
-                    .button-modifica-show {
-
-                    }
-
-                    .button-elimina-show {
+                        .button-elimina-show {
 
 
+                        }
                     }
                 }
             }
@@ -455,6 +507,7 @@
 
 
     .dashboard-restaurant-show {
+
 
 
         .dashboard-header-restaurant-show {
@@ -478,7 +531,7 @@
 
             .dashboard-body-menu-restaurant-show {
 
-
+                flex-basis: 30%;
 
                 ul{
 
@@ -504,11 +557,6 @@
         }
     }
 
-
-    .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
-        flex-basis: 20%;
-    }
-
     .dashboard-body-content-restaurant-show {
 
         .container-restaurant-show {
@@ -524,7 +572,8 @@
                 .title-restaurant-show{
 
 
-                    width: 40%;
+                    width: 50%;
+                    margin: 30px auto 0;
 
 
                     h3 {
@@ -538,20 +587,15 @@
 
                 .button-create-order {
 
-
-
                     .show{
-                        font-size: 17px;
+                        font-size: 12px;
                         font-weight: 700;
-                        width: 43%;
-                        margin: 10px;
+                        width: 45%;
+                        margin: 5px;
 
                     }
 
                     .button-create-new-show {
-
-
-
 
 
                         &:hover {
@@ -563,9 +607,6 @@
                     .button-order-new-show {
 
 
-
-
-
                         &:hover {
 
 
@@ -574,7 +615,6 @@
                 }
             }
         }
-
 
         .your-dishes {
 
@@ -588,12 +628,9 @@
 
             .restaurants-show {
 
-
-
                 .restaurant-card-show {
 
                     flex-basis: 30%;
-
 
                     .body-restaurant-card-show{
 
@@ -604,41 +641,36 @@
                         h3 {
                             font-size: 20px;
                         }
-
-
                     }
                 }
 
                 .details-restaurant-card-show {
 
 
-                }
-
-                .container-button-action-show{
+                    .container-button-action-show{
 
 
+                        .button-show {
 
-                    .button-show {
+                            padding: 5px 15px;
+                            margin: 5px;
 
-                        padding: 5px 15px;
-                        margin: 5px;
+                            &:hover {
 
-                        &:hover {
+                            }
+                        }
+
+                        .button-dettagli-show {
 
                         }
-                    }
 
-                    .button-dettagli-show {
+                        .button-modifica-show {
 
-                    }
+                        }
 
-                    .button-modifica-show {
+                        .button-elimina-show {
 
-                    }
-
-                    .button-elimina-show {
-
-
+                        }
                     }
                 }
             }
@@ -671,33 +703,186 @@
             .dashboard-body-menu-restaurant-show {
 
 
-
                 ul{
 
                     li {
-
 
 
                         a{
 
                             font-size: 25px;
 
-
                             &:hover {
-
-
 
                             }
                         }
                     }
                 }
-
             }
         }
     }
 
-    .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
-        flex-basis: 20%;
+    .dashboard-body-content-restaurant-show {
+
+        .container-restaurant-show {
+
+            .title-show {
+
+                font-size: 40px;
+            }
+
+            .container-title-restaurant-show {
+
+
+                .title-restaurant-show{
+
+
+                    width: 40%;
+
+
+                    h3 {
+
+
+                        strong {
+
+                        }
+                    }
+                }
+
+                .button-create-order {
+
+
+                    .show{
+                        width: 47%;
+                    }
+
+                    .button-create-new-show {
+
+
+                        &:hover {
+
+                        }
+                    }
+
+                    .button-order-new-show {
+
+
+                        &:hover {
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .your-dishes {
+
+            h3 {
+                font-size: 40px;
+            }
+        }
+
+        .container-card-restaurant-show {
+
+
+            .restaurants-show {
+
+
+                .restaurant-card-show {
+
+                    flex-basis: 30%;
+
+
+                    .body-restaurant-card-show{
+
+                        img {
+
+                        }
+
+                        h3 {
+                            font-size: 25px;
+                        }
+
+
+                    }
+                }
+
+                .details-restaurant-card-show {
+
+
+                    .container-button-action-show{
+
+
+                        .button-show {
+
+
+
+                            &:hover {
+
+                            }
+                        }
+
+                        .button-dettagli-show {
+
+                        }
+
+                        .button-modifica-show {
+
+                        }
+
+                        .button-elimina-show {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    .dashboard-restaurant-show {
+
+
+        .dashboard-header-restaurant-show {
+
+            a {
+
+
+                h1 {
+                    font-size: 40px;
+
+                }
+            }
+
+
+        }
+
+        .dashboard-body-restaurant-show {
+
+
+            .dashboard-body-menu-restaurant-show {
+
+
+                ul{
+
+                    li {
+
+
+                        a{
+
+                            font-size: 25px;
+
+                            &:hover {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .dashboard-body-content-restaurant-show {
@@ -730,31 +915,20 @@
                 .button-create-order {
 
 
-
                     .show{
-                        font-size: 17px;
-                        font-weight: 700;
-                        width: 43%;
-                        margin: 10px;
-
+                        width: 40%;
+                        margin: 10px 15px;
                     }
 
                     .button-create-new-show {
 
 
-
-
-
                         &:hover {
-
 
                         }
                     }
 
                     .button-order-new-show {
-
-
-
 
 
                         &:hover {
@@ -765,8 +939,6 @@
                 }
             }
         }
-
-
 
         .your-dishes {
 
@@ -783,7 +955,8 @@
 
                 .restaurant-card-show {
 
-                    flex-basis: 23%;
+                    flex-basis: 20%;
+                    margin: 20px;
 
 
                     .body-restaurant-card-show{
@@ -803,33 +976,29 @@
                 .details-restaurant-card-show {
 
 
-                }
-
-                .container-button-action-show{
+                    .container-button-action-show{
 
 
+                        .button-show {
 
-                    .button-show {
 
-                        padding: 5px 15px;
-                        margin: 5px;
 
-                        &:hover {
+                            &:hover {
+
+                            }
+                        }
+
+                        .button-dettagli-show {
 
                         }
-                    }
 
-                    .button-dettagli-show {
+                        .button-modifica-show {
 
-                    }
+                        }
 
-                    .button-modifica-show {
+                        .button-elimina-show {
 
-                    }
-
-                    .button-elimina-show {
-
-
+                        }
                     }
                 }
             }

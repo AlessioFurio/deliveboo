@@ -297,8 +297,8 @@ header .header-top .toggle-menu i {
 }
 
 .menu-mobile {
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 250px;
+  min-height: 250px;
   max-width: 600px;
   max-width: 600px;
   display: flex;
@@ -343,6 +343,7 @@ header .header-top .toggle-menu i {
 }
 .menu-mobile .nav-menu-mobile ul li:hover a {
   color: #fff;
+  letter-spacing: 3px;
 }
 .menu-mobile .nav-menu-mobile ul li a {
   display: inline-block;
@@ -351,6 +352,8 @@ header .header-top .toggle-menu i {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 25px;
+  transition: all 0.5s ease-in-out;
 }
 
 header.active .menu-mobile {
@@ -423,6 +426,16 @@ header.active .menu-mobile {
     font-family: "Dancing Script", cursive;
     font-size: 100px;
     padding-top: 250px;
+  }
+
+  .menu-mobile {
+    min-width: 350px;
+    min-height: 350px;
+    transition: 0.5s;
+  }
+
+  .menu-mobile .nav-menu-mobile ul li a {
+    padding: 30px 60px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -980,6 +993,12 @@ header.active .menu-mobile {
   border: 1px solid #d2ac7b;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.container-button-login .button-login:hover {
+  background-color: #fff;
+  color: #d2ac7b;
+  letter-spacing: 3px;
 }
 
 .forgot-password {
@@ -990,6 +1009,12 @@ header.active .menu-mobile {
   font-size: 18px;
   text-decoration: none;
   color: black;
+  transition: 1s;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #d2ac7b;
+  letter-spacing: 3px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1041,27 +1066,26 @@ header.active .menu-mobile {
     font-size: 20px;
   }
 }
-.container-general-register {
-  height: 100vh;
-  background-color: #101927;
-}
-
-.container-form-register {
-  padding-top: 100px;
-}
-
 .card-register {
-  width: 80%;
+  width: 70%;
   margin: auto;
-  border: 1px solid black;
+  border: 1px solid #d2ac7b;
   border-radius: 10px;
-  background-color: #e3e8f1;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .card-header-register {
-  font-size: 30px;
+  font-size: 60px;
   margin: 20px 0 20px 0;
   text-align: center;
+  color: #d2ac7b;
+  font-family: "Ballet", cursive;
+  letter-spacing: 1px;
 }
 
 .card-body-register {
@@ -1076,10 +1100,11 @@ header.active .menu-mobile {
 }
 .form-group .container-input-password input, .form-group .container-input-email-address input,
 .form-group .container-input-name input, .form-group .container-input-confirm-password input, .form-group .container-input-address input, .form-group .container-input-vat-number input {
+  font-size: 18px;
   width: 100%;
-  height: 30px;
-  border: 1px solid black;
-  border-radius: 10px;
+  height: 40px;
+  border: 1px solid #d2ac7b;
+  border-radius: 5px;
 }
 .form-group .container-button-register {
   display: flex;
@@ -1088,11 +1113,18 @@ header.active .menu-mobile {
 }
 .form-group .container-button-register .button-register {
   font-size: 20px;
-  padding: 10px 40px;
-  background-color: #00ccbc;
-  color: black;
-  border: 1px solid black;
+  padding: 5px 20px;
+  background-color: #d2ac7b;
+  color: #fff;
+  border: 1px solid #d2ac7b;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.form-group .container-button-register .button-register:hover {
+  background-color: #fff;
+  color: #d2ac7b;
+  letter-spacing: 3px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1141,16 +1173,16 @@ header.active .menu-mobile {
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index {
   display: flex;
-  height: calc(100vh - 100px - 50px);
+  height: calc(100vh - 100px - 53px);
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
   background-color: #101927;
-  border-right: 3px solid #d2ac7b;
+  border-right: 1px solid #d2ac7b;
   height: 100%;
   flex-basis: 40%;
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li {
-  border-bottom: 3px solid #d2ac7b;
+  border-bottom: 1px solid #d2ac7b;
   padding: 10px;
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
@@ -1226,14 +1258,15 @@ header.active .menu-mobile {
   margin-bottom: 10px;
   padding: 10px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   border: 1px solid #d2ac7b;
   border-radius: 10px;
   width: 80%;
   text-align: center;
+  transition: all 1s ease-in-out;
+  display: inline-block;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-index:hover {
-  transition: 1s;
   border-radius: 50%;
   border: 1px solid #422e20;
 }
@@ -1344,7 +1377,6 @@ header.active .menu-mobile {
   }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-index {
     margin: 0 15px;
-    width: 25%;
   }
 }
 .dashboard-restaurant-create {
@@ -1464,10 +1496,12 @@ header.active .menu-mobile {
   cursor: pointer;
   transition: 1s;
   margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create button:hover {
-  color: #000;
+  color: #fff;
   background-color: #d2ac7b;
+  letter-spacing: 3px;
 }
 
 @media screen and (min-width: 768px) {

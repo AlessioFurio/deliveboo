@@ -91,6 +91,13 @@
         border: 1px solid $gold;
         border-radius: 5px;
         cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            background-color: #fff;
+            color: $gold;
+            letter-spacing: 3px;
+        }
     }
 
 
@@ -105,6 +112,12 @@
             font-size: 18px;
             text-decoration: none;
             color: black;
+            transition: 1s;
+            &:hover {
+                text-decoration: underline;
+                color: $gold;
+                letter-spacing: 3px;
+            }
         }
 }
 

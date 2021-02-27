@@ -23,6 +23,7 @@ var app = new Vue({
 		totalPriceCookie: 0,
 		valueInputEmail: '',
 		valueInputPassword: '',
+		servicePage: false,
 	},
 
 
@@ -72,6 +73,7 @@ var app = new Vue({
 				modal.style.display = 'block';
 				console.log(modal.style.display);
 			}
+			this.servicePage = false;
 
 		},
 		closeModal() {
@@ -138,37 +140,37 @@ var app = new Vue({
 			}
 		},
 
-		clear() {
-			this.nome = '';
-			this.cognome = '';
-			this.indirizzo = '';
-			this.cartCookie = [];
-			this.cart = [];
-			this.totalPriceCookie = 0;
-			this.totalPrice = 0;
-			Cookies.remove('nome');
-			Cookies.remove('email');
-			Cookies.remove('indirizzo');
-			Cookies.remove('cartCookie');
-			Cookies.remove('totalPriceCookie');
-			Cookies.remove('totalQuantity');
-			axios
-			.get('http://localhost:8000/api/dishes', {
-				params:{
-					query: this.selectedRestaurant
-				}
-			})
-			.then((risposta) =>{
-				// assegno ad array restaurants la risposta API
-				this.dishesList = risposta.data.results;
-				for (var i = 0; i < this.dishesList.length; i++) {
-					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-				}
-
-			});
-
-			// Cookies.remove('cartCookie')
-		},
+		// clear() {
+		// 	this.nome = '';
+		// 	this.cognome = '';
+		// 	this.indirizzo = '';
+		// 	this.cartCookie = [];
+		// 	this.cart = [];
+		// 	this.totalPriceCookie = 0;
+		// 	this.totalPrice = 0;
+		// 	Cookies.remove('nome');
+		// 	Cookies.remove('email');
+		// 	Cookies.remove('indirizzo');
+		// 	Cookies.remove('cartCookie');
+		// 	Cookies.remove('totalPriceCookie');
+		// 	Cookies.remove('totalQuantity');
+		// 	axios
+		// 	.get('http://localhost:8000/api/dishes', {
+		// 		params:{
+		// 			query: this.selectedRestaurant
+		// 		}
+		// 	})
+		// 	.then((risposta) =>{
+		// 		// assegno ad array restaurants la risposta API
+		// 		this.dishesList = risposta.data.results;
+		// 		for (var i = 0; i < this.dishesList.length; i++) {
+		// 			this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+		// 		}
+		//
+		// 	});
+		//
+		// 	// Cookies.remove('cartCookie')
+		// },
 
 		Save (event) {
 			event.preventDefault(); //blocca il form per far eseguire il resto del codice
@@ -193,34 +195,7 @@ var app = new Vue({
 
 				document.getElementById('payment-form').submit();
 				this.clear() ;
-			});
-
-    	},
-
-<<<<<<< HEAD
-=======
-		Save (event) {
-			event.preventDefault(); //blocca il form per far eseguire il resto del codice
-
-			// var date = new Date();
-			// date.setTime(date.getTime() + (60 * 1000));
-			// Cookies.set('nome', this.nome, { expires: date })
-			// Cookies.set('cognome', this.cognome, { expires: date })
-			// Cookies.set('indirizzo', this.indirizzo, { expires: date })
-			// Cookies.set('cartCookie', this.cart, { expires: date })
-
-			// const form = document.getElementById('payment-form');
-
-			dropinInstance.requestPaymentMethod((error, payload) =>
-			{
-				if (error) console.error(error);
-
-				document.getElementById('nonce').value = payload.nonce;
-
-
-				// form.submit();
-
-				document.getElementById('payment-form').submit();
+				this.servicePage = true;
 			});
 
     	},
@@ -229,7 +204,6 @@ var app = new Vue({
 
 
 
->>>>>>> main
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
     	},

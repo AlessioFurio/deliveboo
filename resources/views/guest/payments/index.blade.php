@@ -79,9 +79,7 @@
         </form>
       </div>
     </div>
-
-    {{-- modal --}}
-    <div v-else class="row g-3">
+    <div v-else-if="!servicePage && !cartCookie.length" class="row g-3">
       <div class="col-12">
         <div class="message-container">
           <img src="{{asset('images/shopping-cart-empty-side-view.png')}}" alt="">
@@ -96,7 +94,17 @@
       </div>
     </div>
 
+  <div v-else-if="servicePage == true" class="row g-3">
+      <div class="loader-container">
+        <div class="loader"></div>
+      </div>
+      <div class="loader-container">
+          <h1>Attendi l'elaborazione del pagamento</h1>
+
+      </div>
+
   </div>
+</div>
 
 @endsection
 
@@ -132,6 +140,6 @@
     </script>
   @include('partials.footer')
 
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script>
+  {{-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script> --}}
 
 @endsection

@@ -1,180 +1,71 @@
-@media screen and (min-width: 200px){
-    footer {
-        background-color: #090d0e;
+footer {
+  width: 100%;
+  max-height: auto;
+  padding: 70px 0;
+  background-color: $body-bg;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .container-contact {
+    margin-bottom: 20px;
+    h5 {
+      color: $gold;
+      margin: 10px 0;
     }
-
-    .container-footer {
-        width: 90%;
-        margin:auto;
+    li {
+      list-style-type: none;
     }
+  }
 
-    .container-totale {
-        display: flex;
-        padding: 50px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-
-    .container-list {
-        width: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .list {
-            font-weight: 700;
-
-            ul {
-
-                li {
-                    list-style-type: none;
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    padding-bottom: 10px;
-                    color: white;
-
-                    &:hover {
-                            color: $gold;
-
-                    }
-
-                }
-            }
-        }
-
-    }
-    
+  .container-social-online {
+    text-align: center;
     .logo {
-      max-width: 50px;
-      max-height: 100%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      h3 {
-        color: #d2ac7b;
+      justify-content: center;
+      h1 {
         font-family: 'Ballet', cursive;
-        font-size: 30px;
-        letter-spacing: 3px;
-        margin-left: 10px;
-        margin-top: 20px;
-        font-weight: bold;
+        color: $gold;
+        font-weight: 700;
       }
 
     }
 
-    .container-social-online {
-        width: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 10px 0px 25px 0px;
-
-
-        .social-online {
-            font-weight: 700;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-
-          span {
-            color: #4c4d4e;
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-
-          }
-            i {
-                padding: 5px 20px;
-                border-radius: 6px;
-                font-size: 16px;
-                color: #4c4d4e;
-
-                &:hover {
-                    background-color: $gold;
-                    color: #fff;
-                    transition: 1s ease;
-                }
-            }
-        }
-
+    h2, .social a {
+      color: #6A6B6D;
     }
 
-    .container-contact {
-        width: 30%;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        align-items: center;
-
-
-        .contact {
-            font-weight: 700;
-            font-size: 16px;
-
-            a {
-                text-decoration: none;
-                font-size: 15px;
-                color: $gold;
-
-            }
-
-            h5 {
-                color: white;
-                font-size: 15px;
-                margin: 10px 0 20px 0;
-            }
-
-            ul {
-                font-size: 12px;
-
-                li {
-                    list-style-type: none;
-                    padding-bottom: 10px;
-                    color: #4c4d4e;
-
-                }
-            }
-
-        }
-
+    h2 {
+      margin: 20px 0;
     }
 
-    .container-social-online .social-online i{
-        font-size: 30px;
+    a {
+      margin: 5px 15px;
     }
-    .container-social-online .social-online .social a {
-        display: inline-block;
 
-        &:nth-child(2) i{
-            margin-left: 10px;
-        }
+  }
+
+  .store {
+    width: 150px;
+    height: auto;
+
+    a, img {
+      width: 100%;
+      height: 100%;
     }
+  }
+
+  .container-contact,
+  .container-social-online,
+  .store {
+    margin: 20px;
+  }
 }
 
-@media screen and (min-width: 1200px) {
-    .container-totale {
-        flex-direction: row;
-        justify-content: center;
-        text-align: left;
-    }
-
-    .container-social-online .social-online .social a {
-
-
-        &:nth-child(2) i{
-            margin-left: 0px;
-        }
-    }
+@media screen and (min-width: 576px) {
+  footer {
+    flex-direction: row;
+  }
 }

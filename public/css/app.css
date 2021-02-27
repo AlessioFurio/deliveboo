@@ -3033,6 +3033,39 @@ div i.fas.fa-times-circle {
   cursor: pointer;
 }
 
+.loader-container {
+  margin: 0 auto;
+}
+
+.loader {
+  margin: 120px 10px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 300px;
+  height: 300px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (min-width: 414px) {
   .modal .modal-content {
     min-width: 80%;

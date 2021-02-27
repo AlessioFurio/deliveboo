@@ -7,31 +7,29 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class MailFromOrder extends Mailable
+class CustomerConfirmMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $new_payment;
-
-
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($_new_payment)
-    {
-        $this->new_payment = $_new_payment;
-        //
-    }
+     public function __construct($_new_payment)
+     {
+         $this->new_payment = $_new_payment;
+         //
+     }
 
     /**
      * Build the message.
      *
      * @return $this
      */
-    public function build()
-    {
-        return $this->view('mail.adminmessage');
+     public function build()
+     {
+         return $this->view('mail.customermsg');
 
-    }
+     }
 }

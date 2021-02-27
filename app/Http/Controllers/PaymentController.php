@@ -9,6 +9,7 @@ use App\Payment;
 use App\Restaurant;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailFromOrder;
+use App\Mail\CustomerConfirmMail;
 
 class PaymentController extends Controller
 {
@@ -77,7 +78,7 @@ class PaymentController extends Controller
     $restaurant_mail = $user->email;
 
     Mail::to($restaurant_mail)->send(new MailFromOrder($new_payment));
-    Mail::to($data['email'])->send(new MailFromOrder($new_payment));
+    Mail::to($data['email'])->send(new CustomerConfirmMail($new_payment));
 
     return redirect()->route('welcome')->with(['transaction_result' => $result->success]);
   }

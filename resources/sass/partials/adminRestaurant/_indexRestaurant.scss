@@ -16,12 +16,12 @@
     .dashboard-body-restaurant-index {
 
         display: flex;
-        height: calc(100vh - 100px - 50px);
+        height: calc(100vh - 100px - 53px);
 
         .dashboard-body-menu-restaurant-index {
 
             background-color: #101927;
-            border-right: 3px solid $gold;
+            border-right: 1px solid $gold;
             height: 100%;
             flex-basis: 40%;
 
@@ -29,7 +29,7 @@
 
 
                 li {
-                    border-bottom: 3px solid $gold;
+                    border-bottom: 1px solid $gold;
                     padding:10px;
 
                     a{
@@ -139,14 +139,15 @@
                         margin-bottom: 10px;
                         padding: 10px;
                         text-decoration: none;
-                        font-size: 20px;
+                        font-size: 15px;
                         border: 1px solid $gold;
                         border-radius: 10px;
                         width: 80%;
                         text-align: center;
+                        transition: all 1s ease-in-out;
+                        display: inline-block;
 
                         &:hover {
-                            transition: 1s;
                             border-radius: 50%;
                             border: 1px solid #422e20;
 
@@ -575,7 +576,7 @@
                             .button-index {
 
                                 margin: 0 15px;
-                                width: 25%;
+
 
                                 &:hover {
 

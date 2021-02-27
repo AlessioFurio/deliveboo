@@ -287,8 +287,8 @@
         }
 
         .menu-mobile {
-            min-width: 200px;
-            min-height: 200px;
+            min-width: 250px;
+            min-height: 250px;
             max-width: 600px;
             max-width: 600px;
             display: flex;
@@ -337,6 +337,7 @@
 
                         &:hover a {
                             color: #fff;
+                            letter-spacing: 3px;
                         }
 
                         a {
@@ -346,7 +347,8 @@
                             text-decoration: none;
                             text-transform: uppercase;
                             letter-spacing: 1px;
-
+                            font-size: 25px;
+                            transition: all 0.5s ease-in-out;
                         }
                     }
                 }
@@ -439,6 +441,16 @@
         font-family: 'Dancing Script', cursive;
         font-size: 100px;
         padding-top: 250px;
+
+    }
+
+    .menu-mobile {
+        min-width: 350px;
+        min-height: 350px;
+        transition: 0.5s;
+    }
+    .menu-mobile .nav-menu-mobile ul li a{
+        padding: 30px 60px;
 
     }
 }

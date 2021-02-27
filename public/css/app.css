@@ -666,136 +666,65 @@ header.active .menu-mobile {
     font-size: 22px;
   }
 }
-@media screen and (min-width: 200px) {
-  footer {
-    background-color: #090d0e;
-  }
-
-  .container-footer {
-    width: 90%;
-    margin: auto;
-  }
-
-  .container-totale {
-    display: flex;
-    padding: 50px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .container-list {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .container-list .list {
-    font-weight: 700;
-  }
-  .container-list .list ul li {
-    list-style-type: none;
-    text-transform: uppercase;
-    font-size: 15px;
-    letter-spacing: 2px;
-    padding-bottom: 10px;
-    color: white;
-  }
-  .container-list .list ul li:hover {
-    color: #d2ac7b;
-  }
-
-  .container-social-online {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px 0px 25px 0px;
-  }
-  .container-social-online .social-online {
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .container-social-online .social-online h3 {
-    font-size: 20px;
-    color: #d2ac7b;
-    border: 1px solid #d2ac7b;
-    padding: 20px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-  }
-  .container-social-online .social-online span {
-    color: #4c4d4e;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-  .container-social-online .social-online i {
-    padding: 5px 20px;
-    border-radius: 6px;
-    font-size: 16px;
-    color: #4c4d4e;
-  }
-  .container-social-online .social-online i:hover {
-    background-color: #d2ac7b;
-    color: #fff;
-    transition: 1s ease;
-  }
-
-  .container-contact {
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .container-contact .contact {
-    font-weight: 700;
-    font-size: 16px;
-  }
-  .container-contact .contact a {
-    text-decoration: none;
-    font-size: 15px;
-    color: #d2ac7b;
-  }
-  .container-contact .contact h5 {
-    color: white;
-    font-size: 15px;
-    margin: 10px 0 20px 0;
-  }
-  .container-contact .contact ul {
-    font-size: 12px;
-  }
-  .container-contact .contact ul li {
-    list-style-type: none;
-    padding-bottom: 10px;
-    color: #4c4d4e;
-  }
-
-  .container-social-online .social-online i {
-    font-size: 30px;
-  }
-
-  .container-social-online .social-online .social a {
-    display: inline-block;
-  }
-  .container-social-online .social-online .social a:nth-child(2) i {
-    margin-left: 10px;
-  }
+footer {
+  width: 100%;
+  max-height: auto;
+  padding: 70px 0;
+  background-color: #040e10;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
-@media screen and (min-width: 1200px) {
-  .container-totale {
-    flex-direction: row;
-    justify-content: center;
-    text-align: left;
-  }
+footer .container-contact {
+  margin-bottom: 20px;
+}
+footer .container-contact h5 {
+  color: #d2ac7b;
+  margin: 10px 0;
+}
+footer .container-contact li {
+  list-style-type: none;
+}
+footer .container-social-online {
+  text-align: center;
+}
+footer .container-social-online .logo {
+  display: flex;
+  justify-content: center;
+}
+footer .container-social-online .logo h1 {
+  font-family: "Ballet", cursive;
+  color: #d2ac7b;
+  font-weight: 700;
+}
+footer .container-social-online h2, footer .container-social-online .social a {
+  color: #6A6B6D;
+}
+footer .container-social-online h2 {
+  margin: 20px 0;
+}
+footer .container-social-online a {
+  margin: 5px 15px;
+}
+footer .store {
+  width: 150px;
+  height: auto;
+}
+footer .store a, footer .store img {
+  width: 100%;
+  height: 100%;
+}
+footer .container-contact,
+footer .container-social-online,
+footer .store {
+  margin: 20px;
+}
 
-  .container-social-online .social-online .social a:nth-child(2) i {
-    margin-left: 0px;
+@media screen and (min-width: 576px) {
+  footer {
+    flex-direction: row;
   }
 }
 #header {

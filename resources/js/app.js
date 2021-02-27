@@ -200,10 +200,6 @@ var app = new Vue({
 			// Cookies.remove('cartCookie')
 		},
 
-
-
-
-
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
     	},

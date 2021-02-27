@@ -165,11 +165,7 @@ var app = new Vue({
 					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 				}
 
-			});
-
-			// Cookies.remove('cartCookie')
-		},
-
+		
 		Save (event) {
 			event.preventDefault(); //blocca il form per far eseguire il resto del codice
 

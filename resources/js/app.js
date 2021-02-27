@@ -138,9 +138,6 @@ var app = new Vue({
 			}
 		},
 
-
-<<<<<<< HEAD
-=======
 		Save (event) {
 			event.preventDefault(); //blocca il form per far eseguire il resto del codice
 
@@ -164,19 +161,13 @@ var app = new Vue({
 
 				document.getElementById('payment-form').submit();
 				this.clear() ;
->>>>>>> animazioni-btn
+
 			});
 
 			// Cookies.remove('cartCookie')
 		},
 
-<<<<<<< HEAD
-		
-		Save (event) {
-			event.preventDefault(); //blocca il form per far eseguire il resto del codice
 
-=======
->>>>>>> animazioni-btn
 		cartBtnLessPlus() { // funzione per aggiornare lista item nel carrello
 			return this.cart = this.dishesList.filter(product => product.quantity > 0);
     	},

@@ -38,6 +38,7 @@
                         <div class="cover-card">
                             @if ($restaurant->cover)
                                 <img src="{{asset('storage/'. $restaurant->cover)}}" alt="{{$restaurant->name}}">
+                            @else <img src="{{asset('images/img_non_disponibile.jpg')}}" alt="{{$restaurant->name}}">
                             @endif
                         </div>
                         <div class="body-restaurant-card-index">

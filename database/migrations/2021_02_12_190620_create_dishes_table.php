@@ -21,7 +21,7 @@ class CreateDishesTable extends Migration
           $table->foreign('course_id')->references('id')->on('courses');
           $table->string('name');
           $table->text('ingredients');
-          $table->double('price', 4, 2);
+          $table->double('price', 6, 2);
           $table->boolean('visibility');
           $table->timestamps();
           $table->string('cover')->nullable();

@@ -20,7 +20,7 @@ class DishesTableSeeder extends Seeder
 
             for ($j=0; $j < 10 ; $j++) {
                 $new_dish = new Dish();
-                $new_dish->name = $plates[$i].''.$faker->word();
+                $new_dish->name = $plates[$i].' '.$faker->word();
                 $new_dish->ingredients = $faker->text($maxNbChars = 60);
                 $new_dish->price = $faker->randomFloat($nbMaxDecimals = 2, $min = 8, $max = 45);
                 $new_dish->visibility = $faker->boolean($chanceOfGettingTrue = 50);

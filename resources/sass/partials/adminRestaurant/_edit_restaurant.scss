@@ -91,6 +91,21 @@
                         }
                     }
 
+                    .content-form-file-restaurant-edit {
+
+                        figure {
+
+                            border: 3px solid $gold;
+                            border-radius: 10px;
+                            margin-bottom: 10px;
+
+                            img {
+                                max-width: 100%;
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+
                     .content-form-category-restaurant-edit {
 
                         padding: 10px;
@@ -120,18 +135,10 @@
                         }
                     }
 
-                    .content-form-file-restaurant-edit {
+                    .content-form-control-file-restaurant-edit {
 
                         margin: 20px 0;
                         text-align: left;
-
-                        figure {
-
-                            img {
-                                max-width: 100%;
-                            }
-                        }
-
 
                         input {
                             background-color: #e3e8f1;
@@ -174,7 +181,7 @@
 
 
                 h1 {
-
+                    font-size: 30px;
                 }
         }
 
@@ -213,6 +220,7 @@
         .dashboard-body-content-restaurant-edit {
 
             flex-basis: 80%;
+            overflow-y: scroll;
 
             .card-form-restaurant-edit {
 
@@ -241,28 +249,21 @@
                             }
                         }
 
-
                         .content-form-file-restaurant-edit {
 
+                            figure {
 
+                                img {
+                                    max-width: 70%;
 
-                            input {
-
+                                }
                             }
-
                         }
 
                         .content-form-category-restaurant-edit {
 
 
-
-
-                            input {
-
-                            }
-
                             .form-check-restaurant-edit {
-
 
 
                                 input {
@@ -274,6 +275,14 @@
 
                                 }
                             }
+                        }
+
+                        .content-form-control-file-restaurant-edit {
+
+                            input {
+
+                            }
+
                         }
 
                         button {
@@ -299,19 +308,18 @@
 
 
                 h1 {
-
+                    font-size: 35px;
                 }
         }
 
 
         .dashboard-body-restaurant-edit {
 
-            display: flex;
-            height: calc(100vh - 100px - 48px);
+
 
             .dashboard-body-menu-restaurant-edit {
 
-                flex-basis: 20%;
+
 
                 ul{
 
@@ -335,7 +343,7 @@
 
         .dashboard-body-content-restaurant-edit {
 
-            flex-basis: 80%;
+
 
             .card-form-restaurant-edit {
 
@@ -364,34 +372,22 @@
                             }
                         }
 
-
                         .content-form-file-restaurant-edit {
 
-
-                            margin: 20px 0;
-                            text-align: left;
+                            figure {
 
 
-                            input {
 
-                                background-color: #e3e8f1;
-                                width: 60%;
+                                img {
+
+                                }
                             }
-
                         }
 
                         .content-form-category-restaurant-edit {
 
 
-
-
-                            input {
-
-                            }
-
                             .form-check-restaurant-edit {
-
-
 
                                 input {
 
@@ -402,6 +398,14 @@
 
                                 }
                             }
+                        }
+
+                        .content-form-control-file-restaurant-edit {
+
+                            input {
+
+                            }
+
                         }
 
                         button {
@@ -472,13 +476,15 @@
 
                 .card-title-restaurant-edit {
 
+                    h2 {
+
+                    }
+
                 }
 
                 form {
 
                     .content-form-restaurant-edit {
-
-
 
                         h3 {
 
@@ -494,29 +500,21 @@
 
                         .content-form-file-restaurant-edit {
 
+                            figure {
 
 
 
+                                img {
+                                    max-width: 60%;
 
-                            input {
-
-
+                                }
                             }
-
                         }
 
                         .content-form-category-restaurant-edit {
 
 
-
-
-                            input {
-
-                            }
-
                             .form-check-restaurant-edit {
-
-
 
                                 input {
 
@@ -527,6 +525,14 @@
 
                                 }
                             }
+                        }
+
+                        .content-form-control-file-restaurant-edit {
+
+                            input {
+
+                            }
+
                         }
 
                         button {

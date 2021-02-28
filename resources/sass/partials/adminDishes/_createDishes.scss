@@ -1,14 +1,15 @@
 .container-general-create {
 
-        background-image: url('/images/portate-fredde.jpg');
+        background-image: url('/images/pizza-sfondo.jpg');
         background-size: cover;
-        background-position: bottom;
         height: 100vh;
-        border-top: 5px solid $gold;
+        border-top: 1px solid $gold;
 
         .container-general-create-plate {
 
-            padding: 50px 0 100px 0;
+            padding: 100px 0;
+            display: flex;
+            justify-content: center;
         }
 
         .container-form-create-plate {
@@ -112,7 +113,7 @@
 
         .container-form-create-plate {
 
-            width: 50%;
+            width: 60%;
 
         }
 
@@ -158,12 +159,64 @@
 
         .container-general-create-plate {
 
+            justify-content: flex-end;
+        }
 
+        .container-form-create-plate {
+
+            width: 45%;
+            margin-right: 50px;
+
+        }
+
+        .title-create-plate {
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+
+        .list-plate {
+
+            label {
+                font-size: 25px;
+
+            }
+
+            .input {
+
+
+            }
+
+            .textarea {
+
+            }
+
+            .check {
+
+            }
+
+            .input-search {
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1400px) {
+
+    .container-general-create {
+
+        .container-general-create-plate {
+
+            justify-content: flex-end;
         }
 
         .container-form-create-plate {
 
             width: 30%;
+            margin-right: 220px;
 
         }
 

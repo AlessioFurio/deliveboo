@@ -11,6 +11,7 @@ class CustomerConfirmMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $new_payment;
+    public $foods;
     /**
      * Create a new message instance.
      *

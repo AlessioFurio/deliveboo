@@ -13,21 +13,22 @@ class CategoryRestaurantTableSeeder extends Seeder
      */
     public function run()
     {
+
         for ($i=1; $i < 11 ; $i++) {
-            if ($i < 6) {
-                for ($j=0; $j < 3 ; $j++) {
-                    DB::table('category_restaurant')->insert([
-                        'category_id' => $j+$i,
-                        'restaurant_id' => $i
-                    ]);
-                }
+            if ($i < 9) {
+                DB::table('category_restaurant')->insert([
+                    'category_id' => $i,
+                    'restaurant_id' => $i
+                ]);
             } else {
-                for ($j=0; $j < 3 ; $j++) {
-                    DB::table('category_restaurant')->insert([
-                        'category_id' => $i-$j-3,
-                        'restaurant_id' => $i
-                    ]);
-                }
+                DB::table('category_restaurant')->insert([
+                    'category_id' => $i-2,
+                    'restaurant_id' => $i
+                ]);
+                DB::table('category_restaurant')->insert([
+                    'category_id' => $i-8,
+                    'restaurant_id' => $i
+                ]);
             }
         }
     }

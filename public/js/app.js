@@ -2216,13 +2216,12 @@ var app = new Vue({
     showModal: function showModal() {
       console.log('ok');
       var modal = document.getElementById("myModal");
+      this.servicePage = false;
 
       if (modal) {
         modal.style.display = 'block';
         console.log(modal.style.display);
       }
-
-      this.servicePage = false;
     },
     closeModal: function closeModal() {
       var modal = document.getElementById("myModal");

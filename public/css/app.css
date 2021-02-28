@@ -1747,7 +1747,7 @@ footer .store {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   margin: 20px 5px;
-  padding: 5px;
+  padding: 10px 5px;
 }
 .container-card-restaurant-show .restaurants-show .restaurant-card-show:hover {
   transition: 1s;
@@ -1945,6 +1945,7 @@ footer .store {
   .dashboard-body-content-restaurant-show .container-card-restaurant-show .restaurants-show .restaurant-card-show {
     flex-basis: 20%;
     margin: 20px;
+    padding: 20px 5px;
   }
   .dashboard-body-content-restaurant-show .container-card-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show h3 {
     font-size: 25px;
@@ -2013,6 +2014,15 @@ footer .store {
   background-color: #e3e8f1;
   border: 3px solid #d2ac7b;
 }
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit figure {
+  border: 3px solid #d2ac7b;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit figure img {
+  max-width: 100%;
+  padding-top: 10px;
+}
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit {
   padding: 10px;
   margin: 10px 0;
@@ -2030,14 +2040,11 @@ footer .store {
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit .form-check-restaurant-edit label {
   padding-left: 10px;
 }
-.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit {
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-control-file-restaurant-edit {
   margin: 20px 0;
   text-align: left;
 }
-.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit figure img {
-  max-width: 100%;
-}
-.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit input {
+.dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-control-file-restaurant-edit input {
   background-color: #e3e8f1;
   border: 3px solid #d2ac7b;
   border-radius: 5px;
@@ -2060,6 +2067,9 @@ footer .store {
 }
 
 @media screen and (min-width: 768px) {
+  .dashboard-restaurant-edit .dashboard-header-restaurant-edit h1 {
+    font-size: 30px;
+  }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit {
     display: flex;
     height: calc(100vh - 100px - 48px);
@@ -2074,39 +2084,31 @@ footer .store {
   }
   .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit {
     flex-basis: 80%;
+    overflow-y: scroll;
   }
   .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
     width: 70%;
     margin: 20px auto;
   }
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit figure img {
+    max-width: 70%;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .dashboard-restaurant-edit .dashboard-body-restaurant-edit {
-    display: flex;
-    height: calc(100vh - 100px - 48px);
-  }
-  .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
-    flex-basis: 20%;
-  }
-  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit {
-    flex-basis: 80%;
+  .dashboard-restaurant-edit .dashboard-header-restaurant-edit h1 {
+    font-size: 35px;
   }
   .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
     margin: 30px auto;
-    width: 60%;
-  }
-  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit {
-    margin: 20px 0;
-    text-align: left;
-  }
-  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit input {
-    background-color: #e3e8f1;
     width: 60%;
   }
 }
 @media screen and (min-width: 1300px) {
   .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
     width: 40%;
+  }
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit figure img {
+    max-width: 60%;
   }
 }
 .dashboard-dishes-index .dashboard-header-dishes-index {
@@ -2212,7 +2214,7 @@ footer .store {
   }
 }
 .container-general-edit {
-  background-image: url("/images/burgerKing.jpeg");
+  background-image: url("/images/snacks-food.jpg");
   background-size: cover;
   background-position: center;
   border-top: 5px solid #d2ac7b;
@@ -2734,14 +2736,15 @@ footer .store {
   }
 }
 .container-general-create {
-  background-image: url("/images/portate-fredde.jpg");
+  background-image: url("/images/pizza-sfondo.jpg");
   background-size: cover;
-  background-position: bottom;
   height: 100vh;
-  border-top: 5px solid #d2ac7b;
+  border-top: 1px solid #d2ac7b;
 }
 .container-general-create .container-general-create-plate {
-  padding: 50px 0 100px 0;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
 }
 .container-general-create .container-form-create-plate {
   width: 90%;
@@ -2812,7 +2815,7 @@ footer .store {
 
 @media screen and (min-width: 768px) {
   .container-general-create .container-form-create-plate {
-    width: 50%;
+    width: 60%;
   }
   .container-general-create .title-create-plate h1 {
     font-size: 30px;
@@ -2822,8 +2825,27 @@ footer .store {
   }
 }
 @media screen and (min-width: 1024px) {
+  .container-general-create .container-general-create-plate {
+    justify-content: flex-end;
+  }
+  .container-general-create .container-form-create-plate {
+    width: 45%;
+    margin-right: 50px;
+  }
+  .container-general-create .title-create-plate h1 {
+    font-size: 30px;
+  }
+  .container-general-create .list-plate label {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container-general-create .container-general-create-plate {
+    justify-content: flex-end;
+  }
   .container-general-create .container-form-create-plate {
     width: 30%;
+    margin-right: 220px;
   }
   .container-general-create .title-create-plate h1 {
     font-size: 30px;

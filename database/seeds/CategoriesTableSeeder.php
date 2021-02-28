@@ -14,7 +14,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $our_categories = ['Italiano','Messicano','Cinese','Fast-food','Pizzeria','Rosticceria','Pasticceria','Sushi'];
+        $our_categories = ['Sushi','Pizzeria','Fast-food','Rosticceria','Pasticceria','Messicano','Cinese','Italiano'];
 
         for ($i=0; $i < 8 ; $i++) {
 

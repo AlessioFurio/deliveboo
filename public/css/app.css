@@ -540,12 +540,12 @@ header.active .menu-mobile {
   justify-content: center;
   align-items: center;
 }
-.card-category .container-card-category .menu-filter .selection .category-select {
+.card-category .container-card-category .menu-filter .selection select {
   width: 70%;
   padding: 8px 30px;
-  border-radius: 6px;
   color: #d2ac7b;
   cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
 }
 .card-category .container-card-category .menu-filter button {
   background-color: #fff;

@@ -53,6 +53,9 @@ h1, h2, h3, h4, h5, h6 {
 header {
   position: relative;
 }
+header a:hover {
+  text-decoration: none;
+}
 header::before {
   content: "";
   position: fixed;
@@ -550,23 +553,12 @@ header.active .menu-mobile {
   justify-content: center;
   align-items: center;
 }
-.card-category .container-card-category .menu-filter .selection .category-select {
+.card-category .container-card-category .menu-filter .selection select {
   width: 70%;
   padding: 8px 30px;
-  border-radius: 6px;
   color: #d2ac7b;
   cursor: pointer;
-}
-.card-category .container-card-category .menu-filter button {
-  background-color: #fff;
-  color: #d2ac7b;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 9px 10px;
-  margin-left: 10px;
-  border-radius: 6px;
-  border-style: none;
-  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
 }
 .card-category .container-card-category .container-card {
   margin: auto;

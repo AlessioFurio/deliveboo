@@ -16,11 +16,21 @@
   .fa-minus-square,
   .fa-plus-square {
     font-size: 22px;
+    color: #6c757d;
 
     &:hover {
       color: $gold;
       cursor: pointer;
     }
+  }
+
+  label {
+    margin-top: 10px;
+  }
+
+  .braintree-sheet__header .braintree-sheet__text,
+  .braintree-sheet__content--form .braintree-form__field-group .braintree-form__label {
+    font-family: 'Josefin Sans', sans-serif;
   }
 }
 

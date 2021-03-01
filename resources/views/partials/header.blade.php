@@ -41,13 +41,8 @@
 
         </div>
         <div class="text-header">
-            <h1 class="principal-text">Welcome to Deliveboo</h1>
+            <h1 class="principal-text">I piatti che ami, <br> a casa tua.</h1>
         </div>
-
-
-
-
-
 
 
         <div class="menu-mobile"> {{--:class="isActive ? 'active' : ''"> --}}

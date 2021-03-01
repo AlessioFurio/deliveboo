@@ -53,6 +53,9 @@ h1, h2, h3, h4, h5, h6 {
 header {
   position: relative;
 }
+header a:hover {
+  text-decoration: none;
+}
 header::before {
   content: "";
   position: fixed;
@@ -531,6 +534,8 @@ header.active .menu-mobile {
   justify-content: center;
 }
 .card-category .container-card-category .menu-filter {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/sayagata-400px.png");
+  background-repeat: repeat;
   padding: 50px 15px;
   border-bottom: 1px solid #d2ac7b;
   border-top: 1px solid #d2ac7b;
@@ -550,23 +555,12 @@ header.active .menu-mobile {
   justify-content: center;
   align-items: center;
 }
-.card-category .container-card-category .menu-filter .selection .category-select {
+.card-category .container-card-category .menu-filter .selection select {
   width: 70%;
   padding: 8px 30px;
-  border-radius: 6px;
   color: #d2ac7b;
   cursor: pointer;
-}
-.card-category .container-card-category .menu-filter button {
-  background-color: #fff;
-  color: #d2ac7b;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 9px 10px;
-  margin-left: 10px;
-  border-radius: 6px;
-  border-style: none;
-  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
 }
 .card-category .container-card-category .container-card {
   margin: auto;
@@ -3009,27 +3003,30 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
   max-width: 1000px;
   margin: auto;
 }
-.container-fluid h4 {
+.container-fluid .row {
+  margin-left: 0;
+}
+.container-fluid .row h4 {
   color: #040e10;
 }
-.container-fluid [v-cloak] {
+.container-fluid .row [v-cloak] {
   display: none;
 }
-.container-fluid .fa-minus-square,
-.container-fluid .fa-plus-square {
+.container-fluid .row .fa-minus-square,
+.container-fluid .row .fa-plus-square {
   font-size: 22px;
   color: #6c757d;
 }
-.container-fluid .fa-minus-square:hover,
-.container-fluid .fa-plus-square:hover {
+.container-fluid .row .fa-minus-square:hover,
+.container-fluid .row .fa-plus-square:hover {
   color: #d2ac7b;
   cursor: pointer;
 }
-.container-fluid label {
+.container-fluid .row label {
   margin-top: 10px;
 }
-.container-fluid .braintree-sheet__header .braintree-sheet__text,
-.container-fluid .braintree-sheet__content--form .braintree-form__field-group .braintree-form__label {
+.container-fluid .row .braintree-sheet__header .braintree-sheet__text,
+.container-fluid .row .braintree-sheet__content--form .braintree-form__field-group .braintree-form__label {
   font-family: "Josefin Sans", sans-serif;
 }
 

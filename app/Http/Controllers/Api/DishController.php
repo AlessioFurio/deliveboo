@@ -19,6 +19,7 @@ class DishController extends Controller
         })->get(); //cerco quei ristoranti che hanno una categoria con id specifica
       } else {
           $dishes = Dish::all();
+          // $dishes = [];
 
       }
 

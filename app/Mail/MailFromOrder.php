@@ -10,7 +10,7 @@ use Illuminate\Queue\SerializesModels;
 class MailFromOrder extends Mailable
 {
     use Queueable, SerializesModels;
-    public $order;
+    public $new_payment;
 
 
     /**
@@ -18,9 +18,9 @@ class MailFromOrder extends Mailable
      *
      * @return void
      */
-    public function __construct($_order)
+    public function __construct($_new_payment)
     {
-        $this->order = $_order;
+        $this->new_payment = $_new_payment;
         //
     }
 

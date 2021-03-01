@@ -33,6 +33,13 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="content-form-file-restaurant-edit">
+                            @if ($restaurant->cover)
+                                <figure>
+                                <img src="{{asset('storage/'.$restaurant->cover )}}" alt="{{$restaurant->name}}">
+                                </figure>
+                            @endif
+                        </div>
                         <h3>Indirizzo</h3>
                         <div class="content-form-input-restaurant-edit">
                             <input value="{{old( 'address', $restaurant->address)}}" type="text" name="address" required>
@@ -72,14 +79,8 @@
                                 </div>
                             @enderror
                         </div>
-                        <div class="content-form-file-restaurant-edit">
-                            @if ($restaurant->cover)
-                                <figure>
-                                <figcaption>Immagine presente:</figcaption>
-                                <img src="{{asset('storage/'.$restaurant->cover )}}" alt="{{$restaurant->name}}">
-                                </figure>
-                            @endif
-                            <input type="file" name="cover" class="form-control-file">
+                        <div class="content-form-control-file-restaurant-edit">
+                            <input type="file" name="cover">
                             @error('cover')
                             <div>{{ $message }}</div>
                             @enderror
@@ -94,35 +95,3 @@
     </div>
 </div>
 @endsection
-
-{{-- @section('content')
-    <form method="post" action="{{route('admin.restaurants.update' , ['restaurant' => $restaurant->id])}}" enctype="multipart/form-data">
-        @method('PUT')
-        @csrf
-        <div>
-            <div>
-                <label>Nome ristorante</label>
-                <input value="{{old( 'name', $restaurant->name)}}" type="text" name="name" required>
-                @error('title')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-            <div>
-                <label>indirizzo</label>
-                <input value="{{old( 'address', $restaurant->address)}}" type="text" name="address" required>
-                @error('address')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-            <div>
-                <label>Telefono</label>
-                <input value="{{old( 'phone', $restaurant->phone)}}" type="text" name="phone" required>
-                @error('phone')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-        <button type="submit" class="btn btn-primary">Salva</button>
-    </form>
-
-
-@endsection --}}

@@ -2,24 +2,9 @@
 
 @section('content')
 
-<div class="dashboard-restaurant-index">
-    <div class="dashboard-header-restaurant-index">
-        <h1>Dashboard</h1>
-    </div>
-    <div class="dashboard-body-restaurant-index">
-
-        <div class="dashboard-body-menu-restaurant-index">
-            <ul>
-                {{-- <li>
-                    <a href="{{route('admin.restaurants.index')}}" >I Tuoi Ristoranti</a>
-                </li> --}}
-                <li>
-                    <a href="{{route('admin.restaurants.create')}}" >Aggiungi Ristorante</a>
-                </li>
-                {{-- <li>
-                    <a href="{{route('admin.dishes.create')}}" class="btn add-restaurant">Aggiungi Piatto</a>
-                </li> --}}
-            </ul>
+    <div class="dashboard-restaurant-index">
+        <div class="dashboard-header-restaurant-index">
+            <h1>Dashboard</h1>
         </div>
 
 
@@ -57,19 +42,17 @@
                                             <button type="submit" name="button" >Elimina</button>
                                             @csrf
                                             @method('DELETE')
-                                        </form>
+                                            </form>
 
-                                    </div> --}}
+                                            </div> --}}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-                    @endforeach
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
 @endsection

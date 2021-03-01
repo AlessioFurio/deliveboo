@@ -90,13 +90,18 @@
             padding: 10px;
             background: rgba(255, 255, 255, 0.5);
 
+            &:hover {
+                transition: 1s;
+                background: rgba(255, 255, 255, 1);
+            }
+
             .title-restaurant-card {
-                text-align: center;
-                color: #101927;
-                font-size: 15px;
 
                 h1 {
-                    padding-bottom: 10px;
+                    text-align: center;
+                    color: #101927;
+                    font-size: 25px;
+                    padding: 10px 0;
                 }
             }
 
@@ -104,6 +109,7 @@
 
                 img {
                     max-width: 100%;
+
                 }
             }
 
@@ -115,10 +121,15 @@
 
                     p {
                         padding: 5px 0;
-                        color: $gold;
+                        color: #422e20;
+                        font-size: 20px;
+                        font-weight: 700;
 
                         strong {
                             color: #101927;
+                            font-size: 15px;
+                            display: block;
+                            padding-top: 5px;
                         }
                     }
                 }
@@ -126,7 +137,7 @@
 
             .action-restaurant-card-index {
 
-                padding: 10px 0;
+                padding: 5px 0;
 
                 .container-button-action-index{
 
@@ -139,7 +150,7 @@
                         margin-bottom: 10px;
                         padding: 10px;
                         text-decoration: none;
-                        font-size: 15px;
+                        font-size: 20px;
                         border: 1px solid $gold;
                         border-radius: 10px;
                         width: 80%;
@@ -150,6 +161,7 @@
                         &:hover {
                             border-radius: 50%;
                             border: 1px solid #422e20;
+                            color: $gold;
 
                         }
 
@@ -194,6 +206,7 @@
                     // .button-elimina-index {
                     //
                     //     color: #101927;
+                    //     display: inline-block;
                     //     background: rgba(255, 99, 71, 0.5);
                     //
                     //     &:hover {
@@ -204,35 +217,52 @@
                     // }
 
                 }
-
             }
-
         }
-
     }
-
 }
 
 
 @media screen and (min-width: 768px){
 
-    .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index{
-        flex-basis: 25%;
+    .dashboard-restaurant-index {
 
-        ul{
-
-            li {
-
-                padding:20px;
-
-                a{
-
-                    font-size: 25px;
+        .dashboard-header-restaurant-index {
 
 
-                    &:hover {
+            h1 {
+
+                font-size: 30px;
+            }
+        }
+
+        .dashboard-body-restaurant-index {
 
 
+
+            .dashboard-body-menu-restaurant-index {
+
+
+                flex-basis: 20%;
+
+                ul {
+
+
+                    li {
+
+                        padding:20px;
+
+                        a{
+
+                            font-size: 23px;
+
+
+                            &:hover {
+
+
+
+                            }
+                        }
                     }
                 }
             }
@@ -249,10 +279,10 @@
 
             .title-restaurant-index {
 
-
+                margin: 20px 0;
 
                 h1 {
-
+                    font-size: 35px;
                 }
             }
         }
@@ -264,7 +294,7 @@
 
             .restaurant-card-index {
 
-                flex-basis: 50%;
+                flex-basis: 60%;
 
 
                 .title-restaurant-card {
@@ -303,11 +333,12 @@
 
                         .container-button-action-index{
 
-
+                            flex-direction: row;
 
                             .button-index {
 
                                 width: 50%;
+                                margin: 10px 5px;
 
                                 &:hover {
 
@@ -368,12 +399,52 @@
 
 @media screen and (min-width: 1024px){
 
-    .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index{
-        flex-basis: 20%;
+    .dashboard-restaurant-index {
+
+        .dashboard-header-restaurant-index {
+
+
+            h1 {
+
+
+            }
+        }
+
+        .dashboard-body-restaurant-index {
+
+
+
+            .dashboard-body-menu-restaurant-index {
+
+
+
+
+                ul {
+
+
+                    li {
+
+
+
+                        a{
+
+
+
+
+                            &:hover {
+
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
-
     .dashboard-body-content-restaurant-index{
+
 
 
         .container-restaurant-index {
@@ -386,33 +457,32 @@
 
                 h1 {
 
-                    font-size: 40px;
-
                 }
             }
         }
 
         .restaurants-index {
 
-            margin: 20px 0;
+
+
 
             .restaurant-card-index {
 
-                flex-basis: 30%;
+
+                flex-basis: 55%;
 
                 .title-restaurant-card {
 
-                    font-size: 15px;
 
                     h1 {
-
+                        font-size: 35px;
+                        padding: 20px 0;
                     }
 
                 }
-
                 .cover-card {
                     img {
-
+                        max-width: 60%;
                     }
                 }
 
@@ -420,13 +490,12 @@
 
                     .details-restaurant-card-index {
 
+
                         p {
 
-                            padding: 5px 0;
-                            font-size: 20px;
+                            font-size: 25px;
 
                             strong {
-
                                 font-size: 20px;
                             }
                         }
@@ -434,22 +503,20 @@
 
                     .action-restaurant-card-index {
 
-                        padding: 10px 0;
+
 
                         .container-button-action-index{
 
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
 
 
                             .button-index {
 
-                                margin: 0 10px;
-                                width: 30%;
+                                margin: 15px 5px;
 
                                 &:hover {
 
+
+                                }
 
                             }
 
@@ -503,9 +570,54 @@
 }
 
 
+@media screen and (min-width: 1200px){
 
+    .dashboard-restaurant-index {
+
+        .dashboard-header-restaurant-index {
+
+
+            h1 {
+
+                font-size: 35px;
+            }
+        }
+
+        .dashboard-body-restaurant-index {
+
+
+
+            .dashboard-body-menu-restaurant-index {
+
+
+                flex-basis: 20%;
+
+                ul {
+
+
+                    li {
+
+
+
+                        a{
+
+                            font-size: 25px;
+
+
+                            &:hover {
+
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .dashboard-body-content-restaurant-index{
+
 
 
         .container-restaurant-index {
@@ -514,36 +626,38 @@
 
             .title-restaurant-index {
 
-
+                margin: 25px 0;
 
                 h1 {
-
                     font-size: 40px;
-
                 }
             }
         }
 
         .restaurants-index {
 
+            justify-content: space-between;
 
 
             .restaurant-card-index {
 
                 flex-basis: 30%;
+                margin-left: 100px;
+
+
 
                 .title-restaurant-card {
 
-                    font-size: 20px;
 
                     h1 {
-
+                        font-size: 40px;
                     }
 
                 }
                 .cover-card {
                     img {
                         max-width: 60%;
+
                     }
                 }
 
@@ -553,13 +667,10 @@
 
 
                         p {
-
-                            padding: 5px 0;
-                            font-size: 20px;
+                            font-size: 27px;
 
                             strong {
-
-                                font-size: 20px;
+                                font-size: 23px;
                             }
                         }
                     }
@@ -572,10 +683,10 @@
 
 
 
-
                             .button-index {
 
-                                margin: 0 15px;
+                                width: 50%;
+                                margin: 10px 5px;
 
 
                                 &:hover {

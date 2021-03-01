@@ -62,7 +62,7 @@
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
-              <label>email</label>
+              <label>E-mail</label>
               <input  type="email" class="form-control" id="mail" placeholder="Inserisci l'indirizzo email" name="email" required>
               <div class="invalid-feedback">
                 Please enter your shipping address.
@@ -79,7 +79,7 @@
         </form>
       </div>
     </div>
-    <div v-else-if="!servicePage && !cartCookie.length" class="row g-3">
+    <div v-else-if="!servicePage && !cartCookie.length" class="row g-3" v-cloak>
       <div class="col-12">
         <div class="message-container">
           <img src="{{asset('images/shopping-cart-empty-side-view.png')}}" alt="">
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-  <div v-else-if="servicePage == true" class="row g-3">
+  <div v-else-if="servicePage == true" class="row g-3" v-cloak>
       <div class="loader-container">
         <div class="loader"></div>
       </div>

@@ -2965,16 +2965,19 @@ main .container-restaurant .container-list-dishes .card-dish {
   min-width: 200px;
   margin: 15px;
   box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
+  border: 3px solid #fff;
+  transition: 0.5s ease-in-out;
 }
 main .container-restaurant .container-list-dishes .card-dish:hover {
-  border: 2px solid #d2ac7b;
+  border: 3px solid #d2ac7b;
+  padding: 10px;
 }
 main .container-restaurant .container-list-dishes .card-dish h3 {
-  padding: 20px;
+  padding: 18px;
   text-align: center;
   text-transform: uppercase;
   color: #d2ac7b;
-  font-size: 23px;
+  font-size: 20px;
 }
 main .container-restaurant .container-list-dishes .card-dish .wp-img-card-dish {
   width: 100%;

@@ -658,7 +658,7 @@ header.active .menu-mobile {
   }
 
   .card-category .container-card-category .container-card .cards .card a p {
-    font-size: 22px;
+    font-size: 28px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -3146,6 +3146,11 @@ div i.fas.fa-times-circle {
     margin: 15% 20%;
   }
 }
+.row {
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+}
+
 .contacts-flex {
   display: flex;
   justify-content: center;
@@ -3172,6 +3177,7 @@ div i.fas.fa-times-circle {
 .contact-developer i {
   font-size: 30px;
   font-family: "Font Awesome 5 Free";
+  margin-right: 5px;
 }
 .contact-developer p {
   margin-top: 30px;
@@ -3186,6 +3192,10 @@ div i.fas.fa-times-circle {
   font-family: "Font Awesome 5 Brands";
   color: #d2ac7b;
 }
+.contact-developer a #i-email {
+  font-family: "Font Awesome 5 Free";
+  font-size: 26px;
+}
 .contact-developer h4 {
   color: #d2ac7b;
   font-size: 20px;
@@ -3195,11 +3205,10 @@ div i.fas.fa-times-circle {
 
 .text {
   margin-top: 100px;
+  text-align: center;
 }
 
 .group {
-  margin: 10px;
-  padding: 20px;
   border-radius: 3px;
   flex-wrap: wrap;
 }

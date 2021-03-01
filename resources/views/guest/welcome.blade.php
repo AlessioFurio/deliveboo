@@ -39,8 +39,6 @@
                     <option :value="{{$category->id}}">{{$category->name}}</option>
                   @endforeach
                 </select>
-                {{-- <button  type="button" name="button">Cerca</button>
-              </div> --}}
           </div>
           <div class="container-card">
               <div class="cards">

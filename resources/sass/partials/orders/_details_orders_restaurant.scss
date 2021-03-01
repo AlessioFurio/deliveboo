@@ -18,7 +18,7 @@
         background-image: url('/images/ordini.jpg');
         background-size: cover;
         background-position: center;
-        height: calc(100vh - 83px - 97px);
+        height: calc(100vh - 83px - 82px);
         overflow-y: scroll;
 
 
@@ -139,7 +139,7 @@
         }
 
         .container-form-details {
-
+            height: calc(100vh - 83px - 97px);
             .my-restaurant-name {
 
                 font-size: 35px;

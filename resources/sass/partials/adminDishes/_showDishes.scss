@@ -21,7 +21,7 @@
     .dashboard-body-dishes-show {
 
         display: flex;
-        height: calc(100vh - 100px - 49px);
+        height: calc(100vh - 100px - 45px);
 
         .dashboard-body-menu-dishes-show {
 
@@ -68,7 +68,7 @@
         background-size: cover;
         background-position: center;
         height: 100vh;
-        overflow-y: scroll;
+
 
 
         .title-dishes-show{
@@ -158,6 +158,7 @@
 
         .dashboard-body-dishes-show {
 
+            height: calc(100vh - 100px - 51px);
 
 
             .dashboard-body-menu-dishes-show {

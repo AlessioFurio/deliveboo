@@ -41,6 +41,8 @@
                 </select>
           </div>
           <div class="container-card">
+
+              <h1>Il nostro array di  ristoranti</h1>
               <div class="cards">
                   <div class="card" v-for="restaurant in restaurants">
                       <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">
@@ -49,9 +51,11 @@
                           <p>@{{ restaurant.name }}</p>
                       </a>
                       <div class="card-restaurant-details">
-                          <h2>Dettagli ristoranti</h2>
                           <p><i class="fas fa-phone-alt"></i>@{{restaurant.phone}}</p>
                           <p><i class="fas fa-map-marker-alt"></i>@{{restaurant.address}}</p>
+                          <div class="see-restaurant">
+                              <a href="#">Visita Ristorante</a>
+                          </div>
                       </div>
                   </div>
               </div>

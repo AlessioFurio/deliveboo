@@ -92,6 +92,7 @@
             height: 100%;
 
             .logo {
+                margin-top: 15px;
                 max-width: 50px;
                 max-height: 100%;
                 display: flex;
@@ -104,6 +105,7 @@
                     object-fit: contain;
                 }
                 span{
+                    display: none;
                     color: #d2ac7b;
                     font-family: 'Ballet', cursive;
                     font-size: 30px;
@@ -507,6 +509,15 @@
 
 }
 
+@media screen and (min-width: 390px){
+
+    header .header-log-in .logo {
+        margin-top: 0;
+        span {
+            display: inline;
+        }
+    }
+}
 @media screen and (min-width: 1300px){
 
     header {

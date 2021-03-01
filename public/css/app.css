@@ -132,6 +132,7 @@ header .header-log-in {
   height: 100%;
 }
 header .header-log-in .logo {
+  margin-top: 15px;
   max-width: 50px;
   max-height: 100%;
   display: flex;
@@ -145,6 +146,7 @@ header .header-log-in .logo img {
      object-fit: contain;
 }
 header .header-log-in .logo span {
+  display: none;
   color: #d2ac7b;
   font-family: "Ballet", cursive;
   font-size: 30px;
@@ -458,6 +460,14 @@ header.active .menu-mobile {
     padding-top: 366px;
   }
 }
+@media screen and (min-width: 390px) {
+  header .header-log-in .logo {
+    margin-top: 0;
+  }
+  header .header-log-in .logo span {
+    display: inline;
+  }
+}
 @media screen and (min-width: 1300px) {
   header .text-header .principal-text {
     font-size: 125px;
@@ -521,7 +531,7 @@ header.active .menu-mobile {
   justify-content: center;
 }
 .card-category .container-card-category .menu-filter {
-  padding: 50px 30px;
+  padding: 50px 15px;
   border-bottom: 1px solid #d2ac7b;
   border-top: 1px solid #d2ac7b;
   display: flex;
@@ -540,12 +550,12 @@ header.active .menu-mobile {
   justify-content: center;
   align-items: center;
 }
-.card-category .container-card-category .menu-filter .selection select {
+.card-category .container-card-category .menu-filter .selection .category-select {
   width: 70%;
   padding: 8px 30px;
+  border-radius: 6px;
   color: #d2ac7b;
   cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
 }
 .card-category .container-card-category .menu-filter button {
   background-color: #fff;
@@ -567,7 +577,7 @@ header.active .menu-mobile {
   flex-wrap: wrap;
 }
 .card-category .container-card-category .container-card .cards .card {
-  margin: 100px 50px;
+  margin: 100px 15px;
   min-width: 250px;
   min-height: 150px;
   max-width: 400px;

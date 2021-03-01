@@ -658,7 +658,7 @@ header.active .menu-mobile {
   }
 
   .card-category .container-card-category .container-card .cards .card a p {
-    font-size: 22px;
+    font-size: 28px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1967,7 +1967,7 @@ footer .store {
 .dashboard-restaurant-edit .dashboard-header-restaurant-edit {
   background-color: #101927;
   padding: 10px;
-  border-bottom: 3px solid #d2ac7b;
+  border-bottom: 1px solid #d2ac7b;
 }
 .dashboard-restaurant-edit .dashboard-header-restaurant-edit h1 {
   color: #e3e8f1;
@@ -1975,11 +1975,16 @@ footer .store {
   letter-spacing: 1px;
   font-size: 25px;
 }
+.dashboard-restaurant-edit .dashboard-body-restaurant-edit {
+  display: flex;
+  height: calc(100vh - 97px - 56px);
+}
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
+  flex-basis: 20%;
   background-color: #101927;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li {
-  border-bottom: 3px solid #d2ac7b;
+  border-bottom: 1px solid #d2ac7b;
   padding: 15px;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
@@ -1994,7 +1999,8 @@ footer .store {
   background-image: url("/images/ristorante-black.jpg");
   background-size: cover;
   background-position: bottom;
-  height: 100vh;
+  overflow-y: scroll;
+  flex-basis: 80%;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
   width: 90%;
@@ -2006,7 +2012,7 @@ footer .store {
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit .card-title-restaurant-edit {
   text-align: center;
   padding: 30px 0;
-  font-size: 20px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #101927;
 }
@@ -2064,32 +2070,37 @@ footer .store {
   width: 100%;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .button-edit {
-  background: rgba(255, 215, 0, 0.5);
+  background: rgba(255, 255, 255, 0.9);
   color: #101927;
   text-transform: uppercase;
-  border: 3px solid #d2ac7b;
+  border: 1px solid #d2ac7b;
   padding: 20px;
   margin: 10px 0 20px 0;
   border-radius: 10px;
-  font-weight: 700;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.75s ease-in-out;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .button-edit:hover {
-  color: #d2ac7b;
-  background-color: #FF8C00;
+  color: #fff;
+  background-color: #d2ac7b;
+  letter-spacing: 2px;
 }
 
+@media screen and (min-width: 768px) {
+  .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit .card-title-restaurant-edit {
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 768px) {
   .dashboard-restaurant-edit .dashboard-header-restaurant-edit h1 {
     font-size: 30px;
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit {
     display: flex;
-    height: calc(100vh - 100px - 48px);
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
-    border-right: 3px solid #d2ac7b;
-    height: 100vh;
+    border-right: 1px solid #d2ac7b;
     flex-basis: 20%;
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
@@ -2759,13 +2770,13 @@ footer .store {
 .container-general-create {
   background-image: url("/images/pizza-sfondo.jpg");
   background-size: cover;
-  height: 100vh;
   border-top: 1px solid #d2ac7b;
 }
 .container-general-create .container-general-create-plate {
   padding: 100px 0;
   display: flex;
   justify-content: center;
+  height: calc(100vh - 98px);
 }
 .container-general-create .container-form-create-plate {
   width: 90%;
@@ -2995,11 +3006,19 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
 .container-fluid .fa-minus-square,
 .container-fluid .fa-plus-square {
   font-size: 22px;
+  color: #6c757d;
 }
 .container-fluid .fa-minus-square:hover,
 .container-fluid .fa-plus-square:hover {
   color: #d2ac7b;
   cursor: pointer;
+}
+.container-fluid label {
+  margin-top: 10px;
+}
+.container-fluid .braintree-sheet__header .braintree-sheet__text,
+.container-fluid .braintree-sheet__content--form .braintree-form__field-group .braintree-form__label {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .message-container {
@@ -3146,6 +3165,11 @@ div i.fas.fa-times-circle {
     margin: 15% 20%;
   }
 }
+.row {
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+}
+
 .contacts-flex {
   display: flex;
   justify-content: center;
@@ -3172,6 +3196,7 @@ div i.fas.fa-times-circle {
 .contact-developer i {
   font-size: 30px;
   font-family: "Font Awesome 5 Free";
+  margin-right: 5px;
 }
 .contact-developer p {
   margin-top: 30px;
@@ -3186,6 +3211,10 @@ div i.fas.fa-times-circle {
   font-family: "Font Awesome 5 Brands";
   color: #d2ac7b;
 }
+.contact-developer a #i-email {
+  font-family: "Font Awesome 5 Free";
+  font-size: 26px;
+}
 .contact-developer h4 {
   color: #d2ac7b;
   font-size: 20px;
@@ -3195,11 +3224,10 @@ div i.fas.fa-times-circle {
 
 .text {
   margin-top: 100px;
+  text-align: center;
 }
 
 .group {
-  margin: 10px;
-  padding: 20px;
   border-radius: 3px;
   flex-wrap: wrap;
 }

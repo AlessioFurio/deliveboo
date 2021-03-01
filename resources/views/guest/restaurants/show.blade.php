@@ -29,20 +29,17 @@
     </section>
     <div class="container-restaurant">
       <div class="content-restaurant">
-        <div class="title-restaurant">
             <h1>
               {{$restaurant->name}}
             </h1>
-        </div>
         <div class="details-restaurant">
-            <h4>Info ristorante:</h4>
             <p>
                 <i class="fas fa-map-marker-alt"></i>
-                Indirizzo: <br>{{$restaurant->address}}
+                Indirizzo: <span>{{$restaurant->address}}</span>
             </p>
             <p>
                 <i class="fas fa-phone-alt"></i>
-                Telefono: <br>{{$restaurant->phone}}
+                Telefono: <span>{{$restaurant->phone}}</span>
             </p>
         </div>
       </div>

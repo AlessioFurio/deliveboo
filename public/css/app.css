@@ -565,6 +565,11 @@ header.active .menu-mobile {
 .card-category .container-card-category .container-card {
   margin: auto;
 }
+.card-category .container-card-category .container-card h1 {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+}
 .card-category .container-card-category .container-card .cards {
   display: flex;
   justify-content: space-around;
@@ -1351,10 +1356,6 @@ footer .store {
   }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index p strong {
     font-size: 23px;
-  }
-  .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .action-restaurant-card-index .container-button-action-index .button-index {
-    width: 50%;
-    margin: 10px 5px;
   }
 }
 .dashboard-restaurant-create {

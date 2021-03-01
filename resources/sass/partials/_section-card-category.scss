@@ -98,6 +98,12 @@
         .container-card {
             margin: auto;
 
+            h1 {
+                text-align: center;
+                color: #000;
+                font-size: 30px;
+            }
+
             .cards {
                 display: flex;
                 justify-content: space-around;

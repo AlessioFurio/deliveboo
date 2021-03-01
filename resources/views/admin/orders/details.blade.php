@@ -33,10 +33,10 @@
                             <span>Data: <strong>{{$payment->created_at}}</strong></span>
                         </li>
                     </ul>
-                    <div class="link-details-order">
+                    {{-- <div class="link-details-order">
                         <a href="{{route('admin.orders.show', ['id' => $payment->id ])}}">Vedi i dettagli
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             @endforeach
         </div>

@@ -18,7 +18,7 @@
         background-image: url('/images/ordini.jpg');
         background-size: cover;
         background-position: center;
-        height: 100vh;
+        height: calc(100vh - 83px - 97px);
         overflow-y: scroll;
 
 
@@ -44,7 +44,9 @@
                 border-radius: 10px;
                 display: inline-block;
                 padding: 25px 40px;
-                background: rgba(0, 0, 0, 0.5);
+                background: rgba(0, 0, 0, 0.8);
+                transition: 1s ease-in-out;
+
 
                 .fa-chart-bar {
                     padding-right: 10px;
@@ -54,7 +56,7 @@
                 &:hover {
                     color: #101927;
                     border: 3px solid #101927;
-                    background: rgba(255,255,255,0.5);
+                    background: rgba(255,255,255,0.9);
                 }
 
             }
@@ -68,11 +70,13 @@
                 display: inline-block;
                 padding: 10px;
                 background: rgba(0,0,0,0.5);
+                transition: 1s ease-in-out;
 
                 &:hover {
                     color: #101927;
                     border: 3px solid #101927;
-                    background: rgba(255,255,255,0.5);
+                    background: rgba(0,225,0,0.8);
+                    background: rgba(255,255,255,0.9);
                 }
             }
         }
@@ -91,6 +95,11 @@
                 border-radius: 10px;
                 width: 90%;
                 margin: 20px 0;
+                transition: 0.5s ease-in-out;
+
+                &:hover {
+                    background: rgba(255,255,255,0.9);
+                }
 
                 ul {
 
@@ -165,6 +174,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                flex-wrap: wrap;
 
                 .form-details-orders {
 

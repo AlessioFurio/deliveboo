@@ -24,7 +24,7 @@
 
     .dashboard-body-restaurant-show {
         display: flex;
-        height: calc(100vh - 100px - 50px);
+        height: calc(100vh - 97px - 61px);
 
         .dashboard-body-menu-restaurant-show {
 
@@ -97,9 +97,9 @@
                 width: 95%;
                 margin: 20px auto 0;
                 border-radius: 10px;
+                transition: 1s ease-in-out;
 
                 &:hover {
-                    transition: 1s;
                     background: rgba(255,255,255,1);
 
                 }
@@ -136,11 +136,11 @@
                     font-size: 13px;
                     font-weight: 700;
                     width: 80%;
+                    transition: 1s ease-in-out;
 
                     &:hover {
                         border-radius: 50%;
                         border: 1px solid #101927;
-                        transition: 1s;
                     }
                 }
 
@@ -149,6 +149,7 @@
                     color: #101927;
                     background: rgba(0, 0, 255, 0.5);
                     padding: 10px 5px;
+                    transition: 1s ease-in-out;
 
 
 
@@ -165,6 +166,7 @@
                     background: rgba(50, 205, 50, 0.5);
                     margin-top: 10px;
                     padding: 15px 10px;
+                    transition: 1s ease-in-out;
 
                     &:hover {
                         color: $gold;
@@ -212,6 +214,7 @@
             border-radius: 10px;
             margin: 20px 5px;
             padding: 10px 5px;
+            transition: 1s ease-in-out;
 
 
             &:hover {
@@ -256,7 +259,7 @@
                 font-size: 20px;
                 border: 1px solid $gold;
                 margin: 0 3px;
-
+                transition: 1s ease-in-out;
 
                 &:hover {
                     border-radius: 50%;
@@ -272,7 +275,7 @@
 
                 color: $gold;
                 background: rgba(65, 105, 255, 0.5);
-
+                transition: 1s ease-in-out;
 
                 &:hover {
                     color: #101927;
@@ -286,6 +289,7 @@
 
                 color: $gold;
                 background: rgba(144,238,144,0.5);
+                transition: 1s ease-in-out;
 
                 &:hover {
                     color: #101927;
@@ -297,10 +301,9 @@
                 display: inline-block;
 
                 .button-elimina-show {
-
-
                     color: $gold;
                     background: rgba(255, 99, 71, 0.5);
+                    transition: 1s ease-in-out;
 
                     &:hover {
                         color: #101927;

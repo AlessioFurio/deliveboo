@@ -16,7 +16,7 @@
     .dashboard-body-restaurant-index {
 
         display: flex;
-        height: calc(100vh - 100px - 53px);
+        height: calc(100vh - 97px - 56px);
 
         .dashboard-body-menu-restaurant-index {
 
@@ -36,12 +36,12 @@
                         color: #e3e8f1;
                         text-decoration: none;
                         font-size: 20px;
+                        transition: 0.5s ease-in-out;
 
 
                         &:hover {
 
                             color: $gold;
-
                         }
                     }
                 }
@@ -60,7 +60,7 @@
 
     .container-restaurant-index {
 
-        height: 100%;
+
 
         .title-restaurant-index {
 
@@ -89,9 +89,9 @@
             margin: 10px;
             padding: 10px;
             background: rgba(255, 255, 255, 0.5);
+            transition: 1s ease-in-out;
 
             &:hover {
-                transition: 1s;
                 background: rgba(255, 255, 255, 1);
             }
 
@@ -636,13 +636,13 @@
 
         .restaurants-index {
 
-            justify-content: space-between;
+            justify-content: space-evenly;
 
 
             .restaurant-card-index {
 
                 flex-basis: 30%;
-                margin-left: 100px;
+
 
 
 

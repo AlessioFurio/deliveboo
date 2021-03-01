@@ -90,10 +90,12 @@
             padding: 10px 30px;
             color: $gold;
             cursor: pointer;
+            transition: 0.5s ease-in-out;
 
             &:hover {
                 color: #101927;
                 background-color: $gold;
+                letter-spacing: 2px;
 
             }
         }

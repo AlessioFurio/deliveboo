@@ -42,7 +42,7 @@
           </div>
           <div class="container-card">
 
-              <h1>Il nostro array di  ristoranti</h1>
+              <h1>Ultimi Ristoranti Inseriti</h1>
               <div class="cards">
                   <div class="card" v-for="restaurant in restaurants">
                       <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">

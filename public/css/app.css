@@ -534,11 +534,7 @@ header.active .menu-mobile {
   justify-content: center;
 }
 .card-category .container-card-category .menu-filter {
-<<<<<<< HEAD
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/sayagata-400px.png");
-=======
   background-image: url("/images/bg-prova-2.jpg");
->>>>>>> modifica-home-bg
   background-repeat: repeat;
   padding: 50px 15px;
   border-bottom: 1px solid #d2ac7b;

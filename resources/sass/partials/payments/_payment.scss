@@ -2,35 +2,38 @@
   max-width: 1000px;
   margin: auto;
 
-
-  h4 {
-    color: $body_bg;
-  }
-
-  [v-cloak] {
-    display: none;
-
-  }
-
-
-  .fa-minus-square,
-  .fa-plus-square {
-    font-size: 22px;
-    color: #6c757d;
-
-    &:hover {
-      color: $gold;
-      cursor: pointer;
+  .row {
+    margin-left: 0;
+    
+    h4 {
+      color: $body_bg;
     }
-  }
 
-  label {
-    margin-top: 10px;
-  }
+    [v-cloak] {
+      display: none;
 
-  .braintree-sheet__header .braintree-sheet__text,
-  .braintree-sheet__content--form .braintree-form__field-group .braintree-form__label {
-    font-family: 'Josefin Sans', sans-serif;
+    }
+
+
+    .fa-minus-square,
+    .fa-plus-square {
+      font-size: 22px;
+      color: #6c757d;
+
+      &:hover {
+        color: $gold;
+        cursor: pointer;
+      }
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    .braintree-sheet__header .braintree-sheet__text,
+    .braintree-sheet__content--form .braintree-form__field-group .braintree-form__label {
+      font-family: 'Josefin Sans', sans-serif;
+    }
   }
 }
 

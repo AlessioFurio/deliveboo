@@ -19,7 +19,7 @@
                     <i class="contact-developer fas fa-user"></i>
                     <h4>Alessio Furio</h4>
                     <p>
-                        <a href="#">email</a>
+                        <a href="#"><i class="fa fa-envelope" id="i-email"></i>email</a>
                     </p>
                     <p>
                         <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
@@ -30,48 +30,50 @@
                     <i class="contact-developer fas fa-user"></i>
                     <h4>Danilo Degortes</h4>
                     <p>
-                        <a href="#">email</a>
+                        <a href="#"><i class="fa fa-envelope" id="i-email"></i>email</a>
                     </p>
                     <p>
                         <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                    </p>        </div>
+                    </p>
+                </div>
 
-                    <div class="contact-developer col-12 col-md-4 col-lg-2">
+                <div class="contact-developer col-12 col-md-4 col-lg-2">
 
-                        <i class="contact-developer fas fa-user"></i>
-                        <h4>Giacomo Di Michele</h4>
-                        <p>
-                            <a href="#">email</a>
-                        </p>
-                        <p>
-                            <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                        </p>        </div>
+                    <i class="contact-developer fas fa-user"></i>
+                    <h4>Giacomo Di Michele</h4>
+                    <p>
+                        <a href="#"><i class="fa fa-envelope" id="i-email"></i>email</a>
+                    </p>
+                    <p>
+                        <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    </p>
+                </div>
 
-                        <div class="contact-developer col-12 col-md-4 col-lg-2">
+                <div class="contact-developer col-12 col-md-4 col-lg-2">
 
-                            <i class="contact-developer fas fa-user"></i>
-                            <h4>Manuel De Vito</h4>
-                            <p>
-                                <a href="#">email</a>
-                            </p>
-                            <p>
-                                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                            </p>
-                        </div>
+                    <i class="contact-developer fas fa-user"></i>
+                    <h4>Manuel De Vito</h4>
+                    <p>
+                        <a href="#"><i class="fa fa-envelope" id="i-email"></i>email</a>
+                    </p>
+                    <p>
+                        <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    </p>
+                </div>
 
-                        <div class="contact-developer col-12 col-md-4 col-lg-2">
+                <div class="contact-developer col-12 col-md-4 col-lg-2">
 
-                            <i class="contact-developer fas fa-user"></i>
-                            <h4>Roberta Sciortino </h4>
-                            <p>
-                                <a href="#">email</a>
-                            </p>
-                            <p>
-                                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                            </p>
+                    <i class="contact-developer fas fa-user"></i>
+                    <h4>Roberta Sciortino </h4>
+                    <p>
+                        <a href="#"><i class="fa fa-envelope" id="i-email"></i>email</a>
+                    </p>
+                    <p>
+                        <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    </p>
 
-                        </div>
-                    </div>
+                </div>
+            </div>
 
         </div>
 

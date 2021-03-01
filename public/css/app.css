@@ -3011,6 +3011,10 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
   margin: 0 5px;
 }
 
+.dishnotavailable {
+  opacity: 0.2;
+}
+
 @media screen and (min-width: 576px) {
   main .container-restaurant .content-restaurant .details-restaurant {
     display: flex;

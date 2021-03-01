@@ -12,45 +12,29 @@ main {
         margin: 0 auto;
 
         .content-restaurant {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 0px 8px 0px;
 
-            .title-restaurant{
-                padding-bottom: 20px;
-                // width: 500px;
-
-                h1{
-                    text-align: center;
-                    text-transform: uppercase;
-                    color: #bf996b;
-                    border: 1px solid #bf996b;
-                    padding: 20px 20px;
-                    font-size: 45px;
-                    background-color: white;
-                    border-radius: 6px;
-                    box-shadow: 0px 11px 20px 0px rgba(0,0,0,0.26);
-                }
+            h1{
+                text-align: center;
+                text-transform: uppercase;
+                color: $gold;
+                margin: 100px 0 40px 0;
+                font-size: 45px;
+                background-color: white;
             }
+
 
             .details-restaurant{
                 display: inline-block;
-                background-color: white;
-                color: #bf996b;
-                border: 1px solid #bf996b;
-                padding: 20px;
-                box-shadow: 0px 11px 20px 0px rgba(0,0,0,0.26);
+                margin: 0 20px;
+                text-align: center;
 
-                & p {
+
+                p {
                     padding: 10px 0;
+                    color: #bf996b;
+                    font-size: 20px;
                 }
 
-                h4 {
-                    text-transform: uppercase;
-                    color: #bf996b;
-                }
             }
 
         }
@@ -82,11 +66,9 @@ main {
 
                 .wp-img-card-dish{
                     width: 100%;
-                    // height: 300px;
 
                     img {
                         width: 100%;
-                        // height: 100%;
                         object-fit: cover;
                     }
                 }
@@ -125,4 +107,12 @@ main {
         }
 
     }
+}
+
+
+@media screen and (min-width: 576px) {
+  main .container-restaurant .content-restaurant .details-restaurant {
+    display: flex;
+    justify-content: space-around;
+  }
 }

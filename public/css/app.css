@@ -2915,41 +2915,23 @@ main .container-restaurant {
   max-width: 1450px;
   margin: 0 auto;
 }
-main .container-restaurant .content-restaurant {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0px 8px 0px;
-}
-main .container-restaurant .content-restaurant .title-restaurant {
-  padding-bottom: 20px;
-}
-main .container-restaurant .content-restaurant .title-restaurant h1 {
+main .container-restaurant .content-restaurant h1 {
   text-align: center;
   text-transform: uppercase;
-  color: #bf996b;
-  border: 1px solid #bf996b;
-  padding: 20px 20px;
+  color: #d2ac7b;
+  margin: 100px 0 40px 0;
   font-size: 45px;
   background-color: white;
-  border-radius: 6px;
-  box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
 }
 main .container-restaurant .content-restaurant .details-restaurant {
   display: inline-block;
-  background-color: white;
-  color: #bf996b;
-  border: 1px solid #bf996b;
-  padding: 20px;
-  box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
+  margin: 0 20px;
+  text-align: center;
 }
 main .container-restaurant .content-restaurant .details-restaurant p {
   padding: 10px 0;
-}
-main .container-restaurant .content-restaurant .details-restaurant h4 {
-  text-transform: uppercase;
   color: #bf996b;
+  font-size: 20px;
 }
 main .container-restaurant .container-list-dishes {
   display: flex;
@@ -3009,6 +2991,12 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
   margin: 0 5px;
 }
 
+@media screen and (min-width: 576px) {
+  main .container-restaurant .content-restaurant .details-restaurant {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .container-fluid {
   max-width: 1000px;
   margin: auto;

@@ -79,8 +79,14 @@ class PaymentController extends Controller
         }
 
         $payments = Payment::where('restaurant_id' , $id)->orderBy('created_at' , 'desc')->get();
+
         $months = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+        $sum = Payment::where('restaurant_id' , $id)->sum('price');
+        $num = Payment::where('restaurant_id' , $id)->count();
+
         $data = [
+            'sum' => $sum,
+            'num' => $num,
             'id' => $id,
             'months' => $months
         ];
@@ -114,10 +120,12 @@ class PaymentController extends Controller
         ->orderBy('created_at' , 'desc')
         ->get();
         $sum = Payment::where('restaurant_id' , $id)->whereMonth('created_at', $month)->sum('price');
+        $num = Payment::where('restaurant_id' , $id)->whereMonth('created_at', $month)->count();
         $months = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
 
         $data = [
             'sum' => $sum,
+            'num' => $num,
             'months' => $months,
             'id' => $id
         ];

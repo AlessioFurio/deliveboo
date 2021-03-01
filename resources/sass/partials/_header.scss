@@ -1,6 +1,10 @@
 
     header{
 
+        a:hover {
+            text-decoration: none;
+        }
+
         position: relative;
 
         &::before{

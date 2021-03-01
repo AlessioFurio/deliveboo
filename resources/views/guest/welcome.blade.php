@@ -34,7 +34,7 @@
               <h3 class="ricerca-avanzata">Seleziona una categoria</h3>
               <div class="selection">
                 <select @change="searchRestaurants()" class="category-select" name="" v-model="selectedCategory">
-                  <option value="">Categoria</option>
+                  <option value="">Tutte le categorie</option>
                   @foreach ($categories as $category)
                     <option :value="{{$category->id}}">{{$category->name}}</option>
                   @endforeach

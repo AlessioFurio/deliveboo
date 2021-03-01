@@ -54,7 +54,7 @@
                           <p><i class="fas fa-phone-alt"></i>@{{restaurant.phone}}</p>
                           <p><i class="fas fa-map-marker-alt"></i>@{{restaurant.address}}</p>
                           <div class="see-restaurant">
-                              <a href="#">Visita Ristorante</a>
+                              <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">Visita Ristorante</a>
                           </div>
                       </div>
                   </div>

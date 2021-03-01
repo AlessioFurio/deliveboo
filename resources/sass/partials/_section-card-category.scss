@@ -70,27 +70,27 @@
                 justify-content: center;
                 align-items: center;
 
-                .category-select {
+                select {
                     width: 70%;
                     padding: 8px 30px;
-                    border-radius: 6px;
                     color: $gold;
                     cursor: pointer;
+                    font-family: 'Josefin Sans', sans-serif;
                 }
 
             }
-
-            button {
-                background-color: #fff;
-                color: $gold;
-                font-size: 14px;
-                font-weight: 500;
-                padding: 9px 10px;
-                margin-left: 10px;
-                border-radius: 6px;
-                border-style: none;
-                cursor: pointer;
-            }
+            //
+            // button {
+            //     background-color: #fff;
+            //     color: $gold;
+            //     font-size: 14px;
+            //     font-weight: 500;
+            //     padding: 9px 10px;
+            //     margin-left: 10px;
+            //     border-radius: 6px;
+            //     border-style: none;
+            //     cursor: pointer;
+            //}
         }
 
         .container-card {

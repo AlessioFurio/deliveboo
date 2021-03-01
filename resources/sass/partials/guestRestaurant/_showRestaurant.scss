@@ -51,7 +51,7 @@ main {
                 min-width: 200px;
                 margin: 15px;
                 box-shadow: 0px 11px 20px 0px rgba(0,0,0,0.26);
-                
+
                 &:hover {
                     border: 2px solid #d2ac7b;
                 }
@@ -107,6 +107,9 @@ main {
         }
 
     }
+}
+.dishnotavailable {
+    opacity: 0.2;
 }
 
 

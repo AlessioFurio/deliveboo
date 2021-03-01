@@ -10,7 +10,7 @@
   <div class="container-fluid">
 
     <div v-if="cartCookie.length" class="row g-3" v-cloak>
-      <div class="offset-xs-1 col-xs-10 col-md-5 col-lg-4 order-md-last mt-5">
+      <div class="offset-xs-2 col-xs-8 col-md-5 col-lg-4 order-md-last mt-5">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span>Il tuo carrello</span>
           {{-- <span class="badge bg-secondary rounded-pill">@{{cartCookie.length}}</span> --}}
@@ -32,13 +32,13 @@
             <span class="text-muted">@{{ product.price }}</span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
+            <span>Totale</span>
             <strong>&euro; @{{Math.round(totalPrice * 100)/100}}</strong>
           </li>
         </ul>
       </div>
-
-      <div class="offset-xs-1 col-xs-10 col-md-7 col-lg-8">
+      
+      <div class="offset-xs-2 col-xs-8 col-md-7 col-lg-8">
         <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
           @csrf
           @method('POST')

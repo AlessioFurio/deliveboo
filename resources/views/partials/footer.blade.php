@@ -26,7 +26,7 @@
 
     <div class="store">
       <a href="#">
-        <img src="images/app-loghi.png" alt="">
+        <img src="{{ asset('images/app-loghi.png') }}" alt="">
       </a>
     </div>
 </footer>

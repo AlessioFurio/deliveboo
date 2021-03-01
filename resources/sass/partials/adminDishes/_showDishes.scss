@@ -3,43 +3,53 @@
     .dashboard-header-dishes-show {
 
         background-color: #101927;
-        padding: 10px;
-        border-bottom: 3px solid $gold;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid $gold;
 
         a {
             text-decoration: none;
+
 
             h1 {
                 color: #e3e8f1;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-size: 25px;
+                padding: 17px 10px;
             }
         }
     }
 
     .dashboard-body-dishes-show {
 
-        display: flex;
-        height: calc(100vh - 100px - 45px);
+        display: block;
+        height: calc(100vh - 97px - 60px - 102px);
 
         .dashboard-body-menu-dishes-show {
 
             background-color: #101927;
-            border-right: 3px solid $gold;
-            height: 100%;
-            flex-basis: 40%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
 
             ul{
+                width: 100%;
 
                 li {
-                    border-bottom: 3px solid $gold;
-                    padding:10px;
+
+                    list-style-type: none;
+                    padding: 15px 10px;
+                    border-bottom: 1px solid $gold;
 
                     a{
                         color: #e3e8f1;
                         text-decoration: none;
                         font-size: 20px;
+                        transition: 0.5s ease-in-out;
+
 
 
                         &:hover {
@@ -64,7 +74,7 @@
 
     .container-restaurant-dishes-show {
 
-        background-image: url('/images/portate-piatti.jpg');
+        background-image: url('/images/snacks-food.jpg');
         background-size: cover;
         background-position: center;
         height: 100vh;
@@ -152,27 +162,35 @@
                 h1 {
 
                     font-size: 30px;
+                    padding: 14px 10px;
                 }
             }
         }
 
         .dashboard-body-dishes-show {
 
-            height: calc(100vh - 100px - 51px);
-
+            display: flex;
+            height: calc(100vh - 97px - 60px);
 
             .dashboard-body-menu-dishes-show {
 
-                flex-basis: 25%;
+                background-color: #101927;
+                border-right: 1px solid $gold;
+                height: 100%;
+                flex-basis: 40%;
+                display: block;
+                border-bottom: 0;
 
                 ul{
 
                     li {
 
+                        border-bottom: 1px solid $gold;
+                        padding: 15px;
 
                         a{
 
-                            font-size: 26px;
+                            font-size: 23px;
 
 
                             &:hover {
@@ -317,7 +335,7 @@
 
                 .dishes-card-show {
 
-                    flex-basis: 35%;
+                    flex-basis: 50%;
 
 
 
@@ -331,6 +349,116 @@
                     .cover-dishes {
                         img {
 
+                        }
+                    }
+
+                    .body-dishes-card-show {
+
+                        .details-dishes-card-show {
+
+
+
+                            p {
+                                font-size: 25px;
+
+                            }
+
+                            span {
+                                font-size: 25px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .dashboard-dishes-show {
+
+        .dashboard-header-dishes-show {
+
+
+
+            a {
+
+
+                h1 {
+
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .dashboard-body-dishes-show {
+
+
+
+            .dashboard-body-menu-dishes-show {
+
+                flex-basis: 20%;
+
+                ul{
+
+                    li {
+
+
+                        a{
+
+                            font-size: 26px;
+
+
+                            &:hover {
+
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .dashboard-body-content-dishes-show{
+
+
+
+        .container-restaurant-dishes-show {
+
+            .title-dishes-show{
+
+                h1 {
+
+                    font-size: 40px;
+
+                }
+            }
+
+            .dishes-show {
+
+
+
+                .dishes-card-show {
+
+                    flex-basis: 30%;
+
+
+
+                    .title-dishes-card-show {
+
+                        h1 {
+                            font-size: 30px;
+                        }
+                    }
+
+                    .cover-dishes {
+                        img {
+                            display: block;
+                            margin: auto;
                         }
                     }
 

@@ -3,11 +3,15 @@
     .dashboard-header-restaurant-show {
 
         background-color: #101927;
-        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         border-bottom: 1px solid $gold;
+
 
         a {
             text-decoration: none;
+
 
 
             h1 {
@@ -15,6 +19,7 @@
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-size: 25px;
+                padding: 17px 10px;
 
             }
         }
@@ -23,27 +28,32 @@
         }
 
     .dashboard-body-restaurant-show {
-        display: flex;
-        height: calc(100vh - 97px - 46px);
+
+        display: block;
+        height: calc(100vh - 97px - 60px - 102px);
 
         .dashboard-body-menu-restaurant-show {
 
             background-color: #101927;
-            border-right: 1px solid $gold;
-            height: 100%;
-            flex-basis: 40%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
 
             ul{
+                width: 100%;
 
                 li {
 
+                    list-style-type: none;
+                    padding: 15px 10px;
                     border-bottom: 1px solid $gold;
-                    padding: 15px;
 
                     a{
                         color: #e3e8f1;
-                        font-size: 20px;
                         text-decoration: none;
+                        font-size: 20px;
+                        transition: 0.5s ease-in-out;
 
 
                         &:hover {
@@ -95,7 +105,7 @@
                 background: rgba(255,255,255,0.5);
                 padding: 20px 10px;
                 width: 95%;
-                margin: 20px auto 0;
+                margin: 20px auto;
                 border-radius: 10px;
                 transition: 1s ease-in-out;
 
@@ -135,7 +145,7 @@
                     border: 1px solid $gold;
                     font-size: 13px;
                     font-weight: 700;
-                    width: 80%;
+                    width: 60%;
                     transition: 1s ease-in-out;
 
                     &:hover {
@@ -165,7 +175,7 @@
                     color: #101927;
                     background: rgba(50, 205, 50, 0.5);
                     margin-top: 10px;
-                    padding: 15px 10px;
+                    padding: 10px 5px;
                     transition: 1s ease-in-out;
 
                     &:hover {
@@ -218,7 +228,6 @@
 
 
             &:hover {
-                transition: 1s;
                 background: #101927;
 
             }
@@ -263,8 +272,6 @@
 
                 &:hover {
                     border-radius: 50%;
-                    transition: 1s;
-
 
                 }
 
@@ -330,6 +337,7 @@
                 h1 {
 
                     font-size: 30px;
+                    padding: 14px 10px;
 
                 }
             }
@@ -338,21 +346,30 @@
             }
 
         .dashboard-body-restaurant-show {
-            height: calc(100vh - 97px - 52px);
+
+            display: flex;
+            height: calc(100vh - 97px - 60px);
 
             .dashboard-body-menu-restaurant-show {
 
+                background-color: #101927;
+                border-right: 1px solid $gold;
+                height: 100%;
+                flex-basis: 40%;
+                display: block;
+                border-bottom: 0;
 
 
                 ul{
 
                     li {
 
-
+                        border-bottom: 1px solid $gold;
+                        padding: 15px;
 
                         a{
 
-
+                            font-size: 23px;
 
                             &:hover {
 
@@ -414,7 +431,7 @@
                     .button-create-new-show {
 
 
-
+                        padding: 10px 0px;
 
 
                         &:hover {
@@ -425,7 +442,7 @@
 
                     .button-order-new-show {
 
-                        padding: 10px 5px;
+                        padding: 10px 0px;
                         margin-top: 0;
 
 
@@ -868,6 +885,7 @@
 
             .dashboard-body-menu-restaurant-show {
 
+                flex-basis: 20%;
 
                 ul{
 

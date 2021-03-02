@@ -22,8 +22,8 @@
 
         <canvas id="ordersChart" class="mt-5"></canvas>
         <div class="mt-2">
-            <h1>Totale ordini &euro; <span id="count"> </span> </h1>
-            <h3>Numero ordini <span id="number"> </span></h3>
+            <h1 class="col-12 col-md-6 ">Totale ordini &euro; <span id="count"></h1>
+            <h3 class="col-12 col-md-6 tot-num">Numero ordini  <span id="number"></h3>
         </div>
       </div>
     </div>

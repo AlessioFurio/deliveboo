@@ -529,7 +529,7 @@ header.active .menu-mobile {
   justify-content: center;
 }
 .card-category .container-card-category .menu-filter {
-  background-image: url("/images/bg-prova-2.jpg");
+  background-image: url("/images/marmo.jpg");
   background-repeat: repeat;
   padding: 50px 15px;
   border-bottom: 1px solid #d2ac7b;
@@ -562,8 +562,8 @@ header.active .menu-mobile {
 }
 .card-category .container-card-category .container-card h1 {
   text-align: center;
-  color: #000;
-  font-size: 30px;
+  color: #d2ac7b;
+  font-size: 36px;
 }
 .card-category .container-card-category .container-card .cards {
   display: flex;
@@ -3089,7 +3089,7 @@ main .how-to-order {
   border-bottom: 2px solid #d2ac7b;
 }
 main .container-restaurant {
-  background-image: url("/images/bg-prova-2.jpg");
+  background-image: url("/images/marmo.jpg");
   background-repeat: repeat;
 }
 main .container-restaurant .content-restaurant h1 {
@@ -3398,8 +3398,9 @@ div i.fas.fa-times-circle {
   text-transform: uppercase;
 }
 .contact-developer i {
-  font-size: 30px;
+  font-size: 36px;
   font-family: "Font Awesome 5 Free";
+  border: 0;
   margin-right: 5px;
 }
 .contact-developer p {
@@ -3434,4 +3435,60 @@ div i.fas.fa-times-circle {
 .group {
   border-radius: 3px;
   flex-wrap: wrap;
+  padding-bottom: 150px;
+}
+
+.footer-project {
+  width: 100%;
+  background-color: black;
+}
+.footer-project .container-project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #d2ac7b;
+  padding: 50px;
+}
+.footer-project .container-project ul li {
+  list-style-type: none;
+}
+.footer-project .container-project .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.footer-project .container-project .logo h1 {
+  margin-bottom: 0px !important;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 60px;
+}
+.footer-project .container-project .container-social-online .h2-proj {
+  font-size: 24px;
+  text-align: center;
+}
+.footer-project .container-project .container-social-online .link-project {
+  text-decoration: none;
+  border: 1px solid #d2ac7b;
+  padding: 15px 70px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 12px;
+}
+.footer-project .container-project .container-social-online a {
+  display: flex;
+  align-items: center;
+  color: #d2ac7b;
+}
+.footer-project .container-project .container-social-online a:hover {
+  text-decoration: none;
+}
+.footer-project .container-project .container-social-online i {
+  font-size: 30px;
+  margin-left: 8px;
 }

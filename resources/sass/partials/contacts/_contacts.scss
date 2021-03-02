@@ -1,3 +1,5 @@
+
+
 .row {
     margin-right: 0px !important;
     padding-right: 0px !important;
@@ -67,75 +69,111 @@
 .group {
     border-radius: 3px;
     flex-wrap: wrap;
-    padding-bottom: 150px;
+    padding-bottom: 250px;
 }
 
-.footer-project {
-    width: 100%;
-    background-color: black;
+@media screen and (min-width: 200px){
 
-    .container-project {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        color: #d2ac7b;
-        padding: 50px;
+    .footer-project {
+        width: 100%;
+        background-color: black;
+        border-top: 3px solid #d2ac7b;
 
-        ul {
-
-            li {
-                list-style-type: none;
-            }
-        }
-
-        .logo {
+        .container-project {
+            text-align: center;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            padding-bottom: 10px;
+            justify-content: space-around;
+            color: #d2ac7b;
+            padding: 20px;
 
-            h1 {
-                margin-bottom: 0px !important;
-                padding-top: 10px;
-                padding-left: 10px;
-                font-size: 60px;
-            }
+            .languages-project {
+                padding-bottom: 20px;
 
-        }
+                ul {
 
-        .container-social-online {
-
-            .h2-proj {
-                font-size: 24px;
-                text-align: center;
-            }
-
-            .link-project {
-                text-decoration: none;
-                border: 1px solid #d2ac7b;
-                padding: 15px 70px;
-                border-radius: 6px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-top: 20px;
-                margin-top: 12px;
-            }
-
-            a {
-                display: flex;
-                align-items: center;
-                color: #d2ac7b;
-
-                &:hover {
-                    text-decoration: none;
+                    li {
+                        list-style-type: none;
+                    }
                 }
             }
 
-            i {
-                font-size: 30px;
-                margin-left: 8px;
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 45px;
+
+                h1 {
+                    margin-bottom: 0px !important;
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    font-size: 45px;
+                }
+
+            }
+
+            .container-social-online {
+
+                .h2-proj {
+                    font-size: 24px;
+                    text-align: center;
+                }
+
+                .link-project {
+                    text-decoration: none;
+                    border: 1px solid #d2ac7b;
+                    border-radius: 6px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 12px;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: #d2ac7b;
+                    padding: 15px 70px;
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: #d2ac7b;
+                        color: white;
+                        transition: 1s ease;
+                    }
+                }
+
+                i {
+                    font-size: 30px;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1250px){
+    .footer-project {
+
+        .container-project {
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+
+            .logo {
+                padding-bottom: 0px;
+                margin-right: 45px;
+
+                h1 {
+                    font-size: 58px;
+                }
+            }
+
+            .languages-project {
+
+                padding-top: 20px;
             }
         }
     }

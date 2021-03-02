@@ -78,12 +78,13 @@
         </div>
         <div class="footer-project">
             <div class="container-project">
-                <div>
-                  <h5>Tecnologie e linguaggi utilizzati</h5>
+                <div class="languages-project">
+                  <h5>Tecnologie e linguaggi utilizzati:</h5>
                   <ul>
                     <li><i class="fab fa-html5"></i> HTML 5 & CSS - SASS <i class="fab fa-sass"></i></li>
-                    <li><i class="fab fa-php"></i> Php - Laravel <i class="fab fa-laravel"></i></li>
+                    <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
                     <li><i class="fab fa-js-square"></i> Javascript - Vue <i class="fab fa-vuejs"></i></li>
+                    <li><i class="fab fa-php"></i> Php - Laravel <i class="fab fa-laravel"></i></li>
                     <li><i class="fas fa-database"></i> My Sql - SQL <i class="fas fa-database"></i></li>
                     <li></li>
                   </ul>

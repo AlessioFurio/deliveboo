@@ -99,26 +99,30 @@
                                         <img src="{{asset('storage/'. $restaurant->cover)}}" alt="{{$restaurant->name}}">
                                     @endif
                                 </div>
+                                <div class="action-restaurant-card-index">
+                                    <div class="flex container-button-action-index-start">
+                                        <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-dettagli-index">Piatti</a>
+                                    </div>
+                                    <div class="flex container-button-action-index-center">
+                                        <a href="{{route('admin.orders.details' , ['id' => $restaurant->id ] )}}" class="button-index button-ordini-index">Ordini</a>
+                                    </div>
+                                    <div class="flex container-button-action-index-end">
+                                        <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-modifica-index">Modifica</a>
+                                    </div>
+                                    {{-- <a href="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-elimina-index">Elimina</a> --}}
+                                    {{-- <div>
+                                    <form action="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" method="post">
+                                    <button class="button-index button-elimina-index" type="submit" name="button" >Elimina</button>
+                                    @csrf
+                                    @method('DELETE')
+                                    </form>
+
+                                    </div> --}}
+                                </div>
                                 <div class="body-restaurant-card-index">
                                     <div class="details-restaurant-card-index">
                                         <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>
                                         <p>Telefono: <strong>{{ $restaurant->phone }}</strong></p>
-                                    </div>
-                                    <div class="action-restaurant-card-index">
-                                        <div class="container-button-action-index">
-                                            <a href="{{route('admin.restaurants.show' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-dettagli-index">Piatti</a>
-                                            <a href="{{route('admin.orders.details' , ['id' => $restaurant->id ] )}}" class="button-index button-ordini-index">Ordini</a>
-                                            <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-modifica-index">Modifica</a>
-                                            {{-- <a href="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-elimina-index">Elimina</a> --}}
-                                            {{-- <div>
-                                            <form action="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" method="post">
-                                            <button class="button-index button-elimina-index" type="submit" name="button" >Elimina</button>
-                                            @csrf
-                                            @method('DELETE')
-                                            </form>
-
-                                            </div> --}}
-                                        </div>
                                     </div>
                                 </div>
                             </div>

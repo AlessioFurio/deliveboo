@@ -24,6 +24,7 @@ var app = new Vue({
 		valueInputEmail: '',
 		valueInputPassword: '',
 		servicePage: false,
+		dropinInstance: null,
 	},
 
 
@@ -171,7 +172,25 @@ var app = new Vue({
 		//
 		// 	// Cookies.remove('cartCookie')
 		// },
+		showPayment() {
+			if (document.getElementById('payment-form') && this.dropinInstance === null) {
 
+				braintree.dropin.create(
+					{
+						authorization: document.getElementById('client_token').value,
+						container: '#dropin-container'
+					},
+					(error, dropinInstance) =>
+					{
+						if (error) console.error(error);
+						this.dropinInstance = dropinInstance;
+					}
+				);
+
+			}
+
+
+		},
 		Save (event) {
 			event.preventDefault(); //blocca il form per far eseguire il resto del codice
 
@@ -184,7 +203,7 @@ var app = new Vue({
 
 			// const form = document.getElementById('payment-form');
 
-			dropinInstance.requestPaymentMethod((error, payload) =>
+			this.dropinInstance.requestPaymentMethod((error, payload) =>
 			{
 				if (error) console.error(error);
 
@@ -246,8 +265,10 @@ var app = new Vue({
     	},
 
 	}, // fine methods
+	updated() {
+		this.showPayment();
+	},
 	mounted() {
-
 		this.showModal();
 		this.showChart();
 

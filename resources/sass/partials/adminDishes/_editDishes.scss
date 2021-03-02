@@ -1,6 +1,6 @@
 .container-general-edit {
 
-        background-image: url('/images/snacks-food.jpg');
+        background-image: url('/images/delicious-kebab.jpg');
         background-size: cover;
         background-position: center;
         border-top: 5px solid $gold;
@@ -80,6 +80,8 @@
                 max-width: 100%;
                 border: 3px solid $gold;
                 border-radius: 20%;
+                display: block;
+                margin: auto;
 
             }
         }
@@ -173,7 +175,7 @@
 
         .container-form-edit-plate {
 
-            width: 30%;
+            width: 40%;
 
         }
 
@@ -189,6 +191,56 @@
 
             label {
                 font-size: 25px;
+
+            }
+
+            .input {
+
+
+            }
+
+            .textarea {
+
+            }
+
+            .check {
+
+            }
+
+            .input-search {
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1300px) {
+
+    .container-general-edit {
+
+        .container-general-edit-plate {
+
+
+        }
+
+        .container-form-edit-plate {
+
+            width: 25%;
+
+        }
+
+        .title-edit-plate {
+
+            h1 {
+                font-size: 35px;
+            }
+        }
+
+
+        .list-edit-plate {
+
+            label {
+                font-size: 30px;
 
             }
 

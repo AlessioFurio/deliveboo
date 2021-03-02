@@ -76,6 +76,30 @@
             </div>
 
         </div>
+        <div class="footer-project">
+            <div class="container-project">
+                <div>
+                  <h5>Tecnologie e linguaggi utilizzati</h5>
+                  <ul>
+                    <li><i class="fab fa-html5"></i> HTML 5 & CSS - SASS <i class="fab fa-sass"></i></li>
+                    <li><i class="fab fa-php"></i> Php - Laravel <i class="fab fa-laravel"></i></li>
+                    <li><i class="fab fa-js-square"></i> Javascript - Vue <i class="fab fa-vuejs"></i></li>
+                    <li><i class="fas fa-database"></i> My Sql - SQL <i class="fas fa-database"></i></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="logo">
+                  <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
+                  <h1>Deliveboo</h1>
+                </div>
+                <div class="container-social-online">
+                  <h2 class="h2-proj">Progetto Github:</h2>
+                  <div class="link-project">
+                    <a href="{{ url('https://github.com/AlessioFurio/deliveboo') }}">Clicca qui <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+            </div>
+        </div>
 
 
 

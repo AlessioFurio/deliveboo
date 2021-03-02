@@ -29,7 +29,7 @@
                 </a>
               </span>
             </div>
-            <span class="text-muted">@{{ product.price }}</span>
+            <span class="text-muted">&euro; @{{ product.price }}</span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
             <span>Totale</span>
@@ -37,7 +37,7 @@
           </li>
         </ul>
       </div>
-      
+
       <div class="offset-xs-2 col-xs-8 col-md-7 col-lg-8">
         <form id="payment-form" action="{{route('transaction')}}" method="post" class="needs-validation mt-5" @submit="Save">
           @csrf
@@ -74,6 +74,7 @@
             <div id="dropin-container"></div>
              <button class="btn btn-primary btn-lg btn-block" type="submit">Paga ora</button>
             <input type="hidden" id="nonce" name="payment_method_nonce"/>
+            <input type="hidden" id="client_token" name="client_token" value='{{$clientToken}}'/>
           </div>
         </div>
         </form>
@@ -106,11 +107,12 @@
   </div>
 </div>
 
+
 @endsection
 
 @section('script')
 
-  <script type="text/javascript">
+  {{-- <script type="text/javascript">
 
       braintree.dropin.create(
         {
@@ -137,7 +139,7 @@
         // });
 
 
-    </script>
+    </script> --}}
   @include('partials.footer')
 
   {{-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script> --}}

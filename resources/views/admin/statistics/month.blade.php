@@ -23,7 +23,7 @@
         <canvas id="ordersChart" class="mt-5"></canvas>
         <div class="mt-2">
             <h1>Totale ordini &euro; {{$sum}}</h1>
-            <h3>Numero ordini  {{$num}}</h3>
+            <h3>Numero ordini {{$num}}</h3>
         </div>
       </div>
     </div>
@@ -39,6 +39,8 @@
       window.cData = JSON.parse(`@php
         echo $chart_data;
       @endphp `);
+
+
 
 
     </script>

@@ -30,8 +30,8 @@
                 </div>
                 <canvas id="ordersChart" class="mt-5"></canvas>
                 <div class="mt-2">
-                    <h1>Totale ordini &euro; {{$sum}}</h1>
-                    <h3>Numero ordini  {{$num}}</h3>
+                    <h1>Totale ordini &euro; <span id="count"></h1>
+                    <h3>Numero ordini  <span id="number"></h3>
                 </div>
             </div>
         </div>
@@ -42,11 +42,33 @@
   <!-- javascript -->
 
    <script>
+   var count = 0;
+   var total = 0;
 
 
       window.cData = JSON.parse(`@php
         echo $chart_data;
       @endphp `);
+      setInterval(run, 20)
+      setInterval(fun, 200)
+
+      function run() {
+          if (count < `@php echo $sum;  @endphp`) {
+              count++;
+          } else {
+              count = `@php echo $sum; @endphp`
+          }
+          document.getElementById('count').innerHTML = count;
+      }
+      function fun() {
+          if (total < `@php echo $num;  @endphp`) {
+              total++;
+          } else {
+              total = `@php echo $num; @endphp`
+          }
+          document.getElementById('number').innerHTML = total;
+      }
+
 
 
 

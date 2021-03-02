@@ -27,8 +27,9 @@
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
     i {
-        font-size: 30px;
+        font-size: 36px;
         font-family: "Font Awesome 5 Free";
+        border: 0;
         margin-right: 5px;
     }
     p {
@@ -66,4 +67,76 @@
 .group {
     border-radius: 3px;
     flex-wrap: wrap;
+    padding-bottom: 150px;
+}
+
+.footer-project {
+    width: 100%;
+    background-color: black;
+
+    .container-project {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        color: #d2ac7b;
+        padding: 50px;
+
+        ul {
+
+            li {
+                list-style-type: none;
+            }
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;
+
+            h1 {
+                margin-bottom: 0px !important;
+                padding-top: 10px;
+                padding-left: 10px;
+                font-size: 60px;
+            }
+
+        }
+
+        .container-social-online {
+
+            .h2-proj {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .link-project {
+                text-decoration: none;
+                border: 1px solid #d2ac7b;
+                padding: 15px 70px;
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 20px;
+                margin-top: 12px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                color: #d2ac7b;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            i {
+                font-size: 30px;
+                margin-left: 8px;
+            }
+        }
+    }
 }

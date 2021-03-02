@@ -3183,7 +3183,7 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
   }
 }
 .container-fluid {
-  max-width: 1100px;
+  max-width: 1090px;
   margin: auto;
 }
 .container-fluid .row {
@@ -3309,19 +3309,22 @@ div i.fas.fa-times-circle {
 }
 
 .loader-container {
-  margin: 0 auto;
+  margin: 100px auto;
 }
-
-.loader {
-  margin: 120px 10px;
+.loader-container .loader {
+  margin: auto;
   border: 8px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 8px solid #3498db;
-  width: 300px;
-  height: 300px;
+  border-top: 8px solid #d2ac7b;
+  width: 200px;
+  height: 200px;
   -webkit-animation: spin 2s linear infinite;
   /* Safari */
   animation: spin 2s linear infinite;
+}
+.loader-container h1 {
+  margin-top: 100px;
+  font-size: 2rem;
 }
 
 /* Safari */
@@ -3347,6 +3350,15 @@ div i.fas.fa-times-circle {
     /* Could be more or less, depending on screen size */
     max-width: 60%;
     margin: 10%;
+  }
+
+  .loader-container .loader {
+    width: 300px;
+    height: 300px;
+  }
+
+  .loader-container h1 {
+    font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 768px) {

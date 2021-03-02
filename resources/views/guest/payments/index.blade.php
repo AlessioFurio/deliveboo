@@ -84,7 +84,7 @@
       <div class="col-12">
         <div class="message-container">
           <img src="{{asset('images/shopping-cart-empty-side-view.png')}}" alt="">
-          <h2 class="mt-3">
+          <h2 class="text-center mt-3">
             Non hai ancora inserito prodotti nel carrello!
           </h2>
           <a href="/" class="btn">
@@ -96,13 +96,14 @@
     </div>
 
   <div v-else-if="servicePage == true" class="row g-3" v-cloak>
+    <div class="col-xs-12 offset-sm-1 col-sm-10">
       <div class="loader-container">
         <div class="loader"></div>
+        <h1 class="text-center">Attendi l'elaborazione del pagamento
+        </h1>
       </div>
-      <div class="loader-container">
-          <h1>Attendi l'elaborazione del pagamento</h1>
 
-      </div>
+    </div>
 
   </div>
 </div>

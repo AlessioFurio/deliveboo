@@ -21,7 +21,7 @@
           @endforeach
 
         <canvas id="ordersChart" class="mt-5"></canvas>
-        <div class="mt-2">
+        <div class="mt-2 row">
             <h1 class="col-12 col-md-6 ">Totale ordini &euro; <span id="count"></h1>
             <h3 class="col-12 col-md-6 tot-num">Numero ordini  <span id="number"></h3>
         </div>

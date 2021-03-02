@@ -1343,7 +1343,7 @@ footer .store {
     font-size: 35px;
   }
   .dashboard-restaurant-index .dashboard-body-restaurant-index {
-    height: calc(100vh - 97px - 56px);
+    height: calc(100vh - 97px - 64px);
   }
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
     flex-basis: 20%;
@@ -1690,7 +1690,6 @@ footer .store {
 }
 .dashboard-restaurant-show .dashboard-body-restaurant-show {
   display: block;
-  height: calc(100vh - 97px - 60px - 102px);
 }
 .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
   background-color: #101927;
@@ -1717,6 +1716,7 @@ footer .store {
 }
 
 .dashboard-body-content-restaurant-show {
+  height: calc(100vh - 97px - 60px - 102px);
   flex-basis: 80%;
   overflow-y: scroll;
 }
@@ -1839,6 +1839,9 @@ footer .store {
 .container-card-restaurant-show .restaurants-show .restaurant-card-show:hover {
   background: #101927;
 }
+.container-card-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show {
+  text-align: center;
+}
 .container-card-restaurant-show .restaurants-show .restaurant-card-show .body-restaurant-card-show img {
   max-width: 100%;
   border-radius: 10px;
@@ -1925,6 +1928,9 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 23px;
   }
+  .dashboard-body-content-restaurant-show {
+    height: calc(100vh - 97px - 60px);
+  }
   .dashboard-body-content-restaurant-show .container-restaurant-show {
     height: 55%;
   }
@@ -1976,13 +1982,16 @@ footer .store {
     font-size: 40px;
   }
   .dashboard-restaurant-show .dashboard-body-restaurant-show {
-    height: calc(100vh - 97px - 61px);
+    height: calc(100vh - 97px - 69px);
   }
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
     flex-basis: 30%;
   }
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 25px;
+  }
+  .dashboard-body-content-restaurant-show {
+    height: calc(100vh - 97px - 69px);
   }
   .dashboard-body-content-restaurant-show .container-restaurant-show .title-show {
     font-size: 40px;
@@ -2770,7 +2779,6 @@ footer .store {
 }
 .dashboard-dishes-show .dashboard-body-dishes-show {
   display: block;
-  height: calc(100vh - 97px - 60px - 102px);
 }
 .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show {
   background-color: #101927;
@@ -2797,6 +2805,7 @@ footer .store {
 }
 
 .dashboard-body-content-dishes-show {
+  height: calc(100vh - 97px - 60px - 102px);
   flex-basis: 80%;
   overflow-y: scroll;
 }
@@ -2804,7 +2813,7 @@ footer .store {
   background-image: url("/images/snacks-food.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
   text-align: center;
@@ -2823,7 +2832,7 @@ footer .store {
   background: rgba(255, 255, 255, 0.8);
   border: 5px ridge #d2ac7b;
   border-radius: 10px;
-  margin: 30px auto;
+  margin: 0px auto;
   padding: 10px;
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show {
@@ -2833,6 +2842,9 @@ footer .store {
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
   font-size: 20px;
+}
+.dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .cover-dishes {
+  text-align: center;
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .cover-dishes img {
   max-width: 100%;
@@ -2876,12 +2888,15 @@ footer .store {
   .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
     font-size: 23px;
   }
+  .dashboard-body-content-dishes-show {
+    height: calc(100vh - 97px - 60px);
+  }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
     font-size: 35px;
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show {
     flex-basis: 60%;
-    margin: 50px auto;
+    margin: 0px auto;
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
     font-size: 25px;

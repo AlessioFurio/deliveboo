@@ -59,16 +59,16 @@
     }
 
     .dashboard-body-content-restaurant-create {
-        background-image: url('/images/interni-rossi.jpg');
+        background-image: url('/images/jumbo.jpg');
         background-size: cover;
-        background-position: bottom;
+        background-position: right;
         display: flex;
         height: 100%;
         justify-content: center;
         align-items: center;
 
         .card-form-restaurant-create {
-            width: 90%;
+            width: 95%;
             background: rgba(255, 255, 255, 0.6);
             border-radius: 10px;
             border: 1px solid $gold;
@@ -236,6 +236,7 @@
         .dashboard-body-content-restaurant-create {
 
             flex-basis: 80%;
+
 
             .card-form-restaurant-create {
 
@@ -484,12 +485,13 @@
 
         .dashboard-body-content-restaurant-create {
 
-
+            justify-content: flex-start;
 
             .card-form-restaurant-create {
 
 
                 width: 35%;
+                margin-left: 250px;
 
 
                 .card-title-restaurant-create {

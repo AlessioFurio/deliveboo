@@ -93,7 +93,7 @@ header.active::after {
   background: #040e10;
 }
 header .wp-header {
-  background: url("/images/tasty-appetizing-italian-mediterranean-food-ingredients-flat-lay-dark-old-black-background-top-view-copy-space.jpg");
+  background: url("/images/italian-mediterranean.jpg");
   height: 85vh;
   background-attachment: fixed;
   background-size: cover;
@@ -1370,7 +1370,7 @@ footer .store {
     margin: 10px;
   }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index {
-    padding: 5px 0px;
+    padding: 5px 15px;
   }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index p {
     font-size: 27px;
@@ -1420,16 +1420,16 @@ footer .store {
   color: #d2ac7b;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create {
-  background-image: url("/images/interni-rossi.jpg");
+  background-image: url("/images/jumbo.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: right;
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create {
-  width: 90%;
+  width: 95%;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   border: 1px solid #d2ac7b;
@@ -1571,8 +1571,12 @@ footer .store {
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create {
     flex-basis: 20%;
   }
+  .dashboard-restaurant-create .dashboard-body-content-restaurant-create {
+    justify-content: flex-start;
+  }
   .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create {
     width: 35%;
+    margin-left: 250px;
   }
 }
 .container-general-dashboard {
@@ -3435,60 +3439,167 @@ div i.fas.fa-times-circle {
 .group {
   border-radius: 3px;
   flex-wrap: wrap;
-  padding-bottom: 150px;
+  padding-bottom: 250px;
 }
 
-.footer-project {
-  width: 100%;
-  background-color: black;
+@media screen and (min-width: 200px) {
+  .footer-project {
+    width: 100%;
+    background-color: black;
+    border-top: 3px solid #d2ac7b;
+  }
+  .footer-project .container-project {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #d2ac7b;
+    padding: 20px;
+  }
+  .footer-project .container-project .languages-project {
+    padding-bottom: 20px;
+  }
+  .footer-project .container-project .languages-project ul li {
+    list-style-type: none;
+  }
+  .footer-project .container-project .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 45px;
+  }
+  .footer-project .container-project .logo h1 {
+    margin-bottom: 0px !important;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 45px;
+  }
+  .footer-project .container-project .container-social-online .h2-proj {
+    font-size: 24px;
+    text-align: center;
+  }
+  .footer-project .container-project .container-social-online .link-project {
+    text-decoration: none;
+    border: 1px solid #d2ac7b;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+  }
+  .footer-project .container-project .container-social-online a {
+    display: flex;
+    align-items: center;
+    color: #d2ac7b;
+    padding: 15px 70px;
+  }
+  .footer-project .container-project .container-social-online a:hover {
+    text-decoration: none;
+    background-color: #d2ac7b;
+    color: white;
+    transition: 1s ease;
+  }
+  .footer-project .container-project .container-social-online i {
+    font-size: 30px;
+    margin-left: 8px;
+  }
 }
-.footer-project .container-project {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  color: #d2ac7b;
-  padding: 50px;
+@media screen and (min-width: 1250px) {
+  .footer-project .container-project {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-project .container-project .logo {
+    padding-bottom: 0px;
+    margin-right: 45px;
+  }
+  .footer-project .container-project .logo h1 {
+    font-size: 58px;
+  }
+  .footer-project .container-project .languages-project {
+    padding-top: 20px;
+  }
 }
-.footer-project .container-project ul li {
-  list-style-type: none;
+.container-total-recovery-password {
+  background-color: grey;
+  height: 100vh;
 }
-.footer-project .container-project .logo {
+.container-total-recovery-password .total-recovery-password {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
+  padding-top: 100px;
 }
-.footer-project .container-project .logo h1 {
-  margin-bottom: 0px !important;
-  padding-top: 10px;
-  padding-left: 10px;
-  font-size: 60px;
+
+.card-recovery-password {
+  border: 3px solid #d2ac7b;
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
 }
-.footer-project .container-project .container-social-online .h2-proj {
-  font-size: 24px;
+.card-recovery-password .card-header-recovery-password {
+  font-size: 25px;
   text-align: center;
-}
-.footer-project .container-project .container-social-online .link-project {
-  text-decoration: none;
-  border: 1px solid #d2ac7b;
-  padding: 15px 70px;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 20px;
-  margin-top: 12px;
-}
-.footer-project .container-project .container-social-online a {
-  display: flex;
-  align-items: center;
+  padding: 10px 0;
   color: #d2ac7b;
 }
-.footer-project .container-project .container-social-online a:hover {
-  text-decoration: none;
+
+.text-recovery-password p {
+  font-size: 19px;
 }
-.footer-project .container-project .container-social-online i {
-  font-size: 30px;
-  margin-left: 8px;
+
+.card-body-recovery-password {
+  padding-top: 15px;
+}
+
+.form-recovery-password .label-recovery-password {
+  font-size: 20px;
+}
+
+.container-input-recovery-password .form-input-recovery-password {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 2px solid #d2ac7b;
+}
+
+.container-button-recovery-password {
+  display: flex;
+  justify-content: center;
+}
+.container-button-recovery-password .button-recovery-password {
+  margin: 10px 0;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #d2ac7b;
+  border: none;
+  transition: all 0.5s ease-in-out;
+}
+.container-button-recovery-password .button-recovery-password:hover {
+  color: #d2ac7b;
+  background-color: white;
+  border: 1px solid #d2ac7b;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-recovery-password {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-recovery-password {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-recovery-password {
+    width: 35%;
+  }
 }

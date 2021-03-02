@@ -46,6 +46,7 @@
 
       <div class="container-dish">
         <div class="container-list-dishes">
+
           <div v-for="product in dishesList" :key="product.id" class="card-dish">
             <h3 class="product__header">@{{ product.name }}</h3>
             <div class="wp-img-card-dish" :class="!product.visibility? 'dishnotavailable' : null">

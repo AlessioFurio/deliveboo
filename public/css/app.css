@@ -62,7 +62,7 @@ header::before {
   top: 0;
   left: 180px;
   width: 100px;
-  height: 120px;
+  height: 0px;
   background: transparent;
   z-index: 10;
   transition: 1s;
@@ -80,7 +80,7 @@ header::after {
   bottom: 0;
   right: 100px;
   width: 180px;
-  height: 120px;
+  height: 0px;
   background: transparent;
   transition: 1s;
   z-index: 9;
@@ -2360,6 +2360,8 @@ footer .store {
   background-size: cover;
   background-position: center;
   border-top: 5px solid #d2ac7b;
+  height: calc(100vh - 97px);
+  overflow-y: scroll;
 }
 .container-general-edit .container-general-edit-plate {
   padding: 50px 0 100px 0;
@@ -3087,16 +3089,15 @@ main .how-to-order {
   border-bottom: 2px solid #d2ac7b;
 }
 main .container-restaurant {
-  max-width: 1450px;
-  margin: 0 auto;
+  background-image: url("/images/bg-prova-2.jpg");
+  background-repeat: repeat;
 }
 main .container-restaurant .content-restaurant h1 {
   text-align: center;
   text-transform: uppercase;
   color: #d2ac7b;
-  margin: 100px 0 40px 0;
+  padding: 100px 0 40px 0;
   font-size: 45px;
-  background-color: white;
 }
 main .container-restaurant .content-restaurant .details-restaurant {
   display: inline-block;
@@ -3118,9 +3119,11 @@ main .container-restaurant .container-list-dishes {
 main .container-restaurant .container-list-dishes .card-dish {
   flex-basis: 325px;
   min-width: 200px;
+  height: 490px;
   margin: 15px;
   box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
   border: 3px solid #fff;
+  background-color: #fff;
   transition: 0.5s ease-in-out;
 }
 main .container-restaurant .container-list-dishes .card-dish:hover {
@@ -3146,7 +3149,7 @@ main .container-restaurant .container-list-dishes .card-dish p {
   text-align: center;
   color: #d2ac7b;
   font-size: 22px;
-  padding-top: 5px;
+  padding: 5px 0;
 }
 main .container-restaurant .container-list-dishes .card-dish .cart {
   text-align: center;

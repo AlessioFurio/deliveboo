@@ -21,7 +21,7 @@ class RestaurantController extends Controller
           $query->where('id', '=', $category_id);
         })->get(); //cerco quei ristoranti che hanno una categoria con id specifica
       } else {
-        $restaurants = Restaurant::limit(10)->get();
+        $restaurants = Restaurant::limit(8)->get();
       }
 
          // prendo tutti i post

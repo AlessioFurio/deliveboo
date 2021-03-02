@@ -1023,7 +1023,7 @@ footer .store {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 3;
 }
 
 .card-header-register {
@@ -1052,6 +1052,7 @@ footer .store {
   height: 40px;
   border: 1px solid #d2ac7b;
   border-radius: 5px;
+  padding-left: 10px;
 }
 .form-group .container-button-register {
   display: flex;

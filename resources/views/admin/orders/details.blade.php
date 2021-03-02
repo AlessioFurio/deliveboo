@@ -18,17 +18,24 @@
                 <div class="form-details-orders">
                     <ul>
                         <li>
-                            <span>Id: <strong>{{$payment->id}}</strong></span>
+                            <span>Totale : <strong>{{$payment->price}}€</strong></span>
                         </li>
                         <li>
-                            <span>Prezzo: <strong>{{$payment->price}}</strong></span>
+                            <span>Status: <strong>Accettato</strong></span>
                         </li>
-                        <li>
-                            <span>Status: <strong>{{$payment->status}}</strong></span>
-                        </li>
-                        <li>
-                            <span>Ristorante_id: <strong>{{$payment->restaurant_id}}</strong></span>
-                        </li>
+                        {{-- @if ($payment->status == 1)
+                            <li>
+                                <span>Status: <strong>Respinto</strong></span>
+                            </li> --}}
+                        {{-- @elseif ($payment->status == 2)
+                                <li>
+                                    <span>Status: <strong>Accettato</strong></span>
+                                </li>
+                        @else
+                            <li>
+                                <span>Status: <strong>Sospeso</strong></span>
+                            </li>
+                        @endif --}}
                         <li>
                             <span>Data: <strong>{{$payment->created_at}}</strong></span>
                         </li>

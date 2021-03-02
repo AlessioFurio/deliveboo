@@ -99,7 +99,6 @@ header .wp-header {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  z-index: 2;
   position: relative;
 }
 header .filter {

@@ -23,7 +23,7 @@ var app = new Vue({
 		totalPriceCookie: 0,
 		valueInputEmail: '',
 		valueInputPassword: '',
-		servicePage: false,
+		servicePage: true,
 		dropinInstance: null,
 	},
 

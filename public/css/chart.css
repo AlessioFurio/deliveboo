@@ -10050,3 +10050,8 @@ h3 {
   padding: 14px;
   text-align: center;
 }
+
+.tot-num {
+  line-height: 4;
+  padding-left: 120px;
+}

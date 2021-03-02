@@ -4,6 +4,8 @@
         background-size: cover;
         background-position: center;
         border-top: 5px solid $gold;
+        height: calc(100vh - 97px);
+        overflow-y: scroll;
 
         .container-general-edit-plate {
 

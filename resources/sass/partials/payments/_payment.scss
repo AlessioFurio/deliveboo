@@ -1,5 +1,5 @@
 .container-fluid {
-  max-width: 1000px;
+  max-width: 1090px;
   margin: auto;
 
   .row {
@@ -11,7 +11,6 @@
 
     [v-cloak] {
       display: none;
-
     }
 
 
@@ -135,17 +134,22 @@ div i.fas.fa-times-circle {
   }
 }
 .loader-container {
-    margin: 0 auto;
-}
-.loader {
-  margin:120px 10px;
-  border: 8px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 8px solid #3498db;
-  width: 300px;
-  height: 300px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+    margin: 100px auto;
+    .loader {
+      margin: auto;
+      border: 8px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 8px solid $gold;
+      width: 200px;
+      height: 200px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+
+    h1 {
+      margin-top: 100px;
+      font-size: 2rem;
+    }
 }
 
 
@@ -167,6 +171,15 @@ div i.fas.fa-times-circle {
       max-width: 60%;
       margin: 10%;
     }
+  }
+
+  .loader-container .loader {
+        width: 300px;
+        height: 300px;
+  }
+
+  .loader-container h1 {
+    font-size: 2.5rem;
   }
 }
 

@@ -8,8 +8,10 @@ main {
     }
 
     .container-restaurant {
-        max-width: 1450px;
-        margin: 0 auto;
+
+        background-image: url('/images/bg-prova-2.jpg');
+        background-repeat: repeat;
+
 
         .content-restaurant {
 
@@ -17,9 +19,9 @@ main {
                 text-align: center;
                 text-transform: uppercase;
                 color: $gold;
-                margin: 100px 0 40px 0;
+                padding: 100px 0 40px 0;
                 font-size: 45px;
-                background-color: white;
+
             }
 
 
@@ -49,9 +51,11 @@ main {
             .card-dish{
                 flex-basis: 325px;
                 min-width: 200px;
+                height: 490px;
                 margin: 15px;
                 box-shadow: 0px 11px 20px 0px rgba(0,0,0,0.26);
                 border: 3px solid #fff;
+                background-color: #fff;
                 transition: 0.5s ease-in-out;
 
                 &:hover {
@@ -80,7 +84,7 @@ main {
                     text-align: center;
                     color: #d2ac7b;
                     font-size: 22px;
-                    padding-top: 5px;
+                    padding: 5px 0;
                 }
 
 

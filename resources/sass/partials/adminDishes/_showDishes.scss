@@ -25,7 +25,7 @@
     .dashboard-body-dishes-show {
 
         display: block;
-        height: calc(100vh - 97px - 60px - 102px);
+
 
         .dashboard-body-menu-dishes-show {
 
@@ -66,7 +66,7 @@
 
 .dashboard-body-content-dishes-show{
 
-
+    height: calc(100vh - 97px - 60px - 102px);
     flex-basis: 80%;
     overflow-y: scroll;
 
@@ -77,8 +77,7 @@
         background-image: url('/images/snacks-food.jpg');
         background-size: cover;
         background-position: center;
-        height: 100vh;
-
+        height: 100%;
 
 
         .title-dishes-show{
@@ -103,7 +102,7 @@
                 background: rgba(255, 255, 255, 0.8);
                 border: 5px ridge $gold;
                 border-radius: 10px;
-                margin: 30px auto;
+                margin: 0px auto;
                 padding: 10px;
 
                 .title-dishes-card-show {
@@ -117,6 +116,7 @@
                 }
 
                 .cover-dishes {
+                    text-align: center;
 
                     img {
                         max-width: 100%;
@@ -206,7 +206,7 @@
     }
 
     .dashboard-body-content-dishes-show{
-
+        height: calc(100vh - 97px - 60px);
 
 
         .container-restaurant-dishes-show {
@@ -226,7 +226,7 @@
 
                 .dishes-card-show {
                     flex-basis: 60%;
-                    margin: 50px auto;
+                    margin: 0px auto;
 
 
                     .title-dishes-card-show {

@@ -30,7 +30,7 @@
     .dashboard-body-restaurant-show {
 
         display: block;
-        height: calc(100vh - 97px - 60px - 102px);
+
 
         .dashboard-body-menu-restaurant-show {
 
@@ -71,7 +71,7 @@
 
 .dashboard-body-content-restaurant-show {
 
-
+    height: calc(100vh - 97px - 60px - 102px);
     flex-basis: 80%;
     overflow-y: scroll;
 
@@ -233,6 +233,7 @@
             }
 
             .body-restaurant-card-show{
+                text-align: center;
 
                 img {
                     max-width: 100%;
@@ -386,7 +387,7 @@
 
     .dashboard-body-content-restaurant-show {
 
-
+        height: calc(100vh - 97px - 60px);
         .container-restaurant-show {
 
             height: 55%;
@@ -547,7 +548,7 @@
             }
 
         .dashboard-body-restaurant-show {
-            height: calc(100vh - 97px - 61px);
+            height: calc(100vh - 97px - 69px);
 
             .dashboard-body-menu-restaurant-show {
 
@@ -578,6 +579,8 @@
     }
 
     .dashboard-body-content-restaurant-show {
+
+        height: calc(100vh - 97px - 69px);
 
         .container-restaurant-show {
 

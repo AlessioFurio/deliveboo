@@ -1,3 +1,37 @@
+.container-dashboard {
+
+    background-color: #101927;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 3px solid $gold;
+    border-top: 2px solid #d2ac7b;
+
+    a {
+
+        h1 {
+            color: #e3e8f1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 25px;
+            padding: 17px 0 17px 30px;
+            transition: 1s;
+            margin: 0;
+
+            &:hover {
+                color: $gold;
+
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+
+    }
+}
+
 .btn-outline-dark:hover {
   color: #ffffff;
   border: 1px solid #d2ac7b;
@@ -7,4 +41,21 @@
 .chart-buttons {
   display: flex;
   justify-content: space-between;
+}
+
+#count {
+    width: 120px;
+    height: 120px;
+    background-color: gold;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 2.2;
+    border-radius: 50%;
+    padding: 14px;
+    text-align: center;
+
+}
+
+.tot-num {
+    line-height: 4;
 }

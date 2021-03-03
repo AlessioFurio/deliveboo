@@ -50,7 +50,7 @@
           <div v-for="product in dishesList" :key="product.id" class="card-dish">
             <h3 class="product__header">@{{ product.name }}</h3>
             <div class="wp-img-card-dish" :class="!product.visibility? 'dishnotavailable' : null">
-                <img v-if="product.cover == null" src="{{url('/images/card.jpg')}}" alt="">
+                <img v-if="product.cover == null" src="{{url('/images/image-non-disp.png')}}" alt="">
                 <img v-else :src="'{{url ('/storage')}}' + '/' + product.cover" :alt="product.name" class="product__image">
             </div>
             <p class="product__description">@{{ product.description }}</p>

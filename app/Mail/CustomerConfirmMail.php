@@ -11,15 +11,16 @@ class CustomerConfirmMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $new_payment;
-    public $foods;
+    public $cooks;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-     public function __construct($_new_payment)
+     public function __construct($_new_payment, $_cooks)
      {
          $this->new_payment = $_new_payment;
+         $this->cooks = $_cooks;
          //
      }
 

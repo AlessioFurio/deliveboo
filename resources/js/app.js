@@ -23,7 +23,7 @@ var app = new Vue({
 		totalPriceCookie: 0,
 		valueInputEmail: '',
 		valueInputPassword: '',
-		servicePage: true,
+		servicePage: false,
 		dropinInstance: null,
 	},
 
@@ -74,12 +74,15 @@ var app = new Vue({
 			if(modal) {
 				modal.style.display = 'block';
 				console.log(modal.style.display);
+
 			}
 
 		},
 		closeModal() {
 			var modal = document.getElementById("myModal");
 			modal.style.display = "none";
+			this.clear();
+
 		},
 		closeModalOnWindow(){
 			var modal = document.getElementById("myModal");
@@ -88,6 +91,8 @@ var app = new Vue({
 					modal.style.display = "none";
 				}
 			}
+			this.clear();
+
 
 		},
 		showChart(){
@@ -212,7 +217,7 @@ var app = new Vue({
 				// form.submit();
 
 				document.getElementById('payment-form').submit();
-				this.clear() ;
+				// this.clear() ;
 				this.servicePage = true;
 			});
 

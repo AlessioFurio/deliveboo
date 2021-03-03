@@ -46,7 +46,7 @@
               <div class="cards">
                   <div class="card" v-for="restaurant in restaurants">
                       <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">
-                          <img v-if="restaurant.cover == null" src="{{url('/images/card.jpg')}}" alt="">
+                          <img v-if="restaurant.cover == null" src="{{url('/images/image-non-disp.png')}}" alt="">
                           <img v-else :src="'{{url('/storage')}}' + '/' + restaurant.cover" alt="">
                           <p>@{{ restaurant.name }}</p>
                       </a>

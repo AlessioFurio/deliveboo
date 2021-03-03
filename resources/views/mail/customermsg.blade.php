@@ -137,6 +137,7 @@
 	</style>
 </head>
 <body class="clean-body" style="margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #FFFFFF;">
+
 <!--[if IE]><div class="ie-browser"><![endif]-->
 <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="table-layout: fixed; vertical-align: top; min-width: 320px; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF; width: 100%;" valign="top" width="100%">
 <tbody>
@@ -210,11 +211,25 @@
 <div style="border-top:0px solid transparent; border-left:0px solid transparent; border-bottom:0px solid transparent; border-right:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;">
 <!--<![endif]-->
 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 5px; font-family: Georgia, 'Times New Roman', serif"><![endif]-->
+
 <div style="color:#555555;font-family:Georgia, Times, 'Times New Roman', serif;line-height:1.2;padding-top:0px;padding-right:0px;padding-bottom:5px;padding-left:0px;">
 <div class="txtTinyMce-wrapper" style="font-family: Georgia, Times, 'Times New Roman', serif; font-size: 12px; line-height: 1.2; color: #555555; mso-line-height-alt: 14px;">
-<p style="font-size: 14px; line-height: 1.2; text-align: center; word-break: break-word; font-family: Georgia, Times, Times New Roman, serif; mso-line-height-alt: 17px; margin: 0;"><em><span style="color: #333333; font-size: 14px;"><span style="color: #ff9900; font-size: 20px;"><strong><span style="font-size: 24px;">Il totale dei tuoi acquisti è di <span style="color: #ffffff;"> {{$new_payment->price}} </span>€</span></strong></span></span></em></p>
+<p style="font-size: 14px; line-height: 1.2; text-align: center; word-break: break-word; font-family: Georgia, Times, Times New Roman, serif; mso-line-height-alt: 17px; margin: 0;"><em><span style="color: #333333; font-size: 14px;"><span style="color: #ff9900; font-size: 20px;"><strong><span style="font-size: 24px;">Il totale dei tuoi acquisti è di <span style="color: #ffffff;"> {{round($new_payment->price , 2)}} </span>€</span></strong></span></span></em></p>
+<p style="font-size: 14px; line-height: 1.2; text-align: center; word-break: break-word; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 17px; margin: 0;"><span style="color: #ffffff; font-size: 14px;">Riepilogo dei tuoi ordini:</span></p>
+<br>
+<br>
+
+@foreach ($cooks as $cook)
+	<p style="font-size: 14px; line-height: 1.2; text-align: center; word-break: break-word; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 17px; margin: 0;"><span style="color: #ffffff; font-size: 14px;">{{$cook->quantity}} {{$cook->name}}</span></p>
+
+	@endforeach
+	<br>
+	<br>
+
 </div>
 </div>
+</div>
+
 <!--[if mso]></td></tr></table><![endif]-->
 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
 <div style="color:#C0C0C0;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">

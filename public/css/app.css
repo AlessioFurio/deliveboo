@@ -1741,7 +1741,7 @@ footer .store {
   overflow-y: scroll;
 }
 .dashboard-body-content-restaurant-show .container-restaurant-show {
-  background-image: url("/images/burger/hamburgers-sfondo.jpg");
+  background-image: url("/images/hamburgers-sfondo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1924,6 +1924,15 @@ footer .store {
   background-color: #FF0000;
 }
 
+@media screen and (min-width: 480px) {
+  .dashboard-body-content-restaurant-show .container-restaurant-show .container-title-restaurant-show .title-restaurant-show {
+    width: 65%;
+  }
+
+  .container-card-restaurant-show .restaurants-show .restaurant-card-show {
+    flex-basis: 65%;
+  }
+}
 @media screen and (min-width: 768px) {
   .dashboard-restaurant-show .dashboard-header-restaurant-show a h1 {
     font-size: 30px;
@@ -2835,7 +2844,7 @@ footer .store {
   background-image: url("/images/snacks-food.jpg");
   background-size: cover;
   background-position: center;
-  height: 100%;
+  height: 100vh;
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
   text-align: center;
@@ -2854,7 +2863,7 @@ footer .store {
   background: rgba(255, 255, 255, 0.8);
   border: 5px ridge #d2ac7b;
   border-radius: 10px;
-  margin: 0px auto;
+  margin: 50px auto;
   padding: 10px;
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show {
@@ -2917,8 +2926,7 @@ footer .store {
     font-size: 35px;
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show {
-    flex-basis: 60%;
-    margin: 0px auto;
+    flex-basis: 70%;
   }
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
     font-size: 25px;

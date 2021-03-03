@@ -32,7 +32,10 @@ class PaymentController extends Controller
 
   public function transaction(Request $request) {
 
+
     $data = $request->all();
+    $cooks = json_decode($_COOKIE['cartCookie']);
+
 
 
     $payment_method_nonce = $data['payment_method_nonce'];
@@ -76,9 +79,10 @@ class PaymentController extends Controller
     // dd($new_payment->restaurant_id);
     $user = User::where('id' , $restaurant->user_id)->first();
     $restaurant_mail = $user->email;
+    $customer_mail = $data['email'];
 
-    Mail::to($restaurant_mail)->send(new MailFromOrder($new_payment));
-    Mail::to($data['email'])->send(new CustomerConfirmMail($new_payment));
+    Mail::to($restaurant_mail)->send(new MailFromOrder($new_payment,$cooks,$new_buyer, $customer_mail));
+    Mail::to($customer_mail)->send(new CustomerConfirmMail($new_payment,$cooks));
 
     return redirect()->route('welcome')->with(['transaction_result' => $result->success]);
   }

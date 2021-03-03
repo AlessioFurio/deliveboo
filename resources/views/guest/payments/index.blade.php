@@ -9,7 +9,7 @@
 
   <div class="container-fluid">
 
-    <div v-if="cartCookie.length" class="row g-3" v-cloak>
+    <div v-if="cartCookie.length && !servicePage" class="row g-3" v-cloak>
       <div class="offset-xs-2 col-xs-8 col-md-5 col-lg-4 order-md-last mt-5">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span>Il tuo carrello</span>
@@ -95,7 +95,7 @@
       </div>
     </div>
 
-  <div v-else-if="servicePage == true" class="row g-3" v-cloak>
+  <div v-else class="row g-3" v-cloak>
     <div class="col-xs-12 offset-sm-1 col-sm-10">
       <div class="loader-container">
         <div class="loader"></div>

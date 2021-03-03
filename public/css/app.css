@@ -530,7 +530,6 @@ header.active .menu-mobile {
 }
 .card-category .container-card-category .menu-filter {
   background-image: url("/images/marmo.jpg");
-  background-repeat: repeat;
   padding: 50px 15px;
   border-bottom: 1px solid #d2ac7b;
   border-top: 1px solid #d2ac7b;
@@ -538,6 +537,7 @@ header.active .menu-mobile {
   flex-direction: column;
   align-items: center;
   background-color: #fff;
+  background-size: cover;
 }
 .card-category .container-card-category .menu-filter h3 {
   margin-bottom: 40px;
@@ -3096,6 +3096,7 @@ main .how-to-order {
 main .container-restaurant {
   background-image: url("/images/marmo.jpg");
   background-repeat: repeat;
+  background-size: cover;
 }
 main .container-restaurant .content-restaurant h1 {
   text-align: center;

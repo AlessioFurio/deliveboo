@@ -42,7 +42,7 @@
         echo $chart_data;
       @endphp `);
 
-      setInterval(run, 20)
+      setInterval(run, 10)
       setInterval(fun, 200)
 
       function run() {

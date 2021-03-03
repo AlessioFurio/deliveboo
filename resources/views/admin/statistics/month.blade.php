@@ -20,7 +20,7 @@
               <a href="{{route('admin.statistics.month', ['id' => $id , 'month' => $key+1 ])}}" class="btn btn-outline-dark">{{$month}}</a>
           @endforeach
 
-        <canvas id="ordersChart" class="mt-5"></canvas>
+        <canvas id="ordersChart" style="height: 440px" class="mt-5"></canvas>
         <div class="mt-2 row">
             <h1 class="col-12 col-md-6 ">Totale ordini &euro; <span id="count"></h1>
             <h3 class="col-12 col-md-6 tot-num">Numero ordini  <span id="number"></h3>

@@ -10054,3 +10054,7 @@ h3 {
 .tot-num {
   line-height: 4;
 }
+
+#ordersChart {
+  height: 440px !important;
+}

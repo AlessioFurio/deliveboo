@@ -1,17 +1,7 @@
-.container-general-login {
-    height: 100vh;
-    background-color: #101927;
-
-}
-
-.container-form-login {
-    padding-top: 100px;
-}
-
 .card-login {
-    width: 80%;
+    width: 90%;
     margin: auto;
-    border: 1px solid black;
+    border: 3px solid $gold;
     border-radius: 10px;
     background-color: #fff;
     position: absolute;
@@ -36,16 +26,8 @@
 .form-group {
     margin-bottom: 20px;
 
-    label{
-        color: #000;
-        font-size: 20px;
-    }
 
-    .label-email-address, .label-password {
-        font-size: 18px;
-    }
-
-        .container-input-email, .container-input-password  {
+    .container-input-email, .container-input-password  {
 
             input {
                 font-size: 18px;
@@ -53,6 +35,7 @@
                 height: 40px;
                 border: 1px solid $gold;
                 border-radius: 5px;
+                padding-left: 10px;
             }
         }
 
@@ -121,6 +104,43 @@
         }
 }
 
+@media screen and (min-width: 768px){
+
+    .card-login {
+        width: 70%;
+
+        .card-header-login {
+
+        }
+            .card-body-login {
+
+            }
+    }
+
+    .form-check {
+
+        .form-check-label {
+
+        }
+    }
+
+    .container-button-login {
+
+        .button-login {
+
+        }
+    }
+
+    .forgot-password {
+        a {
+
+
+        }
+    }
+
+}
+
+
 
 
 
@@ -163,7 +183,7 @@
 @media screen and (min-width:1400px){
 
     .card-login {
-        width: 50%;
+        width: 45%;
 
         .card-header-login {
             font-size: 50px;

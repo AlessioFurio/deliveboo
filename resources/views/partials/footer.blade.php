@@ -16,11 +16,19 @@
         <h1>Deliveboo</h1>
       </div>
       <h2>Follow us</h2>
-      <div class="social">
-          <a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
-          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="#"><i class="fab fa-snapchat-ghost fa-2x"></i></a>
+      <div class="container-social">
+          <a class="social facebook" href="#">
+              <i class="fab fa-facebook-f fa-2x"></i>
+          </a>
+          <a class="social instagram" href="#">
+              <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a class="social twitter" href="#">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <a class="social snapchat" href="#">
+              <i class="fab fa-snapchat-ghost fa-2x"></i>
+          </a>
       </div>
     </div>
 

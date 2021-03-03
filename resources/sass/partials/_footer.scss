@@ -34,19 +34,32 @@ footer {
     }
 
 
-    h2, .social a {
+    h2, .container-social .social {
       color: #6A6B6D;
+      margin: 5px 15px;
     }
 
     h2 {
       margin: 20px 0;
     }
 
-    a {
-      margin: 5px 15px;
+    .facebook:hover {
+        color: #294f92;
     }
 
-  }
+    .instagram:hover {
+        color: #bf0707;
+    }
+
+    .twitter:hover {
+        color: #009ded;
+    }
+
+    .snapchat:hover {
+        color: yellow;
+    }
+
+}
 
   .store {
     width: 150px;

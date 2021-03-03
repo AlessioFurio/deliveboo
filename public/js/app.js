@@ -2570,9 +2570,15 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\app.scss */"./resources/sass/app.scss");
 module.exports = __webpack_require__(/*! C:\MAMP\htdocs\boolean\progetto-finale\resources\sass\chart.scss */"./resources/sass/chart.scss");
+=======
+__webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/Backend/Esercizi/deliveboo/resources/sass/chart.scss */"./resources/sass/chart.scss");
+>>>>>>> recovery_password
 
 
 /***/ })

@@ -543,6 +543,7 @@ header.active .menu-mobile {
   margin-bottom: 40px;
   text-transform: uppercase;
   font-size: 35px;
+  text-align: center;
 }
 .card-category .container-card-category .menu-filter .selection {
   display: flex;
@@ -551,11 +552,12 @@ header.active .menu-mobile {
   align-items: center;
 }
 .card-category .container-card-category .menu-filter .selection select {
-  width: 70%;
-  padding: 8px 30px;
+  width: 80%;
+  padding: 8px 10px;
   color: #d2ac7b;
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
 }
 .card-category .container-card-category .container-card {
   margin: auto;
@@ -658,11 +660,11 @@ header.active .menu-mobile {
     font-size: 13px;
   }
 
-  .card-category .container-card-category .menu-filter .selection {
-    width: 50%;
+  .card-category .container-card-category .menu-filter .selection select {
+    font-size: 17px;
     margin: auto;
   }
-  .card-category .container-card-category .menu-filter .selection .category-select, .card-category .container-card-category .menu-filter .selection button {
+  .card-category .container-card-category .menu-filter .selection select .category-select, .card-category .container-card-category .menu-filter .selection select button {
     font-size: 18px;
   }
 
@@ -685,16 +687,29 @@ header.active .menu-mobile {
     font-size: 21px;
   }
 
-  .card-category .container-card-category .menu-filter .selection {
-    width: 50%;
+  .card-category .container-card-category .menu-filter .selection select {
+    width: 45%;
     margin: auto;
+    font-size: 18px;
   }
-  .card-category .container-card-category .menu-filter .selection .category-select, .card-category .container-card-category .menu-filter .selection button {
+  .card-category .container-card-category .menu-filter .selection select .category-select, .card-category .container-card-category .menu-filter .selection select button {
     font-size: 18px;
   }
 
   .card-category .container-card-category .container-card .cards .card a p {
     font-size: 28px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-category .container-card-category .menu-filter .selection select {
+    width: 35%;
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-category .container-card-category .menu-filter .selection select {
+    width: 20%;
+    font-size: 20px;
   }
 }
 footer {
@@ -730,14 +745,24 @@ footer .container-social-online .logo h1 {
   color: #d2ac7b;
   font-weight: 700;
 }
-footer .container-social-online h2, footer .container-social-online .social a {
+footer .container-social-online h2, footer .container-social-online .container-social .social {
   color: #6A6B6D;
+  margin: 5px 15px;
 }
 footer .container-social-online h2 {
   margin: 20px 0;
 }
-footer .container-social-online a {
-  margin: 5px 15px;
+footer .container-social-online .facebook:hover {
+  color: #294f92;
+}
+footer .container-social-online .instagram:hover {
+  color: #bf0707;
+}
+footer .container-social-online .twitter:hover {
+  color: #009ded;
+}
+footer .container-social-online .snapchat:hover {
+  color: yellow;
 }
 footer .store {
   width: 150px;
@@ -866,19 +891,10 @@ footer .store {
     flex-direction: row;
   }
 }
-.container-general-login {
-  height: 100vh;
-  background-color: #101927;
-}
-
-.container-form-login {
-  padding-top: 100px;
-}
-
 .card-login {
-  width: 80%;
+  width: 90%;
   margin: auto;
-  border: 1px solid black;
+  border: 3px solid #d2ac7b;
   border-radius: 10px;
   background-color: #fff;
   position: absolute;
@@ -901,19 +917,13 @@ footer .store {
 .form-group {
   margin-bottom: 20px;
 }
-.form-group label {
-  color: #000;
-  font-size: 20px;
-}
-.form-group .label-email-address, .form-group .label-password {
-  font-size: 18px;
-}
 .form-group .container-input-email input, .form-group .container-input-password input {
   font-size: 18px;
   width: 100%;
   height: 40px;
   border: 1px solid #d2ac7b;
   border-radius: 5px;
+  padding-left: 10px;
 }
 .form-group .container-input-password input {
   font-size: 18px;
@@ -964,6 +974,11 @@ footer .store {
   letter-spacing: 3px;
 }
 
+@media screen and (min-width: 768px) {
+  .card-login {
+    width: 70%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .card-login {
     width: 60%;
@@ -989,7 +1004,7 @@ footer .store {
 }
 @media screen and (min-width: 1400px) {
   .card-login {
-    width: 50%;
+    width: 45%;
   }
   .card-login .card-header-login {
     font-size: 50px;
@@ -3524,47 +3539,43 @@ div i.fas.fa-times-circle {
     padding-top: 20px;
   }
 }
-.container-total-recovery-password {
-  background-color: grey;
-  height: 100vh;
-}
-.container-total-recovery-password .total-recovery-password {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 100px;
-}
-
 .card-recovery-password {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
   border: 3px solid #d2ac7b;
   width: 95%;
-  padding: 10px;
+  margin: auto;
+  padding: 0 20px;
   border-radius: 10px;
   background-color: white;
 }
 .card-recovery-password .card-header-recovery-password {
-  font-size: 25px;
+  font-size: 40px;
+  margin: 35px 0;
   text-align: center;
-  padding: 10px 0;
   color: #d2ac7b;
+  font-family: "Ballet", cursive;
 }
 
 .text-recovery-password p {
-  font-size: 19px;
+  font-size: 23px;
 }
 
 .card-body-recovery-password {
-  padding-top: 15px;
+  padding-top: 30px;
 }
 
 .form-recovery-password .label-recovery-password {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .container-input-recovery-password .form-input-recovery-password {
   width: 100%;
   height: 30px;
-  margin: 10px 0;
+  margin: 10px 0 15px;
   border-radius: 5px;
   border: 2px solid #d2ac7b;
 }
@@ -3572,6 +3583,7 @@ div i.fas.fa-times-circle {
 .container-button-recovery-password {
   display: flex;
   justify-content: center;
+  margin: 20px 0;
 }
 .container-button-recovery-password .button-recovery-password {
   margin: 10px 0;
@@ -3594,14 +3606,47 @@ div i.fas.fa-times-circle {
   .card-recovery-password {
     width: 70%;
   }
+
+  .card-recovery-password .card-header-recovery-password {
+    font-size: 55px;
+  }
+
+  .text-recovery-password p {
+    font-size: 25px;
+  }
+
+  .form-recovery-password .label-recovery-password {
+    font-size: 25px;
+  }
+
+  .container-input-recovery-password .form-input-recovery-password {
+    height: 35px;
+  }
+
+  .container-button-recovery-password .button-recovery-password {
+    font-size: 20px;
+    padding: 15px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .card-recovery-password {
     width: 60%;
   }
+
+  .card-recovery-password .card-header-recovery-password {
+    font-size: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .card-recovery-password {
     width: 35%;
+  }
+
+  .card-recovery-password .card-header-recovery-password {
+    margin: 35px 0 20px 0;
+  }
+
+  .text-recovery-password p {
+    margin-bottom: 15px;
   }
 }

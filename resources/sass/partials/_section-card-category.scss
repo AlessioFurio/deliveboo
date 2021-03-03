@@ -65,6 +65,7 @@
                 margin-bottom: 40px;
                 text-transform: uppercase;
                 font-size: 35px;
+                text-align: center;
             }
 
             .selection {
@@ -74,11 +75,12 @@
                 align-items: center;
 
                 select {
-                    width: 70%;
-                    padding: 8px 30px;
+                    width: 80%;
+                    padding: 8px 10px;
                     color: $gold;
                     cursor: pointer;
                     font-family: 'Josefin Sans', sans-serif;
+                    font-size: 15px;
                 }
 
             }
@@ -214,8 +216,9 @@
         }
     }
 
-    .card-category .container-card-category .menu-filter .selection {
-        width: 50%;
+    .card-category .container-card-category .menu-filter .selection select {
+
+        font-size: 17px;
         margin: auto;
 
         .category-select, button {
@@ -251,9 +254,11 @@
         }
     }
 
-    .card-category .container-card-category .menu-filter .selection {
-        width: 50%;
+    .card-category .container-card-category .menu-filter .selection select {
+
+        width: 45%;
         margin: auto;
+        font-size: 18px;
 
         .category-select, button {
             font-size: 18px;
@@ -263,5 +268,81 @@
 
     .card-category .container-card-category .container-card .cards .card a p {
         font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .how-to-order {
+
+
+        h1 {
+
+        }
+
+        .steps {
+
+
+            .step {
+
+                h5 {
+
+                }
+            }
+        }
+    }
+
+    .card-category .container-card-category .menu-filter .selection select {
+
+        width: 35%;
+        font-size: 19px;
+
+
+        .category-select, button {
+
+        }
+
+    }
+
+    .card-category .container-card-category .container-card .cards .card a p {
+
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .how-to-order {
+
+
+        h1 {
+
+        }
+
+        .steps {
+
+
+            .step {
+
+                h5 {
+
+                }
+            }
+        }
+    }
+
+    .card-category .container-card-category .menu-filter .selection select {
+
+        width: 20%;
+        font-size: 20px;
+
+
+        .category-select, button {
+
+        }
+
+    }
+
+    .card-category .container-card-category .container-card .cards .card a p {
+
     }
 }

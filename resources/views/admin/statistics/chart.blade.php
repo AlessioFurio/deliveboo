@@ -49,7 +49,7 @@
       window.cData = JSON.parse(`@php
         echo $chart_data;
       @endphp `);
-      setInterval(run, 20)
+      setInterval(run, 5)
       setInterval(fun, 200)
 
       function run() {
